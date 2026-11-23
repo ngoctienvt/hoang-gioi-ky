@@ -44,6 +44,14 @@ func test_entities_instantiate_glb_and_fallback() -> void:
 		["drop", "drops", {"id": "wood"}],
 		["drop", "drops", {"id": "spear"}],
 		["drop", "drops", {"id": "blood_pill"}],
+		["boss_flame_wolf", "creatures", {}],
+		["carrion_crow", "creatures", {}],
+		["bamboo", "nodes", {}],
+		["mud", "nodes", {}],
+		["talisman_desk", "structures", {}],
+		["puppet_chop", "puppets", {}],
+		["drop", "drops", {"id": "frost_talisman"}],
+		["drop", "drops", {"id": "imprint_frost_wyrm"}],
 	]
 	for c in cases:
 		var node := Shapes.create(c[0], c[1], c[2])
@@ -51,7 +59,7 @@ func test_entities_instantiate_glb_and_fallback() -> void:
 		assert_true(bool(node.get_meta("has_glb", false)), "Expected GLB for %s/%s" % [c[1], c[0]])
 		node.free()
 
-	for fb in [["boss_flame_wolf", "creatures", {}], ["puppet_chop", "puppets", {}], ["bamboo", "nodes", {}]]:
+	for fb in [["no_such_beast", "creatures", {}], ["puppet_unknown", "puppets", {}], ["no_such_node", "nodes", {}]]:
 		var node := Shapes.create(fb[0], fb[1], fb[2])
 		assert_not_null(node, "Fallback returned null for %s/%s" % [fb[1], fb[0]])
 		assert_false(bool(node.get_meta("has_glb", false)), "Expected primitive fallback for %s/%s" % [fb[1], fb[0]])

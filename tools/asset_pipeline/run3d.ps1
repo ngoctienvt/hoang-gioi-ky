@@ -25,12 +25,14 @@ foreach ($it in $items) {
   if ($it.rig) {
     $rg = "$O\rig\$($it.key)_full.glb"
     if (-not (Test-Path $rg)) {
-      $p = Start-Process -FilePath $bl -ArgumentList @('-b', '-P', "$R\tools\studio\creature_rig.py", '--', '--kind', $it.rig, '--model', $src, '--out', $rg, '--faces', '0', '--tex', '8192') -RedirectStandardOutput "$O\rig\$($it.key).log" -RedirectStandardError "$O\rig\$($it.key).err" -PassThru -WindowStyle Hidden
+      $rt = switch ($it.rig) { 'bird' { @("$R\tools\studio\bird_rig.py", '--model', $src, '--out', $rg, '--faces', '0', '--tex', '8192') } { $_ -in 'hop', 'float' } { @("$R\tools\studio\rigid_rig.py", '--model', $src, '--out', $rg, '--style', $it.rig, '--faces', '10000000', '--tex', '8192') } default { @("$R\tools\studio\creature_rig.py", '--kind', $it.rig, '--model', $src, '--out', $rg, '--faces', '0', '--tex', '8192') } }
+      $p = Start-Process -FilePath $bl -ArgumentList (@('-b', '-P') + $rt[0] + @('--') + $rt[1..($rt.Count - 1)]) -RedirectStandardOutput "$O\rig\$($it.key).log" -RedirectStandardError "$O\rig\$($it.key).err" -PassThru -WindowStyle Hidden
       if (-not $p.WaitForExit(600000)) { $p.Kill() }
     }
     if (Test-Path $rg) { $src = $rg } else { St "RIG_FAIL $($it.key) (xuat ban tinh)" }
   }
   $dims = ($it.dims -join ','); $var = if ($it.variants) { $vf = "$O\low\$($it.key)_variants.json"; [IO.File]::WriteAllText($vf, ($it.variants | ConvertTo-Json -Compress)); $vf } else { $null }
+  $env:HGK_NOFLOOR = if ($it.rig -eq 'bird') { "1" } else { $null }
   $args2 = @('-b', '-P', "$H\hgk_fit.py", '--', $src, $dst, $dims, "$($it.tris)", "$($it.tex)"); if ($var) { $args2 += $var }
   & $bl @args2 2>&1 | Select-String 'FIT_DONE|VARIANT_DONE|Error|Traceback' | ForEach-Object { $_.Line }
   if (Test-Path $dst) { $outs += $dst }

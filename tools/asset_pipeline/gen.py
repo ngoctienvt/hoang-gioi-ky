@@ -13,16 +13,22 @@ LOOK = ("gloomy mysterious fantasy wilderness, survival game mood, hand-painted 
 VIEW = {
  "prop": "single object centered, full object visible with margin, three-quarter front view from slightly above",
  "quad": "slightly stylized natural proportions, not chibi, full body standing on all four legs, three-quarter front view at eye level, the head and face clearly visible, all legs and the tail visible",
+ "bird": "slightly stylized natural proportions, not chibi, full body hovering in the air with the wings spread wide open to both sides, straight front view at eye level, the head and face clearly visible, the tail and legs visible",
+ "serpent": "slightly stylized, not chibi, the long body coiled in a compact pile with the head raised up facing the viewer, three-quarter front view at eye level, the head clearly visible",
+ "monster": "slightly stylized, not chibi, full body standing upright, straight front view at eye level, orthographic, arms slightly away from the body, the face clearly visible",
  "human": "slightly stylized natural proportions, not chibi, full body, straight front view at eye level, orthographic, standing upright facing the viewer in a relaxed A-pose, arms slightly away from the body, empty hands, the face clearly visible"}
 TAIL = "plain light grey background, flat even lighting, no shadow, no ground, no text, no outline"
 NEG = ("bright saturated colors, cheerful, cute pastel, neon, chibi, big head, photorealistic, PBR, shiny metal, high detail noise, glow, aura, magic effects, "
        "particles, smoke, fire, flames, text, logo, watermark, multiple objects, ground, scene, harsh shadow, black outline, cropped, blurry")
 NEG_K = {"prop": "", "quad": ", realistic animal, realistic fur, fur strands, wildlife photo, humanoid, standing on two legs, rider, saddle, top view, back view",
+         "bird": ", realistic bird photo, perched, sitting, folded wings, top view, back view, side view, multiple creatures",
+         "serpent": ", legs, humanoid, top view, back view, multiple creatures",
+         "monster": ", weapon, three-quarter view, side view, perspective distortion, multiple characters",
          "human": ", weapon, tool, three-quarter view, side view, perspective distortion, multiple characters"}
 
 def prompt(it):
-    head = "stylized low-poly 3D game character" if it["kind"] == "human" else ("stylized low-poly 3D game creature" if it["kind"] == "quad" else "stylized low-poly 3D game asset")
-    return f"{head}, {it['prompt']}, {LOOK}, {VIEW[it['kind']]}, {TAIL}"
+    head = "stylized low-poly 3D game character" if it["kind"] == "human" else ("stylized low-poly 3D game creature" if it["kind"] in ("quad", "bird", "serpent", "monster") else "stylized low-poly 3D game asset")
+    return f"{head}, {it['prompt']}, {it.get('look', LOOK)}, {VIEW[it['kind']]}, {TAIL}"
 
 if __name__ == "__main__":
     av = sys.argv[1:]; keys = None

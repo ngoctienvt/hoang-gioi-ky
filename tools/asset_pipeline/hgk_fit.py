@@ -6,7 +6,7 @@ blender -b -P hgk_fit.py -- SRC DST DIMS(x,y,z m) TRIS TEX [VARIANTS_JSON]
 - Env HGK_KEEP=1: giu nguyen mesh va do phan giai texture goc (chi scale, pivot, huong, mau). Mac dinh tu 23-11.
 - Env HGK_LOW=<low.glb tu simplify.py>: model tinh dung mesh thap do, UV moi, bake mau tu mesh goc (giu hinh tot hon decimate).
 - VARIANTS_JSON {"ten_file": hue_do | null}: xuat them ban doi mau (vd dan duoc dung chung mesh)."""
-import bpy, sys, json, colorsys
+import bpy, sys, json, colorsys, os, struct
 import numpy as np
 from mathutils import Vector, Matrix
 a = sys.argv[sys.argv.index("--") + 1:]
@@ -23,7 +23,7 @@ if arm:  # bo mesh hinh xuong (Icosphere...) khong skin vao armature, neu khong 
     for o in [o for o in ms if not any(md.type == "ARMATURE" for md in o.modifiers)]:
         print("DROP_MESH", o.name); bpy.data.objects.remove(o, do_unlink=True)
     ms = [o for o in bpy.data.objects if o.type == "MESH"]
-import os
+BRIGHT = float(os.environ.get("HGK_BRIGHT", "1.17"))  # plan Dot 2: texture Dot 1 toi (~0.24 sRGB), nang sang 15-20%
 KEEP = os.environ.get("HGK_KEEP") == "1"  # giu nguyen mesh + texture goc cua Omni/Paint, khong giam
 LOW = None if KEEP else os.environ.get("HGK_LOW")
 if LOW and not arm and os.path.exists(LOW):
@@ -85,8 +85,9 @@ if not arm:
 else:
     pts = world_pts(); lo = Vector([min(p[i] for p in pts) for i in range(3)]); hi = Vector([max(p[i] for p in pts) for i in range(3)])
     s = dims[1] / (hi.z - lo.z); c = (hi + lo) / 2
+    z0 = 0.0 if os.environ.get("HGK_NOFLOOR") == "1" else lo.z  # chim bay: giu do cao lo lung so voi goc
     for r in [x for x in bpy.data.objects if x.parent is None]:
-        r.location = (r.location - Vector((c.x, c.y, lo.z))) * s; r.scale = r.scale * s
+        r.location = (r.location - Vector((c.x, c.y, z0))) * s; r.scale = r.scale * s
 # texture
 imgs = []
 for m in bpy.data.materials:
@@ -101,7 +102,7 @@ def pull(px):
     rgb = px[:, :3]; lum = (rgb * [0.299, 0.587, 0.114]).sum(1, keepdims=True)
     rgb = rgb + (lum - rgb) * 0.2
     d = ((rgb[:, None, :] - P[None]) ** 2).sum(2); near = P[d.argmin(1)]
-    px[:, :3] = np.clip(rgb + (near - rgb) * 0.35, 0, 1); return px
+    px[:, :3] = np.clip((rgb + (near - rgb) * 0.35) * BRIGHT, 0, 1); return px
 base = {}
 for im in imgs:
     if max(im.size) > TEX and not KEEP: im.scale(TEX, TEX)
@@ -109,8 +110,24 @@ for im in imgs:
     im.pixels.foreach_set(px.ravel()); im.update(); base[im.name] = px.copy()
 name = dst.replace("\\", "/").split("/")[-1][:-4]
 if not arm: ms[0].name = name
+def patch_glb(path):
+    """Ghi ro metallicFactor 0 / roughnessFactor 1, bo KHR_materials_specular & ior (Dot 1: 60/63 GLB thieu metallicFactor -> mac dinh 1.0, den si)."""
+    b = open(path, "rb").read(); n = struct.unpack("<I", b[12:16])[0]; j = json.loads(b[20:20 + n]); rest = b[20 + n:]
+    for m in j.get("materials", []):
+        pr = m.setdefault("pbrMetallicRoughness", {}); pr["metallicFactor"] = 0.0; pr["roughnessFactor"] = 1.0
+        pr.pop("metallicRoughnessTexture", None)
+        ex = m.get("extensions", {}); ex.pop("KHR_materials_specular", None); ex.pop("KHR_materials_ior", None)
+        if not ex: m.pop("extensions", None)
+    used = {k for m in j.get("materials", []) for k in m.get("extensions", {})}
+    if "extensionsUsed" in j:
+        j["extensionsUsed"] = [e for e in j["extensionsUsed"] if e in used or not e.startswith("KHR_materials")]
+        if not j["extensionsUsed"]: j.pop("extensionsUsed")
+    js = json.dumps(j, separators=(",", ":")).encode(); js += b" " * ((4 - len(js) % 4) % 4)
+    out = b"glTF" + struct.pack("<II", 2, 12 + 8 + len(js) + len(rest)) + struct.pack("<I", len(js)) + b"JSON" + js + rest
+    open(path, "wb").write(out)
 def export(path):
     bpy.ops.export_scene.gltf(filepath=path, export_format="GLB", export_image_format="AUTO", export_animations=bool(arm), export_animation_mode="ACTIONS")
+    patch_glb(path)
 export(dst)
 tris = sum(len(p.vertices) - 2 for o in ms for p in o.data.polygons)
 pts = world_pts(); lo = Vector([min(p[i] for p in pts) for i in range(3)]); hi = Vector([max(p[i] for p in pts) for i in range(3)])
