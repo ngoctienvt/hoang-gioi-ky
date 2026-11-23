@@ -24,3 +24,8 @@ Thumbs.db
 
 # Raw art sources (concepts, raw Omni meshes, .blend) — kept outside git
 art-source/
+
+# Local validation state and packaged builds
+.runtime/
+build/
+plans/reports/*.log
