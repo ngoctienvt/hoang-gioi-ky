@@ -24,3 +24,7 @@ Thumbs.db
 
 # Raw art sources (concepts, raw Omni meshes, .blend) — kept outside git
 art-source/
+
+# Ban sao tam va file sinh ra cua pipeline asset
+*.bak*
+tools/asset_pipeline/omni_jobs.json

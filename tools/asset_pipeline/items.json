@@ -1,0 +1,955 @@
+[
+ {
+  "key": "tree_common_a",
+  "name": "Cây gỗ thường A",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a common broadleaf tree with a sturdy gnarled brown trunk and a big rounded clumpy canopy made of a few large soft blobs of olive green foliage",
+  "dims": [
+   3,
+   6,
+   3
+  ],
+  "tris": 3500,
+  "tex": 512,
+  "rig": null,
+  "anchor": true,
+  "file": "tree_common_a_standing"
+ },
+ {
+  "key": "rock_spirit_ore",
+  "name": "Tảng Linh Thạch",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a large weathered grey-brown boulder with a few chunky cyan spirit crystals jutting out of its cracks",
+  "dims": [
+   1.4,
+   1.2,
+   1.2
+  ],
+  "tris": 1500,
+  "tex": 512,
+  "rig": null,
+  "file": "rock_spirit_ore_stage1"
+ },
+ {
+  "key": "bush_berry",
+  "name": "Bụi linh quả",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a round leafy olive green bush dotted with small clusters of ripe red-orange berries",
+  "dims": [
+   1.2,
+   1.0,
+   1.2
+  ],
+  "tris": 2500,
+  "tex": 512,
+  "rig": null,
+  "file": "bush_berry_ripe"
+ },
+ {
+  "key": "bush_twig",
+  "name": "Bụi cành khô",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a sparse dry bush of thin bare brown twigs and branches with a few withered leaves",
+  "dims": [
+   0.9,
+   1.0,
+   0.9
+  ],
+  "tris": 1500,
+  "tex": 256,
+  "rig": null,
+  "file": "bush_twig_full"
+ },
+ {
+  "key": "herb_spirit_wild",
+  "name": "Linh Thảo mọc dại",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a small wild medicinal herb plant with broad serrated sage green leaves and a few tiny pale mint buds at the top",
+  "dims": [
+   0.4,
+   0.4,
+   0.4
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "herb_spirit_wild"
+ },
+ {
+  "key": "spring_thanh_moc",
+  "name": "Thanh Mộc Tuyền",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a small natural spring basin: a low ring of mossy weathered stones around an empty shallow hollow, ferns and small plants between the stones, the hollow in the middle empty and dry",
+  "dims": [
+   3,
+   0.6,
+   3
+  ],
+  "tris": 3000,
+  "tex": 512,
+  "rig": null,
+  "file": "spring_thanh_moc"
+ },
+ {
+  "key": "den_rabbit_burrow",
+  "name": "Hang thỏ linh",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a small mound of brown earth with a dark round rabbit burrow hole in its side and tufts of dry grass around it",
+  "dims": [
+   1.2,
+   0.4,
+   1.2
+  ],
+  "tris": 1200,
+  "tex": 256,
+  "rig": null,
+  "file": "den_rabbit_burrow"
+ },
+ {
+  "key": "den_wolf",
+  "name": "Ổ sói",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a wolf den: a dark low cave entrance in a crevice between two big leaning weathered rocks, scattered old bones and dry grass bedding in front",
+  "dims": [
+   4,
+   2,
+   3
+  ],
+  "tris": 2500,
+  "tex": 512,
+  "rig": null,
+  "file": "den_wolf"
+ },
+ {
+  "key": "den_monkey_nest",
+  "name": "Ổ khỉ linh",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a monkey nest: a messy big nest of woven branches and leaves on top of a short thick broken old tree stump, a few stolen trinkets inside",
+  "dims": [
+   2,
+   2.5,
+   2
+  ],
+  "tris": 3000,
+  "tex": 512,
+  "rig": null,
+  "file": "den_monkey_nest"
+ },
+ {
+  "key": "item_twigs",
+  "name": "Cành khô",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small bundle of dry brown twigs tied together lying on its side",
+  "dims": [
+   0.5,
+   0.12,
+   0.2
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "item_twigs"
+ },
+ {
+  "key": "item_grass_fiber",
+  "name": "Cỏ sợi",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a bundle of dry yellowish grass fibers tied in the middle, lying on its side",
+  "dims": [
+   0.4,
+   0.1,
+   0.15
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "item_grass_fiber"
+ },
+ {
+  "key": "item_flint",
+  "name": "Đá lửa",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single chunky dark grey flint stone with sharp chipped facets",
+  "dims": [
+   0.12,
+   0.08,
+   0.1
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_flint"
+ },
+ {
+  "key": "item_log",
+  "name": "Gỗ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a short cut wooden log with bark and a pale cut end showing rings, lying on its side",
+  "dims": [
+   0.7,
+   0.25,
+   0.25
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "item_log"
+ },
+ {
+  "key": "item_bamboo",
+  "name": "Linh trúc",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single cut segment of grey-green bamboo stalk with nodes, lying on its side",
+  "dims": [
+   0.8,
+   0.1,
+   0.1
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_bamboo"
+ },
+ {
+  "key": "item_stone",
+  "name": "Đá",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single rough grey-brown stone chunk",
+  "dims": [
+   0.2,
+   0.14,
+   0.16
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_stone"
+ },
+ {
+  "key": "item_spirit_stone",
+  "name": "Linh Thạch",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single faceted cyan spirit crystal shard",
+  "dims": [
+   0.1,
+   0.15,
+   0.1
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_spirit_stone"
+ },
+ {
+  "key": "item_spirit_berry",
+  "name": "Quả linh",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small cluster of ripe round red-orange berries on a short twig with two leaves",
+  "dims": [
+   0.12,
+   0.12,
+   0.12
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "item_spirit_berry"
+ },
+ {
+  "key": "item_white_mushroom",
+  "name": "Nấm trắng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single plump pale white mushroom with a thick stem",
+  "dims": [
+   0.1,
+   0.12,
+   0.1
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_white_mushroom"
+ },
+ {
+  "key": "item_wild_tuber",
+  "name": "Củ hoang",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single knobby brown wild root tuber with a few root hairs",
+  "dims": [
+   0.18,
+   0.12,
+   0.12
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_wild_tuber"
+ },
+ {
+  "key": "item_pine_cone",
+  "name": "Quả thông",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single brown pine cone standing upright",
+  "dims": [
+   0.07,
+   0.1,
+   0.07
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_pine_cone"
+ },
+ {
+  "key": "item_rope",
+  "name": "Dây thừng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a coiled loop of rough straw-colored rope",
+  "dims": [
+   0.2,
+   0.08,
+   0.2
+  ],
+  "tris": 800,
+  "tex": 256,
+  "rig": null,
+  "file": "item_rope"
+ },
+ {
+  "key": "item_meat_small",
+  "name": "Thịt nhỏ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small raw red morsel of meat on a little bone",
+  "dims": [
+   0.15,
+   0.06,
+   0.1
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_meat_small"
+ },
+ {
+  "key": "item_meat",
+  "name": "Thịt",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a raw red meat haunch with a white bone sticking out",
+  "dims": [
+   0.25,
+   0.1,
+   0.15
+  ],
+  "tris": 500,
+  "tex": 256,
+  "rig": null,
+  "file": "item_meat"
+ },
+ {
+  "key": "item_pelt",
+  "name": "Da lông",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a folded brown fur pelt hide",
+  "dims": [
+   0.4,
+   0.1,
+   0.3
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "item_pelt"
+ },
+ {
+  "key": "item_wolf_tooth",
+  "name": "Răng sói",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single large curved ivory-white animal fang lying on its side, a simple smooth curved cone, no jaw, no skull, no head",
+  "dims": [
+   0.04,
+   0.08,
+   0.03
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_wolf_tooth"
+ },
+ {
+  "key": "item_monkey_fur",
+  "name": "Lông khỉ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small loose bundle of shaggy golden-brown animal fur tied with a thin cord, just a fur tuft lying flat, no head, no face, no animal",
+  "dims": [
+   0.15,
+   0.06,
+   0.1
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_monkey_fur"
+ },
+ {
+  "key": "item_spirit_herb",
+  "name": "Linh Thảo (đã hái)",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a picked medicinal herb: a small bunch of serrated sage green leaves with tiny pale mint buds, stems tied with a thread, lying on its side",
+  "dims": [
+   0.2,
+   0.08,
+   0.1
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_spirit_herb"
+ },
+ {
+  "key": "item_herb_seed",
+  "name": "Hạt Linh Thảo",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small tied cloth seed pouch of faded brown linen",
+  "dims": [
+   0.08,
+   0.1,
+   0.08
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_herb_seed"
+ },
+ {
+  "key": "item_beast_core_small",
+  "name": "Yêu Đan nhỏ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single small round demon beast core gem, a cloudy dark red-purple jewel",
+  "dims": [
+   0.06,
+   0.06,
+   0.06
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "file": "item_beast_core_small"
+ },
+ {
+  "key": "item_mutated_fruit",
+  "name": "Linh Quả biến dị",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single large odd lumpy spirit fruit with faint pale mint veins",
+  "dims": [
+   0.15,
+   0.18,
+   0.15
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "item_mutated_fruit"
+ },
+ {
+  "key": "tool_axe_stone",
+  "name": "Rìu đá",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive stone axe: a chipped grey stone blade lashed with rope to a short rough wooden handle, lying flat on its side",
+  "dims": [
+   0.6,
+   0.08,
+   0.22
+  ],
+  "tris": 1000,
+  "tex": 256,
+  "rig": null,
+  "file": "tool_axe_stone"
+ },
+ {
+  "key": "tool_pickaxe_stone",
+  "name": "Cuốc đá",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive pickaxe: a pointed chipped stone head lashed with rope across a rough wooden handle, lying flat on its side",
+  "dims": [
+   0.65,
+   0.08,
+   0.3
+  ],
+  "tris": 1000,
+  "tex": 256,
+  "rig": null,
+  "file": "tool_pickaxe_stone"
+ },
+ {
+  "key": "tool_shovel",
+  "name": "Xẻng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive shovel: a flat blade carved from bone and wood lashed to a long rough wooden handle, lying flat on its side",
+  "dims": [
+   0.9,
+   0.06,
+   0.2
+  ],
+  "tris": 1000,
+  "tex": 256,
+  "rig": null,
+  "file": "tool_shovel"
+ },
+ {
+  "key": "tool_hammer",
+  "name": "Búa",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive hammer: a heavy rounded stone head bound with rope to a wooden handle, lying flat on its side",
+  "dims": [
+   0.55,
+   0.1,
+   0.22
+  ],
+  "tris": 1000,
+  "tex": 256,
+  "rig": null,
+  "file": "tool_hammer"
+ },
+ {
+  "key": "weapon_spear",
+  "name": "Giáo",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive spear: a long rough wooden shaft with a sharp chipped flint spearhead lashed with rope, lying flat on its side",
+  "dims": [
+   1.6,
+   0.06,
+   0.08
+  ],
+  "tris": 1000,
+  "tex": 256,
+  "rig": null,
+  "file": "weapon_spear"
+ },
+ {
+  "key": "tool_torch",
+  "name": "Đuốc",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive unlit torch: a wooden stick with oily cloth rags wrapped around the top end, lying flat on its side",
+  "dims": [
+   0.55,
+   0.07,
+   0.08
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "tool_torch"
+ },
+ {
+  "key": "tool_water_flask",
+  "name": "Bình Đựng Nước",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a dried bottle gourd water flask with a wooden stopper and a rope loop at the neck, standing upright",
+  "dims": [
+   0.15,
+   0.25,
+   0.15
+  ],
+  "tris": 800,
+  "tex": 256,
+  "rig": null,
+  "file": "tool_water_flask_empty"
+ },
+ {
+  "key": "armor_grass",
+  "name": "Giáp cỏ (gấp)",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a folded primitive armor vest woven from dry straw and grass, tied with rope",
+  "dims": [
+   0.4,
+   0.12,
+   0.35
+  ],
+  "tris": 2400,
+  "tex": 256,
+  "rig": null,
+  "file": "armor_grass_item"
+ },
+ {
+  "key": "food_berry_roasted",
+  "name": "Quả nướng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a few roasted spirit berries, charred golden brown, on a big green leaf",
+  "dims": [
+   0.18,
+   0.07,
+   0.15
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "food_berry_roasted"
+ },
+ {
+  "key": "food_meat_roasted",
+  "name": "Thịt nướng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a chunk of roasted meat skewered on a wooden stick, browned and charred, lying on its side",
+  "dims": [
+   0.3,
+   0.08,
+   0.1
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "food_meat_roasted"
+ },
+ {
+  "key": "food_mushroom_roasted",
+  "name": "Nấm nướng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "three roasted white mushrooms on a wooden skewer, browned, lying on its side",
+  "dims": [
+   0.28,
+   0.07,
+   0.08
+  ],
+  "tris": 600,
+  "tex": 256,
+  "rig": null,
+  "file": "food_mushroom_roasted"
+ },
+ {
+  "key": "food_berry_soup",
+  "name": "Canh Linh Quả",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a rustic clay bowl of red berry soup",
+  "dims": [
+   0.2,
+   0.1,
+   0.2
+  ],
+  "tris": 1000,
+  "tex": 256,
+  "rig": null,
+  "file": "food_berry_soup"
+ },
+ {
+  "key": "food_meat_mushroom_stew",
+  "name": "Thịt Hầm Nấm",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a rustic clay bowl of thick brown meat and mushroom stew",
+  "dims": [
+   0.2,
+   0.1,
+   0.2
+  ],
+  "tris": 1000,
+  "tex": 256,
+  "rig": null,
+  "file": "food_meat_mushroom_stew"
+ },
+ {
+  "key": "food_steamed_tuber",
+  "name": "Củ Hấp",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "steamed brown tubers on a large green banana leaf",
+  "dims": [
+   0.25,
+   0.08,
+   0.18
+  ],
+  "tris": 800,
+  "tex": 256,
+  "rig": null,
+  "file": "food_steamed_tuber"
+ },
+ {
+  "key": "food_spirit_feast",
+  "name": "Linh Thực Tổng Hợp",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a big rustic clay bowl heaped with mixed food: meat, mushrooms, berries and greens",
+  "dims": [
+   0.28,
+   0.15,
+   0.28
+  ],
+  "tris": 1200,
+  "tex": 256,
+  "rig": null,
+  "file": "food_spirit_feast"
+ },
+ {
+  "key": "food_burnt",
+  "name": "Món Cháy",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a rustic clay bowl holding a black burnt charred lump of food",
+  "dims": [
+   0.2,
+   0.1,
+   0.2
+  ],
+  "tris": 800,
+  "tex": 256,
+  "rig": null,
+  "file": "food_burnt"
+ },
+ {
+  "key": "pill_heal",
+  "name": "Hồi Huyết Đan",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single small round red elixir pill, a smooth glossy sphere like a big pea, alone, no bottle, no container",
+  "dims": [
+   0.12,
+   0.12,
+   0.1
+  ],
+  "tris": 400,
+  "tex": 256,
+  "rig": null,
+  "variants": {
+   "pill_calm_mind": 200,
+   "pill_night_sight": 48,
+   "pill_revive": 150,
+   "pill_waste": null
+  },
+  "file": "pill_heal"
+ },
+ {
+  "key": "struct_campfire",
+  "name": "Lửa Trại",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a primitive campfire: a ring of rough grey stones around a pile of crossed split firewood logs, unlit, some grey ash",
+  "dims": [
+   1.2,
+   0.5,
+   1.2
+  ],
+  "tris": 3000,
+  "tex": 512,
+  "rig": null,
+  "anchor": true,
+  "file": "struct_campfire"
+ },
+ {
+  "key": "struct_fire_pit",
+  "name": "Lò Lửa",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a sturdy primitive fire pit: a higher circular wall of stacked flat stones with firewood inside, unlit",
+  "dims": [
+   1.5,
+   0.8,
+   1.5
+  ],
+  "tris": 3000,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_fire_pit"
+ },
+ {
+  "key": "struct_crafting_table",
+  "name": "Bàn Chế Tác",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a crude survival crafting table of rough hewn planks on log legs lashed with rope, a stone axe, a coil of rope and a few wood chunks on top",
+  "dims": [
+   1.4,
+   1.0,
+   0.9
+  ],
+  "tris": 2500,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_crafting_table"
+ },
+ {
+  "key": "struct_chest",
+  "name": "Rương",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a crude wooden storage chest of rough planks bound with rope and leather straps, lid closed",
+  "dims": [
+   0.9,
+   0.6,
+   0.6
+  ],
+  "tris": 1500,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_chest"
+ },
+ {
+  "key": "struct_cook_pot",
+  "name": "Nồi Linh Thực",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a primitive cooking station: a round clay cooking pot with a lid resting on three stacked stones over firewood, unlit",
+  "dims": [
+   1.0,
+   1.1,
+   1.0
+  ],
+  "tris": 1500,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_cook_pot"
+ },
+ {
+  "key": "struct_alchemy_furnace",
+  "name": "Lò Đan",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "an ancient alchemy furnace: a squat round cauldron furnace on three stubby legs made of dark weathered stone and fired clay, a small furnace door at the front, faint carved rune lines, broken ruin stones around its base, no gold, no metal trim",
+  "dims": [
+   1.3,
+   1.8,
+   1.3
+  ],
+  "tris": 2500,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_alchemy_furnace"
+ },
+ {
+  "key": "struct_herb_field",
+  "name": "Ruộng Linh Thảo",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a small square garden bed of dark tilled soil framed by rough wooden planks with rows of young herb sprouts",
+  "dims": [
+   2.0,
+   0.4,
+   2.0
+  ],
+  "tris": 3000,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_herb_field"
+ },
+ {
+  "key": "struct_revive_altar",
+  "name": "Hồi Hồn Đài",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "an ancient round stepped stone altar, cracked and broken, two monolithic standing stone pillars carved with faint pale mint runes, roots and moss creeping over it, a stone bowl in the middle",
+  "dims": [
+   2.5,
+   2.5,
+   2.5
+  ],
+  "tris": 3000,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_revive_altar"
+ },
+ {
+  "key": "creature_forest_wolf",
+  "name": "Sói rừng",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "a lean gaunt forest wolf, stylized low-poly faceted model, chunky simplified shapes, fur as a few large painted clumps, no fine hair strands, NOT realistic, ragged grey-brown fur clumps, thin legs, bony shoulders, glowing amber-yellow eyes",
+  "dims": [
+   0.45,
+   0.8,
+   1.4
+  ],
+  "tris": 5000,
+  "tex": 1024,
+  "rig": "quadruped",
+  "anchor": true,
+  "file": "creature_forest_wolf"
+ },
+ {
+  "key": "creature_spirit_rabbit",
+  "name": "Thỏ linh",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "a wild spirit rabbit beast, stylized low-poly faceted model, chunky simplified shapes, fur as a few large painted clumps, no fine hair strands, NOT realistic, cream white fur, very long ears with pale mint tips, a fluffy pale mint tail, small dark eyes with a mint glint, slightly oversized hind legs",
+  "dims": [
+   0.2,
+   0.35,
+   0.45
+  ],
+  "tris": 2500,
+  "tex": 512,
+  "rig": "quadruped",
+  "file": "creature_spirit_rabbit"
+ },
+ {
+  "key": "creature_spirit_monkey",
+  "name": "Khỉ linh",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "a wild spirit monkey beast, stylized low-poly faceted model, chunky simplified shapes, fur as a few large painted clumps, no fine hair strands, NOT realistic, lanky body walking on all fours, shaggy ochre-brown fur clumps, a long thin tail, a mischievous grey face with glowing pale green eyes",
+  "dims": [
+   0.35,
+   0.6,
+   0.9
+  ],
+  "tris": 4000,
+  "tex": 512,
+  "rig": "quadruped",
+  "file": "creature_spirit_monkey"
+ },
+ {
+  "key": "char_ancient_beast_blood",
+  "name": "Huyết Mạch Cổ Thú",
+  "folder": "characters",
+  "kind": "human",
+  "prompt": "a young human survivor from another world, ragged rough brown cloth tunic and trousers, wrapped cloth shoes, messy dark hair, normal human ears, natural tanned human skin, faint dark tiger-like stripe markings on the forearms",
+  "dims": [
+   0.75,
+   1.7,
+   0.35
+  ],
+  "tris": 9000,
+  "tex": 1024,
+  "rig": null,
+  "file": "char_ancient_beast_blood"
+ }
+]
