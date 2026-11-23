@@ -11,7 +11,7 @@ Làm mục 7 của [asset-catalog.md](asset-catalog.md): Lửa Trại, Lò Lửa
 3. **Dùng greybox để khóa hình.** Công trình có hình dạng chức năng (bàn cao vừa tay, rương đủ to, đài có bậc) nên:
    - Dựng khối greybox trong Blender theo kích thước catalog, đặt cạnh hình nhân 1,7 m.
    - Xuất point cloud từ greybox, dùng khống chế `point` hoặc `voxel` của Omni cùng ảnh concept để ra mesh bám đúng khung.
-4. **Phong cách theo bậc:** đồ bậc 0 (Lửa Trại, Bàn Chế Tác) thô sơ bằng đá, gỗ, dây. Đồ bậc 1 (Nồi, Lò Đan, Hồi Hồn Đài) bắt đầu có nét cổ phong: gốm men, đồng cũ `#A88B4E`, sơn mài đỏ đã bạc `#852D26`, mái cong nhỏ, hoa văn mây đơn giản.
+4. **Phong cách theo bậc:** đồ bậc 0 (Lửa Trại, Bàn Chế Tác) thô sơ bằng đá, gỗ, dây. Đồ bậc 1 (Nồi, Lò Đan, Hồi Hồn Đài) vẫn là đồ chắp vá của người sinh tồn, nhưng gắn thêm **mảnh phế tích cổ** nhặt được: đá khắc phù văn phát sáng nhẹ, tinh thể Linh Thạch, đồng cũ `#A88B4E` xỉn màu. Không làm mái cong, sơn đỏ, hoa văn mây kiểu cổ phong. Tham chiếu phong cách phế tích: `Gate` trong `world/style_test/style_test.tscn`.
 5. **Đáy phẳng, pivot tâm đáy.** Công trình đặt trên mọi chỗ đất phẳng, nên đáy không có chân lơ lửng hay lún.
 6. **Đọc được từ trên xuống.** Mặt trên của công trình là mặt người chơi thấy nhiều nhất: Lò Đan nhìn từ trên vẫn thấy rõ miệng lò, Ruộng thấy rõ luống cây, Hồi Hồn Đài thấy rõ vòng đài.
 7. **Ruộng Linh Thảo:** 4 giai đoạn cây là object con chồng lên nhau trong cùng file (`crop_seed`, `crop_young`, `crop_grown`, `crop_mutated`). `crop_mutated` có quả to phát sáng màu linh khí.
@@ -20,8 +20,8 @@ Làm mục 7 của [asset-catalog.md](asset-catalog.md): Lửa Trại, Lò Lửa
 
 - Lửa trại: `a campfire made of a ring of rounded stones with stacked firewood logs in the middle, unlit`
 - Bàn Chế Tác: `a rough handmade wooden crafting workbench with a stone axe, a coil of rope and wood planks on top`
-- Lò Đan: `an ancient chinese bronze alchemy furnace on three legs with a small door, gold trim and cloud motifs`
-- Hồi Hồn Đài: `a round stone altar platform with three steps, two red lacquered wooden pillars and an incense burner in the center`
+- Lò Đan: `a crude alchemy furnace built from stacked stones and a cracked ancient tarnished bronze cauldron on three legs, faint glowing rune carvings, small fire door`
+- Hồi Hồn Đài: `a round weathered ancient stone altar with three cracked steps, two leaning carved monolith stones with faint glowing runes, roots and moss, a small stone bowl in the center`
 - Nồi Linh Thực: `a glazed clay cooking pot with a lid standing on a tripod of stones above a fire pit`
 
 ## Việc cần làm

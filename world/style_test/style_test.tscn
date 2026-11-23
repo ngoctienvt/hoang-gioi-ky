@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://6r038areqv5w"]
 
+[ext_resource type="Shader" uid="uid://blbaj2jevqq2m" path="res://shaders/rift_veil.gdshader" id="2_0d1ih"]
 [ext_resource type="Shader" uid="uid://b8qlq44sxkpos" path="res://shaders/vignette.gdshader" id="2_xd7oy"]
 [ext_resource type="Shader" uid="uid://cj6arjxd2o3jw" path="res://shaders/painted_gradient.gdshader" id="shader"]
 
@@ -153,65 +154,165 @@ height = 2.0
 radial_segments = 7
 rings = 4
 
-[sub_resource type="ShaderMaterial" id="mat_stone"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xd7oy"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.56, 0.53, 0.47, 1)
-shader_parameter/bottom_color = Color(0.38, 0.36, 0.32, 1)
-shader_parameter/gradient_start = null
-shader_parameter/gradient_height = 0.6
+shader_parameter/top_color = Color(0.4, 0.4, 0.38, 1)
+shader_parameter/bottom_color = Color(0.17, 0.17, 0.18, 1)
+shader_parameter/gradient_start = -2.5
+shader_parameter/gradient_height = 5.0
 shader_parameter/shade_floor = 0.28
 
-[sub_resource type="BoxMesh" id="mesh_7"]
-size = Vector3(0.9, 0.6, 0.9)
+[sub_resource type="BoxMesh" id="BoxMesh_0d1ih"]
+size = Vector3(1.1, 5.2, 0.9)
 
-[sub_resource type="ShaderMaterial" id="mat_pillar"]
+[sub_resource type="BoxMesh" id="BoxMesh_iuwhn"]
+size = Vector3(1, 3.6, 0.85)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5krbm"]
+size = Vector3(0.9, 1.1, 0.8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ebd4m"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.52, 0.17, 0.15, 1)
-shader_parameter/bottom_color = Color(0.3, 0.11, 0.1, 1)
-shader_parameter/gradient_start = null
-shader_parameter/gradient_height = null
+shader_parameter/top_color = Color(0.42, 0.41, 0.38, 1)
+shader_parameter/bottom_color = Color(0.24, 0.23, 0.22, 1)
+shader_parameter/gradient_start = -0.4
+shader_parameter/gradient_height = 0.8
 shader_parameter/shade_floor = 0.28
 
-[sub_resource type="CylinderMesh" id="mesh_6"]
-top_radius = 0.24
-bottom_radius = 0.27
-height = 4.2
-radial_segments = 8
+[sub_resource type="BoxMesh" id="BoxMesh_i4wfq"]
+size = Vector3(3, 0.7, 1)
 
-[sub_resource type="BoxMesh" id="mesh_8"]
+[sub_resource type="BoxMesh" id="BoxMesh_47t2l"]
+size = Vector3(2.2, 0.6, 0.95)
 
-[sub_resource type="ShaderMaterial" id="mat_gold"]
-render_priority = 0
-shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.68, 0.55, 0.3, 1)
-shader_parameter/bottom_color = Color(0.42, 0.32, 0.16, 1)
-shader_parameter/gradient_start = -0.3
-shader_parameter/gradient_height = 0.6
-shader_parameter/shade_floor = 0.28
+[sub_resource type="BoxMesh" id="BoxMesh_wjmph"]
+size = Vector3(0.8, 0.6, 0.1)
 
-[sub_resource type="ShaderMaterial" id="mat_tile"]
-render_priority = 0
-shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.2, 0.2, 0.22, 1)
-shader_parameter/bottom_color = Color(0.1, 0.1, 0.12, 1)
-shader_parameter/gradient_start = -0.2
-shader_parameter/gradient_height = 0.4
-shader_parameter/shade_floor = 0.28
-
-[sub_resource type="PrismMesh" id="mesh_9"]
-left_to_right = 0.0
-
-[sub_resource type="StandardMaterial3D" id="emi_lantern"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxoia"]
 shading_mode = 0
-albedo_color = Color(1, 0.353, 0.165, 1)
+albedo_color = Color(0.37, 0.85, 0.88, 1)
 
-[sub_resource type="CylinderMesh" id="mesh_10"]
-top_radius = 0.16
-bottom_radius = 0.16
-height = 0.42
-radial_segments = 8
+[sub_resource type="BoxMesh" id="BoxMesh_r5oxo"]
+size = Vector3(0.12, 0.45, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_l5pux"]
+size = Vector3(0.35, 0.1, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lq7h4"]
+size = Vector3(0.1, 0.6, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t6x30"]
+size = Vector3(0.3, 0.1, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f0c64"]
+size = Vector3(0.1, 0.5, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lnjta"]
+size = Vector3(0.3, 0.1, 0.04)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7i645"]
+size = Vector3(0.12, 0.35, 0.03)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iuwhn"]
+render_priority = 0
+shader = ExtResource("2_0d1ih")
+shader_parameter/glow_color = null
+shader_parameter/intensity = null
+shader_parameter/edge_softness = null
+shader_parameter/ripple_speed = null
+
+[sub_resource type="QuadMesh" id="QuadMesh_5krbm"]
+size = Vector2(3.6, 4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2ed0m"]
+size = Vector3(0.4, 0.3, 0.35)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4xutv"]
+size = Vector3(0.4, 0.3, 0.35)
+
+[sub_resource type="BoxMesh" id="BoxMesh_td1kr"]
+size = Vector3(0.4, 0.3, 0.35)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cwlrn"]
+size = Vector3(0.4, 0.3, 0.35)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8mhmw"]
+render_priority = 0
+shader = ExtResource("shader")
+shader_parameter/top_color = Color(0.33, 0.37, 0.21, 1)
+shader_parameter/bottom_color = Color(0.15, 0.18, 0.11, 1)
+shader_parameter/gradient_start = -0.5
+shader_parameter/gradient_height = 1.0
+shader_parameter/shade_floor = 0.28
+
+[sub_resource type="SphereMesh" id="SphereMesh_f11o0"]
+radius = 0.6
+height = 1.2
+radial_segments = 10
+rings = 5
+
+[sub_resource type="SphereMesh" id="SphereMesh_21p48"]
+radius = 0.6
+height = 1.2
+radial_segments = 10
+rings = 5
+
+[sub_resource type="SphereMesh" id="SphereMesh_dewhi"]
+radius = 0.6
+height = 1.2
+radial_segments = 10
+rings = 5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ccjq"]
+render_priority = 0
+shader = ExtResource("shader")
+shader_parameter/top_color = Color(0.22, 0.26, 0.15, 1)
+shader_parameter/bottom_color = Color(0.12, 0.14, 0.09, 1)
+shader_parameter/gradient_start = -1.5
+shader_parameter/gradient_height = 3.0
+shader_parameter/shade_floor = 0.28
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6tpcv"]
+top_radius = 0.05
+bottom_radius = 0.03
+height = 2.2
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xo6us"]
+top_radius = 0.05
+bottom_radius = 0.03
+height = 1.6
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7ox2m"]
+top_radius = 0.05
+bottom_radius = 0.03
+height = 1.1
+radial_segments = 6
+rings = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ouglb"]
+top_radius = 0.05
+bottom_radius = 0.03
+height = 1.4
+radial_segments = 6
+rings = 1
+
+[sub_resource type="BoxMesh" id="BoxMesh_ibg3e"]
+size = Vector3(0.45, 0.3, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lihbx"]
+size = Vector3(0.45, 0.3, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_mths3"]
+size = Vector3(0.45, 0.3, 0.4)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d8s1b"]
+size = Vector3(0.45, 0.3, 0.4)
 
 [sub_resource type="StandardMaterial3D" id="emi_spark"]
 shading_mode = 0
@@ -618,142 +719,156 @@ mesh = SubResource("mesh_5")
 [node name="Gate" type="Node3D" parent="." unique_id=1576521640]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 
-[node name="BaseL" type="MeshInstance3D" parent="Gate" unique_id=1898739290]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0.3, 0)
-material_override = SubResource("mat_stone")
-mesh = SubResource("mesh_7")
+[node name="MonolithL" type="MeshInstance3D" parent="Gate" unique_id=830497092]
+transform = Transform3D(0.9951341, 0.06958655, 0.06975647, -0.06975647, 0.9975641, 0, -0.06958655, -0.0048659653, 0.9975641, -2.2, 2.5, 0)
+material_override = SubResource("ShaderMaterial_xd7oy")
+mesh = SubResource("BoxMesh_0d1ih")
 
-[node name="PillarL" type="MeshInstance3D" parent="Gate" unique_id=1662302367]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 2.4, 0)
-material_override = SubResource("mat_pillar")
-mesh = SubResource("mesh_6")
+[node name="MonolithR" type="MeshInstance3D" parent="Gate" unique_id=1827348505]
+transform = Transform3D(0.99315894, -0.052049257, -0.104528464, 0.05233596, 0.9986295, 0, 0.10438521, -0.0054705977, 0.9945219, 2.25, 1.75, 0)
+material_override = SubResource("ShaderMaterial_xd7oy")
+mesh = SubResource("BoxMesh_iuwhn")
 
-[node name="BaseR" type="MeshInstance3D" parent="Gate" unique_id=621194021]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0.3, 0)
-material_override = SubResource("mat_stone")
-mesh = SubResource("mesh_7")
+[node name="FallenTop" type="MeshInstance3D" parent="Gate" unique_id=2043976171]
+transform = Transform3D(0.36363125, -0.83479744, 0.41338307, 0.9302737, 0.3022642, -0.2079117, 0.048613265, 0.46016255, 0.8865028, 3.4, 0.42, 1)
+material_override = SubResource("ShaderMaterial_xd7oy")
+mesh = SubResource("BoxMesh_5krbm")
 
-[node name="PillarR" type="MeshInstance3D" parent="Gate" unique_id=224158907]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 2.4, 0)
-material_override = SubResource("mat_pillar")
-mesh = SubResource("mesh_6")
+[node name="LintelL" type="MeshInstance3D" parent="Gate" unique_id=1822777666]
+transform = Transform3D(0.9986295, 0.05233596, 0, -0.05233596, 0.9986295, 0, 0, 0, 1, -1, 5.1, 0)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_i4wfq")
 
-[node name="BeamLow" type="MeshInstance3D" parent="Gate" unique_id=351905229]
-transform = Transform3D(5, 0, 0, 0, 0.28, 0, 0, 0, 0.34, 0, 3.5, 0)
-material_override = SubResource("mat_pillar")
-mesh = SubResource("mesh_8")
+[node name="LintelR" type="MeshInstance3D" parent="Gate" unique_id=1614229454]
+transform = Transform3D(0.8888361, 0.4528846, 0.06975647, -0.4539905, 0.8910065, 0, -0.06215347, -0.031668775, 0.9975641, 1.55, 4, 0.05)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_47t2l")
 
-[node name="BeamHigh" type="MeshInstance3D" parent="Gate" unique_id=315140067]
-transform = Transform3D(5.8, 0, 0, 0, 0.32, 0, 0, 0, 0.4, 0, 4.35, 0)
-material_override = SubResource("mat_pillar")
-mesh = SubResource("mesh_8")
+[node name="Tablet" type="MeshInstance3D" parent="Gate" unique_id=673946715]
+transform = Transform3D(0.99026805, -0.1391731, 0, 0.1391731, 0.99026805, 0, 0, 0, 1, -1.1, 4.35, 0.52)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_wjmph")
 
-[node name="Plaque" type="MeshInstance3D" parent="Gate" unique_id=1129577624]
-transform = Transform3D(1.3, 0, 0, 0, 0.6, 0, 0, 0, 0.08, 0, 3.93, 0.18)
-material_override = SubResource("mat_gold")
-mesh = SubResource("mesh_8")
+[node name="Rune0" type="MeshInstance3D" parent="Gate" unique_id=289940002]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.15, 1.1, 0.47)
+material_override = SubResource("StandardMaterial3D_jxoia")
+mesh = SubResource("BoxMesh_r5oxo")
 
-[node name="Roof" type="MeshInstance3D" parent="Gate" unique_id=1610505498]
-transform = Transform3D(6.4, 0, 0, 0, 0.3, 0, 0, 0, 1.5, 0, 4.72, 0)
-material_override = SubResource("mat_tile")
-mesh = SubResource("mesh_8")
+[node name="Rune1" type="MeshInstance3D" parent="Gate" unique_id=1677419230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2, 1.8, 0.47)
+material_override = SubResource("StandardMaterial3D_jxoia")
+mesh = SubResource("BoxMesh_l5pux")
 
-[node name="Ridge" type="MeshInstance3D" parent="Gate" unique_id=1493287535]
-transform = Transform3D(4.6, 0, 0, 0, 0.22, 0, 0, 0, 0.6, 0, 5, 0)
-material_override = SubResource("mat_tile")
-mesh = SubResource("mesh_8")
+[node name="Rune2" type="MeshInstance3D" parent="Gate" unique_id=614485942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25, 2.6, 0.47)
+material_override = SubResource("StandardMaterial3D_jxoia")
+mesh = SubResource("BoxMesh_lq7h4")
 
-[node name="EaveL" type="MeshInstance3D" parent="Gate" unique_id=1571679937]
-transform = Transform3D(0.9, 0, 0, 0, 0.7, 0, 0, 0, 1.5, -3.45, 4.92, 0)
-material_override = SubResource("mat_tile")
-mesh = SubResource("mesh_9")
+[node name="Rune3" type="MeshInstance3D" parent="Gate" unique_id=258278553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3, 3.5, 0.47)
+material_override = SubResource("StandardMaterial3D_jxoia")
+mesh = SubResource("BoxMesh_t6x30")
 
-[node name="RidgeEndL" type="MeshInstance3D" parent="Gate" unique_id=1444816048]
-transform = Transform3D(0.35, 0, 0, 0, 0.4, 0, 0, 0, 0.25, -2.45, 5.28, 0)
-material_override = SubResource("mat_gold")
-mesh = SubResource("mesh_9")
+[node name="Rune4" type="MeshInstance3D" parent="Gate" unique_id=1300362654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 1, 0.45)
+material_override = SubResource("StandardMaterial3D_jxoia")
+mesh = SubResource("BoxMesh_f0c64")
 
-[node name="EaveR" type="MeshInstance3D" parent="Gate" unique_id=1075614282]
-transform = Transform3D(-0.9, 0, 0, 0, 0.7, 0, 0, 0, 1.5, 3.45, 4.92, 0)
-material_override = SubResource("mat_tile")
-mesh = SubResource("mesh_9")
+[node name="Rune5" type="MeshInstance3D" parent="Gate" unique_id=1726947566]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 1.9, 0.45)
+material_override = SubResource("StandardMaterial3D_jxoia")
+mesh = SubResource("BoxMesh_lnjta")
 
-[node name="RidgeEndR" type="MeshInstance3D" parent="Gate" unique_id=971385087]
-transform = Transform3D(-0.35, 0, 0, 0, 0.4, 0, 0, 0, 0.25, 2.45, 5.28, 0)
-material_override = SubResource("mat_gold")
-mesh = SubResource("mesh_9")
+[node name="Rune6" type="MeshInstance3D" parent="Gate" unique_id=806587429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 4.35, 0.58)
+material_override = SubResource("StandardMaterial3D_jxoia")
+mesh = SubResource("BoxMesh_7i645")
 
-[node name="SideBaseL" type="MeshInstance3D" parent="Gate" unique_id=140796186]
-transform = Transform3D(0.8, 0, 0, 0, 0.85, 0, 0, 0, 0.8, -3.7, 0.25, 0)
-material_override = SubResource("mat_stone")
-mesh = SubResource("mesh_7")
+[node name="RiftVeil" type="MeshInstance3D" parent="Gate" unique_id=1681712845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05, 2, 0)
+material_override = SubResource("ShaderMaterial_iuwhn")
+mesh = SubResource("QuadMesh_5krbm")
 
-[node name="SidePillarL" type="MeshInstance3D" parent="Gate" unique_id=593076166]
-transform = Transform3D(0.8, 0, 0, 0, 0.7, 0, 0, 0, 0.8, -3.7, 1.7, 0)
-material_override = SubResource("mat_pillar")
-mesh = SubResource("mesh_6")
+[node name="RiftLight" type="OmniLight3D" parent="Gate" unique_id=686261393]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.9)
+light_color = Color(0.45, 0.9, 0.85, 1)
+light_energy = 0.9
+omni_range = 6.0
 
-[node name="SideBeamL" type="MeshInstance3D" parent="Gate" unique_id=2048805219]
-transform = Transform3D(1.9, 0, 0, 0, 0.24, 0, 0, 0, 0.3, -2.9, 2.85, 0)
-material_override = SubResource("mat_pillar")
-mesh = SubResource("mesh_8")
+[node name="Shard0" type="MeshInstance3D" parent="Gate" unique_id=225540037]
+transform = Transform3D(0.9848077, -0.17364818, 0, 0.16317591, 0.9254165, -0.34202012, 0.05939117, 0.33682406, 0.9396926, -0.5, 6.3, 0.1)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_2ed0m")
 
-[node name="SideRoofL" type="MeshInstance3D" parent="Gate" unique_id=364919080]
-transform = Transform3D(2.6, 0, 0, 0, 0.24, 0, 0, 0, 1.3, -3, 3.35, 0)
-material_override = SubResource("mat_tile")
-mesh = SubResource("mesh_8")
+[node name="Shard1" type="MeshInstance3D" parent="Gate" unique_id=1529883592]
+transform = Transform3D(0.7307543, -0.17030051, 0.3993694, 0.46984634, 0.6710101, -0.57357645, -0.20035353, 0.7138655, 0.6710101, 0.6, 5.9, 0.3)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_4xutv")
 
-[node name="SideEaveL" type="MeshInstance3D" parent="Gate" unique_id=535545449]
-transform = Transform3D(0.7, 0, 0, 0, 0.55, 0, 0, 0, 1.3, -4.6, 3.5, 0)
-material_override = SubResource("mat_tile")
-mesh = SubResource("mesh_9")
+[node name="Shard2" type="MeshInstance3D" parent="Gate" unique_id=1934407067]
+transform = Transform3D(0.5560907, 0.044607475, 0.42281595, 0.5566704, 0.3213938, -0.76604444, -0.24294531, 0.944799, 0.21984632, 1.4, 6.7, -0.1)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_td1kr")
 
-[node name="SideBaseR" type="MeshInstance3D" parent="Gate" unique_id=115586044]
-transform = Transform3D(0.8, 0, 0, 0, 0.85, 0, 0, 0, 0.8, 3.7, 0.25, 0)
-material_override = SubResource("mat_stone")
-mesh = SubResource("mesh_7")
+[node name="Shard3" type="MeshInstance3D" parent="Gate" unique_id=821271335]
+transform = Transform3D(0.4672455, 0.18377294, 0.22451982, 0.42101005, 0.036833633, -0.9063078, -0.31786317, 0.9418061, -0.109381646, 0.1, 7.2, 0.1)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_cwlrn")
 
-[node name="SidePillarR" type="MeshInstance3D" parent="Gate" unique_id=2135062118]
-transform = Transform3D(0.8, 0, 0, 0, 0.7, 0, 0, 0, 0.8, 3.7, 1.7, 0)
-material_override = SubResource("mat_pillar")
-mesh = SubResource("mesh_6")
+[node name="MossTop" type="MeshInstance3D" parent="Gate" unique_id=1912971291]
+transform = Transform3D(1.6, 0, 0, 0, 0.4, 0, 0, 0, 1, -1.4, 5.45, 0)
+material_override = SubResource("ShaderMaterial_8mhmw")
+mesh = SubResource("SphereMesh_f11o0")
 
-[node name="SideBeamR" type="MeshInstance3D" parent="Gate" unique_id=1920873240]
-transform = Transform3D(1.9, 0, 0, 0, 0.24, 0, 0, 0, 0.3, 2.9, 2.85, 0)
-material_override = SubResource("mat_pillar")
-mesh = SubResource("mesh_8")
+[node name="MossBaseL" type="MeshInstance3D" parent="Gate" unique_id=68712367]
+transform = Transform3D(1.4, 0, 0, 0, 0.5, 0, 0, 0, 1.2, -2.3, 0.1, 0.3)
+material_override = SubResource("ShaderMaterial_8mhmw")
+mesh = SubResource("SphereMesh_21p48")
 
-[node name="SideRoofR" type="MeshInstance3D" parent="Gate" unique_id=1732809443]
-transform = Transform3D(2.6, 0, 0, 0, 0.24, 0, 0, 0, 1.3, 3, 3.35, 0)
-material_override = SubResource("mat_tile")
-mesh = SubResource("mesh_8")
+[node name="MossBaseR" type="MeshInstance3D" parent="Gate" unique_id=1951696866]
+transform = Transform3D(1.2, 0, 0, 0, 0.45, 0, 0, 0, 1.1, 2.4, 0.1, 0.2)
+material_override = SubResource("ShaderMaterial_8mhmw")
+mesh = SubResource("SphereMesh_dewhi")
 
-[node name="SideEaveR" type="MeshInstance3D" parent="Gate" unique_id=1052525593]
-transform = Transform3D(-0.7, 0, 0, 0, 0.55, 0, 0, 0, 1.3, 4.6, 3.5, 0)
-material_override = SubResource("mat_tile")
-mesh = SubResource("mesh_9")
+[node name="Vine0" type="MeshInstance3D" parent="Gate" unique_id=1782435038]
+transform = Transform3D(0.9975641, -0.06975647, 0, 0.06975647, 0.9975641, 0, 0, 0, 1, -0.3, 3.7, 0.45)
+material_override = SubResource("ShaderMaterial_6ccjq")
+mesh = SubResource("CylinderMesh_6tpcv")
 
-[node name="LanternL" type="MeshInstance3D" parent="Gate" unique_id=23917382]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 3.05, 0.1)
-material_override = SubResource("emi_lantern")
-mesh = SubResource("mesh_10")
+[node name="Vine1" type="MeshInstance3D" parent="Gate" unique_id=1411340335]
+transform = Transform3D(0.9945219, 0.104528464, 0, -0.104528464, 0.9945219, 0, 0, 0, 1, -1.7, 3.9, 0.5)
+material_override = SubResource("ShaderMaterial_6ccjq")
+mesh = SubResource("CylinderMesh_xo6us")
 
-[node name="LanternLightL" type="OmniLight3D" parent="Gate" unique_id=960607383]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 2.9, 0.5)
-light_color = Color(1, 0.478, 0.227, 1)
-light_energy = 1.2
-omni_range = 4.5
+[node name="Vine2" type="MeshInstance3D" parent="Gate" unique_id=648763494]
+transform = Transform3D(0.99939084, -0.034899496, 0, 0.034899496, 0.99939084, 0, 0, 0, 1, -0.9, 4.1, 0.5)
+material_override = SubResource("ShaderMaterial_6ccjq")
+mesh = SubResource("CylinderMesh_7ox2m")
 
-[node name="LanternR" type="MeshInstance3D" parent="Gate" unique_id=1210273735]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 3.05, 0.1)
-material_override = SubResource("emi_lantern")
-mesh = SubResource("mesh_10")
+[node name="Vine3" type="MeshInstance3D" parent="Gate" unique_id=1603636416]
+transform = Transform3D(0.9986295, 0.05233596, 0, -0.05233596, 0.9986295, 0, 0, 0, 1, 1.2, 3.2, 0.45)
+material_override = SubResource("ShaderMaterial_6ccjq")
+mesh = SubResource("CylinderMesh_ouglb")
 
-[node name="LanternLightR" type="OmniLight3D" parent="Gate" unique_id=2021898777]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 2.9, 0.5)
-light_color = Color(1, 0.478, 0.227, 1)
-light_energy = 1.2
-omni_range = 4.5
+[node name="Rubble0" type="MeshInstance3D" parent="Gate" unique_id=677453453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1, 0.15, 0.8)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_ibg3e")
+
+[node name="Rubble1" type="MeshInstance3D" parent="Gate" unique_id=1094089216]
+transform = Transform3D(0.7748477, -0.08569211, 0.626313, 0.28487822, 0.93179476, -0.22495104, -0.56431866, 0.35272574, 0.7464108, 1.5, 0.12, 1.1)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_lihbx")
+
+[node name="Rubble2" type="MeshInstance3D" parent="Gate" unique_id=501766911]
+transform = Transform3D(0.3853708, 0.26080203, 0.88513935, 0.50259924, 0.74513406, -0.43837115, -0.7738756, 0.61380583, 0.15607399, -1.4, 0.1, 1.3)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_mths3")
+
+[node name="Rubble3" type="MeshInstance3D" parent="Gate" unique_id=485078802]
+transform = Transform3D(0.10889003, 0.7315573, 0.6730281, 0.6039558, 0.4890738, -0.6293204, -0.78954434, 0.47500598, -0.38857302, 3, 0.15, -0.6)
+material_override = SubResource("ShaderMaterial_ebd4m")
+mesh = SubResource("BoxMesh_d8s1b")
 
 [node name="Fireflies" type="CPUParticles3D" parent="." unique_id=1642594019]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)

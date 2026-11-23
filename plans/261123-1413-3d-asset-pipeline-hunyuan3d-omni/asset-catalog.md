@@ -122,7 +122,7 @@ Vật phẩm nằm dưới đất trong game và cũng dùng để render icon. 
 | `struct_cook_pot` | Nồi Linh Thực | Nồi gốm trên kiềng đá. Object con `lid`, empty `steam_socket` | 1 × 1 × 1,1 | 1500 | 512 | P0 |
 | `struct_alchemy_furnace` | Lò Đan | Lò đồng ba chân, viền vàng đồng, có cửa lò. Object con `door`, empty `fire_socket`, `smoke_socket` | 1,3 × 1,3 × 1,8 | 2500 | 512 | P0 |
 | `struct_herb_field` | Ruộng Linh Thảo | Luống đất có viền gỗ. Object con: `crop_seed`, `crop_young`, `crop_grown`, `crop_mutated` (Godot bật tắt theo giai đoạn) | 2 × 2 × 0,3 (cây cao tới 0,6) | 1500 | pal | P0 |
-| `struct_revive_altar` | Hồi Hồn Đài | Đài đá tròn bậc thang, cột sơn đỏ cổ phong, lư hương. Empty `spirit_socket` | 2,5 × 2,5 × 2,5 | 3000 | 512 | P0 |
+| `struct_revive_altar` | Hồi Hồn Đài | Đài đá cổ tròn bậc thang nứt vỡ, hai cột đá nguyên khối khắc phù văn phát sáng nhẹ, rễ và rêu, bát đá ở giữa. Empty `spirit_socket` | 2,5 × 2,5 × 2,5 | 3000 | 512 | P0 |
 | `struct_placement_ghost` | — | Không cần làm. Godot tự dựng bóng mờ từ mesh công trình | — | — | — | — |
 
 ## 8. Nhân vật & yêu thú (`characters/`, `creatures/`) — xem phase-05
@@ -142,7 +142,8 @@ Vật phẩm nằm dưới đất trong game và cũng dùng để render icon. 
 - **Biome U Minh Đầm Lầy:** cây mục, lau sậy, đá rêu, mỏ Chu Sa, nấm dạ quang, mộ cổ, U Minh Âm Tuyền; đỉa linh, quạ, Cương Thi, U Linh.
 - **Boss:** U Minh Quỷ Tướng, Xích Viêm Hỏa Lang, Huyền Thiết Nham Quy.
 - **Công trình:** Bàn Vẽ Phù, Đài Luyện Khí, Trận Bàn Thức Tỉnh, Đèn Dẫn Hồn, Trụ Chiếu Sáng, Trụ Dẫn Lôi, Rương bùa, Đài Dẫn Khách, Cổ Đàn, Khôi Lỗi Lao Động.
-- **Kiến trúc cổ phong cho Sơn Môn:** tường, cổng tam quan, mái cong, đèn lồng (làm thành bộ module ghép được).
+- **Phế tích cổ (trang trí thế giới):** Cổng Hoang Cổ, cột đá nguyên khối, bia đá phù văn, mảnh đá lơ lửng, tường đổ (làm thành bộ module ghép được, theo cổng trong cảnh thử).
+- **Tường rào, cổng Sơn Môn của người chơi:** hàng rào gỗ vót nhọn, tường đá xếp, cổng gỗ chắp vá.
 - **Tâm Ma:** cần phong cách riêng khác hẳn quái thường (nét mực thủy mặc), chốt art direction riêng trước khi làm.
 
 ## Tổng số (để ước lượng thời gian)

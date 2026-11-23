@@ -89,7 +89,7 @@ Dựng đủ công cụ trên máy, chốt bảng màu và quy trình chuẩn, l
 **Mẫu prompt tạo ảnh concept** (thay phần trong ngoặc vuông):
 
 ```
-stylized low-poly 3D game asset, [MÔ TẢ VẬT THỂ], gloomy ancient chinese fantasy wilderness,
+stylized low-poly 3D game asset, [MÔ TẢ VẬT THỂ], gloomy mysterious fantasy wilderness with ruins of a lost ancient civilization,
 survival game mood, hand-painted flat colors with soft gradients,
 muted earthy desaturated palette, olive green, umber brown, rust, ash grey,
 weathered and worn, chunky simple shapes, soft rounded forms,
