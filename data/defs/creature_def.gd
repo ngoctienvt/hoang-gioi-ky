@@ -14,6 +14,10 @@ enum ActivePeriod { ALWAYS, DAY, DUSK, NIGHT, DUSK_AND_NIGHT }
 ## Tầm phát hiện người chơi (mét).
 @export_range(0.0, 100.0) var detect_range: float = 8.0
 @export var active_period: ActivePeriod = ActivePeriod.ALWAYS
+## Linh thú hiền: giết khi nó chưa đánh mình thì cộng Nghiệp; bắt được bằng Lồng Thú.
+@export var peaceful: bool = false
+## Linh thể: chỉ nhìn thấy và đánh trúng khi có linh nhãn.
+@export var spirit: bool = false
 @export var behavior: StringName = &"herd_flee"
 @export var params: Dictionary = {}
 @export var drops: Array[DropEntry] = []

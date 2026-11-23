@@ -146,7 +146,7 @@ static func _open_secret_realm(world, _params: Dictionary) -> void:
 
 
 static func _grant_recipe(world, params: Dictionary) -> void:
-	var rid := str(params.get("recipe_id", "conceal_pill"))
+	var rid := str(params.get("recipe_id", ""))
 	if not world.state.has("forbidden_recipes"):
 		world.state["forbidden_recipes"] = []
 	if not rid in world.state.forbidden_recipes:

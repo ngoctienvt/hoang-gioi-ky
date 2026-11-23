@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/conceal_pill.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = &"forbidden_conceal_pill"
+result = ExtResource("2")
+result_count = 2
+tier = 0
+group = 2
+station = &"alchemy_furnace"
+forbidden_unlock = true
+ingredients = Dictionary[StringName, int]({&"soul_herb": 2, &"yin_soul_crystal": 1})

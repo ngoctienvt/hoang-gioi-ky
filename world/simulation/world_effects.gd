@@ -77,8 +77,6 @@ static func step_player(world, player: Dictionary, delta: float) -> void:
 		entry.time = float(entry.get("time", 0.0)) - delta
 		if entry.time <= 0.0:
 			fx.erase(key)
-	if has(player, "temp_lock") and player.has("stats") and player.stats is Dictionary:
-		player.stats.temperature = magnitude(player, "temp_lock", 50.0)
 	if has(player, "nausea") and player.has("stats") and player.stats is Dictionary:
 		player.stats.dao = maxf(0.0, float(player.stats.get("dao", 100.0)) - 0.8 * delta)
 	if has(player, "burn"):

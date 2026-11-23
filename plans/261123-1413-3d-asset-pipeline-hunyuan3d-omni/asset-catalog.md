@@ -1,11 +1,53 @@
 # Danh sách asset 3D — Hoang Giới Ký
 
-Danh sách lấy từ [kế hoạch demo](../261123-1353-demo-hoang-gioi-ky/plan.md) (giai đoạn 03–10) và [GDD](../../docs/game-design-document.md).
+Danh sách tổng hợp toàn bộ asset cho game hiện tại (cập nhật sau **Đợt 1**: 59 món / 63 GLB đã gắn vào gameplay).
 
-**Mức ưu tiên:**
-- **P0:** demo bắt buộc phải có.
-- **P1:** demo cần nhưng tạm dùng khối đơn giản được.
-- **P2:** sau demo (vertical slice). Chỉ làm khi xong P0 và P1.
+**Ký hiệu trạng thái:**
+- ✅ **Đã có (Đợt 1):** Đã có file `.glb` và đã nối vào `entities/view/model_library.gd`.
+- 🔧 **Cần sửa / hoàn thiện (Đợt 2A):** Đã có GLB nhưng bị lỗi hình khối, thiếu rig hoặc thiếu socket/biến thể.
+- ⬜ **Thiếu (Đợt 2B / 2C / 3 / 4):** Chưa có asset, hiện đang dùng khối tạm trong game.
+
+---
+
+## 0A. Danh sách cần sửa từ Đợt 1 (Đợt 2A — Làm ngay)
+
+| id / file | Lỗi hiện tại (theo `asset-manifest.json` & PR #1) | Yêu cầu sửa |
+|---|---|---|
+| `weapon_spear` 🔧 | Ra hình rìu hai lưỡi | Tạo lại dáng giáo dài 1,6 m, mũi giáo đá/kim loại rõ ràng |
+| `tool_axe_stone` 🔧 | Cán bị chẻ đôi | Tạo lại cán gỗ liền mạch, lưỡi đá buộc dây |
+| `tool_hammer` 🔧 | Cán bị chẻ đôi | Tạo lại búa đá/gỗ cán liền |
+| `tool_pickaxe_stone` 🔧 | Cán bị chẻ đôi | Tạo lại cuốc đá cán liền |
+| `pill_heal` (+ 4 biến thể đan) 🔧 | Thành đĩa dẹt | Tạo lại viên đan tròn kèm lọ sứ nhỏ (`pill_base` rồi đổi màu 5 viên) |
+| `armor_grass` 🔧 | Ra vòng cỏ thay vì áo | Tạo lại dáng áo giáp cỏ gấp gọn (`armor_grass_item.glb`) |
+| `char_ancient_beast_blood` 🔧 | Bản tĩnh, chưa rig | Gắn rig humanoid + đủ clip (`idle`, `walk`, `run`, `attack`, `chop`, `mine`, `dig`, `pickup`, `use`, `eat`, `hit`, `death`) |
+| `struct_campfire`, `struct_fire_pit` 🔧 | Chưa tách `logs_full`, `logs_low`, `ash` và `flame_socket` | Tách object con theo trạng thái nhiên liệu + empty `flame_socket` |
+
+## 0B. Nền đất tự nhiên (Đợt 2B — Texture seamless & Phủ nền MultiMesh)
+
+### Texture mặt đất seamless (`assets/textures/ground/<biome>/`)
+Mỗi biome cần 2 bộ texture tileable 1024×1024 (`*_albedo.png`, `*_normal.png`, `*_roughness.png`), không có bóng đổ nung sẵn:
+
+| Biome | Nền chính (`main`) | Nền phụ (`accent`) | Trạng thái |
+|---|---|---|---|
+| `bamboo_forest` | Đất mùn rêu xanh lục nhạt + lá trúc rụng | Đường đất mòn nâu xám + sỏi nhỏ | ⬜ Đợt 2B |
+| `nether_swamp` | Bùn đen tím ẩm ướt | Rêu độc xanh xỉn + cỏ úa | ⬜ Đợt 2B |
+| `crimson_volcano` | Tro núi lửa xám đen | Đá bazan nứt rạn ánh đỏ trầm | ⬜ Đợt 2B |
+| `thunder_gorge` | Đá phiến xám xanh tím | Đất cháy sém + cát sỏi | ⬜ Đợt 2B |
+| `frost_peaks` | Tuyết nén trắng xám xanh | Đá băng xám lạnh lộ thiên | ⬜ Đợt 2B |
+| `ancient_ruins` | Đá lát cổ nứt vỡ phủ rêu | Đất cát khô xen cỏ dại | ⬜ Đợt 2B |
+
+### Phủ nền rải `MultiMesh` (`assets/models/nature/decor/`) — **BẮT BUỘC ≤ 150 tam giác/mẫu**
+
+| id | Tên | Biến thể | Kích thước | Tam giác tối đa | Trạng thái |
+|---|---|---|---|---|---|
+| `decor_grass_tuft` | Bụi cỏ thấp | `a`, `b`, `c` | 0,4 × 0,4 × 0,35 | **80** | ⬜ Đợt 2B |
+| `decor_pebbles` | Cụm sỏi | `a`, `b` | 0,5 × 0,5 × 0,1 | **100** | ⬜ Đợt 2B |
+| `decor_flower` | Cụm hoa dại | `red`, `purple`, `yellow` | 0,3 × 0,3 × 0,3 | **120** | ⬜ Đợt 2B |
+| `decor_fern` | Bụi dương xỉ | `a`, `b` | 0,7 × 0,7 × 0,5 | **150** | ⬜ Đợt 2B |
+| `decor_fallen_log` | Khúc gỗ mục nằm đất | 1 file | 2,0 × 0,5 × 0,5 | **300** | ⬜ Đợt 2B |
+| `decor_mushroom_cluster` | Cụm nấm nhỏ trang trí | 1 file | 0,3 × 0,3 × 0,2 | **150** | ⬜ Đợt 2B |
+
+---
 
 **Cột "Kích thước":** dài (X) × rộng (Z) × cao (Y), đơn vị mét, sai lệch cho phép khoảng 15%. **Tam giác:** ngân sách tối đa. **Tex:** cỡ texture (`pal` = dùng `assets/palette.png` chung).
 
@@ -136,23 +178,77 @@ Vật phẩm nằm dưới đất trong game và cũng dùng để render icon. 
 | `creature_forest_wolf` | Sói rừng (lông xám nâu, dáng gầy, mắt vàng) | dài 1,4, cao vai 0,8 | 5000 | 1024 | Thú 4 chân | `idle`, `walk`, `run`, `attack`, `howl`, `sleep`, `hit`, `death` | P0 |
 | `creature_spirit_monkey` | Khỉ linh (lông vàng nâu, đuôi dài, mặt tinh nghịch) | cao 0,9 khi đứng | 4000 | 512 | Nửa người (đi 4 chân và 2 chân) | `idle`, `walk`, `run`, `pickup`, `carry`, `flee`, `hit`, `death` | P0 |
 
-## 9. Backlog sau demo (P2) — chưa làm
+## 9. Asset còn thiếu cho bản game đầy đủ (Đợt 2C, Đợt 3, Đợt 4)
 
-- **Nhân vật:** Thực Hồn Nhân; Ngự Khí & Khôi Lỗi Sư; Âm Dương Thể.
-- **Biome U Minh Đầm Lầy:** cây mục, lau sậy, đá rêu, mỏ Chu Sa, nấm dạ quang, mộ cổ, U Minh Âm Tuyền; đỉa linh, quạ, Cương Thi, U Linh.
-- **Boss:** U Minh Quỷ Tướng, Xích Viêm Hỏa Lang, Huyền Thiết Nham Quy.
-- **Công trình:** Bàn Vẽ Phù, Đài Luyện Khí, Trận Bàn Thức Tỉnh, Đèn Dẫn Hồn, Trụ Chiếu Sáng, Trụ Dẫn Lôi, Rương bùa, Đài Dẫn Khách, Cổ Đàn, Khôi Lỗi Lao Động.
-- **Phế tích cổ (trang trí thế giới):** Cổng Hoang Cổ, cột đá nguyên khối, bia đá phù văn, mảnh đá lơ lửng, tường đổ (làm thành bộ module ghép được, theo cổng trong cảnh thử).
-- **Tường rào, cổng Sơn Môn của người chơi:** hàng rào gỗ vót nhọn, tường đá xếp, cổng gỗ chắp vá.
-- **Tâm Ma:** cần phong cách riêng khác hẳn quái thường (nét mực thủy mặc), chốt art direction riêng trước khi làm.
+### Đợt 2C — Hoàn thiện Rừng Linh Trúc (lộ rõ ngay khi vào game)
 
-## Tổng số (để ước lượng thời gian)
+| Game ID | Tên / Mô tả | Thư mục đích | Kích thước | Trạng thái |
+|---|---|---|---|---|
+| `bamboo` (`bamboo_cluster`) | Bụi linh trúc (`full`, `cut`, `regrow`) — đang là khối trụ/cầu xanh! | `nature/bamboo_cluster/` | 2 × 2 × 7 | ⬜ Đợt 2C |
+| `forest_pheasant` | Gà rừng linh (`idle`, `walk`, `run`, `flee`, `hit`, `death`) — xuất hiện ngay ở Rừng Linh Trúc | `creatures/creature_forest_pheasant/` | cao 0,45 | ⬜ Đợt 2C |
+| `teleport_array` | Trận Pháp Truyền Tống (đĩa đá cổ khắc phù văn, có rãnh phát sáng `active`/`dormant`) | `structures/struct_teleport_array/` | 3,6 × 3,6 × 0,25 | ⬜ Đợt 2C |
+| `ruin_path` | Phiến đá lát đường phế tích (nứt vỡ, rêu bám, thay ô vuông nâu dưới đất) | `nature/ruin_path/` | 1,8 × 1,8 × 0,08 | ⬜ Đợt 2C |
+| `floor_trap` | Bẫy sập phế tích (tấm đá cơ quan cổ) | `nature/floor_trap/` | 1,2 × 1,2 × 0,1 | ⬜ Đợt 2C |
+| `mud` | Vũng bùn lầy (dẹt, viền bùn nhão) | `nature/mud/` | 2,8 × 2,8 × 0,06 | ⬜ Đợt 2C |
+| `grass` (`bush_grass`) | Bụi cỏ sợi (`full`, `picked`) | `nature/bush_grass/` | 0,8 × 0,8 × 0,8 | ⬜ Đợt 2C |
+| `tree_common_a_stump`, `bush_berry_picked`, `rock_*_stage2/3` | Các biến thể sau khi chặt/hái/đập | `nature/` | theo bảng mục 1 | ⬜ Đợt 2C |
 
-| Nhóm | P0 | P1 |
-|---|---|---|
-| Thiên nhiên + hang ổ | 12 id (khoảng 30 file theo giai đoạn) | 9 id |
-| Vật phẩm nguyên liệu | 21 | 0 |
-| Công cụ, vũ khí, đồ mặc | 8 | 1 |
-| Thức ăn, đan | 13 | 1 |
-| Công trình | 8 | 0 |
-| Nhân vật, yêu thú | 4 (có rig) | 1 |
+### Đợt 3 — Nhân vật, Công trình nâng cao, Khôi Lỗi, NPC & Bí Cảnh
+
+- **Nhân vật (4 model có rig humanoid):**
+  - `devourer` (Thực Hồn Nhân — áo choàng tối, mặt nạ/vết ấn tối) ⬜
+  - `puppeteer` (Ngự Khí & Khôi Lỗi Sư — mang túi bùa/dây điều khiển) ⬜
+  - `yin_yang` (Âm Dương Thể — áo hai tông sáng/tối, bùa Thái Cực) ⬜
+  - `char_ancient_beast_blood_beastform` (Dạng Hóa Thú của Cổ Thú, cao 2 m) ⬜
+- **Công trình còn thiếu (13 công trình trong `data/recipes/`):**
+  - `alchemy_furnace_t2` (Lò Đan bậc 2 — lớn hơn, phù văn đồng sáng) ⬜
+  - `talisman_desk` (Bàn Vẽ Phù) ⬜
+  - `refining_forge` (Đài Luyện Khí / Rèn) ⬜
+  - `talisman_chest` (Rương Bùa chống cháy/chống trộm) ⬜
+  - `awakening_altar` (Đài Thức Tỉnh) ⬜
+  - `guest_altar` (Đài Dẫn Khách) ⬜
+  - `soul_lantern` (Đèn Dẫn Hồn) ⬜
+  - `light_pillar` (Trụ Chiếu Sáng) ⬜
+  - `lightning_rod` (Trụ Dẫn Lôi) ⬜
+  - `water_array` (Trận Tụ Thủy) ⬜
+  - `ice_cellar` (Hầm Băng) ⬜
+  - `ice_structure` (Khối Băng chống cháy) ⬜
+  - `stake` (Cọc Tiêu / Cọc Đánh Dấu) ⬜
+- **Khôi Lỗi & NPC (rig humanoid đơn giản):**
+  - `puppet_chop`, `puppet_mine`, `puppet_haul` (3 Khôi Lỗi gỗ/đá lao động) + `puppet_guard` (Khôi Lỗi vệ sĩ) ⬜
+  - NPC: `merchant` (Thương Nhân), `enforcer` (Chấp Pháp), `evil_cultivator` (Tà Tu) ⬜
+- **Bí Cảnh (`secret_realm_*`):**
+  - `secret_realm_portal` (Cổng vào Bí Cảnh), `secret_realm_exit` (Cổng thoát), `realm_switch` (Trụ công tắc), `realm_chest` (Rương Bí Cảnh) ⬜
+
+### Đợt 4 — 5 Biome còn lại, 14 Yêu thú thường, Tâm Ma & 6 Boss
+
+- **14 Yêu thú thường + Tâm Ma (có rig & hoạt ảnh):**
+  - Đầm Lầy U Minh: `spirit_leech`, `carrion_crow`, `jiangshi`, `wraith` ⬜
+  - Hỏa Sơn Xích Viêm: `lava_lizard`, `fire_bird` ⬜
+  - Lôi Cốc: `thunder_beast`, `stone_golem` ⬜
+  - Tuyết Sơn Băng Phong: `ice_wolf` (hoặc dùng biến thể trắng của sói), `snow_bear`, `thick_fur_beast` ⬜
+  - Phế Tích Cổ: `construct_beast`, `ruin_wraith` ⬜
+  - Tâm Ma (phong cách mực thủy mặc): `heart_demon` ⬜
+- **6 Boss Biome (kích thước lớn 2,5–4 m, có rig):**
+  - `boss_ghost_general` (U Minh Quỷ Tướng) ⬜
+  - `boss_flame_wolf` (Xích Viêm Hỏa Lang) ⬜
+  - `boss_iron_turtle` (Huyền Thiết Nham Quy) ⬜
+  - `boss_thunder_roc` (Lôi Bằng) ⬜
+  - `boss_frost_wyrm` (Băng Giao) ⬜
+  - `boss_ancient_warden` (Thủ Vệ Cổ Tích) ⬜
+- **Tài nguyên, hang ổ & phế tích 5 biome:**
+  - Cây: `rotten_tree`, `charred_tree`, `snow_pine`, `ancient_pine`, `ancient_fruit_tree`, `reed_clump` ⬜
+  - Mỏ khoáng & cột đá: `cinnabar_ore`, `dark_iron_vein`, `eternal_ice_vein`, `magma_ore`, `thunder_crystal_vein`, `ice_boulder`, `sect_ore`, `seal_stone`, `carved_pillar` ⬜
+  - Hang ổ & di tích: `ancient_grave`, `wraith_shrine`, `golem_pillar`, `ice_fishing_hole`, `broken_sword_pile`, `bird_nest`, `fire_bird_nest`, `crow_den`, `leech_den`, `lava_lizard_den`, `snow_bear_den`, `thick_fur_den`, `thunder_beast_den`, `construct_den` ⬜
+  - Thảo dược & nấm đặc trưng: `snow_lotus_node`, `fire_lotus_node`, `glow_mushroom_node`, `ruin_mushroom_node`, `volt_moss_node`, `ancient_vine_node` ⬜
+
+## Tổng hợp tiến độ hiện tại
+
+| Nhóm | Đã có (Đợt 1) | Cần sửa (Đợt 2A) | Thiếu (Đợt 2B–4) |
+|---|---|---|---|
+| Thiên nhiên + hang ổ | 9 | 0 | ~36 (+ biến thể giai đoạn) |
+| Nền đất (texture + decor MultiMesh) | 0 | 0 | 12 bộ texture + 6 nhóm `decor_*` |
+| Vật phẩm, công cụ, thức ăn, đan | 42 | 10 (6 món + 4 biến thể đan) | ~3–5 (túi ngủ, giáo hắc thiết, giáp cao...) |
+| Công trình & Bí Cảnh | 8 | 2 (lửa trại, lò lửa tách socket) | 18 (13 công trình + 4 Bí Cảnh + `teleport_array`) |
+| Nhân vật, Khôi Lỗi, NPC | 1 (tĩnh) | 1 (rig `char_ancient_beast_blood`) | 11 (3 nhân vật + Hóa Thú + 4 Khôi Lỗi + 3 NPC) |
+| Yêu thú & Boss | 3 (có rig) | 0 | 21 (14 yêu thú + Tâm Ma + 6 Boss) |

@@ -35,40 +35,16 @@ static func attack(world, player: Dictionary, args: Dictionary) -> bool:
 	var col: String = world.index.collection_of.get(int(target.get("uid", 0)), "")
 	if not other.is_empty():
 		world.hurt(other, damage)
-	elif col == "creatures":
-		if target.health <= 0 or target.state == "burrow":
+	elif col in ["creatures", "npcs"]:
+		var dealt := damage_target(world, player, target, damage, hand, 0.4)
+		if dealt < 0.0:
 			return false
-		if target.get("private_to_owner", false) and int(target.get("owner_peer", 0)) != -int(player.uid):
-			return false
-		if target.kind in Rules.SPIRIT_KINDS:
-			var ttype: String = str(world.Tempering.get_temper_type(hand))
-			var can_see_spirit: bool = ttype == "u_minh" or world.Effects.has(player, "pierce_mist") or world.Effects.has(player, "spirit_sight") or float(player.stats.get("dao", 100.0)) < 30.0 or BoundaryDao.in_boundary(player)
-			if not can_see_spirit:
-				return false
-		damage = world.Bosses.modify_incoming_damage(world, target, player, damage, hand)
-		target.health -= damage
-		if player.beast_time > 0 and world.Skills.has_skill(player, "beast_t2_bloodlust"):
-			player.stats["health"] = minf(float(player.stats.get("max_health", Rules.BASE_MAX_HEALTH)), float(player.stats.get("health", 0.0)) + damage * 0.15)
-		world.Creatures.on_creature_hurt(world, target, player)
-		world.Creatures.notify_noise(world, player.position, 8.0)
-		target.hit_flash = 0.2
-		world.Tempering.apply_hit(world, player, target, hand)
-		var limit: float = world.map_half() - 1.0
-		var away := Vector3(target.position[0] - player.position[0], 0, target.position[2] - player.position[2]).normalized()
-		var new_pos := [clampf(target.position[0] + away.x * 0.4, -limit, limit), 0.0, clampf(target.position[2] + away.z * 0.4, -limit, limit)]
-		world.move_entity(target, new_pos, true)
-		if target.health <= 0:
-			kill(world, target)
-	elif col == "npcs":
-		if float(target.get("health", 0.0)) <= 0.0 or not target.get("hostile", false):
-			return false
-		target.health = float(target.health) - damage
-		target.hit_flash = 0.2
-		world.Tempering.apply_hit(world, player, target, hand)
-		if float(target.health) <= 0.0:
-			world.Npcs.kill(world, target)
-		else:
-			world.touch(int(target.uid))
+		if col == "creatures":
+			if player.beast_time > 0 and world.Skills.has_skill(player, "beast_t2_bloodlust"):
+				player.stats["health"] = minf(float(player.stats.get("max_health", Rules.BASE_MAX_HEALTH)), float(player.stats.get("health", 0.0)) + dealt * 0.15)
+			world.Creatures.notify_noise(world, player.position, 8.0)
+		if world.index.by_uid.has(int(target.uid)):
+			world.Tempering.apply_hit(world, player, target, hand)
 	elif col == "structures":
 		if not world.has_tool(player, "hammer"):
 			return false
@@ -89,6 +65,60 @@ static func attack(world, player: Dictionary, args: Dictionary) -> bool:
 	return true
 
 
+## Whether player may strike target at all. A heart demon is private to its owner, spirits need
+## spirit sight (U Minh tempering, Khai Nhãn Phù, a shaken Dao Heart, the Âm Dương boundary), allied
+## beasts and peaceful NPCs are never targets. An empty player (an ownerless puppet) sees no spirit.
+static func can_target(world, player: Dictionary, target: Dictionary, hand: Dictionary = {}) -> bool:
+	if target.is_empty() or float(target.get("health", 0.0)) <= 0.0:
+		return false
+	var col: String = world.index.collection_of.get(int(target.get("uid", 0)), "")
+	if col == "npcs":
+		return bool(target.get("hostile", false))
+	if col != "creatures" or str(target.get("state", "")) in ["burrow", "dead"] or target.get("ally", false):
+		return false
+	var owner_peer := -int(player.get("uid", 0)) if not player.is_empty() else 0
+	if target.get("private_to_owner", false) and int(target.get("owner_peer", 0)) != owner_peer:
+		return false
+	if Rules.is_spirit(str(target.kind)):
+		if player.is_empty():
+			return false
+		var sees: bool = str(world.Tempering.get_temper_type(hand)) == "u_minh" \
+			or world.Effects.has(player, "pierce_mist") or world.Effects.has(player, "spirit_sight") \
+			or float(player.stats.get("dao", 100.0)) < 30.0 or BoundaryDao.in_boundary(player)
+		if not sees:
+			return false
+	return true
+
+
+## The one path for player-side damage (weapons, skills, puppets) to creatures and hostile NPCs, so
+## targeting rules and Boss damage rules hold everywhere. Returns the damage dealt, or -1 if refused.
+static func damage_target(world, player: Dictionary, target: Dictionary, damage: float, hand: Dictionary = {}, knockback: float = 0.0) -> float:
+	if not can_target(world, player, target, hand):
+		return -1.0
+	var col: String = world.index.collection_of.get(int(target.uid), "")
+	if col == "creatures" and not player.is_empty():
+		damage = world.Bosses.modify_incoming_damage(world, target, player, damage, hand)
+	target.health = float(target.health) - damage
+	target.hit_flash = 0.2
+	if col == "npcs":
+		if float(target.health) <= 0.0:
+			world.Npcs.kill(world, target)
+		else:
+			world.touch(int(target.uid))
+		return damage
+	world.Creatures.on_creature_hurt(world, target, player)
+	if knockback > 0.0 and not player.is_empty():
+		var limit: float = world.map_half() - 1.0
+		var away := Vector3(target.position[0] - player.position[0], 0, target.position[2] - player.position[2]).normalized()
+		var new_pos := [clampf(target.position[0] + away.x * knockback, -limit, limit), 0.0, clampf(target.position[2] + away.z * knockback, -limit, limit)]
+		world.move_entity(target, new_pos, true)
+	else:
+		world.touch(int(target.uid))
+	if float(target.health) <= 0.0:
+		kill(world, target)
+	return damage
+
+
 ## by_player: the kill was made by a player (or their puppet, skill, effect); only those weigh on
 ## karma. Predators killing prey is nature.
 static func kill(world, target: Dictionary, by_player: bool = true) -> void:
@@ -98,7 +128,8 @@ static func kill(world, target: Dictionary, by_player: bool = true) -> void:
 	for slot in target.get("stolen", []):
 		world.drop_item(slot.id, slot.count, target.position, slot.get("extra", slot))
 	target.stolen = []
-	if by_player and target.kind == "rabbit" and not target.get("ally", false):
+	# Killing a peaceful beast that never struck first is a sin (GDD 12.1).
+	if by_player and cdef != null and cdef.peaceful and not target.get("ally", false) and float(target.get("provoked", 0.0)) <= 0.0:
 		world.Karma.add_sin(world, "kill_peaceful")
 	if target.get("no_respawn", false) or target.get("ally", false):
 		world.remove_entity(target)

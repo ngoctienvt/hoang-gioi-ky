@@ -8,4 +8,4 @@ threshold = 60
 weight = 1.0
 cost = 15.0
 kind = "grant_recipe"
-params = {"recipe_id": "conceal_pill"}
+params = {"recipe_id": "forbidden_conceal_pill"}

@@ -1,9 +1,9 @@
 # Kế hoạch tạo asset 3D — Hoang Giới Ký (Hunyuan3D-Omni chạy local)
 
-- **Trạng thái:** Chưa bắt đầu
-- **Ngày lập:** 2026-11-23
-- **Người thực hiện:** máy của anh chủ dự án, chạy Hunyuan3D-Omni local, có AI hỗ trợ
-- **Người duyệt:** chủ dự án (duyệt asset mẫu và từng đợt)
+- **Trạng thái:** Đang thực hiện — Đã xong **Đợt 1** (59 món / 63 GLB, đã gắn vào gameplay chính), chuẩn bị **Đợt 2–4**
+- **Ngày lập:** 2026-11-23 (cập nhật: 2026-11-23)
+- **Người thực hiện:** máy của anh chủ dự án, chạy Hunyuan3D-Omni local, có AI (Claude) hỗ trợ
+- **Người duyệt:** AI (Claude) bên máy tạo asset tự đánh giá, tự duyệt và tự làm lại nếu chưa đạt (không cần dừng chờ chủ dự án duyệt từng món/từng đợt)
 - **Nguồn thiết kế:** [GDD mục 1.1 Art direction](../../docs/game-design-document.md), [Kế hoạch demo](../261123-1353-demo-hoang-gioi-ky/plan.md)
 - **Danh sách asset đầy đủ:** [asset-catalog.md](asset-catalog.md)
 
@@ -17,7 +17,7 @@ Tạo đủ model 3D cho bản demo (biome Rừng Linh Trúc & Đồng Cỏ, mù
 
 1. Mọi asset có mức ưu tiên **P0** trong `asset-catalog.md` đã có file `.glb` trong `assets/models/`, đúng tên, đúng thư mục.
 2. Mỗi asset qua toàn bộ checklist kỹ thuật ở [phase-06](phase-06-godot-import-and-qa.md): tỉ lệ mét, pivot, hướng mặt, số tam giác, một material, texture đúng cỡ.
-3. Ba asset mẫu (cây gỗ thường, lửa trại, sói rừng) đã được chủ dự án duyệt trước khi làm hàng loạt.
+3. Mọi asset đều đã qua bước tự đánh giá bằng ảnh xem trước của Claude (`approved_by: "claude-auto"`); các món lỗi hình khối (như giáo thành rìu, cán chẻ đôi, đan dẹt, giáp thành vòng) phải tự tạo lại cho đạt trước khi mở PR.
 4. Nhân vật và 3 loài yêu thú có rig và đủ hoạt ảnh bắt buộc.
 5. `assets/asset-manifest.json` ghi đủ nguồn gốc từng asset (công cụ, phiên bản, ảnh đầu vào, ai duyệt), dùng để khai báo nội dung AI khi lên Steam.
 6. Mở project trong Godot, toàn bộ GLB import không lỗi, đặt cạnh nhân vật cao 1,7 m trông đúng tỉ lệ dưới góc camera game.
@@ -25,10 +25,28 @@ Tạo đủ model 3D cho bản demo (biome Rừng Linh Trúc & Đồng Cỏ, mù
 ## Không làm (Non-goals)
 
 - Icon 2D của vật phẩm: phía Godot sẽ render icon từ chính file GLB. Vì vậy model cần đẹp khi nhìn nghiêng 3/4 từ trên xuống.
-- Mặt đất, địa hình, cỏ phủ nền, nước: làm bằng shader và mesh trong Godot, không tạo bằng Omni.
-- Hiệu ứng (lửa, khói, đom đóm, linh khí, Hắc Ám, sét): làm bằng particle trong Godot.
+- Nước sông/suối, hiệu ứng (lửa, khói, đom đóm, linh khí, Hắc Ám, sét): làm bằng shader và particle trong Godot.
 - Hình va chạm (collision): phía Godot tự dựng khối đơn giản.
-- Asset của biome khác, Boss, nhân vật thứ 2: nằm ở mục Backlog trong `asset-catalog.md`, chỉ làm khi đã xong P0 và P1.
+
+## Chiến lược làm nền đất tự nhiên (3 lớp)
+
+Không dùng mesh Omni 40k tam giác cho mặt đất hay cỏ rải. Để nền đất trông tự nhiên và ăn nhập với model 3D, chia thành 3 lớp:
+
+1. **Lớp 1 — Texture mặt đất seamless tileable (`assets/textures/ground/`, phía anh tạo):**
+   - Mỗi biome cần **2 bộ texture lặp liền mạch (seamless)**: **nền chính** (cỏ rêu / bùn / tro / đá nứt / tuyết / gạch cổ) và **nền phụ** (đất mòn / sỏi / rêu đậm).
+   - Mỗi bộ gồm `albedo.png` (1024×1024, không có bóng nắng nung sẵn), `normal.png` (tạo từ heightmap), `roughness.png` (hoặc grayscale).
+   - Phía Godot dùng `shaders/biome_ground.gdshader` để **pha trộn 2 texture theo noise đa tầng + triplanar/UV** và làm mềm ranh giới giữa 6 biome (hết trơn lì và hết vệt lưới).
+2. **Lớp 2 — Phủ nền `MultiMesh` (`assets/models/nature/decor/`, phía anh tạo):**
+   - Bụi cỏ (`decor_grass_tuft` 3 mẫu), cụm sỏi (`decor_pebbles`), hoa dại, dương xỉ, nấm nhỏ, gỗ mục.
+   - **BẮT BUỘC low-poly ≤ 80–150 tam giác/mẫu** (tắt `HGK_KEEP=1` khi fit nhóm này) để Godot rải hàng nghìn cụm bằng `MultiMeshInstance3D` mà vẫn mượt 60 FPS.
+3. **Lớp 3 — Bóng tiếp đất & đường mòn (phía Godot tự xử lý):**
+   - Bóng đổ mềm + `ContactShadow` dưới chân mọi thực thể + decal/đá lát cho `ruin_path`, `mud`, `floor_trap`.
+
+## Lưu ý kỹ thuật rút ra từ Đợt 1 (bắt buộc sửa trước Đợt 2)
+
+1. **Lỗi `metallicFactor` mặc định = 1.0 trong GLB:** 60/63 GLB ở Đợt 1 xuất ra bị thiếu `metallicFactor` trong JSON glTF (glTF mặc định là `1.0` nếu bỏ trống), khiến model bị đen sì trong Godot nếu không vá bằng code. Trong `hgk_fit.py`, phải gán rõ `metallic = 0.0` sao cho exporter ghi `"metallicFactor": 0.0` vào GLB, và bỏ `KHR_materials_specular = 2.0`.
+2. **Độ sáng texture:** Texture Đợt 1 có độ sáng trung bình khá tối (~0.24 sRGB). Khi kéo màu về bảng màu ở `hgk_fit.py`, nâng sáng nhẹ (~15–20%) để cây/đá/nhân vật không bị bệt tối dưới ánh sáng ban ngày.
+3. **Ngân sách tam giác cho đồ rải nhiều (`nature/decor/`):** Model đơn lẻ (cây, công trình, yêu thú) có thể giữ mesh Omni ~40k tam giác; riêng nhóm `decor_*` dùng cho `MultiMesh` **không được vượt quá 150 tam giác**.
 
 ## Khung kỹ thuật (bắt buộc, không tự ý đổi)
 
@@ -66,18 +84,25 @@ Tạo đủ model 3D cho bản demo (biome Rừng Linh Trúc & Đồng Cỏ, mù
 
 Chi tiết từng bước nằm ở [phase-01](phase-01-style-lock-and-setup.md) mục "Quy trình chuẩn".
 
-## Các giai đoạn
+## Quy trình tự đánh giá & tự duyệt (dành cho Claude bên máy tạo asset)
 
-| # | Giai đoạn | Phụ thuộc | Trạng thái |
-|---|---|---|---|
-| 01 | [Cài đặt, khóa phong cách & 3 asset mẫu](phase-01-style-lock-and-setup.md) | — | Chưa làm |
-| 02 | [Cây, đá, bụi: điểm tài nguyên & trang trí](phase-02-nature-resource-nodes.md) | 01 | Chưa làm |
-| 03 | [Vật phẩm, công cụ, thức ăn, đan](phase-03-items-tools-food.md) | 01 | Chưa làm |
-| 04 | [Công trình Sơn Môn](phase-04-structures.md) | 01 | Chưa làm |
-| 05 | [Nhân vật & yêu thú (rig, hoạt ảnh)](phase-05-characters-creatures.md) | 01 | Chưa làm |
-| 06 | [Import Godot, kiểm tra & bàn giao](phase-06-godot-import-and-qa.md) | 02–05 (chạy song song theo từng đợt) | Chưa làm |
+Không dừng lại chờ chủ dự án duyệt tay. Sau khi `hgk_fit.py` và `preview.py` xuất ảnh xem trước (góc 3/4 từ trên xuống + đứng cạnh hình nhân 1,7 m), Claude tự kiểm tra từng món:
+1. **Đúng hình dáng & công năng:** Không sai vật thể (vd giáo không ra rìu, giáp không ra vòng), không chẻ đôi cán công cụ, không bị dẹt/mất khối, không thừa mảnh rác lơ lửng.
+2. **Đúng tỉ lệ, pivot & hướng:** Chiều cao/dài khớp catalog khi đặt cạnh hình nhân 1,7 m; đáy `y = 0`; mặt trước quay đúng hướng.
+3. **Màu sắc & kỹ thuật:** Đúng bảng màu 80/20, không quá tối bệt; GLB có `"metallicFactor": 0.0` (không mặc định 1.0); nhóm `decor_*` ≤ 150 tam giác; sinh vật có đủ rig và hoạt ảnh không biến dạng lưới.
+4. **Xử lý khi chưa đạt:** Tự đổi seed/prompt concept hoặc chỉnh thông số và tạo lại ngay (tối đa 3 lần; nếu vẫn không đạt mới ghi `known_issue` để báo lại).
+5. **Tự duyệt & bàn giao:** Khi đạt toàn bộ mục trên, tự điền `"approved_by": "claude-auto"` và `"approved_date": "YYYY-MM-DD"` vào `assets/asset-manifest.json`, giữ `technical_checks_passed: true`, rồi commit và mở Pull Request vào `main`.
 
-Giai đoạn 02–05 làm song song được sau khi xong 01. Thứ tự khuyên dùng theo nhu cầu của kế hoạch demo: 02 → 03 → 04 → 05 (nhân vật có thể bắt đầu sớm vì rig tốn thời gian nhất).
+## Các giai đoạn & Đợt bàn giao
+
+| Đợt | Nội dung chính | Trạng thái |
+|---|---|---|
+| **Đợt 1** | 59 món P0 / 63 GLB (thiên nhiên 9, công trình 8, yêu thú 3 có rig, nhân vật 1 tĩnh, vật phẩm 38) + pipeline + cảnh `asset_review` | ✅ Đã xong & đã gắn vào gameplay |
+| **Đợt 2** | **Ưu tiên cao nhất:** (2A) Sửa 7 món lỗi Đợt 1 + rig nhân vật chính + tách socket lửa trại; (2B) **Texture nền đất seamless 6 biome + `nature/decor/` low-poly**; (2C) Hoàn thiện Rừng Linh Trúc (`bamboo_cluster`, `forest_pheasant`, `teleport_array`, `ruin_path`, `floor_trap`, `mud`, `bush_grass`, biến thể `stump`/`picked`) | ⬜ Tiếp theo |
+| **Đợt 3** | 3 nhân vật còn lại + dạng Hóa Thú; 13 công trình nâng cao; 4 Khôi Lỗi; 3 NPC; 4 object Bí Cảnh | ⬜ Kế tiếp |
+| **Đợt 4** | 5 Biome còn lại: 14 yêu thú thường + Tâm Ma + 6 Boss + tài nguyên & phế tích đặc trưng từng biome | ⬜ Sau Đợt 3 |
+
+Chi tiết danh sách từng món nằm ở [asset-catalog.md](asset-catalog.md).
 
 ## Cách giao nhận qua GitHub
 

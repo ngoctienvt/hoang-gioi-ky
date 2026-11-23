@@ -3,22 +3,23 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://githh8yuw8by"
-path="res://.godot/imported/tree_common_a_standing_textured.jpg-5ec59e9e88a6c5fe5f30f87705e5fea1.ctex"
+path.s3tc="res://.godot/imported/tree_common_a_standing_textured.jpg-5ec59e9e88a6c5fe5f30f87705e5fea1.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
-"md5": "070fb99709721b423679f36875db686e"
+"md5": "2eacbb106bfd462f27305476310c8426"
 }
 
 [deps]
 
 source_file="res://assets/models/nature/tree_common_a/tree_common_a_standing_textured.jpg"
-dest_files=["res://.godot/imported/tree_common_a_standing_textured.jpg-5ec59e9e88a6c5fe5f30f87705e5fea1.ctex"]
+dest_files=["res://.godot/imported/tree_common_a_standing_textured.jpg-5ec59e9e88a6c5fe5f30f87705e5fea1.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -28,8 +28,6 @@ static func record_and_check(world, player: Dictionary, element: String) -> bool
 
 static func step(world, player: Dictionary, _stats, delta: float, modifiers: Dictionary) -> void:
 	_prune(player, world.elapsed())
-	if world.Effects.has(player, "nausea"):
-		modifiers["dao"] = float(modifiers.get("dao", 0.0)) - 0.8 * delta
 
 
 static func _prune(player: Dictionary, now: float) -> Array:

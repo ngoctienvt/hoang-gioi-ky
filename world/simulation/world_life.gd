@@ -2,6 +2,7 @@ extends RefCounted
 const Rules = preload("res://world/simulation/world_rules.gd")
 const Temperature = preload("res://world/simulation/world_temperature.gd")
 const Weather = preload("res://world/simulation/world_weather.gd")
+const NAUSEA_HEAL_RATE := 0.5  # nausea halves healing (GDD 6.5 "chậm hồi")
 
 
 static func step(world, delta: float) -> void:
@@ -52,7 +53,8 @@ static func step(world, delta: float) -> void:
 		var modifiers := {"health": 0.0, "stamina": 0.0, "dao": 0.0}
 		Temperature.step_player(world, player, stats, delta, modifiers)
 		Weather.apply_player_weather(world, player, delta, modifiers)
-		if str(player.get("biome", "")) == "nether_swamp":
+		if str(player.get("biome", "")) == "nether_swamp" and not world.Effects.has(player, "poison_immune"):
+			# The swamp's toxic miasma wears the Dao Heart; Tị Độc Đan keeps it out.
 			modifiers.dao -= 0.5 * delta
 		if player.spring_heal > 0:
 			modifiers.health += delta
@@ -62,6 +64,8 @@ static func step(world, delta: float) -> void:
 		var cdef = world.Abilities.character_def(player)
 		if cdef != null and float(modifiers.health) > 0.0:
 			modifiers.health = float(modifiers.health) * float(cdef.heal_rate)
+		if world.Effects.has(player, "nausea") and float(modifiers.health) > 0.0:
+			modifiers.health = float(modifiers.health) * NAUSEA_HEAL_RATE
 		stats.health = clampf(stats.health + float(modifiers.health), 0.0, float(player.stats.get("max_health", Rules.BASE_MAX_HEALTH)))
 		stats.stamina = clampf(stats.stamina + float(modifiers.stamina), 0.0, 150.0)
 		stats.dao = clampf(stats.dao + float(modifiers.dao), 0.0, 100.0)

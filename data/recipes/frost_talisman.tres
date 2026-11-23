@@ -8,5 +8,6 @@ result = ExtResource("2")
 result_count = 2
 tier = 0
 group = 5
+success = 0.85
 station = &"talisman_desk"
 ingredients = Dictionary[StringName, int]({&"talisman_paper": 1, &"cinnabar": 1, &"ice_block": 1})

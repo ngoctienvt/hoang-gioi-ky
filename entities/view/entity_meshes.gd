@@ -1,5 +1,7 @@
 extends RefCounted
 
+const ModelLib = preload("res://entities/view/model_library.gd")
+
 static func mesh(parent: Node3D, shape: PrimitiveMesh, color: Color, at: Vector3) -> MeshInstance3D:
 	var node := MeshInstance3D.new()
 	node.mesh = shape
@@ -30,6 +32,9 @@ static func cylinder(parent: Node3D, color: Color, at: Vector3, radius: float, h
 	return mesh(parent, shape, color, at)
 
 static func create(kind: String, category: String, entity: Dictionary = {}) -> Node3D:
+	var glb := ModelLib.instantiate(kind, category, entity)
+	if glb != null:
+		return glb
 	var node := Node3D.new()
 	var green := Color("3c7652")
 	var wood := Color("795036")

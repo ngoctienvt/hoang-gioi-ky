@@ -23,6 +23,7 @@ damage = 0
 move_speed = 3.5
 detect_range = 8
 active_period = 0
+peaceful = true
 behavior = &"herd_flee"
 params = {"flee_speed": 3.2, "predators": ["ice_wolf"]}
 drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2")])

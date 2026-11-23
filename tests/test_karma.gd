@@ -50,8 +50,22 @@ func test_both_60_hybrid_and_determinism_and_disable_option() -> void:
 	var t1: Array = w1.Karma.check_thresholds(w1)
 	var t2: Array = w2.Karma.check_thresholds(w2)
 	assert_eq(t1, t2)
-	assert_true("both_60_broker" in t1)
+	assert_eq(t1, ["both_60_broker"], "only the hybrid event fires, not the per-bar ones too")
 
 	var w_off := _make_world(888, false)
 	w_off.state.karma = {"sin": 60.0, "fate": 60.0}
 	assert_true(w_off.Karma.check_thresholds(w_off).is_empty())
+
+
+func test_karma_bar_at_100_on_cooldown_does_not_fall_through_to_lower_tiers() -> void:
+	# Arrange: Nghiệp at 100, its 100 event fired today.
+	var w := _make_world(5, true)
+	w.state.karma = {"sin": 100.0, "fate": 0.0}
+	var day := int(w.state.clock.day)
+	w.state.karma_cooldowns["sin_100"] = day
+
+	# Act
+	var fired: Array = w.Karma.check_thresholds(w)
+
+	# Assert
+	assert_true(fired.is_empty(), "the 60 and 30 tiers stay quiet while 100 cools down")

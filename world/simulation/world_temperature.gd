@@ -65,6 +65,11 @@ static func step_player(world, player: Dictionary, stats, delta: float, modifier
 	var ambient := ambient_at(world, player.position, str(player.get("biome", "")))
 	player["ambient_temperature"] = ambient
 
+	if world.Effects.has(player, "temp_lock"):
+		# Ôn Dương / Thanh Lương pills pin body temperature for their duration.
+		stats.temperature = world.Effects.magnitude(player, "temp_lock", 50.0)
+		return
+
 	var eq: Dictionary = player.get("inventory", {}).get("equipment", {})
 	var hand = eq.get("hand", {})
 	var target := ambient

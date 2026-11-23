@@ -91,9 +91,9 @@ func test_wanderer_guest_altar_recipe_tame_and_portal() -> void:
 	# grant_recipe, tame_beast, open_secret_realm
 	var ev_r := KarmaEventDef.new()
 	ev_r.kind = "grant_recipe"
-	ev_r.params = {"recipe_id": "conceal_pill"}
+	ev_r.params = {"recipe_id": "forbidden_conceal_pill"}
 	w.Karma.Events.execute(w, ev_r)
-	assert_true("conceal_pill" in w.state.forbidden_recipes)
+	assert_true("forbidden_conceal_pill" in w.state.forbidden_recipes)
 
 	var ev_t := KarmaEventDef.new()
 	ev_t.kind = "tame_beast"

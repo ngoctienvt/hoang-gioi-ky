@@ -36,6 +36,8 @@ func install(parent: Node3D) -> Dictionary:
 	return {"sun": scene.get_node("Sun"), "environment": env, "ink_overlay": ink_overlay}
 
 func decorate(visual: Node3D, kind: String, category: String) -> Node3D:
+	if visual.get_meta("has_glb", false):
+		return visual
 	if category == "nodes" and kind == "tree":
 		visual.free()
 		visual = tree.duplicate()

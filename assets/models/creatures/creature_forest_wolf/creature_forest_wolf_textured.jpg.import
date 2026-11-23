@@ -3,22 +3,23 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbt7ct8ymgm15"
-path="res://.godot/imported/creature_forest_wolf_textured.jpg-4b51ff19f37a6b7cc0c927093a277632.ctex"
+path.s3tc="res://.godot/imported/creature_forest_wolf_textured.jpg-4b51ff19f37a6b7cc0c927093a277632.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
-"md5": "d2f46e838fd0e0d326da42540c555a40"
+"md5": "ed087ec07112b194a109b410ab860de9"
 }
 
 [deps]
 
 source_file="res://assets/models/creatures/creature_forest_wolf/creature_forest_wolf_textured.jpg"
-dest_files=["res://.godot/imported/creature_forest_wolf_textured.jpg-4b51ff19f37a6b7cc0c927093a277632.ctex"]
+dest_files=["res://.godot/imported/creature_forest_wolf_textured.jpg-4b51ff19f37a6b7cc0c927093a277632.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +41,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

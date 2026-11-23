@@ -20,11 +20,11 @@ sky_material = SubResource("sky_mat")
 background_mode = 2
 sky = SubResource("sky")
 ambient_light_source = 3
-ambient_light_color = Color(0.38, 0.41, 0.46, 1)
-ambient_light_sky_contribution = 0.4
+ambient_light_color = Color(0.55, 0.57, 0.6, 1)
+ambient_light_sky_contribution = 0.35
 ambient_light_energy = 0.85
 tonemap_mode = 2
-tonemap_exposure = 0.9
+tonemap_exposure = 1.08
 glow_enabled = true
 glow_intensity = 0.5
 glow_bloom = 0.08
@@ -39,9 +39,9 @@ fog_depth_curve = 1.6
 fog_depth_begin = 8.0
 fog_depth_end = 50.0
 adjustment_enabled = true
-adjustment_brightness = 0.95
+adjustment_brightness = 1.02
 adjustment_contrast = 1.1
-adjustment_saturation = 0.78
+adjustment_saturation = 0.92
 
 [sub_resource type="ShaderMaterial" id="mat_ground"]
 render_priority = 0
@@ -341,7 +341,7 @@ transform = Transform3D(-0.6428, 0.3116, -0.6998, 0, 0.9135, 0.4067, 0.766, 0.26
 light_color = Color(0.88, 0.76, 0.6, 1)
 light_energy = 0.95
 shadow_enabled = true
-directional_shadow_max_distance = 60.0
+directional_shadow_max_distance = 90.0
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1988051673]
 transform = Transform3D(1, 0, 0, 0, 0.9563, 0.2924, 0, -0.2924, 0.9563, 0, 5.8, 15.5)

@@ -18,12 +18,24 @@ float hash21(vec2 p) {
 float value_noise(vec2 p) {
 	vec2 i = floor(p);
 	vec2 f = fract(p);
-	f = f * f * (3.0 - 2.0 * f);
+	f = f * f * f * (f * (f * 6.0 - 15.0) + 10.0);
 	float a = hash21(i);
 	float b = hash21(i + vec2(1.0, 0.0));
 	float c = hash21(i + vec2(0.0, 1.0));
 	float d = hash21(i + vec2(1.0, 1.0));
 	return mix(mix(a, b, f.x), mix(c, d, f.x), f.y);
+}
+
+float fbm(vec2 p) {
+	mat2 rot = mat2(vec2(0.8, 0.6), vec2(-0.6, 0.8));
+	float v = 0.0;
+	float amp = 0.5;
+	for (int i = 0; i < 3; i++) {
+		v += amp * value_noise(p);
+		p = rot * p * 2.03 + vec2(17.1, 31.7);
+		amp *= 0.5;
+	}
+	return v;
 }
 
 vec2 warp_xz(vec2 xz, float phase) {
@@ -59,16 +71,24 @@ void fragment() {
 		}
 	}
 
-	float mottle = value_noise(world_pos.xz * 0.1);
-	float grain = value_noise(world_pos.xz * 0.42);
-	float edge = (d2 - d1) + (grain - 0.5) * 5.0;
+	float mottle = fbm(world_pos.xz * 0.08);
+	float patch_n = fbm(world_pos.xz * 0.22);
+	float fine = fbm(world_pos.xz * 1.15);
+	float edge = (d2 - d1) + (patch_n - 0.5) * 6.0 + (fine - 0.5) * 1.5;
 	float blend_t = smoothstep(0.0, blend_width, edge);
 
 	vec3 base = mix(c2, c1, 0.5 + 0.5 * blend_t);
-	base = mix(base, a1, mottle * 0.14);
-	base *= 0.93 + grain * 0.12;
+	base = mix(base, a1, mottle * 0.24 + patch_n * 0.10);
+	base *= 0.94 + (fine - 0.5) * 0.16;
+
+	float eps = 0.08;
+	float h0 = patch_n * 0.55 + fine * 0.45;
+	float hx = fbm((world_pos.xz + vec2(eps, 0.0)) * 0.22) * 0.55 + fbm((world_pos.xz + vec2(eps, 0.0)) * 1.15) * 0.45;
+	float hz = fbm((world_pos.xz + vec2(0.0, eps)) * 0.22) * 0.55 + fbm((world_pos.xz + vec2(0.0, eps)) * 1.15) * 0.45;
+	vec3 world_n = normalize(vec3((h0 - hx) * 0.22, 1.0, (h0 - hz) * 0.22));
+	NORMAL = normalize((VIEW_MATRIX * vec4(world_n, 0.0)).xyz);
 
 	ALBEDO = base;
-	ROUGHNESS = 0.95;
+	ROUGHNESS = 0.88 + fine * 0.10;
 	METALLIC = 0.0;
 }

@@ -23,6 +23,7 @@ damage = 26
 move_speed = 3.8
 detect_range = 11
 active_period = 3
+spirit = true
 behavior = &"night_guardian"
 params = {"fear_radius": 6.0}
 drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2")])

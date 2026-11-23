@@ -16,6 +16,8 @@ enum Group { TOOLS, LIGHT, SURVIVAL, COMBAT, STRUCTURES, TALISMANS, PUPPETS }
 @export var group: Group = Group.TOOLS
 ## Công trình bắt buộc đứng gần (tùy chọn, ví dụ &"talisman_desk", &"refining_forge").
 @export var station: StringName = &""
+## Tỉ lệ thành công (bùa chú). Thất bại thì chỉ mất giấy bùa, không ra sản phẩm.
+@export_range(0.0, 1.0) var success: float = 1.0
 ## true = công thức cấm, chỉ chế được khi đã mở khóa.
 @export var forbidden_unlock: bool = false
 ## true = sản phẩm là công trình đặt xuống đất (lửa trại, bàn chế tác...).

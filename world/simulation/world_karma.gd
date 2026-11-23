@@ -78,21 +78,24 @@ static func check_thresholds(world) -> Array:
 	if sin_v >= 60.0 and fate_v >= 60.0 and _ready_slot(cds, "both_60", day):
 		var ev := _pick_event(world, "both", 60)
 		if ev != null:
+			# Both bars high: one draw from the hybrid pool replaces the per-bar events.
 			_fire_event(world, ev, "both_60", day)
 			triggered.append(String(ev.id))
+			return triggered
 	for bar in ["sin", "fate"]:
 		var val := float(k.get(bar, 0.0))
 		for th in [100, 60, 30]:
 			var slot_key := "%s_%d" % [bar, th]
-			if val >= float(th):
-				if _ready_slot(cds, slot_key, day):
-					var ev := _pick_event(world, bar, th)
-					if ev != null:
-						_fire_event(world, ev, slot_key, day)
-						triggered.append(String(ev.id))
-					break
-			else:
+			if val < float(th):
 				cds.erase(slot_key)
+				continue
+			# Only the highest tier reached may fire; a tier on cooldown does not fall through.
+			if _ready_slot(cds, slot_key, day):
+				var ev := _pick_event(world, bar, th)
+				if ev != null:
+					_fire_event(world, ev, slot_key, day)
+					triggered.append(String(ev.id))
+			break
 	return triggered
 
 

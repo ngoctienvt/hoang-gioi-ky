@@ -50,6 +50,8 @@ static func strike_at(world, pos: Array) -> Dictionary:
 
 	for player in world.state.players.values():
 		if not player.get("ghost", false) and world.distance(pos, player.position) <= 2.5:
+			if world.Effects.has(player, "lightning_immune"):
+				continue
 			if world.Skills.has_imprint_effect(player, "lightning_surge"):
 				world.Effects.apply(world, player, "speed_boost", 0.4, 8.0)
 			else:
@@ -202,7 +204,7 @@ static func _has_ice_near(world, pos: Array) -> bool:
 
 static func apply_player_weather(world, player: Dictionary, delta: float, modifiers: Dictionary) -> void:
 	var w := player_weather(world, player)
-	if w not in ["rain", "storm"]:
+	if w not in ["rain", "storm"] or world.Effects.has(player, "rain_immune"):
 		return
 	var equip := Temperature.equipment_totals(player)
 	var base_drain := 0.35 if w == "rain" else 0.55

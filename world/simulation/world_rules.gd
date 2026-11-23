@@ -3,7 +3,6 @@ extends RefCounted
 const BASE_MAX_HEALTH := 150.0
 ## Spirit beings (linh thể): hidden and immune to blows unless the player can see spirits
 ## (U Minh tempered weapon, Phá Hồn / spirit sight, a shaken Dao Heart, Boundary Dao).
-const SPIRIT_KINDS := ["wraith", "ruin_wraith", "phantom"]
 ## Days an ice block (băng khối) lasts before it has melted away (summer melts it twice as fast).
 const ICE_BLOCK_MELT_DAYS := 3.0
 ## Fuel burn multipliers for open fires (campfire, firepit) in bad weather.
@@ -56,6 +55,12 @@ static func creature(kind: String):
 		var path := "res://data/creatures/" + str(CREATURE_ALIASES.get(kind, kind)) + ".tres"
 		_creature_defs[kind] = load(path) if ResourceLoader.exists(path) else null
 	return _creature_defs[kind]
+
+
+## Spirits (CreatureDef.spirit) can only be seen and struck with spirit sight.
+static func is_spirit(kind: String) -> bool:
+	var definition = creature(kind)
+	return definition != null and bool(definition.spirit)
 
 
 static func drops(world, entries: Array, position: Array) -> void:

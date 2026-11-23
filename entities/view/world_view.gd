@@ -25,6 +25,9 @@ var weather_particles: CPUParticles3D
 var warning_root: Node3D
 var ink_overlay: ColorRect
 var karma_cloud: MeshInstance3D
+var _hit_overlay: StandardMaterial3D
+var _ghost_overlay: StandardMaterial3D
+var _sense_overlay: StandardMaterial3D
 
 
 func _ready() -> void:
@@ -170,6 +173,7 @@ func render(state: Dictionary, local_id: int) -> void:
 			if not visuals.has(key):
 				var visual := Shapes.create(String(entity.get("kind", "")), category, entity)
 				visual = style.decorate(visual, String(entity.get("kind", "")), category)
+				visual.set_meta("category", category)
 				add_child(visual)
 				visuals[key] = visual
 				visual.position = _position(entity.get("position", [0, 0, 0]))
@@ -186,12 +190,13 @@ func render(state: Dictionary, local_id: int) -> void:
 			desired[key] = epos
 			tracked[key] = state.players[str(entity.uid)] if category == "players" else entity
 			visual.visible = not (category == "nodes" and float(entity.get("regrow", 0)) > 0)
-			if str(entity.get("kind", "")) == "floor_trap" or str(entity.get("kind", "")) in Rules.SPIRIT_KINDS:
+			if str(entity.get("kind", "")) == "floor_trap" or Rules.is_spirit(str(entity.get("kind", ""))):
 				visual.visible = visual.visible and can_see_hidden
 			if category == "creatures":
 				var cstate := str(entity.get("state", ""))
 				var ckind := str(entity.get("kind", ""))
 				visual.visible = visual.visible and cstate != "dead" and not (cstate in ["sleep", "burrow"] and ckind in ["rabbit", "spirit_rabbit", "jiangshi", "ruin_wraith"])
+				_update_creature_anim(visual, entity)
 			if category == "nodes": visual.scale = Vector3.ONE * (0.35 if int(entity.get("stage", 0)) > 0 else 1.0)
 			if category == "players":
 				visual.scale = Vector3.ONE * (1.45 if float(entity.get("beast", entity.get("beast_time", 0))) > 0 else 1.0)
@@ -213,9 +218,9 @@ func render(state: Dictionary, local_id: int) -> void:
 	var season_def := WorldSeason.get_def(str(clock.get("season", "autumn")))
 	var base_tint := season_def.sky_tint if season_def != null else Color(0.88, 0.76, 0.6)
 	if sun:
-		sun.light_energy = 0.95 if phase == "day" else 0.5 if phase == "dusk" else 0.025
+		sun.light_energy = 1.25 if phase == "day" else 0.62 if phase == "dusk" else 0.04
 		sun.light_color = base_tint if phase == "day" else Color("c58b68") if phase == "dusk" else Color("788aba")
-		environment.ambient_light_energy = 0.85 if phase == "day" else 0.3 if phase == "dusk" else 0.06
+		environment.ambient_light_energy = 0.95 if phase == "day" else 0.38 if phase == "dusk" else 0.09
 	if weather_particles:
 		var wkind := str(state.get("weather", {}).get("kind", "clear"))
 		weather_particles.emitting = wkind in ["rain", "snow", "storm"]
@@ -241,7 +246,12 @@ func _process(delta: float) -> void:
 			desired[key] = _position(entity.get("position", [0, 0, 0]))
 		if key == local_key and local_prediction.is_finite():
 			desired[key] = local_prediction
-		visuals[key].position = visuals[key].position.lerp(desired[key], minf(1, delta * 14))
+		var v: Node3D = visuals[key]
+		if v.get_meta("has_glb", false) and str(v.get_meta("category", "")) in ["players", "creatures"]:
+			var move: Vector3 = desired[key] - v.position
+			if Vector2(move.x, move.z).length() > 0.02:
+				v.rotation.y = lerp_angle(v.rotation.y, atan2(move.x, move.z), minf(1.0, delta * 12.0))
+		v.position = v.position.lerp(desired[key], minf(1, delta * 14))
 
 ## Nearest targetable entity under the cursor, as a copy tagged with its collection.
 func get_target(world_position: Vector3) -> Dictionary:
@@ -276,14 +286,71 @@ func placement_clear(world_position: Vector3) -> bool:
 func _position(value: Array) -> Vector3:
 	return Vector3(value[0], value[1], value[2])
 
+func _ensure_overlays() -> void:
+	if _hit_overlay != null:
+		return
+	_hit_overlay = StandardMaterial3D.new()
+	_hit_overlay.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_hit_overlay.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	_hit_overlay.albedo_color = Color(1.0, 0.34, 0.3, 0.55)
+	_hit_overlay.emission_enabled = true
+	_hit_overlay.emission = Color("ff574c")
+	_hit_overlay.emission_energy_multiplier = 0.8
+
+	_ghost_overlay = StandardMaterial3D.new()
+	_ghost_overlay.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_ghost_overlay.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	_ghost_overlay.albedo_color = Color(0.62, 0.91, 0.89, 0.35)
+	_ghost_overlay.emission_enabled = true
+	_ghost_overlay.emission = Color("9de8e2")
+	_ghost_overlay.emission_energy_multiplier = 0.45
+
+	_sense_overlay = StandardMaterial3D.new()
+	_sense_overlay.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_sense_overlay.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	_sense_overlay.albedo_color = Color(0.42, 0.91, 0.79, 0.28)
+	_sense_overlay.emission_enabled = true
+	_sense_overlay.emission = Color("6be7ca")
+	_sense_overlay.emission_energy_multiplier = 0.7
+
+
+func _update_creature_anim(node: Node3D, entity: Dictionary) -> void:
+	var ap := node.get_meta("anim_player", null) as AnimationPlayer
+	if ap == null:
+		return
+	var candidates: Array[String]
+	match str(entity.get("state", "idle")):
+		"chase", "flee":
+			candidates = ["run", "walk", "idle"]
+		"wander", "return":
+			candidates = ["walk", "idle"]
+		"attack", "special":
+			candidates = ["attack", "pounce", "claw", "idle"]
+		_:
+			candidates = ["idle"]
+	for clip in candidates:
+		if ap.has_animation(clip):
+			if ap.current_animation != clip:
+				ap.play(clip, 0.15)
+			return
+
+
 func _set_ghost(node: Node3D, ghost: bool, hit: bool) -> void:
-	for child in node.get_children():
-		if child is MeshInstance3D:
-			var material := child.material_override as StandardMaterial3D
-			if not child.has_meta("base_color"): child.set_meta("base_color", material.albedo_color)
-			material.albedo_color = Color("ff574c") if hit else Color("9de8e2") if ghost else child.get_meta("base_color")
+	_ensure_overlays()
+	for child in node.find_children("*", "MeshInstance3D", true, false):
+		var mi := child as MeshInstance3D
+		if mi == null or mi.name == "ContactShadow":
+			continue
+		if mi.material_override is StandardMaterial3D:
+			var material := mi.material_override as StandardMaterial3D
+			if not mi.has_meta("base_color"):
+				mi.set_meta("base_color", material.albedo_color)
+			material.albedo_color = Color("ff574c") if hit else Color("9de8e2") if ghost else mi.get_meta("base_color")
 			material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA if ghost else BaseMaterial3D.TRANSPARENCY_DISABLED
 			material.albedo_color.a = 0.35 if ghost else 1.0
+		elif mi.material_override == null:
+			mi.transparency = 0.65 if ghost else 0.0
+			mi.material_overlay = _hit_overlay if hit else _ghost_overlay if ghost else null
 
 func _fire(node: Node3D, burning: bool) -> void:
 	var light := node.get_node_or_null("FireLight") as OmniLight3D
@@ -296,18 +363,34 @@ func _fire(node: Node3D, burning: bool) -> void:
 		light.light_energy = 2.5
 		node.add_child(light)
 	light.visible = burning
+	if node.get_meta("has_glb", false) and str(node.get_meta("category", "")) == "structures":
+		var flame := node.get_node_or_null("FireFlame") as MeshInstance3D
+		if flame == null:
+			flame = Shapes.ball(node, Color("ffae48"), Vector3(0, 0.38, 0), Vector3(0.42, 0.65, 0.42))
+			flame.name = "FireFlame"
+			var fmat := flame.material_override as StandardMaterial3D
+			if fmat != null:
+				fmat.emission_enabled = true
+				fmat.emission = Color("ff8c2a")
+				fmat.emission_energy_multiplier = 1.6
+		flame.visible = burning
 
 func _highlight(node: Node3D, active: bool) -> void:
-	for child in node.get_children():
-		if child is MeshInstance3D:
-			var material := child.material_override as StandardMaterial3D
-			if material:
-				material.emission_enabled = active
-				material.emission = Color("6be7ca")
-				material.emission_energy_multiplier = 0.65
-			elif child.material_override is ShaderMaterial:
-				child.material_override.set_shader_parameter("shade_floor", 0.95 if active else 0.28)
-		_highlight(child, active) if child is Node3D else null
+	_ensure_overlays()
+	var is_glb := bool(node.get_meta("has_glb", false)) and str(node.get_meta("category", "")) != "players"
+	for child in node.find_children("*", "MeshInstance3D", true, false):
+		var mi := child as MeshInstance3D
+		if mi == null or mi.name == "ContactShadow":
+			continue
+		if mi.material_override is StandardMaterial3D:
+			var material := mi.material_override as StandardMaterial3D
+			material.emission_enabled = active
+			material.emission = Color("6be7ca")
+			material.emission_energy_multiplier = 0.65
+		elif mi.material_override is ShaderMaterial:
+			mi.material_override.set_shader_parameter("shade_floor", 0.95 if active else 0.28)
+		elif is_glb and mi.material_override == null:
+			mi.material_overlay = _sense_overlay if active else null
 
 
 func _update_karma_cloud(state: Dictionary) -> void:

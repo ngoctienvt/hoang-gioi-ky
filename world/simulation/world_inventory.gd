@@ -37,9 +37,12 @@ static func perform(world, player: Dictionary, verb: String, args: Dictionary) -
 		if not can_craft_recipe(world, player, recipe):
 			return false
 		var reqs := PuppeteerCraft.effective_ingredients(player, recipe.resource)
-		if not world.craft(inv, recipe, world.tier(player), reqs):
+		if _talisman_attempt_fails(world, player, recipe.resource, inv, reqs):
+			world.log_event("talisman_failed", {"name": player.name, "recipe": str(recipe.id)})
+		elif not world.craft(inv, recipe, world.tier(player), reqs):
 			return false
-		world.discover(str(recipe.get("id", recipe.get("result", ""))))
+		else:
+			world.discover(str(recipe.get("id", recipe.get("result", ""))))
 	else:
 		if not valid_slot(index) or inv.slots[index].is_empty():
 			return false
@@ -97,6 +100,22 @@ static func perform(world, player: Dictionary, verb: String, args: Dictionary) -
 		else:
 			return false
 	player.inventory = inv.to_dict()
+	return true
+
+
+## Talismans may fail (RecipeDef.success, +15% for the Puppeteer). A failed attempt with every
+## ingredient in hand burns the talisman paper only; anything else lets the normal craft refuse.
+static func _talisman_attempt_fails(world, player: Dictionary, recipe_def: RecipeDef, inv, reqs: Dictionary) -> bool:
+	if recipe_def == null or int(recipe_def.group) != RecipeDef.Group.TALISMANS or recipe_def.success >= 1.0:
+		return false
+	if world.tier(player) < recipe_def.tier:
+		return false
+	for id in reqs:
+		if inv.count_item(String(id)) < int(reqs[id]):
+			return false
+	if world.rng.randf() < PuppeteerCraft.talisman_success_chance(player, recipe_def.success):
+		return false
+	inv.remove_item("talisman_paper", int(reqs.get(&"talisman_paper", reqs.get("talisman_paper", 0))))
 	return true
 
 

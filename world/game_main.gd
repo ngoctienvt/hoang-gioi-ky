@@ -122,7 +122,7 @@ func _process(delta: float) -> void:
 		predicted = predicted.lerp(authoritative, minf(delta * 8, 1))
 		predicted += Vector3(direction.x, 0, direction.y) * delta * 5.0
 	camera.size = zoom
-	camera.position = predicted + Vector3(0, 22, 18)
+	camera.position = predicted + Vector3(0, 17, 21)
 	camera.look_at(predicted)
 	view.local_prediction = predicted
 	ui.set_interact_hint(controls.get_work_hint(player, state))

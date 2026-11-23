@@ -21,7 +21,7 @@ static func effective_ingredients(player: Dictionary, recipe_def) -> Dictionary:
 	return out
 
 
-static func talisman_success_chance(player: Dictionary, base_chance: float = 0.85) -> float:
+static func talisman_success_chance(player: Dictionary, base_chance: float) -> float:
 	var bonus := 0.15 if str(player.get("character", "")) == "puppeteer" else 0.0
 	return clampf(base_chance + bonus, 0.0, 1.0)
 
