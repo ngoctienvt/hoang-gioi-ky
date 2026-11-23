@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="TagRecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/tag_recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/fruit_soup.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = "fruit_soup"
+result = ExtResource("2")
+minimum = Dictionary[StringName, float]({&"fruit": 2.0})
+maximum = Dictionary[StringName, float]({&"meat": 0.0})
+forbidden = Array[StringName]([])
+priority = 5
+time = 10.0
+success = 1
+solvent_tag = &"healing"

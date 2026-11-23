@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"flint_axe"
+name_key = "ITEM_FLINT_AXE"
+desc_key = "DESC_FLINT_AXE"
+category = 1
+max_stack = 1
+max_durability = 80
+tool_type = 1
+damage = 15

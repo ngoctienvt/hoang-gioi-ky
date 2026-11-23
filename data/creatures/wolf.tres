@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="CreatureDef" load_steps=9 format=3]
+[ext_resource type="Script" path="res://data/defs/creature_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/meat.tres" id="i1"]
+[ext_resource type="Resource" path="res://data/items/fang.tres" id="i2"]
+[ext_resource type="Resource" path="res://data/items/monster_core.tres" id="i3"]
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 2
+max_count = 2
+[sub_resource type="Resource" id="d2"]
+script = ExtResource("drop")
+item = ExtResource("i2")
+min_count = 1
+max_count = 1
+[sub_resource type="Resource" id="d3"]
+script = ExtResource("drop")
+item = ExtResource("i3")
+chance = 0.2
+min_count = 1
+max_count = 1
+[resource]
+script = ExtResource("1")
+id = &"wolf"
+name_key = "WORLD_WOLF"
+max_health = 100.0
+damage = 18.0
+move_speed = 3.8
+active_period = 4
+drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2"), SubResource("d3")])

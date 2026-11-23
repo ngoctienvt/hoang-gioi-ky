@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"steamed_roots"
+name_key = "ITEM_STEAMED_ROOTS"
+desc_key = "DESC_STEAMED_ROOTS"
+category = 3
+max_stack = 40
+restore_stamina = 55
+restore_health = 5

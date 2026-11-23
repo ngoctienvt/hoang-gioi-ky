@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"alchemy_furnace"
+name_key = "ITEM_ALCHEMY_FURNACE"
+desc_key = "DESC_ALCHEMY_FURNACE"
+category = 5
+max_stack = 1

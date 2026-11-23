@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/flint_pickaxe.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = &"flint_pickaxe"
+result = ExtResource("2")
+tier = 0
+is_structure = false
+group = 0
+ingredients = Dictionary[StringName, int]({&"twig": 2, &"flint": 3})

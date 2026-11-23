@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"calm_pill"
+name_key = "ITEM_CALM_PILL"
+desc_key = "DESC_CALM_PILL"
+category = 4
+max_stack = 40
+restore_dao_heart = 50

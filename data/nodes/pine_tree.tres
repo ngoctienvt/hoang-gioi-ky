@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="ResourceNodeDef" load_steps=9 format=3]
+[ext_resource type="Script" path="res://data/defs/resource_node_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/resource_node_stage.gd" id="stage"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/wood.tres" id="i1"]
+[ext_resource type="Resource" path="res://data/items/pinecone.tres" id="i2"]
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 3
+max_count = 3
+[sub_resource type="Resource" id="d2"]
+script = ExtResource("drop")
+item = ExtResource("i2")
+min_count = 1
+max_count = 1
+[sub_resource type="Resource" id="s1"]
+script = ExtResource("stage")
+stage_name = &"standing"
+work_hits = 15
+drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2")])
+[resource]
+script = ExtResource("1")
+id = &"pine_tree"
+name_key = "WORLD_PINE_TREE"
+required_tool = 1
+stages = Array[ExtResource("stage")]([SubResource("s1")])
+regrow_time = 0.0

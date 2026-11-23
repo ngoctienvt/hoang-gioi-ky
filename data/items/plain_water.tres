@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"plain_water"
+name_key = "ITEM_PLAIN_WATER"
+desc_key = "DESC_PLAIN_WATER"
+category = 3
+max_stack = 40
+restore_stamina = 2.0
+tags = Dictionary[StringName, float]({&"water": 1.0})
