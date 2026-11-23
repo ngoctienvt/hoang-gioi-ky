@@ -21,3 +21,6 @@ Thumbs.db
 
 # Godot-MCP managed server binary
 .ai-game-dev/
+
+# Raw art sources (concepts, raw Omni meshes, .blend) — kept outside git
+art-source/

@@ -149,7 +149,7 @@ Vật phẩm nằm dưới đất trong game và cũng dùng để render icon. 
 
 | Nhóm | P0 | P1 |
 |---|---|---|
-| Thiên nhiên + hang ổ | 15 id (khoảng 30 file theo giai đoạn) | 9 id |
+| Thiên nhiên + hang ổ | 12 id (khoảng 30 file theo giai đoạn) | 9 id |
 | Vật phẩm nguyên liệu | 21 | 0 |
 | Công cụ, vũ khí, đồ mặc | 8 | 1 |
 | Thức ăn, đan | 13 | 1 |

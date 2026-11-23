@@ -4,6 +4,7 @@ Game sinh tồn co-op 1–4 người, bối cảnh huyền huyễn, làm bằng 
 
 - Thiết kế: [docs/game-design-document.md](docs/game-design-document.md)
 - Kế hoạch demo: [plans/261123-1353-demo-hoang-gioi-ky/plan.md](plans/261123-1353-demo-hoang-gioi-ky/plan.md)
+- Kế hoạch asset 3D (Hunyuan3D-Omni): [plans/261123-1413-3d-asset-pipeline-hunyuan3d-omni/plan.md](plans/261123-1413-3d-asset-pipeline-hunyuan3d-omni/plan.md)
 
 ## Yêu cầu
 
