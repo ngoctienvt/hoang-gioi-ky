@@ -7,12 +7,13 @@ signal action_feedback(success: bool)
 const World = preload("res://world/simulation/game_world.gd")
 const Avatar = preload("res://entities/view/network_avatar.gd")
 const Replicator = preload("res://world/session/state_replicator.gd")
+const Mirror = preload("res://world/session/replica_mirror.gd")
 
 var world
 var state: Dictionary = {}
-var avatars: Node3D
-var spawner: MultiplayerSpawner
+var avatars: Node3D  # host only: one collision body per player
 var replicator := Replicator.new()
+var mirror := Mirror.new()
 var elapsed := 0.0
 var last_day := 1
 var limits: Dictionary = {}
@@ -22,11 +23,6 @@ func _ready() -> void:
 	avatars = Node3D.new()
 	avatars.name = "Avatars"
 	add_child(avatars)
-	spawner = MultiplayerSpawner.new()
-	spawner.name = "Spawner"
-	spawner.spawn_path = ^"../Avatars"
-	spawner.spawn_function = _spawn_avatar
-	add_child(spawner)
 	NetworkManager.joined.connect(func(): request_register.rpc_id(1, NetworkManager.player_name))
 	NetworkManager.disconnected.connect(func(message): stop(); ended.emit(message))
 	multiplayer.peer_disconnected.connect(_peer_left)
@@ -47,9 +43,9 @@ func start(options: Dictionary) -> Error:
 	else:
 		world.restore(saved)
 	world.add_player(1, NetworkManager.player_name)
-	spawner.spawn({"peer_id": 1, "position": world.state.players["1"].position, "map_limit": world.map_half() - 1.0})
+	_spawn_avatar(1)
 	replicator.reset_host()
-	replicator.reset_client()
+	mirror.reset()
 	_publish()
 	return OK
 
@@ -58,7 +54,7 @@ func stop() -> void:
 	world = null
 	state.clear()
 	replicator.reset_host()
-	replicator.reset_client()
+	mirror.reset()
 	for avatar in avatars.get_children():
 		avatar.queue_free()
 	limits.clear()
@@ -70,14 +66,14 @@ func save() -> void:
 		print("[save] result=", error)
 
 
-func _spawn_avatar(data: Dictionary) -> Node:
+func _spawn_avatar(peer_id: int) -> void:
 	var avatar := Avatar.new()
-	avatar.name = str(data.peer_id)
-	avatar.peer_id = int(data.peer_id)
-	avatar.map_limit = float(data.get("map_limit", 39.0))
-	avatar.position = Vector3(data.position[0], 0, data.position[2])
-	avatar.authoritative_position = avatar.position
-	return avatar
+	var pos: Array = world.state.players[str(peer_id)].position
+	avatar.name = str(peer_id)
+	avatar.peer_id = peer_id
+	avatar.map_limit = world.map_half() - 1.0
+	avatar.position = Vector3(float(pos[0]), 0, float(pos[2]))
+	avatars.add_child(avatar)
 
 
 @rpc("any_peer", "reliable")
@@ -93,7 +89,7 @@ func request_register(display_name: String) -> void:
 			registration_failed.rpc_id(sender, "NAME_IN_USE")
 			return
 	world.add_player(sender, cleaned)
-	spawner.spawn({"peer_id": sender, "position": world.state.players[str(sender)].position, "map_limit": world.map_half() - 1.0})
+	_spawn_avatar(sender)
 	receive_initial.rpc_id(sender, replicator.initial_payload(world, sender))
 	print("[network] registered ", sender)
 
@@ -135,7 +131,6 @@ func _apply(sender: int, verb: String, args: Dictionary) -> void:
 			if avatar != null:
 				var p: Array = player.get("position", [0.0, 0.0, 0.0])
 				avatar.position = Vector3(float(p[0]), 0.0, float(p[2]))
-				avatar.authoritative_position = avatar.position
 	if sender == 1:
 		action_feedback.emit(success)
 	else:
@@ -215,34 +210,39 @@ func _physics_process(delta: float) -> void:
 func _publish() -> void:
 	state = world.state
 	state_received.emit(state)
-	var peers := multiplayer.get_peers()
+	# Only registered peers get the world stream; a connected but unregistered peer sees nothing.
+	var peers: Array = []
+	for peer_id in multiplayer.get_peers():
+		if world.state.players.has(str(peer_id)):
+			peers.append(peer_id)
 	if peers.is_empty():
 		world.index.consume_dirty()
 		return
 	var packets: Dictionary = replicator.step_host(world, peers)
 	for peer_id in packets:
 		var p: Dictionary = packets[peer_id]
-		receive_patch.rpc_id(peer_id, p.patch)
+		if not p.patch.is_empty():
+			receive_patch.rpc_id(peer_id, p.patch)
 		if not p.positions.is_empty():
 			receive_positions.rpc_id(peer_id, p.positions)
 
 
 @rpc("authority", "call_remote", "reliable", 2)
 func receive_initial(data: Dictionary) -> void:
-	state = replicator.apply_initial(data)
+	state = mirror.apply_initial(data)
 	state_received.emit(state)
 
 
 @rpc("authority", "call_remote", "reliable", 2)
 func receive_patch(patch: Dictionary) -> void:
-	state = replicator.apply_patch(patch)
+	state = mirror.apply_patch(patch)
 	state_received.emit(state)
 
 
 @rpc("authority", "call_remote", "unreliable_ordered", 3)
 func receive_positions(positions: Array) -> void:
-	state = replicator.apply_positions(positions)
-	state_received.emit(state)
+	# Positions update mirror entities in place; the view interpolates them, no full UI refresh needed.
+	state = mirror.apply_positions(positions)
 
 
 @rpc("authority", "call_local", "reliable")

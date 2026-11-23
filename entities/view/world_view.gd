@@ -3,9 +3,14 @@ extends Node3D
 const Shapes = preload("res://entities/view/entity_meshes.gd")
 const WorldSeason = preload("res://world/simulation/world_season.gd")
 const BoundaryDao = preload("res://world/simulation/traits/boundary_dao.gd")
+## Entities farther than this from the local player are not drawn. On clients the mirror is already
+## limited to the interest window; on the host this keeps the scene from holding the whole map.
+const VIEW_RADIUS := float(InterestGrid.EXIT_RADIUS + 1) * WorldEntityIndex.CHUNK_SIZE
+
 var visuals: Dictionary = {}
-var targets: Array = []
+var targets: Array = []  # [{"entity": Dictionary, "collection": String}] drawn and targetable
 var desired: Dictionary = {}
+var tracked: Dictionary = {}  # visual key -> entity dictionary whose position the visual follows
 var sun: DirectionalLight3D
 var environment: Environment
 var latest_state: Dictionary = {}
@@ -115,6 +120,8 @@ func _apply_graphics_settings() -> void:
 	if environment != null:
 		environment.fog_enabled = SettingsManager.fog
 
+## Rebuilds visuals from a state update (called when the session publishes, ~10 Hz). Never writes into
+## the entities: on the host they are the live simulation state. Per-frame motion is in _process.
 func render(state: Dictionary, local_id: int) -> void:
 	latest_state = state
 	local_peer = local_id
@@ -137,6 +144,7 @@ func render(state: Dictionary, local_id: int) -> void:
 			ink_int = maxf(ink_int, 0.75)
 		ink_overlay.material.set_shader_parameter("intensity", ink_int)
 	_update_karma_cloud(state)
+	var center := _position(local.get("position", [0, 0, 0]))
 	for category in ["players", "nodes", "drops", "structures", "creatures", "puppets", "npcs"]:
 		var entities: Array = []
 		if category == "players":
@@ -147,7 +155,9 @@ func render(state: Dictionary, local_id: int) -> void:
 				entities.append(player)
 		else: entities = state.get(category, [])
 		for entity in entities:
-			entity.collection = category
+			var epos := _position(entity.get("position", [0, 0, 0]))
+			if category != "players" and Vector2(epos.x - center.x, epos.z - center.z).length() > VIEW_RADIUS:
+				continue
 			var key: String = category + str(entity.uid)
 			present[key] = true
 			if category == "players" and visuals.has(key):
@@ -172,8 +182,8 @@ func render(state: Dictionary, local_id: int) -> void:
 					name_label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 					visual.add_child(name_label)
 			var visual: Node3D = visuals[key]
-			desired[key] = _position(entity.get("position", [0, 0, 0]))
-			if category == "players" and int(entity.uid) == local_id and local_prediction.is_finite(): desired[key] = local_prediction
+			desired[key] = epos
+			tracked[key] = state.players[str(entity.uid)] if category == "players" else entity
 			visual.visible = not (category == "nodes" and float(entity.get("regrow", 0)) > 0)
 			if str(entity.get("kind", "")) in ["floor_trap", "wraith", "phantom"]:
 				visual.visible = visual.visible and can_see_hidden
@@ -190,12 +200,13 @@ func render(state: Dictionary, local_id: int) -> void:
 			_highlight(visual, sensing and category in ["nodes", "creatures"] and _position(entity.position).distance_to(_position(local.get("position", [0, 0, 0]))) < 16)
 			if "fire" in String(entity.kind): _fire(visual, float(entity.get("fuel", 0)) > 0)
 			if category != "players" or int(entity.uid) != local_id:
-				targets.append(entity)
+				targets.append({"entity": entity, "collection": category})
 	for key in visuals.keys():
 		if not present.has(key):
 			visuals[key].queue_free()
 			visuals.erase(key)
 			desired.erase(key)
+			tracked.erase(key)
 	var clock: Dictionary = state.get("clock", {})
 	var phase := str(clock.get("phase", "day"))
 	var season_def := WorldSeason.get_def(str(clock.get("season", "autumn")))
@@ -220,20 +231,46 @@ func render(state: Dictionary, local_id: int) -> void:
 
 func _process(delta: float) -> void:
 	if audio and not latest_state.is_empty(): audio.update(latest_state, local_peer, delta)
+	var local_key := "players" + str(local_peer)
 	for key in visuals:
+		# Follow the entity's current position: unreliable position packets update mirror entities in
+		# place between full state updates.
+		var entity: Dictionary = tracked.get(key, {})
+		if not entity.is_empty():
+			desired[key] = _position(entity.get("position", [0, 0, 0]))
+		if key == local_key and local_prediction.is_finite():
+			desired[key] = local_prediction
 		visuals[key].position = visuals[key].position.lerp(desired[key], minf(1, delta * 14))
 
+## Nearest targetable entity under the cursor, as a copy tagged with its collection.
 func get_target(world_position: Vector3) -> Dictionary:
 	var best: Dictionary = {}
 	var distance := 1.7
-	for entity in targets:
+	for target in targets:
+		var entity: Dictionary = target.entity
 		if float(entity.get("regrow", 0)) > 0 or entity.get("state", "") == "dead": continue
 		if str(entity.get("kind", "")) in ["ruin_path", "mud"]: continue
 		var next := _position(entity.position).distance_to(world_position)
 		if next < distance:
 			distance = next
-			best = entity
-	return best
+			best = target
+	if best.is_empty():
+		return {}
+	var copy: Dictionary = best.entity.duplicate()
+	copy["collection"] = best.collection
+	return copy
+
+
+## True when no drawn node or structure blocks building at world_position.
+func placement_clear(world_position: Vector3) -> bool:
+	for target in targets:
+		if target.collection not in ["nodes", "structures"]:
+			continue
+		var p: Array = target.entity.position
+		var radius := 3.0 if target.entity.kind == "spring" else 1.5
+		if Vector2(p[0], p[2]).distance_to(Vector2(world_position.x, world_position.z)) < radius:
+			return false
+	return true
 
 func _position(value: Array) -> Vector3:
 	return Vector3(value[0], value[1], value[2])

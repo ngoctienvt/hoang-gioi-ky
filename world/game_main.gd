@@ -14,6 +14,17 @@ var preview_recipe := ""
 var preview: MeshInstance3D
 var predicted := Vector3.ZERO
 var colliders: Dictionary = {}
+var obstacle_age := 0.0
+var preview_valid_material := _preview_material(Color(0.2, 1, 0.3, 0.45))
+var preview_blocked_material := _preview_material(Color(1, 0.1, 0.1, 0.45))
+
+
+static func _preview_material(color: Color) -> StandardMaterial3D:
+	var material := StandardMaterial3D.new()
+	material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	material.albedo_color = color
+	return material
+
 
 func _ready() -> void:
 	TranslationServer.set_locale("vi")
@@ -58,7 +69,9 @@ func _ready() -> void:
 
 func _host(options: Dictionary) -> void:
 	var error: Error = session.start(options)
-	if error != OK:
+	if error == ERR_FILE_CORRUPT:
+		ui.set_status(tr(SaveManager.last_error))
+	elif error != OK:
 		ui.set_status(tr("CONNECTION_FAILED") + " " + error_string(error))
 	else:
 		ui.show_game()
@@ -79,9 +92,14 @@ func _receive(data: Dictionary) -> void:
 		var p: Array = state.players[str(id)].position
 		predicted = Vector3(p[0], 0, p[2])
 	ui.update_state(state, id)
-	_obstacles()
+	view.render(state, id)
+	# Colliders follow chopped/regrown trees; twice a second is enough and keeps the full node scan rare.
+	if obstacle_age >= 0.5 or was_empty:
+		obstacle_age = 0.0
+		_obstacles()
 
 func _process(delta: float) -> void:
+	obstacle_age += delta
 	if state.is_empty() or not NetworkManager.active:
 		return
 	var id := multiplayer.get_unique_id()
@@ -107,7 +125,6 @@ func _process(delta: float) -> void:
 	camera.position = predicted + Vector3(0, 22, 18)
 	camera.look_at(predicted)
 	view.local_prediction = predicted
-	view.render(state, id)
 	ui.set_interact_hint(controls.get_work_hint(player, state))
 	if not get_viewport().gui_get_hovered_control():
 		ui.set_target(view.get_target(_mouse_world()))
@@ -115,15 +132,9 @@ func _process(delta: float) -> void:
 		preview.visible = true
 		preview.position = _mouse_world() + Vector3(0, 0.25, 0)
 		var half_limit := float(state.get("options", {}).get("map_size", 80.0)) * 0.5
-		var valid := preview.position.distance_to(authoritative) <= 5.0 and absf(preview.position.x) <= half_limit and absf(preview.position.z) <= half_limit
-		for entity in state.get("structures", []) + state.get("nodes", []):
-			var p: Array = entity.position
-			var radius := 3.0 if entity.kind == "spring" else 1.5
-			valid = valid and Vector2(p[0], p[2]).distance_to(Vector2(preview.position.x, preview.position.z)) >= radius
-		var material := StandardMaterial3D.new()
-		material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-		material.albedo_color = Color(0.2, 1, 0.3, 0.45) if valid else Color(1, 0.1, 0.1, 0.45)
-		preview.material_override = material
+		var valid: bool = preview.position.distance_to(authoritative) <= 5.0 and absf(preview.position.x) <= half_limit \
+			and absf(preview.position.z) <= half_limit and view.placement_clear(preview.position)
+		preview.material_override = preview_valid_material if valid else preview_blocked_material
 
 func _unhandled_input(event: InputEvent) -> void:
 	controls.handle(event)
@@ -190,5 +201,12 @@ func _leave() -> void:
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		session.save()
-		get_tree().quit()
+		quit_game()
+
+
+## Quits once the audio mix thread has had time to drop every playback, so no stream is still in use at exit.
+func quit_game(exit_code: int = 0) -> void:
+	AudioManager.release_all()
+	await get_tree().create_timer(0.25).timeout
+	get_tree().quit(exit_code)
 

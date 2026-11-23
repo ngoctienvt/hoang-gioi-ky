@@ -1,8 +1,12 @@
 extends Node
+const Rules = preload("res://world/simulation/world_rules.gd")
 
 const SAVE_DIR := "user://saves/"
 const MAX_SAVE_BYTES := 16000000
 const SAVE_VERSION := 10
+
+## Translation key of the reason the last load_world() returned nothing ("" after a successful load).
+var last_error := ""
 
 
 func _valid_slot(slot: String) -> bool:
@@ -47,6 +51,7 @@ func save_world(state: Dictionary, slot: String = "world") -> Error:
 
 
 func load_world(slot: String = "world") -> Dictionary:
+	last_error = "SAVE_UNREADABLE"
 	if not _valid_slot(slot):
 		return {}
 	var base := SAVE_DIR + slot + ".json"
@@ -57,10 +62,17 @@ func load_world(slot: String = "world") -> Dictionary:
 		if file == null or file.get_length() > MAX_SAVE_BYTES:
 			continue
 		var parsed = JSON.parse_string(file.get_as_text())
-		if parsed is Dictionary:
-			var migrated := migrate_envelope(parsed)
-			if not migrated.is_empty():
-				return migrated
+		if not parsed is Dictionary:
+			continue
+		# A save written by a newer game must not be opened: falling back to the older backup would let
+		# the next autosave overwrite the newer data.
+		if int(parsed.get("version", 0)) > SAVE_VERSION:
+			last_error = "SAVE_NEWER_VERSION"
+			return {}
+		var migrated := migrate_envelope(parsed)
+		if not migrated.is_empty():
+			last_error = ""
+			return migrated
 	return {}
 
 
@@ -155,7 +167,7 @@ func _migrate(state: Dictionary, from_version: int) -> Dictionary:
 							if not p.has("devour_history") or not p.devour_history is Array:
 								p["devour_history"] = []
 							if p.has("stats") and p.stats is Dictionary and not p.stats.has("base_max_health"):
-								p.stats["base_max_health"] = 150.0
+								p.stats["base_max_health"] = Rules.BASE_MAX_HEALTH
 		elif v == 8:
 			if not data.has("rituals") or not data.rituals is Array:
 				data["rituals"] = []

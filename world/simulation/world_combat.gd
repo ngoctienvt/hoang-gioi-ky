@@ -47,7 +47,7 @@ static func attack(world, player: Dictionary, args: Dictionary) -> bool:
 		damage = world.Bosses.modify_incoming_damage(world, target, player, damage, hand)
 		target.health -= damage
 		if player.beast_time > 0 and world.Skills.has_skill(player, "beast_t2_bloodlust"):
-			player.stats["health"] = minf(float(player.stats.get("max_health", 150.0)), float(player.stats.get("health", 0.0)) + damage * 0.15)
+			player.stats["health"] = minf(float(player.stats.get("max_health", Rules.BASE_MAX_HEALTH)), float(player.stats.get("health", 0.0)) + damage * 0.15)
 		world.Creatures.on_creature_hurt(world, target, player)
 		world.Creatures.notify_noise(world, player.position, 8.0)
 		target.hit_flash = 0.2

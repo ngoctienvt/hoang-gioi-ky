@@ -139,12 +139,15 @@ static func step(world, delta: float) -> void:
 	var day := int(world.state.clock.get("day", 1))
 	for target in world.state.structures:
 		var changed := false
+		# Countdowns replicate on whole-second steps only (see StateReplicator.COARSE_TIMERS).
 		if float(target.fuel) > 0.0:
+			var fuel_before := ceili(float(target.fuel))
 			target.fuel = maxf(0.0, float(target.fuel) - delta)
-			changed = true
+			changed = ceili(float(target.fuel)) != fuel_before
 		if float(target.remaining) > 0.0:
+			var remaining_before := ceili(float(target.remaining))
 			target.remaining = maxf(0.0, float(target.remaining) - delta)
-			changed = true
+			changed = changed or ceili(float(target.remaining)) != remaining_before
 			if target.remaining == 0.0:
 				target.output = target.pending
 				world.discover(target.output)

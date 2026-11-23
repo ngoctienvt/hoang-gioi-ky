@@ -161,7 +161,7 @@ static func _move_in_bounds(creature: Dictionary, target: Array, amount: float, 
 	return true
 
 
-static func move(creature: Dictionary, target: Array, amount: float, limit: float = 39.0) -> bool:
+static func move(creature: Dictionary, target: Array, amount: float, limit: float) -> bool:
 	if amount <= 0.0:
 		return false
 	var source := Vector3(float(creature.position[0]), 0.0, float(creature.position[2]))

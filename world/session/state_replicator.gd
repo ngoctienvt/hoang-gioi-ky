@@ -1,14 +1,30 @@
 class_name StateReplicator
 extends RefCounted
+## Host side of state replication. Every network tick it turns the world's dirty set into one patch
+## per peer, holding only entities inside that peer's area of interest. Moving creatures go in a
+## separate packed position list for the unreliable channel. The client side is ReplicaMirror.
 
 const Interest = preload("res://world/session/interest_grid.gd")
 
-var interest := Interest.new()
-var peer_meta: Dictionary = {}
+const ENTITY_COLLECTIONS := ["nodes", "drops", "structures", "creatures", "puppets", "npcs"]
+## World-wide fields sent whole, but only when their content hash changes.
+const SHARED_GROUPS := ["discovered", "regions", "teleports", "karma", "forbidden_recipes", "rituals", "secret_realm", "weather"]
+## Host-only bookkeeping on entities. Never sent, so changing it needs no touch(). Any key starting with
+## "_" (at any depth, e.g. the raw freshness "_f" in item slots) is host-only by the same rule.
+const HOST_ONLY_FIELDS := ["cooldown", "noise_alert", "provoked", "home", "stolen", "target_uid", "aggro_pos",
+	"cracked_timer", "grounded_timer", "channel_timer", "respawn"]
+## Countdowns the host only re-sends when they cross a whole second, so a mirror may lag by under 1 s.
+const COARSE_TIMERS := ["fuel", "remaining", "regrow", "age"]
+## Key inside a per-field delta listing the fields the receiver must erase.
+const REMOVED_KEY := "~removed"
+## Weather countdowns tick every frame; clients only need the kind and the warning areas.
+const WEATHER_VOLATILE := ["timer", "lightning_cd", "fire_cd"]
+## What another player's mirror needs to draw and target a teammate. The owner gets the full record.
+const PUBLIC_PLAYER_FIELDS := ["name", "position", "character", "ghost", "beast_time", "hit_flash", "biome",
+	"in_secret_realm", "awakening_tier"]
 
-# Client-side state
-var client_entities: Dictionary = {}
-var client_state: Dictionary = {}
+var interest := Interest.new()
+var peer_meta: Dictionary = {}  # peer_id -> {group: hash, "clock": {field: hash}, "players": {pid: {field: hash}}}
 
 
 func reset_host() -> void:
@@ -21,310 +37,209 @@ func remove_peer(peer_id: int) -> void:
 	peer_meta.erase(peer_id)
 
 
+## Full join payload: shared groups plus every entity in the peer's starting area.
 func initial_payload(world: GameWorld, peer_id: int) -> Dictionary:
-	var player: Dictionary = world.state.players.get(str(peer_id), {})
-	var pos: Array = player.get("position", [0.0, 0.0, 0.0])
-	interest.remove_peer(peer_id)
-	var delta := interest.update_peer(peer_id, pos, world.index)
-	var upsert: Array = []
-	for uid in delta.entered:
-		var entity: Dictionary = world.index.find(uid)
-		if not entity.is_empty() and _visible_to_peer(entity, peer_id):
-			var copy := entity.duplicate(true)
-			copy["collection"] = world.index.collection_of.get(int(uid), "nodes")
-			upsert.append(copy)
-	var discovered: Array = world.state.get("discovered", []).duplicate()
-	var events: Array = world.state.get("events", []).duplicate(true)
-	var regions: Array = world.state.get("regions", []).duplicate(true)
-	var teleports: Array = world.state.get("teleports", []).duplicate(true)
-	var karma: Dictionary = world.state.get("karma", {"sin": 0.0, "fate": 0.0}).duplicate(true)
-	var forbidden: Array = world.state.get("forbidden_recipes", []).duplicate()
-	var rituals: Array = world.state.get("rituals", []).duplicate(true)
-	var secret_realm: Dictionary = world.state.get("secret_realm", {}).duplicate(true)
-	peer_meta[peer_id] = {
-		"discovered_size": discovered.size(),
-		"events_sig": str(events.back()) if not events.is_empty() else "",
-		"regions_size": regions.size(),
-		"teleports_sig": str(teleports),
-		"weather_sig": str(world.state.get("weather", {})),
-		"karma_sig": str(karma),
-		"forbidden_size": forbidden.size(),
-		"rituals_sig": str(rituals),
-		"secret_realm_sig": str(secret_realm),
-		"inv_sigs": _player_inv_sigs(world.state.players),
-	}
-	return {
-		"seed": world.state.seed,
-		"options": world.state.options.duplicate(true),
-		"clock": world.state.clock.duplicate(true),
-		"weather": world.state.get("weather", {}).duplicate(true),
-		"players": world.state.players.duplicate(true),
-		"discovered": discovered,
-		"events": events,
-		"regions": regions,
-		"teleports": teleports,
-		"karma": karma,
-		"forbidden_recipes": forbidden,
-		"rituals": rituals,
-		"secret_realm": secret_realm,
-		"upsert": upsert,
-	}
+	remove_peer(peer_id)
+	var packets := step_host(world, [peer_id], false)
+	var patch: Dictionary = packets[peer_id].patch
+	patch["seed"] = world.state.seed
+	patch["options"] = world.state.options.duplicate(true)
+	return patch
 
 
-func step_host(world: GameWorld, peer_ids: Array) -> Dictionary:
-	var changes := world.index.consume_dirty()
-	var dirty_uids: Array = changes.dirty
-	var removed_uids: Array = changes.removed
-	var moved_creatures: Array = changes.moved_creatures
-
-	var discovered: Array = world.state.get("discovered", [])
-	var events: Array = world.state.get("events", [])
-	var events_sig := str(events.back()) if not events.is_empty() else ""
-	var regions: Array = world.state.get("regions", [])
-	var teleports: Array = world.state.get("teleports", [])
-	var teleports_sig := str(teleports)
-
+## Builds {peer_id: {"patch": Dictionary, "positions": Array}}. consume=false leaves the world's dirty
+## set untouched (used for a join in the middle of a tick).
+func step_host(world: GameWorld, peer_ids: Array, consume: bool = true) -> Dictionary:
+	var changes: Dictionary = world.index.consume_dirty() if consume else {"dirty": [], "removed": [], "moved_creatures": [], "chunk_changed": []}
+	var group_hashes := _group_hashes(world.state)
 	var out: Dictionary = {}
 	for peer_id in peer_ids:
-		var player: Dictionary = world.state.players.get(str(peer_id), {})
-		var pos: Array = player.get("position", [0.0, 0.0, 0.0])
-		var delta := interest.update_peer(peer_id, pos, world.index)
-
-		var upsert_set: Dictionary = {}
-		var remove_set: Dictionary = {}
-
-		for uid in delta.entered:
-			upsert_set[uid] = true
-		for uid in delta.exited:
-			remove_set[uid] = true
-		for uid in removed_uids:
-			if interest.untrack_uid(peer_id, uid):
-				remove_set[uid] = true
-				upsert_set.erase(uid)
-
-		for uid in dirty_uids:
-			var chunk_key: String = world.index.entity_chunk.get(uid, "")
-			var in_interest := interest.has_uid(peer_id, uid)
-			if not in_interest and not chunk_key.is_empty():
-				in_interest = interest.track_uid(peer_id, uid, chunk_key)
-			if in_interest:
-				upsert_set[uid] = true
-				remove_set.erase(uid)
-			elif interest.untrack_uid(peer_id, uid):
-				remove_set[uid] = true
-
-		var upsert: Array = []
-		for uid in upsert_set:
-			var entity: Dictionary = world.index.find(uid)
-			if not entity.is_empty() and _visible_to_peer(entity, peer_id):
-				var copy := entity.duplicate(true)
-				copy["collection"] = world.index.collection_of.get(int(uid), "nodes")
-				upsert.append(copy)
-
-		var positions: Array = []
-		for uid in moved_creatures:
-			if upsert_set.has(uid):
-				continue
-			var chunk_key: String = world.index.entity_chunk.get(uid, "")
-			var in_interest := interest.has_uid(peer_id, uid)
-			if not in_interest and not chunk_key.is_empty():
-				in_interest = interest.track_uid(peer_id, uid, chunk_key)
-				if in_interest:
-					var entered_c: Dictionary = world.index.find(uid)
-					if not entered_c.is_empty() and _visible_to_peer(entered_c, peer_id):
-						var c_copy := entered_c.duplicate(true)
-						c_copy["collection"] = world.index.collection_of.get(int(uid), "creatures")
-						upsert.append(c_copy)
-					continue
-			if in_interest:
-				var c: Dictionary = world.index.find(uid)
-				if not c.is_empty() and _visible_to_peer(c, peer_id):
-					positions.append(int(uid))
-					positions.append(snappedf(float(c.position[0]), 0.01))
-					positions.append(snappedf(float(c.position[2]), 0.01))
-
-		var meta: Dictionary = peer_meta.get(peer_id, {})
-		var prev_inv_sigs: Dictionary = meta.get("inv_sigs", {})
-		var players_patch: Dictionary = {}
-		var new_inv_sigs: Dictionary = {}
-		var self_key := str(peer_id)
-		for pid in world.state.players:
-			var pdata: Dictionary = world.state.players[pid]
-			if pid != self_key:
-				players_patch[pid] = {
-					"uid": pdata.uid,
-					"kind": "player",
-					"name": pdata.name,
-					"position": pdata.position,
-					"ghost": pdata.get("ghost", false),
-					"beast_time": pdata.get("beast_time", 0.0),
-					"hit_flash": pdata.get("hit_flash", 0.0),
-					"biome": pdata.get("biome", "bamboo_forest"),
-				}
-				continue
-			var inv_sig := str(pdata.get("inventory", {}))
-			new_inv_sigs[pid] = inv_sig
-			if inv_sig == str(prev_inv_sigs.get(pid, "")):
-				var slim := pdata.duplicate(true)
-				slim.erase("inventory")
-				players_patch[pid] = slim
-			else:
-				players_patch[pid] = pdata.duplicate(true)
-		meta["inv_sigs"] = new_inv_sigs
-
-		var patch: Dictionary = {
-			"players": players_patch,
-			"clock": world.state.clock.duplicate(true),
-		}
-		if not upsert.is_empty():
-			patch["upsert"] = upsert
-		if not remove_set.is_empty():
-			patch["remove"] = remove_set.keys()
-
-		if discovered.size() != int(meta.get("discovered_size", -1)):
-			patch["discovered"] = discovered.duplicate()
-			meta["discovered_size"] = discovered.size()
-		if events_sig != str(meta.get("events_sig", "")):
-			patch["events"] = events.duplicate(true)
-			meta["events_sig"] = events_sig
-		if regions.size() != int(meta.get("regions_size", -1)):
-			patch["regions"] = regions.duplicate(true)
-			meta["regions_size"] = regions.size()
-		if teleports_sig != str(meta.get("teleports_sig", "")):
-			patch["teleports"] = teleports.duplicate(true)
-			meta["teleports_sig"] = teleports_sig
-		var weather_data: Dictionary = world.state.get("weather", {})
-		var weather_sig := str(weather_data)
-		if weather_sig != str(meta.get("weather_sig", "")):
-			patch["weather"] = weather_data.duplicate(true)
-			meta["weather_sig"] = weather_sig
-		var karma: Dictionary = world.state.get("karma", {"sin": 0.0, "fate": 0.0})
-		var karma_sig := str(karma)
-		if karma_sig != str(meta.get("karma_sig", "")):
-			patch["karma"] = karma.duplicate(true)
-			meta["karma_sig"] = karma_sig
-		var forbidden: Array = world.state.get("forbidden_recipes", [])
-		if forbidden.size() != int(meta.get("forbidden_size", -1)):
-			patch["forbidden_recipes"] = forbidden.duplicate()
-			meta["forbidden_size"] = forbidden.size()
-		var rituals: Array = world.state.get("rituals", [])
-		var rituals_sig := str(rituals)
-		if rituals_sig != str(meta.get("rituals_sig", "")):
-			patch["rituals"] = rituals.duplicate(true)
-			meta["rituals_sig"] = rituals_sig
-		var sr: Dictionary = world.state.get("secret_realm", {})
-		var sr_sig := str(sr)
-		if sr_sig != str(meta.get("secret_realm_sig", "")):
-			patch["secret_realm"] = sr.duplicate(true)
-			meta["secret_realm_sig"] = sr_sig
-		peer_meta[peer_id] = meta
-
-		out[peer_id] = {"patch": patch, "positions": positions}
+		out[peer_id] = _peer_packet(world, int(peer_id), changes, group_hashes)
 	return out
 
 
-func reset_client() -> void:
-	client_entities.clear()
-	client_state.clear()
+func _peer_packet(world: GameWorld, peer_id: int, changes: Dictionary, group_hashes: Dictionary) -> Dictionary:
+	var index: WorldEntityIndex = world.index
+	var player: Dictionary = world.state.players.get(str(peer_id), {})
+	var window := interest.update_chunks(peer_id, player.get("position", [0.0, 0.0, 0.0]))
+	var upsert: Dictionary = {}
+	var remove: Dictionary = {}
+	for key in window.entered:
+		for uid in index.uids_in_chunk(key):
+			_reconcile(world, peer_id, uid, false, upsert, remove)
+	for key in window.exited:
+		for uid in index.uids_in_chunk(key):
+			_reconcile(world, peer_id, uid, false, upsert, remove)
+	for uid in changes.removed:
+		if interest.forget(peer_id, uid):
+			remove[uid] = true
+	for uid in changes.chunk_changed:
+		_reconcile(world, peer_id, uid, false, upsert, remove)
+	for uid in changes.dirty:
+		_reconcile(world, peer_id, uid, true, upsert, remove)
+	var positions: Array = []
+	for uid in changes.moved_creatures:
+		if upsert.has(uid) or not interest.knows(peer_id, uid):
+			continue
+		var entity: Dictionary = index.find(uid)
+		if entity.is_empty():
+			continue
+		positions.append(int(uid))
+		positions.append(snappedf(float(entity.position[0]), 0.01))
+		positions.append(snappedf(float(entity.position[2]), 0.01))
+		index.last_sent_pos[uid] = entity.position.duplicate()
+	var meta: Dictionary = peer_meta.get(peer_id, {})
+	var patch := {}
+	var players := _players_for(world, peer_id, meta)
+	if not players.players.is_empty():
+		patch["players"] = players.players
+	if not players.players_left.is_empty():
+		patch["players_left"] = players.players_left
+	var clock_delta := _field_delta(world.state.clock, meta.get("clock", {}))
+	if not clock_delta.is_empty():
+		patch["clock"] = clock_delta.duplicate(true)
+		var clock_hashes: Dictionary = meta.get("clock", {})
+		_remember_delta(clock_hashes, clock_delta)
+		meta["clock"] = clock_hashes
+	if not upsert.is_empty():
+		patch["upsert"] = upsert.values()
+	if not remove.is_empty():
+		patch["remove"] = remove.keys()
+	for group in SHARED_GROUPS:
+		if meta.get(group, null) != group_hashes[group]:
+			meta[group] = group_hashes[group]
+			patch[group] = _shared_value(world.state, group)
+	peer_meta[peer_id] = meta
+	return {"patch": patch, "positions": positions}
 
 
-func apply_initial(data: Dictionary) -> Dictionary:
-	client_entities.clear()
-	client_state = {
-		"seed": data.get("seed", 0),
-		"options": data.get("options", {}),
-		"clock": data.get("clock", {}),
-		"weather": data.get("weather", {}),
-		"players": data.get("players", {}),
-		"discovered": data.get("discovered", []),
-		"events": data.get("events", []),
-		"regions": data.get("regions", []),
-		"teleports": data.get("teleports", []),
-		"karma": data.get("karma", {"sin": 0.0, "fate": 0.0}),
-		"forbidden_recipes": data.get("forbidden_recipes", []),
-		"rituals": data.get("rituals", []),
-		"secret_realm": data.get("secret_realm", {}),
-		"nodes": [],
-		"drops": [],
-		"structures": [],
-		"creatures": [],
-		"puppets": [],
-		"npcs": [],
-	}
-	for entity in data.get("upsert", []):
-		client_entities[int(entity.uid)] = entity
-	_rebuild_client_collections()
-	return client_state
+## Decides whether the peer should hold uid right now and records the upsert/remove that makes it so.
+func _reconcile(world: GameWorld, peer_id: int, uid: int, changed: bool, upsert: Dictionary, remove: Dictionary) -> void:
+	var entity: Dictionary = world.index.find(uid)
+	var should := not entity.is_empty() and interest.sees_chunk(peer_id, world.index.entity_chunk.get(uid, "")) \
+		and _visible_to_peer(entity, peer_id)
+	var known := interest.knows(peer_id, uid)
+	if should and (changed or not known):
+		interest.mark_known(peer_id, uid)
+		upsert[uid] = public_entity(entity, world.index.collection_of.get(uid, "nodes"))
+		remove.erase(uid)
+	elif not should and known:
+		interest.forget(peer_id, uid)
+		upsert.erase(uid)
+		remove[uid] = true
 
 
-func apply_patch(patch: Dictionary) -> Dictionary:
-	if patch.has("players"):
-		var prev_players: Dictionary = client_state.get("players", {})
-		var next_players: Dictionary = patch["players"]
-		for pid in next_players:
-			if not next_players[pid].has("inventory") and prev_players.has(pid):
-				next_players[pid]["inventory"] = prev_players[pid].get("inventory", {})
-		client_state["players"] = next_players
-	for key in ["clock", "weather", "discovered", "events", "regions", "teleports", "karma", "forbidden_recipes", "rituals", "secret_realm"]:
-		if patch.has(key):
-			client_state[key] = patch[key]
-	for uid in patch.get("remove", []):
-		client_entities.erase(int(uid))
-	for entity in patch.get("upsert", []):
-		client_entities[int(entity.uid)] = entity
-	_rebuild_client_collections()
-	return client_state
+static func public_entity(entity: Dictionary, collection: String) -> Dictionary:
+	var copy: Dictionary = strip_private(entity)
+	for key in HOST_ONLY_FIELDS:
+		copy.erase(key)
+	copy["collection"] = collection
+	return copy
 
 
-func apply_positions(positions: Array) -> Dictionary:
-	var i := 0
-	var count := positions.size()
-	while i + 2 < count:
-		var uid := int(positions[i])
-		if client_entities.has(uid):
-			client_entities[uid].position = [float(positions[i + 1]), 0.0, float(positions[i + 2])]
-		i += 3
-	return client_state
+## Deep copy without "_"-prefixed keys.
+static func strip_private(value):
+	if value is Dictionary:
+		var out := {}
+		for key in value:
+			if not str(key).begins_with("_"):
+				out[key] = strip_private(value[key])
+		return out
+	if value is Array:
+		var arr: Array = []
+		for item in value:
+			arr.append(strip_private(item))
+		return arr
+	return value
 
 
-func _rebuild_client_collections() -> void:
-	var nodes: Array = []
-	var drops: Array = []
-	var structures: Array = []
-	var creatures: Array = []
-	var puppets: Array = []
-	var npcs: Array = []
-	for entity in client_entities.values():
-		var col: String = str(entity.get("collection", "nodes"))
-		match col:
-			"nodes":
-				nodes.append(entity)
-			"drops":
-				drops.append(entity)
-			"structures":
-				structures.append(entity)
-			"creatures":
-				creatures.append(entity)
-			"puppets":
-				puppets.append(entity)
-			"npcs":
-				npcs.append(entity)
-	client_state["nodes"] = nodes
-	client_state["drops"] = drops
-	client_state["structures"] = structures
-	client_state["creatures"] = creatures
-	client_state["puppets"] = puppets
-	client_state["npcs"] = npcs
+## Per-field delta of every player record: a field is sent only when its hash differs from what this
+## peer last received. "players_left" lists records the peer should drop.
+func _players_for(world: GameWorld, peer_id: int, meta: Dictionary) -> Dictionary:
+	var sent: Dictionary = meta.get("players", {})
+	var delta: Dictionary = {}
+	var self_key := str(peer_id)
+	for pid in world.state.players:
+		var pdata: Dictionary = world.state.players[pid]
+		var record: Dictionary = strip_private(pdata) if pid == self_key else public_player(pdata)
+		var changed := _field_delta(record, sent.get(pid, {}))
+		if not changed.is_empty():
+			delta[pid] = changed
+	var left: Array = []
+	for pid in sent.keys():
+		if not world.state.players.has(pid):
+			sent.erase(pid)
+			left.append(pid)
+	for pid in delta:
+		if not sent.has(pid):
+			sent[pid] = {}
+		_remember_delta(sent[pid], delta[pid])
+	meta["players"] = sent
+	return {"players": delta, "players_left": left}
 
 
-func _visible_to_peer(entity: Dictionary, peer_id: int) -> bool:
+## Fields of record whose hash differs from previous_hashes. Fields that disappeared are listed
+## under REMOVED_KEY so the mirror erases them too.
+static func _field_delta(record: Dictionary, previous_hashes: Dictionary) -> Dictionary:
+	var out := {}
+	for key in record:
+		if previous_hashes.get(key, null) != hash(record[key]):
+			out[key] = record[key]
+	var gone: Array = []
+	for key in previous_hashes:
+		if not record.has(key):
+			gone.append(key)
+	if not gone.is_empty():
+		out[REMOVED_KEY] = gone
+	return out
+
+
+## Records the hashes of a delta produced by _field_delta into hashes.
+static func _remember_delta(hashes: Dictionary, delta: Dictionary) -> void:
+	for key in delta:
+		if key == REMOVED_KEY:
+			for gone in delta[key]:
+				hashes.erase(gone)
+		else:
+			hashes[key] = hash(delta[key])
+
+
+static func public_player(pdata: Dictionary) -> Dictionary:
+	var out := {"uid": pdata.get("uid", 0), "kind": "player"}
+	for key in PUBLIC_PLAYER_FIELDS:
+		if pdata.has(key):
+			out[key] = pdata[key]
+	var equipment: Dictionary = pdata.get("inventory", {}).get("equipment", {})
+	var shown := {}
+	for slot in ["hand", "body", "head"]:
+		var item = equipment.get(slot)
+		if item is Dictionary and not item.is_empty():
+			shown[slot] = {"id": item.get("id", "")}
+	out["inventory"] = {"equipment": shown}
+	return out
+
+
+func _group_hashes(state: Dictionary) -> Dictionary:
+	var out := {}
+	for group in SHARED_GROUPS:
+		out[group] = hash(_shared_value(state, group))
+	return out
+
+
+static func _shared_value(state: Dictionary, group: String):
+	var value = state.get(group, {} if group in ["karma", "secret_realm", "weather"] else [])
+	if group == "weather" and value is Dictionary:
+		var trimmed: Dictionary = value.duplicate(true)
+		for key in WEATHER_VOLATILE:
+			trimmed.erase(key)
+		for warning in trimmed.get("warnings", []):
+			if warning is Dictionary:
+				warning.erase("timer")
+		return trimmed
+	return value.duplicate(true) if value is Dictionary or value is Array else value
+
+
+static func _visible_to_peer(entity: Dictionary, peer_id: int) -> bool:
 	if not entity.get("private_to_owner", false):
 		return true
 	return int(entity.get("owner_peer", 0)) == peer_id
-
-
-func _player_inv_sigs(players: Dictionary) -> Dictionary:
-	var sigs: Dictionary = {}
-	for pid in players:
-		sigs[pid] = str(players[pid].get("inventory", {}))
-	return sigs

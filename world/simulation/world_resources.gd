@@ -10,18 +10,23 @@ static func step(world, delta: float) -> void:
 			continue
 		var changed := false
 		if float(node.get("regrow", 0.0)) > 0.0:
+			var before := ceili(float(node.regrow))
 			node.regrow = maxf(0.0, float(node.regrow) - delta)
-			changed = true
+			# Countdowns replicate on whole-second steps only (see StateReplicator.COARSE_TIMERS).
+			changed = ceili(float(node.regrow)) != before
 			if node.regrow == 0.0:
+				changed = true
 				node.stage = 0
 				node.hits = 0
 				node.depleted = false
 		if node.get("sapling", false):
+			var age_before := floori(float(node.get("age", 0.0)))
 			node.age = float(node.get("age", 0.0)) + delta
-			changed = true
+			changed = changed or floori(float(node.age)) != age_before
 			if node.age >= world.day_length() * 2.0:
 				node.sapling = false
 				node.stage = 0
+				changed = true
 		if changed:
 			world.touch(int(uid))
 		if float(node.get("regrow", 0.0)) <= 0.0 and not node.get("sapling", false):

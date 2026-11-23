@@ -348,7 +348,6 @@ func action(peer_id: int, verb: String, args: Dictionary) -> bool:
 					touch(int(target.uid))
 		if accepted:
 			player.work_cd = 0.35
-	log_event("action" if accepted else "rejected", {"peer": peer_id, "verb": verb})
 	return accepted
 
 
@@ -359,6 +358,8 @@ func snapshot() -> Dictionary:
 	return result
 
 
+## Loads a snapshot. Older saves must go through SaveManager's migration first; defaults for missing
+## fields live there only.
 func restore(data: Dictionary) -> void:
 	state = data.duplicate(true)
 	for player in state.players.values():
@@ -375,26 +376,6 @@ func restore(data: Dictionary) -> void:
 				s.slots.resize(Inventory.SLOT_COUNT)
 				for idx in range(old_size, Inventory.SLOT_COUNT):
 					s.slots[idx] = {}
-	if not state.has("options") or not state.options is Dictionary:
-		state.options = {}
-	if not state.options.has("map_size"):
-		state.options.map_size = 80.0
-	if not state.has("regions"):
-		state.regions = []
-	if not state.has("teleports"):
-		state.teleports = []
-	if not state.has("weather") or not state.weather is Dictionary:
-		state.weather = {"kind": "clear", "timer": 0.0, "lightning_cd": 0.0, "fire_cd": 0.0, "warnings": []}
-	if not state.has("puppets"):
-		state["puppets"] = []
-	if not state.has("npcs"):
-		state["npcs"] = []
-	if not state.has("forbidden_recipes"):
-		state["forbidden_recipes"] = []
-	if not state.has("rituals") or not state.rituals is Array:
-		state["rituals"] = []
-	if not state.has("secret_realm") or not state.secret_realm is Dictionary:
-		state["secret_realm"] = {"built": false, "switches_active": 0, "unlocked": false}
 	Karma.ensure_state(self)
 	Season.update_clock(self)
 	next_uid = int(state.get("next_uid", 1000))
@@ -431,18 +412,6 @@ func stats(player: Dictionary):
 	return result
 
 
-func find_entity(collection: Array, uid) -> Dictionary:
-	if not (uid is int or uid is float):
-		return {}
-	var found := index.find(uid)
-	if not found.is_empty():
-		return found
-	for target in collection:
-		if target.uid == uid:
-			return target
-	return {}
-
-
 func find_any(uid) -> Dictionary:
 	return index.find(uid)
 
@@ -459,6 +428,7 @@ func discover(id: String) -> void:
 		state.discovered.append(id)
 
 
+## Host-side log of notable world events (kept in saves, not replicated).
 func log_event(event: String, details: Dictionary = {}) -> void:
 	state.events.append({"event": event, "time": elapsed(), "details": details})
 	if state.events.size() > 32:

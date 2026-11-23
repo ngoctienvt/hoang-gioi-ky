@@ -52,7 +52,7 @@ func _build_home_page() -> void:
 	join_btn.custom_minimum_size.y = 40
 	var set_btn := W.button(home_page, "UI_SETTINGS", func(): settings_requested.emit())
 	set_btn.custom_minimum_size.y = 38
-	var quit_btn := W.button(home_page, "UI_QUIT", func(): get_tree().quit(), "ButtonSubtle")
+	var quit_btn := W.button(home_page, "UI_QUIT", func(): get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST), "ButtonSubtle")
 	quit_btn.custom_minimum_size.y = 36
 
 

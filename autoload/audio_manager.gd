@@ -148,6 +148,26 @@ func _ready() -> void:
 	_amb_sanity = _make_player(BUS_AMBIENT)
 
 
+func _exit_tree() -> void:
+	release_all()
+
+
+## Stops every player and drops cached streams. Playing streams hold Ogg playbacks that the audio
+## server frees on its next mix, so call this a couple of frames before quitting.
+func release_all() -> void:
+	for tween in [_music_tween, _amb_biome_tween]:
+		if tween != null and tween.is_valid():
+			tween.kill()
+	for child in get_children():
+		if child is AudioStreamPlayer:
+			child.stop()
+			child.stream = null
+	_stream_cache.clear()
+	current_music_key = ""
+	_current_biome_track = ""
+	_current_weather_track = ""
+
+
 func _make_player(bus_name: StringName) -> AudioStreamPlayer:
 	var player := AudioStreamPlayer.new()
 	player.bus = bus_name

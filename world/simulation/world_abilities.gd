@@ -1,4 +1,5 @@
 extends RefCounted
+const Rules = preload("res://world/simulation/world_rules.gd")
 
 const CHAR_DIR := "res://data/characters/"
 const BeastRage = preload("res://world/simulation/traits/beast_rage.gd")
@@ -69,7 +70,7 @@ static func choose_character(world, player: Dictionary, args: Dictionary) -> boo
 	var max_hp := cdef.max_health * (1.0 - 0.25 * revivals)
 	player.stats["base_max_health"] = cdef.max_health
 	player.stats["max_health"] = max_hp
-	if float(player.stats.get("health", 150.0)) >= 150.0:
+	if float(player.stats.get("health", Rules.BASE_MAX_HEALTH)) >= Rules.BASE_MAX_HEALTH:
 		player.stats["health"] = max_hp
 	else:
 		player.stats["health"] = minf(max_hp, float(player.stats.get("health", max_hp)))

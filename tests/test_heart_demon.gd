@@ -25,11 +25,11 @@ func test_heart_demon_spawn_banish_and_peer_isolation() -> void:
 	var init1 := rep.initial_payload(w, 1)
 	var init2 := rep.initial_payload(w, 2)
 	var p1_has := false
-	for e in init1.upsert:
+	for e in init1.get("upsert", []):
 		if e.kind == "heart_demon":
 			p1_has = true
 	var p2_has := false
-	for e in init2.upsert:
+	for e in init2.get("upsert", []):
 		if e.kind == "heart_demon":
 			p2_has = true
 	assert_true(p1_has)

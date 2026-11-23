@@ -1,4 +1,5 @@
 extends RefCounted
+const Rules = preload("res://world/simulation/world_rules.gd")
 
 const WAVE_DURATION := 12.0
 const TOTAL_WAVES := 3
@@ -184,7 +185,7 @@ static func _wave_end_failed(world, player: Dictionary, r: Dictionary) -> bool:
 static func _complete(world, player: Dictionary, tier: int) -> void:
 	player["awakening_tier"] = tier
 	player["skill_points"] = int(player.get("skill_points", 0)) + 1
-	var base_hp := float(player.stats.get("base_max_health", 150.0)) + 15.0
+	var base_hp := float(player.stats.get("base_max_health", Rules.BASE_MAX_HEALTH)) + 15.0
 	player.stats["base_max_health"] = base_hp
 	var revivals := clampi(int(player.get("deaths", 0)), 0, 2)
 	player.stats["max_health"] = base_hp * (1.0 - 0.25 * revivals)

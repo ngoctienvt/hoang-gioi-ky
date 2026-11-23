@@ -1,12 +1,12 @@
 extends CharacterBody3D
-## Only the server moves collision bodies. Local prediction is visual, never authority.
+## Host-only collision body for one player. Its position is copied into the world state and reaches
+## clients through state replication; clients never create avatars.
 var peer_id := 1
 var direction := Vector2.ZERO
 var speed := 5.0
 var ghost := false
 var input_age := 0.0
-var authoritative_position := Vector3.ZERO
-var map_limit := 39.0
+var map_limit := 0.0  # set by the session from the world's map size
 var in_secret_realm := false
 
 func _ready() -> void:
@@ -17,18 +17,8 @@ func _ready() -> void:
 	shape.shape = capsule
 	shape.position.y = 0.75
 	add_child(shape)
-	var sync := MultiplayerSynchronizer.new()
-	sync.name = "State"
-	var config := SceneReplicationConfig.new()
-	config.add_property(^".:authoritative_position")
-	config.property_set_replication_mode(^".:authoritative_position", SceneReplicationConfig.REPLICATION_MODE_ALWAYS)
-	sync.replication_config = config
-	sync.replication_interval = 0.05
-	add_child(sync)
 
 func _physics_process(delta: float) -> void:
-	if not multiplayer.is_server():
-		return
 	input_age += delta
 	if input_age > 0.4:
 		direction = Vector2.ZERO
@@ -41,4 +31,3 @@ func _physics_process(delta: float) -> void:
 		position.x = clampf(position.x, -map_limit, map_limit)
 		position.z = clampf(position.z, -map_limit, map_limit)
 	position.y = 0.0
-	authoritative_position = position

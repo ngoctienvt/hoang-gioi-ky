@@ -1,4 +1,5 @@
 extends RefCounted
+const Rules = preload("res://world/simulation/world_rules.gd")
 
 const CONFLICTS := {"fire": "ice", "ice": "fire", "yin": "spirit", "spirit": "yin"}
 const WINDOW := 60.0
@@ -16,7 +17,7 @@ static func record_and_check(world, player: Dictionary, element: String) -> bool
 	history.append({"element": element, "time": now})
 	player["devour_history"] = history
 	if conflicted:
-		var max_hp := float(player.stats.get("max_health", 150.0))
+		var max_hp := float(player.stats.get("max_health", Rules.BASE_MAX_HEALTH))
 		player.stats["health"] = clampf(float(player.stats.get("health", max_hp)) - 25.0, 0.0, max_hp)
 		player.stats["dao"] = maxf(0.0, float(player.stats.get("dao", 100.0)) - 20.0)
 		world.log_event("devour_conflict", {"name": player.name, "element": element})

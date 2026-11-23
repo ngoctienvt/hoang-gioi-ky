@@ -10,6 +10,9 @@ var entity_chunk: Dictionary = {}
 var dirty: Dictionary = {}
 var removed: Dictionary = {}
 var moved_creatures: Dictionary = {}
+## Entities whose chunk changed since the last consume; replication re-checks interest for them.
+var chunk_changed: Dictionary = {}
+## Last position published per moving entity, so sub-threshold drift is not resent every tick.
 var last_sent_pos: Dictionary = {}
 
 
@@ -31,6 +34,7 @@ func clear() -> void:
 	dirty.clear()
 	removed.clear()
 	moved_creatures.clear()
+	chunk_changed.clear()
 	last_sent_pos.clear()
 
 
@@ -76,6 +80,7 @@ func remove(uid: int) -> void:
 	collection_of.erase(uid)
 	dirty.erase(uid)
 	moved_creatures.erase(uid)
+	chunk_changed.erase(uid)
 	last_sent_pos.erase(uid)
 	removed[uid] = true
 
@@ -96,6 +101,7 @@ func update_position(entity: Dictionary) -> void:
 			chunks[new_key] = {}
 		chunks[new_key][uid] = true
 		entity_chunk[uid] = new_key
+		chunk_changed[uid] = true
 
 
 func touch(uid: int) -> void:
@@ -171,9 +177,10 @@ func consume_dirty() -> Dictionary:
 		"dirty": dirty.keys(),
 		"removed": removed.keys(),
 		"moved_creatures": moved_creatures.keys(),
+		"chunk_changed": chunk_changed.keys(),
 	}
 	dirty.clear()
 	removed.clear()
 	moved_creatures.clear()
-	last_sent_pos.clear()
+	chunk_changed.clear()
 	return out

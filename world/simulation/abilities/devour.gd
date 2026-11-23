@@ -1,4 +1,5 @@
 extends RefCounted
+const Rules = preload("res://world/simulation/world_rules.gd")
 
 const DevourerConflict = preload("res://world/simulation/traits/devourer_conflict.gd")
 
@@ -63,7 +64,7 @@ static func execute(world, player: Dictionary, args: Dictionary, def) -> bool:
 	player.inventory = inv.to_dict()
 
 	var elem := element_of(chosen_def)
-	var max_hp := float(player.stats.get("max_health", 150.0))
+	var max_hp := float(player.stats.get("max_health", Rules.BASE_MAX_HEALTH))
 	player.stats["health"] = minf(max_hp, float(player.stats.get("health", max_hp)) + 25.0)
 	match elem:
 		"fire":

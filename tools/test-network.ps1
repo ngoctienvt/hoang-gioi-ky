@@ -20,6 +20,8 @@ try {
         $flag = if ($role -eq 'host') { '--host' } else { '--join' }
         $arguments = @('--headless', '--path', $projectRoot, '--log-file', (Join-Path $runtimeRoot "$role-engine.log"), '--', $flag, '--probe', '--clients', "$Clients")
         $process = Start-Process -FilePath $Godot -ArgumentList $arguments -WorkingDirectory $projectRoot -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $runtimeRoot "$role-output.log") -RedirectStandardError (Join-Path $runtimeRoot "$role-error.log")
+        # Reading Handle keeps it open so ExitCode is still available after the process exits.
+        $null = $process.Handle
         $ownedProcesses += $process
         Write-Output "Started $role PID=$($process.Id), port=24565, project=$projectRoot"
         if ($role -eq 'host') { Start-Sleep -Milliseconds 1500 } else { Start-Sleep -Milliseconds 250 }
@@ -27,7 +29,7 @@ try {
     $failed = $false
     foreach ($process in $ownedProcesses) {
         if (!$process.WaitForExit(30000)) { throw "Network probe timed out: PID $($process.Id)" }
-        if ($process.ExitCode -ne 0) { $failed = $true }
+        if ($process.ExitCode -ne 0) { Write-Output "PID $($process.Id) exit code $($process.ExitCode)"; $failed = $true }
     }
     foreach ($role in $roles) {
         Write-Output "=== $role ==="

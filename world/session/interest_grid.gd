@@ -1,11 +1,14 @@
 class_name InterestGrid
 extends RefCounted
+## Per-peer area of interest: the set of chunks a peer can see and the entity uids it currently holds.
+## Chunks within ENTER_RADIUS of the player are added; chunks are dropped only beyond EXIT_RADIUS,
+## so a player walking along a chunk border does not make entities flicker in and out.
 
 const ENTER_RADIUS := 2
 const EXIT_RADIUS := 3
 
-var peer_chunks: Dictionary = {}
-var peer_uids: Dictionary = {}
+var peer_chunks: Dictionary = {}  # peer_id -> {chunk_key: true}
+var peer_uids: Dictionary = {}  # peer_id -> {uid: true}, exactly what the peer's mirror holds
 
 
 func clear() -> void:
@@ -18,59 +21,42 @@ func remove_peer(peer_id: int) -> void:
 	peer_uids.erase(peer_id)
 
 
-func has_uid(peer_id: int, uid: int) -> bool:
+func knows(peer_id: int, uid: int) -> bool:
 	return peer_uids.get(peer_id, {}).has(uid)
 
 
-func update_peer(peer_id: int, pos: Array, index: WorldEntityIndex) -> Dictionary:
+func sees_chunk(peer_id: int, chunk_key: String) -> bool:
+	return peer_chunks.get(peer_id, {}).has(chunk_key)
+
+
+func mark_known(peer_id: int, uid: int) -> void:
+	if not peer_uids.has(peer_id):
+		peer_uids[peer_id] = {}
+	peer_uids[peer_id][uid] = true
+
+
+func forget(peer_id: int, uid: int) -> bool:
+	return peer_uids.get(peer_id, {}).erase(uid)
+
+
+## Moves the peer's window to the chunk containing pos. Returns the chunk keys that were added and dropped.
+func update_chunks(peer_id: int, pos: Array) -> Dictionary:
 	var center := WorldEntityIndex.chunk_coords(pos)
-	var current_chunks: Dictionary = peer_chunks.get(peer_id, {})
-	var current_uids: Dictionary = peer_uids.get(peer_id, {})
-
-	var entered_uids: Array = []
-	var exited_uids: Array = []
-
-	# 1. Add chunks within ENTER_RADIUS
+	var current: Dictionary = peer_chunks.get(peer_id, {})
+	var entered: Array = []
+	var exited: Array = []
 	for dx in range(-ENTER_RADIUS, ENTER_RADIUS + 1):
 		for dz in range(-ENTER_RADIUS, ENTER_RADIUS + 1):
 			var key := WorldEntityIndex.chunk_key(center.x + dx, center.y + dz)
-			if not current_chunks.has(key):
-				current_chunks[key] = true
-				for uid in index.uids_in_chunk(key):
-					if not current_uids.has(uid):
-						current_uids[uid] = true
-						entered_uids.append(uid)
-
-	# 2. Remove chunks beyond EXIT_RADIUS
-	for key in current_chunks.keys():
+			if not current.has(key):
+				current[key] = true
+				entered.append(key)
+	for key in current.keys():
 		var parts: PackedStringArray = String(key).split(",")
-		var cx := int(parts[0])
-		var cz := int(parts[1])
-		if maxi(absi(cx - center.x), absi(cz - center.y)) > EXIT_RADIUS:
-			current_chunks.erase(key)
-			for uid in index.uids_in_chunk(key):
-				if current_uids.has(uid):
-					current_uids.erase(uid)
-					exited_uids.append(uid)
-
-	peer_chunks[peer_id] = current_chunks
-	peer_uids[peer_id] = current_uids
-	return {"entered": entered_uids, "exited": exited_uids}
-
-
-func track_uid(peer_id: int, uid: int, entity_chunk_key: String) -> bool:
-	var current_chunks: Dictionary = peer_chunks.get(peer_id, {})
-	if current_chunks.has(entity_chunk_key):
-		if not peer_uids.has(peer_id):
-			peer_uids[peer_id] = {}
-		peer_uids[peer_id][uid] = true
-		return true
-	return false
-
-
-func untrack_uid(peer_id: int, uid: int) -> bool:
-	var current_uids: Dictionary = peer_uids.get(peer_id, {})
-	if current_uids.has(uid):
-		current_uids.erase(uid)
-		return true
-	return false
+		if maxi(absi(int(parts[0]) - center.x), absi(int(parts[1]) - center.y)) > EXIT_RADIUS:
+			current.erase(key)
+			exited.append(key)
+	peer_chunks[peer_id] = current
+	if not peer_uids.has(peer_id):
+		peer_uids[peer_id] = {}
+	return {"entered": entered, "exited": exited}
