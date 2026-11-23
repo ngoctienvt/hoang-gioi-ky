@@ -28,4 +28,5 @@ art-source/
 # Local validation state and packaged builds
 .runtime/
 build/
+builds/
 plans/reports/*.log
