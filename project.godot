@@ -24,6 +24,11 @@ ItemDB="*res://autoload/item_db.gd"
 RecipeDB="*res://autoload/recipe_db.gd"
 SaveManager="*res://autoload/save_manager.gd"
 SettingsManager="*res://autoload/settings_manager.gd"
+AudioManager="*res://autoload/audio_manager.gd"
+
+[audio]
+
+buses/default_bus_layout="res://default_bus_layout.tres"
 
 [debug]
 
@@ -37,6 +42,7 @@ window/size/viewport_height=800
 window/size/window_width_override=1280
 window/size/window_height_override=800
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [dotnet]
 

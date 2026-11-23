@@ -20,6 +20,8 @@ const DEFAULT_BINDINGS := {
 }
 
 var master_volume: float = 1.0
+var music_volume: float = 0.7
+var ambient_volume: float = 0.8
 var sfx_volume: float = 1.0
 var muted: bool = false
 var window_mode: String = "windowed"
@@ -40,6 +42,8 @@ func load_settings(path: String = SETTINGS_PATH) -> void:
 	if cfg.load(path) != OK:
 		return
 	master_volume = clampf(float(cfg.get_value("audio", "master_volume", 1.0)), 0.0, 1.0)
+	music_volume = clampf(float(cfg.get_value("audio", "music_volume", 0.7)), 0.0, 1.0)
+	ambient_volume = clampf(float(cfg.get_value("audio", "ambient_volume", 0.8)), 0.0, 1.0)
 	sfx_volume = clampf(float(cfg.get_value("audio", "sfx_volume", 1.0)), 0.0, 1.0)
 	muted = bool(cfg.get_value("audio", "muted", false))
 	window_mode = str(cfg.get_value("graphics", "window_mode", "windowed"))
@@ -54,6 +58,8 @@ func load_settings(path: String = SETTINGS_PATH) -> void:
 func save_settings(path: String = SETTINGS_PATH) -> Error:
 	var cfg := ConfigFile.new()
 	cfg.set_value("audio", "master_volume", master_volume)
+	cfg.set_value("audio", "music_volume", music_volume)
+	cfg.set_value("audio", "ambient_volume", ambient_volume)
 	cfg.set_value("audio", "sfx_volume", sfx_volume)
 	cfg.set_value("audio", "muted", muted)
 	cfg.set_value("graphics", "window_mode", window_mode)
@@ -67,11 +73,10 @@ func save_settings(path: String = SETTINGS_PATH) -> Error:
 
 
 func apply_all() -> void:
-	var bus := AudioServer.get_bus_index("Master")
-	if bus >= 0:
-		AudioServer.set_bus_mute(bus, muted)
-		var db := linear_to_db(maxf(0.0001, master_volume)) if not muted else -80.0
-		AudioServer.set_bus_volume_db(bus, db)
+	_apply_bus(&"Master", master_volume, muted)
+	_apply_bus(&"Music", music_volume, muted)
+	_apply_bus(&"Ambient", ambient_volume, muted)
+	_apply_bus(&"SFX", sfx_volume, muted)
 	if DisplayServer.get_name() != "headless":
 		match window_mode:
 			"fullscreen":
@@ -82,6 +87,17 @@ func apply_all() -> void:
 				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED if vsync else DisplayServer.VSYNC_DISABLED)
 	settings_changed.emit()
+
+
+func _apply_bus(bus_name: StringName, value_0_to_1: float, force_mute: bool) -> void:
+	var bus := AudioServer.get_bus_index(bus_name)
+	if bus == -1:
+		return
+	var vol := clampf(value_0_to_1, 0.0, 1.0)
+	var is_muted := force_mute or vol <= 0.0
+	AudioServer.set_bus_mute(bus, is_muted)
+	if not is_muted:
+		AudioServer.set_bus_volume_linear(bus, vol)
 
 
 func key_for(action_name: String) -> int:

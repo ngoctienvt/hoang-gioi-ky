@@ -176,6 +176,8 @@ func _clear_world() -> void:
 	for body in colliders.values():
 		body.queue_free()
 	colliders.clear()
+	if view != null and view.audio != null:
+		view.audio.reset()
 	view.render({}, multiplayer.get_unique_id())
 
 func _leave() -> void:

@@ -1,6 +1,7 @@
 extends PanelContainer
+## Centered top Boss Health Bar with cinnabar-gold styling.
 
-const W = preload("res://ui/hud/hud_widgets.gd")
+const UITheme = preload("res://ui/theme/ui_theme.gd")
 
 var title_lbl: Label
 var hp_bar: ProgressBar
@@ -8,20 +9,45 @@ var status_lbl: Label
 
 
 func _ready() -> void:
+	theme_type_variation = &"PanelPrimary"
 	set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP)
-	position = Vector2(-180, 96)
-	custom_minimum_size = Vector2(360, 56)
+	offset_left = -200
+	offset_right = 200
+	offset_top = 12
+	offset_bottom = 74
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
+
 	var box := VBoxContainer.new()
+	box.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	box.add_theme_constant_override("separation", 4)
 	add_child(box)
-	title_lbl = W.label(box, "")
-	title_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+
+	var head := HBoxContainer.new()
+	head.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	box.add_child(head)
+
+	title_lbl = Label.new()
+	title_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	title_lbl.add_theme_font_size_override("font_size", 14)
+	title_lbl.add_theme_color_override("font_color", UITheme.TEXT_ACCENT)
+	title_lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	head.add_child(title_lbl)
+
+	status_lbl = Label.new()
+	status_lbl.add_theme_font_size_override("font_size", 12)
+	status_lbl.add_theme_color_override("font_color", UITheme.TEXT_PRIMARY)
+	status_lbl.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	head.add_child(status_lbl)
+
 	hp_bar = ProgressBar.new()
-	hp_bar.custom_minimum_size = Vector2(340, 14)
+	hp_bar.custom_minimum_size = Vector2(360, 12)
 	hp_bar.show_percentage = false
+	hp_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var fill := StyleBoxFlat.new()
+	fill.bg_color = Color("b83b3b")
+	fill.set_corner_radius_all(3)
+	hp_bar.add_theme_stylebox_override("fill", fill)
 	box.add_child(hp_bar)
-	status_lbl = W.label(box, "")
-	status_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	status_lbl.add_theme_font_size_override("font_size", 11)
 	hide()
 
 
