@@ -1,13 +1,14 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://6r038areqv5w"]
 
-[ext_resource type="Shader" path="res://shaders/painted_gradient.gdshader" id="shader"]
+[ext_resource type="Shader" uid="uid://b8qlq44sxkpos" path="res://shaders/vignette.gdshader" id="2_xd7oy"]
+[ext_resource type="Shader" uid="uid://cj6arjxd2o3jw" path="res://shaders/painted_gradient.gdshader" id="shader"]
 
 [sub_resource type="ProceduralSkyMaterial" id="sky_mat"]
-sky_top_color = Color(0.231, 0.165, 0.361, 1)
-sky_horizon_color = Color(1.0, 0.478, 0.271, 1)
+sky_top_color = Color(0.12, 0.13, 0.16, 1)
+sky_horizon_color = Color(0.52, 0.42, 0.33, 1)
 sky_curve = 0.12
-ground_bottom_color = Color(0.227, 0.141, 0.188, 1)
-ground_horizon_color = Color(1.0, 0.541, 0.333, 1)
+ground_bottom_color = Color(0.09, 0.08, 0.08, 1)
+ground_horizon_color = Color(0.4, 0.33, 0.27, 1)
 sun_angle_max = 25.0
 sun_curve = 0.08
 
@@ -18,41 +19,49 @@ sky_material = SubResource("sky_mat")
 background_mode = 2
 sky = SubResource("sky")
 ambient_light_source = 3
-ambient_light_color = Color(0.659, 0.439, 0.541, 1)
-ambient_light_sky_contribution = 0.55
-ambient_light_energy = 0.9
+ambient_light_color = Color(0.38, 0.41, 0.46, 1)
+ambient_light_sky_contribution = 0.4
+ambient_light_energy = 0.85
 tonemap_mode = 2
-tonemap_exposure = 1.05
+tonemap_exposure = 0.9
 glow_enabled = true
-glow_intensity = 0.7
-glow_strength = 1.0
+glow_intensity = 0.5
 glow_bloom = 0.08
 glow_hdr_threshold = 0.9
-glow_blend_mode = 1
 fog_enabled = true
 fog_mode = 1
-fog_light_color = Color(0.91, 0.541, 0.416, 1)
-fog_light_energy = 1.0
-fog_sun_scatter = 0.25
+fog_light_color = Color(0.42, 0.41, 0.39, 1)
+fog_sun_scatter = 0.1
 fog_density = 1.0
-fog_sky_affect = 0.35
+fog_sky_affect = 0.7
 fog_depth_curve = 1.6
-fog_depth_begin = 14.0
-fog_depth_end = 75.0
+fog_depth_begin = 8.0
+fog_depth_end = 50.0
 adjustment_enabled = true
-adjustment_saturation = 1.15
+adjustment_brightness = 0.95
+adjustment_contrast = 1.1
+adjustment_saturation = 0.78
 
 [sub_resource type="ShaderMaterial" id="mat_ground"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.373, 0.604, 0.306, 1)
-shader_parameter/bottom_color = Color(0.29, 0.498, 0.235, 1)
+shader_parameter/top_color = Color(0.37, 0.39, 0.25, 1)
+shader_parameter/bottom_color = Color(0.31, 0.33, 0.21, 1)
 shader_parameter/gradient_start = -0.1
 shader_parameter/gradient_height = 0.2
-shader_parameter/shade_floor = 0.45
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="PlaneMesh" id="mesh_0"]
 size = Vector2(160, 160)
+
+[sub_resource type="ShaderMaterial" id="mat_hill"]
+render_priority = 0
+shader = ExtResource("shader")
+shader_parameter/top_color = Color(0.3, 0.33, 0.22, 1)
+shader_parameter/bottom_color = Color(0.22, 0.23, 0.16, 1)
+shader_parameter/gradient_start = null
+shader_parameter/gradient_height = null
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="SphereMesh" id="mesh_1"]
 radius = 1.0
@@ -60,23 +69,14 @@ height = 2.0
 radial_segments = 12
 rings = 6
 
-[sub_resource type="ShaderMaterial" id="mat_hill"]
-render_priority = 0
-shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.31, 0.478, 0.227, 1)
-shader_parameter/bottom_color = Color(0.239, 0.369, 0.18, 1)
-shader_parameter/gradient_start = -1
-shader_parameter/gradient_height = 2
-shader_parameter/shade_floor = 0.4
-
 [sub_resource type="ShaderMaterial" id="mat_path"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.788, 0.706, 0.561, 1)
-shader_parameter/bottom_color = Color(0.659, 0.569, 0.427, 1)
+shader_parameter/top_color = Color(0.52, 0.48, 0.4, 1)
+shader_parameter/bottom_color = Color(0.4, 0.36, 0.3, 1)
 shader_parameter/gradient_start = -0.1
 shader_parameter/gradient_height = 0.2
-shader_parameter/shade_floor = 0.5
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="BoxMesh" id="mesh_2"]
 size = Vector3(1, 0.1, 1)
@@ -84,11 +84,11 @@ size = Vector3(1, 0.1, 1)
 [sub_resource type="ShaderMaterial" id="mat_trunk"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.541, 0.353, 0.235, 1)
-shader_parameter/bottom_color = Color(0.353, 0.22, 0.149, 1)
-shader_parameter/gradient_start = 0
+shader_parameter/top_color = Color(0.36, 0.26, 0.2, 1)
+shader_parameter/bottom_color = Color(0.2, 0.15, 0.12, 1)
+shader_parameter/gradient_start = null
 shader_parameter/gradient_height = 2.5
-shader_parameter/shade_floor = 0.4
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="CylinderMesh" id="mesh_3"]
 top_radius = 0.18
@@ -96,56 +96,56 @@ bottom_radius = 0.32
 height = 2.6
 radial_segments = 7
 
+[sub_resource type="ShaderMaterial" id="mat_canopy_green"]
+render_priority = 0
+shader = ExtResource("shader")
+shader_parameter/top_color = Color(0.5, 0.55, 0.28, 1)
+shader_parameter/bottom_color = Color(0.18, 0.22, 0.13, 1)
+shader_parameter/gradient_start = null
+shader_parameter/gradient_height = null
+shader_parameter/shade_floor = 0.28
+
 [sub_resource type="SphereMesh" id="mesh_4"]
 radius = 1.0
 height = 2.0
 radial_segments = 10
 rings = 6
 
-[sub_resource type="ShaderMaterial" id="mat_canopy_green"]
-render_priority = 0
-shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.435, 0.682, 0.29, 1)
-shader_parameter/bottom_color = Color(0.184, 0.373, 0.173, 1)
-shader_parameter/gradient_start = -1
-shader_parameter/gradient_height = 2
-shader_parameter/shade_floor = 0.4
-
 [sub_resource type="ShaderMaterial" id="mat_canopy_red"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(1.0, 0.416, 0.29, 1)
-shader_parameter/bottom_color = Color(0.659, 0.157, 0.227, 1)
-shader_parameter/gradient_start = -1
-shader_parameter/gradient_height = 2
-shader_parameter/shade_floor = 0.4
+shader_parameter/top_color = Color(0.58, 0.28, 0.18, 1)
+shader_parameter/bottom_color = Color(0.3, 0.14, 0.1, 1)
+shader_parameter/gradient_start = null
+shader_parameter/gradient_height = null
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="ShaderMaterial" id="mat_canopy_purple"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.773, 0.541, 0.878, 1)
-shader_parameter/bottom_color = Color(0.369, 0.227, 0.541, 1)
-shader_parameter/gradient_start = -1
-shader_parameter/gradient_height = 2
-shader_parameter/shade_floor = 0.4
+shader_parameter/top_color = Color(0.36, 0.29, 0.39, 1)
+shader_parameter/bottom_color = Color(0.18, 0.14, 0.2, 1)
+shader_parameter/gradient_start = null
+shader_parameter/gradient_height = null
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="ShaderMaterial" id="mat_canopy_dark"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.31, 0.561, 0.271, 1)
-shader_parameter/bottom_color = Color(0.133, 0.278, 0.165, 1)
-shader_parameter/gradient_start = -1
-shader_parameter/gradient_height = 2
-shader_parameter/shade_floor = 0.4
+shader_parameter/top_color = Color(0.3, 0.34, 0.2, 1)
+shader_parameter/bottom_color = Color(0.12, 0.15, 0.1, 1)
+shader_parameter/gradient_start = null
+shader_parameter/gradient_height = null
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="ShaderMaterial" id="mat_rock"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.722, 0.659, 0.596, 1)
-shader_parameter/bottom_color = Color(0.431, 0.373, 0.353, 1)
-shader_parameter/gradient_start = -1
-shader_parameter/gradient_height = 2
-shader_parameter/shade_floor = 0.35
+shader_parameter/top_color = Color(0.56, 0.55, 0.5, 1)
+shader_parameter/bottom_color = Color(0.3, 0.29, 0.27, 1)
+shader_parameter/gradient_start = null
+shader_parameter/gradient_height = null
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="SphereMesh" id="mesh_5"]
 radius = 1.0
@@ -153,41 +153,26 @@ height = 2.0
 radial_segments = 7
 rings = 4
 
-[sub_resource type="ShaderMaterial" id="mat_pillar"]
-render_priority = 0
-shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.847, 0.263, 0.227, 1)
-shader_parameter/bottom_color = Color(0.557, 0.133, 0.188, 1)
-shader_parameter/gradient_start = 0
-shader_parameter/gradient_height = 4
-shader_parameter/shade_floor = 0.4
-
 [sub_resource type="ShaderMaterial" id="mat_stone"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.812, 0.765, 0.678, 1)
-shader_parameter/bottom_color = Color(0.561, 0.51, 0.431, 1)
-shader_parameter/gradient_start = 0
+shader_parameter/top_color = Color(0.56, 0.53, 0.47, 1)
+shader_parameter/bottom_color = Color(0.38, 0.36, 0.32, 1)
+shader_parameter/gradient_start = null
 shader_parameter/gradient_height = 0.6
-shader_parameter/shade_floor = 0.45
+shader_parameter/shade_floor = 0.28
 
-[sub_resource type="ShaderMaterial" id="mat_tile"]
+[sub_resource type="BoxMesh" id="mesh_7"]
+size = Vector3(0.9, 0.6, 0.9)
+
+[sub_resource type="ShaderMaterial" id="mat_pillar"]
 render_priority = 0
 shader = ExtResource("shader")
-shader_parameter/top_color = Color(0.29, 0.31, 0.416, 1)
-shader_parameter/bottom_color = Color(0.173, 0.184, 0.271, 1)
-shader_parameter/gradient_start = -0.2
-shader_parameter/gradient_height = 0.4
-shader_parameter/shade_floor = 0.45
-
-[sub_resource type="ShaderMaterial" id="mat_gold"]
-render_priority = 0
-shader = ExtResource("shader")
-shader_parameter/top_color = Color(1.0, 0.812, 0.353, 1)
-shader_parameter/bottom_color = Color(0.769, 0.541, 0.165, 1)
-shader_parameter/gradient_start = -0.3
-shader_parameter/gradient_height = 0.6
-shader_parameter/shade_floor = 0.5
+shader_parameter/top_color = Color(0.52, 0.17, 0.15, 1)
+shader_parameter/bottom_color = Color(0.3, 0.11, 0.1, 1)
+shader_parameter/gradient_start = null
+shader_parameter/gradient_height = null
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="CylinderMesh" id="mesh_6"]
 top_radius = 0.24
@@ -195,22 +180,32 @@ bottom_radius = 0.27
 height = 4.2
 radial_segments = 8
 
-[sub_resource type="BoxMesh" id="mesh_7"]
-size = Vector3(0.9, 0.6, 0.9)
-
 [sub_resource type="BoxMesh" id="mesh_8"]
-size = Vector3(1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="mat_gold"]
+render_priority = 0
+shader = ExtResource("shader")
+shader_parameter/top_color = Color(0.68, 0.55, 0.3, 1)
+shader_parameter/bottom_color = Color(0.42, 0.32, 0.16, 1)
+shader_parameter/gradient_start = -0.3
+shader_parameter/gradient_height = 0.6
+shader_parameter/shade_floor = 0.28
+
+[sub_resource type="ShaderMaterial" id="mat_tile"]
+render_priority = 0
+shader = ExtResource("shader")
+shader_parameter/top_color = Color(0.2, 0.2, 0.22, 1)
+shader_parameter/bottom_color = Color(0.1, 0.1, 0.12, 1)
+shader_parameter/gradient_start = -0.2
+shader_parameter/gradient_height = 0.4
+shader_parameter/shade_floor = 0.28
 
 [sub_resource type="PrismMesh" id="mesh_9"]
 left_to_right = 0.0
-size = Vector3(1, 1, 1)
 
 [sub_resource type="StandardMaterial3D" id="emi_lantern"]
 shading_mode = 0
-albedo_color = Color(1.0, 0.353, 0.165, 1)
-emission_enabled = true
-emission = Color(1.0, 0.353, 0.165, 1)
-emission_energy_multiplier = 6.0
+albedo_color = Color(1, 0.353, 0.165, 1)
 
 [sub_resource type="CylinderMesh" id="mesh_10"]
 top_radius = 0.16
@@ -220,10 +215,7 @@ radial_segments = 8
 
 [sub_resource type="StandardMaterial3D" id="emi_spark"]
 shading_mode = 0
-albedo_color = Color(1.0, 0.878, 0.541, 1)
-emission_enabled = true
-emission = Color(1.0, 0.878, 0.541, 1)
-emission_energy_multiplier = 4.0
+albedo_color = Color(1, 0.878, 0.541, 1)
 
 [sub_resource type="SphereMesh" id="mesh_11"]
 radius = 0.04
@@ -231,539 +223,545 @@ height = 0.08
 radial_segments = 4
 rings = 2
 
-[node name="StyleTest" type="Node3D"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0d1ih"]
+shader = ExtResource("2_xd7oy")
+shader_parameter/tint = null
+shader_parameter/inner_radius = null
+shader_parameter/outer_radius = null
+shader_parameter/strength = null
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="StyleTest" type="Node3D" unique_id=915260066]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2085633334]
 environment = SubResource("env")
 
-[node name="Sun" type="DirectionalLight3D" parent="."]
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=1269081850]
 transform = Transform3D(-0.6428, 0.3116, -0.6998, 0, 0.9135, 0.4067, 0.766, 0.2614, -0.5872, 0, 0, 0)
-light_color = Color(1.0, 0.698, 0.478, 1)
-light_energy = 1.5
+light_color = Color(0.88, 0.76, 0.6, 1)
+light_energy = 0.95
 shadow_enabled = true
 directional_shadow_max_distance = 60.0
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1988051673]
 transform = Transform3D(1, 0, 0, 0, 0.9563, 0.2924, 0, -0.2924, 0.9563, 0, 5.8, 15.5)
-fov = 50.0
 current = true
+fov = 50.0
 
-[node name="Ground" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-mesh = SubResource("mesh_0")
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=672095760]
 material_override = SubResource("mat_ground")
+mesh = SubResource("mesh_0")
 
-[node name="Hill0" type="MeshInstance3D" parent="."]
+[node name="Hill0" type="MeshInstance3D" parent="." unique_id=1387141454]
 transform = Transform3D(22.4, 0, 0, 0, 7.7, 0, 0, 0, 14, -30, -3.5, -45)
-mesh = SubResource("mesh_1")
 material_override = SubResource("mat_hill")
+mesh = SubResource("mesh_1")
 
-[node name="Hill1" type="MeshInstance3D" parent="."]
+[node name="Hill1" type="MeshInstance3D" parent="." unique_id=1211912771]
 transform = Transform3D(28.8, 0, 0, 0, 9.9, 0, 0, 0, 18, -6, -4.5, -60)
-mesh = SubResource("mesh_1")
 material_override = SubResource("mat_hill")
+mesh = SubResource("mesh_1")
 
-[node name="Hill2" type="MeshInstance3D" parent="."]
+[node name="Hill2" type="MeshInstance3D" parent="." unique_id=1553466771]
 transform = Transform3D(24, 0, 0, 0, 8.25, 0, 0, 0, 15, 24, -3.75, -50)
-mesh = SubResource("mesh_1")
 material_override = SubResource("mat_hill")
+mesh = SubResource("mesh_1")
 
-[node name="Hill3" type="MeshInstance3D" parent="."]
+[node name="Hill3" type="MeshInstance3D" parent="." unique_id=793512895]
 transform = Transform3D(17.6, 0, 0, 0, 6.05, 0, 0, 0, 11, 46, -2.75, -38)
-mesh = SubResource("mesh_1")
 material_override = SubResource("mat_hill")
+mesh = SubResource("mesh_1")
 
-[node name="Hill4" type="MeshInstance3D" parent="."]
+[node name="Hill4" type="MeshInstance3D" parent="." unique_id=98629915]
 transform = Transform3D(16, 0, 0, 0, 5.5, 0, 0, 0, 10, -50, -2.5, -30)
-mesh = SubResource("mesh_1")
 material_override = SubResource("mat_hill")
+mesh = SubResource("mesh_1")
 
-[node name="PathStone0" type="MeshInstance3D" parent="."]
+[node name="PathStone0" type="MeshInstance3D" parent="." unique_id=806337033]
 transform = Transform3D(1.565, 0, 0.2287, 0, 1, 0, -0.3327, 0, 1.076, 0.15, 0.03, 6)
-mesh = SubResource("mesh_2")
 material_override = SubResource("mat_path")
+mesh = SubResource("mesh_2")
 
-[node name="PathStone1" type="MeshInstance3D" parent="."]
+[node name="PathStone1" type="MeshInstance3D" parent="." unique_id=755308964]
 transform = Transform3D(1.565, 0, -0.2287, 0, 1, 0, 0.3327, 0, 1.076, -0.15, 0.03, 4.4)
-mesh = SubResource("mesh_2")
 material_override = SubResource("mat_path")
+mesh = SubResource("mesh_2")
 
-[node name="PathStone2" type="MeshInstance3D" parent="."]
+[node name="PathStone2" type="MeshInstance3D" parent="." unique_id=335212541]
 transform = Transform3D(1.565, 0, 0.2287, 0, 1, 0, -0.3327, 0, 1.076, 0.15, 0.03, 2.8)
-mesh = SubResource("mesh_2")
 material_override = SubResource("mat_path")
+mesh = SubResource("mesh_2")
 
-[node name="PathStone3" type="MeshInstance3D" parent="."]
+[node name="PathStone3" type="MeshInstance3D" parent="." unique_id=329029291]
 transform = Transform3D(1.565, 0, -0.2287, 0, 1, 0, 0.3327, 0, 1.076, -0.15, 0.03, 1.2)
-mesh = SubResource("mesh_2")
 material_override = SubResource("mat_path")
+mesh = SubResource("mesh_2")
 
-[node name="PathStone4" type="MeshInstance3D" parent="."]
+[node name="PathStone4" type="MeshInstance3D" parent="." unique_id=71261739]
 transform = Transform3D(1.565, 0, 0.2287, 0, 1, 0, -0.3327, 0, 1.076, 0.15, 0.03, -0.4)
-mesh = SubResource("mesh_2")
 material_override = SubResource("mat_path")
+mesh = SubResource("mesh_2")
 
-[node name="PathStone5" type="MeshInstance3D" parent="."]
+[node name="PathStone5" type="MeshInstance3D" parent="." unique_id=980976318]
 transform = Transform3D(1.565, 0, -0.2287, 0, 1, 0, 0.3327, 0, 1.076, -0.15, 0.03, -2)
-mesh = SubResource("mesh_2")
 material_override = SubResource("mat_path")
+mesh = SubResource("mesh_2")
 
-[node name="PathStone6" type="MeshInstance3D" parent="."]
+[node name="PathStone6" type="MeshInstance3D" parent="." unique_id=1725111785]
 transform = Transform3D(1.565, 0, 0.2287, 0, 1, 0, -0.3327, 0, 1.076, 0.15, 0.03, -3.6)
-mesh = SubResource("mesh_2")
 material_override = SubResource("mat_path")
+mesh = SubResource("mesh_2")
 
-[node name="Trees" type="Node3D" parent="."]
+[node name="Trees" type="Node3D" parent="." unique_id=1575399514]
 
-[node name="Tree0" type="Node3D" parent="Trees"]
+[node name="Tree0" type="Node3D" parent="Trees" unique_id=1862735346]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -5.5, 0, -1)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree0"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree0" unique_id=705412712]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree0"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree0" unique_id=2118621678]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree0"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree0" unique_id=972657450]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree0"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree0" unique_id=665902242]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree0"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree0" unique_id=178693635]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Tree1" type="Node3D" parent="Trees"]
+[node name="Tree1" type="Node3D" parent="Trees" unique_id=53207030]
 transform = Transform3D(0.7986, 0, 0.6018, 0, 1, 0, -0.6018, 0, 0.7986, 5.8, 0, -2.5)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree1"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree1" unique_id=399813485]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree1"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree1" unique_id=2143302036]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_red")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree1"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree1" unique_id=405713255]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_red")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree1"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree1" unique_id=1674989013]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_red")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree1"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree1" unique_id=1796775251]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_red")
+mesh = SubResource("mesh_4")
 
-[node name="Tree2" type="Node3D" parent="Trees"]
+[node name="Tree2" type="Node3D" parent="Trees" unique_id=829736256]
 transform = Transform3D(0.3032, 0, 1.057, 0, 1.1, 0, -1.057, 0, 0.3032, -9, 0, -7)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree2"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree2" unique_id=855112595]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree2"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree2" unique_id=302095980]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_purple")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree2"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree2" unique_id=185477471]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_purple")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree2"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree2" unique_id=1984621872]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_purple")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree2"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree2" unique_id=2092992058]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_purple")
+mesh = SubResource("mesh_4")
 
-[node name="Tree3" type="Node3D" parent="Trees"]
+[node name="Tree3" type="Node3D" parent="Trees" unique_id=19160106]
 transform = Transform3D(-0.4659, 0, 1.214, 0, 1.3, 0, -1.214, 0, -0.4659, 9, 0, -9)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree3"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree3" unique_id=344113583]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree3"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree3" unique_id=316897750]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree3"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree3" unique_id=868107525]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree3"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree3" unique_id=580185246]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree3"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree3" unique_id=1959214920]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Tree4" type="Node3D" parent="Trees"]
+[node name="Tree4" type="Node3D" parent="Trees" unique_id=602202700]
 transform = Transform3D(-1.187, 0, 0.7419, 0, 1.4, 0, -0.7419, 0, -1.187, -13, 0, -14)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree4"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree4" unique_id=1267473702]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree4"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree4" unique_id=979146451]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree4"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree4" unique_id=1758879619]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree4"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree4" unique_id=309051491]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree4"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree4" unique_id=675896492]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Tree5" type="Node3D" parent="Trees"]
+[node name="Tree5" type="Node3D" parent="Trees" unique_id=1292882425]
 transform = Transform3D(-1.195, 0, -0.1046, 0, 1.2, 0, 0.1046, 0, -1.195, 3, 0, -16)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree5"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree5" unique_id=408686484]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree5"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree5" unique_id=542597223]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree5"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree5" unique_id=1613952323]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree5"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree5" unique_id=1338786750]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree5"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree5" unique_id=62382014]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Tree6" type="Node3D" parent="Trees"]
+[node name="Tree6" type="Node3D" parent="Trees" unique_id=1298711807]
 transform = Transform3D(-0.8175, 0, -0.736, 0, 1.1, 0, 0.736, 0, -0.8175, -3, 0, -22)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree6"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree6" unique_id=656530227]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree6"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree6" unique_id=1470528504]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_red")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree6"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree6" unique_id=1748096956]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_red")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree6"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree6" unique_id=1002981624]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_red")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree6"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree6" unique_id=1499919536]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_red")
+mesh = SubResource("mesh_4")
 
-[node name="Tree7" type="Node3D" parent="Trees"]
+[node name="Tree7" type="Node3D" parent="Trees" unique_id=981232171]
 transform = Transform3D(-0.2862, 0, -1.472, 0, 1.5, 0, 1.472, 0, -0.2862, 14, 0, -18)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree7"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree7" unique_id=1710681021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree7"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree7" unique_id=1805987762]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree7"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree7" unique_id=234800966]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree7"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree7" unique_id=1954958157]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree7"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree7" unique_id=1776654278]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Tree8" type="Node3D" parent="Trees"]
+[node name="Tree8" type="Node3D" parent="Trees" unique_id=350783849]
 transform = Transform3D(0.526, 0, -1.079, 0, 1.2, 0, 1.079, 0, 0.526, -18, 0, -4)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree8"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree8" unique_id=8049420]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree8"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree8" unique_id=307706270]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree8"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree8" unique_id=161952536]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree8"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree8" unique_id=1653961428]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree8"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree8" unique_id=1294925800]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_dark")
+mesh = SubResource("mesh_4")
 
-[node name="Tree9" type="Node3D" parent="Trees"]
+[node name="Tree9" type="Node3D" parent="Trees" unique_id=441897340]
 transform = Transform3D(0.9801, 0, -0.4994, 0, 1.1, 0, 0.4994, 0, 0.9801, 17, 0, -3)
 
-[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree9"]
+[node name="Trunk" type="MeshInstance3D" parent="Trees/Tree9" unique_id=815043452]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
-mesh = SubResource("mesh_3")
 material_override = SubResource("mat_trunk")
+mesh = SubResource("mesh_3")
 
-[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree9"]
+[node name="Canopy0" type="MeshInstance3D" parent="Trees/Tree9" unique_id=833021404]
 transform = Transform3D(1.35, 0, 0, 0, 1.242, 0, 0, 0, 1.35, 0, 3.3, 0)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree9"]
+[node name="Canopy1" type="MeshInstance3D" parent="Trees/Tree9" unique_id=429540933]
 transform = Transform3D(0.95, 0, 0, 0, 0.874, 0, 0, 0, 0.95, 0.8, 2.7, 0.3)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree9"]
+[node name="Canopy2" type="MeshInstance3D" parent="Trees/Tree9" unique_id=502633404]
 transform = Transform3D(1, 0, 0, 0, 0.92, 0, 0, 0, 1, -0.75, 2.8, -0.2)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree9"]
+[node name="Canopy3" type="MeshInstance3D" parent="Trees/Tree9" unique_id=627054615]
 transform = Transform3D(0.85, 0, 0, 0, 0.782, 0, 0, 0, 0.85, 0.1, 4.2, -0.1)
-mesh = SubResource("mesh_4")
 material_override = SubResource("mat_canopy_green")
+mesh = SubResource("mesh_4")
 
-[node name="Rocks" type="Node3D" parent="."]
+[node name="Rocks" type="Node3D" parent="." unique_id=505851895]
 
-[node name="Rock0" type="MeshInstance3D" parent="Rocks"]
+[node name="Rock0" type="MeshInstance3D" parent="Rocks" unique_id=811124397]
 transform = Transform3D(1.117, -0.1046, 0.342, 0.167, 0.7922, 0, -0.4064, 0.03808, 0.9397, 3.2, 0.44, 2.2)
-mesh = SubResource("mesh_5")
 material_override = SubResource("mat_rock")
+mesh = SubResource("mesh_5")
 
-[node name="Rock1" type="MeshInstance3D" parent="Rocks"]
+[node name="Rock1" type="MeshInstance3D" parent="Rocks" unique_id=841538656]
 transform = Transform3D(0.2032, -0.02142, 0.5168, 0.0835, 0.4456, 0, -0.5583, 0.05885, 0.1881, 4.2, 0.2475, 3)
-mesh = SubResource("mesh_5")
 material_override = SubResource("mat_rock")
+mesh = SubResource("mesh_5")
 
-[node name="Rock2" type="MeshInstance3D" parent="Rocks"]
+[node name="Rock2" type="MeshInstance3D" parent="Rocks" unique_id=171790692]
 transform = Transform3D(0.7802, -0.07538, 0.1216, 0.1113, 0.5446, 0, -0.1376, 0.01329, 0.6894, -3.4, 0.3025, 3.6)
-mesh = SubResource("mesh_5")
 material_override = SubResource("mat_rock")
+mesh = SubResource("mesh_5")
 
-[node name="Rock3" type="MeshInstance3D" parent="Rocks"]
+[node name="Rock3" type="MeshInstance3D" parent="Rocks" unique_id=390032537]
 transform = Transform3D(1.12, -0.1083, 0.9192, 0.2227, 1.089, 0, -1.12, 0.1083, 0.9192, -7.5, 0.605, -11)
-mesh = SubResource("mesh_5")
 material_override = SubResource("mat_rock")
+mesh = SubResource("mesh_5")
 
-[node name="Gate" type="Node3D" parent="."]
+[node name="Gate" type="Node3D" parent="." unique_id=1576521640]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 
-[node name="BaseL" type="MeshInstance3D" parent="Gate"]
+[node name="BaseL" type="MeshInstance3D" parent="Gate" unique_id=1898739290]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 0.3, 0)
-mesh = SubResource("mesh_7")
 material_override = SubResource("mat_stone")
+mesh = SubResource("mesh_7")
 
-[node name="PillarL" type="MeshInstance3D" parent="Gate"]
+[node name="PillarL" type="MeshInstance3D" parent="Gate" unique_id=1662302367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 2.4, 0)
-mesh = SubResource("mesh_6")
 material_override = SubResource("mat_pillar")
+mesh = SubResource("mesh_6")
 
-[node name="BaseR" type="MeshInstance3D" parent="Gate"]
+[node name="BaseR" type="MeshInstance3D" parent="Gate" unique_id=621194021]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 0.3, 0)
-mesh = SubResource("mesh_7")
 material_override = SubResource("mat_stone")
+mesh = SubResource("mesh_7")
 
-[node name="PillarR" type="MeshInstance3D" parent="Gate"]
+[node name="PillarR" type="MeshInstance3D" parent="Gate" unique_id=224158907]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1, 2.4, 0)
-mesh = SubResource("mesh_6")
 material_override = SubResource("mat_pillar")
+mesh = SubResource("mesh_6")
 
-[node name="BeamLow" type="MeshInstance3D" parent="Gate"]
+[node name="BeamLow" type="MeshInstance3D" parent="Gate" unique_id=351905229]
 transform = Transform3D(5, 0, 0, 0, 0.28, 0, 0, 0, 0.34, 0, 3.5, 0)
-mesh = SubResource("mesh_8")
 material_override = SubResource("mat_pillar")
+mesh = SubResource("mesh_8")
 
-[node name="BeamHigh" type="MeshInstance3D" parent="Gate"]
+[node name="BeamHigh" type="MeshInstance3D" parent="Gate" unique_id=315140067]
 transform = Transform3D(5.8, 0, 0, 0, 0.32, 0, 0, 0, 0.4, 0, 4.35, 0)
-mesh = SubResource("mesh_8")
 material_override = SubResource("mat_pillar")
+mesh = SubResource("mesh_8")
 
-[node name="Plaque" type="MeshInstance3D" parent="Gate"]
+[node name="Plaque" type="MeshInstance3D" parent="Gate" unique_id=1129577624]
 transform = Transform3D(1.3, 0, 0, 0, 0.6, 0, 0, 0, 0.08, 0, 3.93, 0.18)
-mesh = SubResource("mesh_8")
 material_override = SubResource("mat_gold")
+mesh = SubResource("mesh_8")
 
-[node name="Roof" type="MeshInstance3D" parent="Gate"]
+[node name="Roof" type="MeshInstance3D" parent="Gate" unique_id=1610505498]
 transform = Transform3D(6.4, 0, 0, 0, 0.3, 0, 0, 0, 1.5, 0, 4.72, 0)
-mesh = SubResource("mesh_8")
 material_override = SubResource("mat_tile")
+mesh = SubResource("mesh_8")
 
-[node name="Ridge" type="MeshInstance3D" parent="Gate"]
+[node name="Ridge" type="MeshInstance3D" parent="Gate" unique_id=1493287535]
 transform = Transform3D(4.6, 0, 0, 0, 0.22, 0, 0, 0, 0.6, 0, 5, 0)
-mesh = SubResource("mesh_8")
 material_override = SubResource("mat_tile")
+mesh = SubResource("mesh_8")
 
-[node name="EaveL" type="MeshInstance3D" parent="Gate"]
+[node name="EaveL" type="MeshInstance3D" parent="Gate" unique_id=1571679937]
 transform = Transform3D(0.9, 0, 0, 0, 0.7, 0, 0, 0, 1.5, -3.45, 4.92, 0)
-mesh = SubResource("mesh_9")
 material_override = SubResource("mat_tile")
+mesh = SubResource("mesh_9")
 
-[node name="RidgeEndL" type="MeshInstance3D" parent="Gate"]
+[node name="RidgeEndL" type="MeshInstance3D" parent="Gate" unique_id=1444816048]
 transform = Transform3D(0.35, 0, 0, 0, 0.4, 0, 0, 0, 0.25, -2.45, 5.28, 0)
-mesh = SubResource("mesh_9")
 material_override = SubResource("mat_gold")
-
-[node name="EaveR" type="MeshInstance3D" parent="Gate"]
-transform = Transform3D(-0.9, 0, 0, -0, 0.7, 0, -0, 0, 1.5, 3.45, 4.92, 0)
 mesh = SubResource("mesh_9")
+
+[node name="EaveR" type="MeshInstance3D" parent="Gate" unique_id=1075614282]
+transform = Transform3D(-0.9, 0, 0, 0, 0.7, 0, 0, 0, 1.5, 3.45, 4.92, 0)
 material_override = SubResource("mat_tile")
-
-[node name="RidgeEndR" type="MeshInstance3D" parent="Gate"]
-transform = Transform3D(-0.35, 0, 0, -0, 0.4, 0, -0, 0, 0.25, 2.45, 5.28, 0)
 mesh = SubResource("mesh_9")
-material_override = SubResource("mat_gold")
 
-[node name="SideBaseL" type="MeshInstance3D" parent="Gate"]
+[node name="RidgeEndR" type="MeshInstance3D" parent="Gate" unique_id=971385087]
+transform = Transform3D(-0.35, 0, 0, 0, 0.4, 0, 0, 0, 0.25, 2.45, 5.28, 0)
+material_override = SubResource("mat_gold")
+mesh = SubResource("mesh_9")
+
+[node name="SideBaseL" type="MeshInstance3D" parent="Gate" unique_id=140796186]
 transform = Transform3D(0.8, 0, 0, 0, 0.85, 0, 0, 0, 0.8, -3.7, 0.25, 0)
-mesh = SubResource("mesh_7")
 material_override = SubResource("mat_stone")
+mesh = SubResource("mesh_7")
 
-[node name="SidePillarL" type="MeshInstance3D" parent="Gate"]
+[node name="SidePillarL" type="MeshInstance3D" parent="Gate" unique_id=593076166]
 transform = Transform3D(0.8, 0, 0, 0, 0.7, 0, 0, 0, 0.8, -3.7, 1.7, 0)
-mesh = SubResource("mesh_6")
 material_override = SubResource("mat_pillar")
+mesh = SubResource("mesh_6")
 
-[node name="SideBeamL" type="MeshInstance3D" parent="Gate"]
+[node name="SideBeamL" type="MeshInstance3D" parent="Gate" unique_id=2048805219]
 transform = Transform3D(1.9, 0, 0, 0, 0.24, 0, 0, 0, 0.3, -2.9, 2.85, 0)
-mesh = SubResource("mesh_8")
 material_override = SubResource("mat_pillar")
+mesh = SubResource("mesh_8")
 
-[node name="SideRoofL" type="MeshInstance3D" parent="Gate"]
+[node name="SideRoofL" type="MeshInstance3D" parent="Gate" unique_id=364919080]
 transform = Transform3D(2.6, 0, 0, 0, 0.24, 0, 0, 0, 1.3, -3, 3.35, 0)
-mesh = SubResource("mesh_8")
 material_override = SubResource("mat_tile")
+mesh = SubResource("mesh_8")
 
-[node name="SideEaveL" type="MeshInstance3D" parent="Gate"]
+[node name="SideEaveL" type="MeshInstance3D" parent="Gate" unique_id=535545449]
 transform = Transform3D(0.7, 0, 0, 0, 0.55, 0, 0, 0, 1.3, -4.6, 3.5, 0)
-mesh = SubResource("mesh_9")
 material_override = SubResource("mat_tile")
+mesh = SubResource("mesh_9")
 
-[node name="SideBaseR" type="MeshInstance3D" parent="Gate"]
+[node name="SideBaseR" type="MeshInstance3D" parent="Gate" unique_id=115586044]
 transform = Transform3D(0.8, 0, 0, 0, 0.85, 0, 0, 0, 0.8, 3.7, 0.25, 0)
-mesh = SubResource("mesh_7")
 material_override = SubResource("mat_stone")
+mesh = SubResource("mesh_7")
 
-[node name="SidePillarR" type="MeshInstance3D" parent="Gate"]
+[node name="SidePillarR" type="MeshInstance3D" parent="Gate" unique_id=2135062118]
 transform = Transform3D(0.8, 0, 0, 0, 0.7, 0, 0, 0, 0.8, 3.7, 1.7, 0)
+material_override = SubResource("mat_pillar")
 mesh = SubResource("mesh_6")
-material_override = SubResource("mat_pillar")
 
-[node name="SideBeamR" type="MeshInstance3D" parent="Gate"]
+[node name="SideBeamR" type="MeshInstance3D" parent="Gate" unique_id=1920873240]
 transform = Transform3D(1.9, 0, 0, 0, 0.24, 0, 0, 0, 0.3, 2.9, 2.85, 0)
-mesh = SubResource("mesh_8")
 material_override = SubResource("mat_pillar")
-
-[node name="SideRoofR" type="MeshInstance3D" parent="Gate"]
-transform = Transform3D(2.6, 0, 0, 0, 0.24, 0, 0, 0, 1.3, 3, 3.35, 0)
 mesh = SubResource("mesh_8")
-material_override = SubResource("mat_tile")
 
-[node name="SideEaveR" type="MeshInstance3D" parent="Gate"]
-transform = Transform3D(-0.7, 0, 0, -0, 0.55, 0, -0, 0, 1.3, 4.6, 3.5, 0)
+[node name="SideRoofR" type="MeshInstance3D" parent="Gate" unique_id=1732809443]
+transform = Transform3D(2.6, 0, 0, 0, 0.24, 0, 0, 0, 1.3, 3, 3.35, 0)
+material_override = SubResource("mat_tile")
+mesh = SubResource("mesh_8")
+
+[node name="SideEaveR" type="MeshInstance3D" parent="Gate" unique_id=1052525593]
+transform = Transform3D(-0.7, 0, 0, 0, 0.55, 0, 0, 0, 1.3, 4.6, 3.5, 0)
+material_override = SubResource("mat_tile")
 mesh = SubResource("mesh_9")
-material_override = SubResource("mat_tile")
 
-[node name="LanternL" type="MeshInstance3D" parent="Gate"]
+[node name="LanternL" type="MeshInstance3D" parent="Gate" unique_id=23917382]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 3.05, 0.1)
-mesh = SubResource("mesh_10")
 material_override = SubResource("emi_lantern")
+mesh = SubResource("mesh_10")
 
-[node name="LanternLightL" type="OmniLight3D" parent="Gate"]
+[node name="LanternLightL" type="OmniLight3D" parent="Gate" unique_id=960607383]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25, 2.9, 0.5)
-light_color = Color(1.0, 0.478, 0.227, 1)
+light_color = Color(1, 0.478, 0.227, 1)
 light_energy = 1.2
 omni_range = 4.5
 
-[node name="LanternR" type="MeshInstance3D" parent="Gate"]
+[node name="LanternR" type="MeshInstance3D" parent="Gate" unique_id=1210273735]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 3.05, 0.1)
-mesh = SubResource("mesh_10")
 material_override = SubResource("emi_lantern")
+mesh = SubResource("mesh_10")
 
-[node name="LanternLightR" type="OmniLight3D" parent="Gate"]
+[node name="LanternLightR" type="OmniLight3D" parent="Gate" unique_id=2021898777]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25, 2.9, 0.5)
-light_color = Color(1.0, 0.478, 0.227, 1)
+light_color = Color(1, 0.478, 0.227, 1)
 light_energy = 1.2
 omni_range = 4.5
 
-[node name="Fireflies" type="CPUParticles3D" parent="."]
+[node name="Fireflies" type="CPUParticles3D" parent="." unique_id=1642594019]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = SubResource("emi_spark")
 amount = 50
 lifetime = 6.0
 preprocess = 6.0
 mesh = SubResource("mesh_11")
-material_override = SubResource("emi_spark")
 emission_shape = 3
 emission_box_extents = Vector3(10, 1.2, 7)
 direction = Vector3(0, 1, 0)
@@ -771,3 +769,13 @@ spread = 180.0
 gravity = Vector3(0, 0.02, 0)
 initial_velocity_min = 0.05
 initial_velocity_max = 0.25
+
+[node name="Vignette" type="CanvasLayer" parent="." unique_id=1254142246]
+layer = 10
+
+[node name="Overlay" type="ColorRect" parent="Vignette" unique_id=1301521645]
+material = SubResource("ShaderMaterial_0d1ih")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2

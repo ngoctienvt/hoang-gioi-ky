@@ -35,33 +35,47 @@ Dựng đủ công cụ trên máy, chốt bảng màu và quy trình chuẩn, l
 
 ## Bảng màu chuẩn (biome Rừng Linh Trúc, mùa Thu)
 
+**Không khí: thế giới hoang dã u ám, kiểu sinh tồn DST.** Theo quy tắc 80/20 của GDD 1.1: màu nền trầm, bạc, ngả đất. Chỉ nhóm "Điểm nhấn" bên dưới mới được rực. Đã thử trên cảnh `world/style_test/style_test.tscn`, xem ảnh `plans/reports/style-test-261123-1429-canh-thu-u-am.png`.
+
+**Màu nền (chiếm phần lớn mọi asset):**
+
 | Vai trò | Hex | Dùng cho |
 |---|---|---|
-| Lá xanh sáng | `#7FB24A` | Mặt trên tán cây, cỏ |
-| Lá xanh đậm | `#3E6B2F` | Mặt dưới tán cây |
-| Lá xanh rất đậm | `#24452A` | Bóng trong tán, bụi rậm |
-| Trúc xanh ngọc | `#6FBF8E` | Thân linh trúc |
-| Tán đỏ Thu | `#C8452E` | Cây điểm xuyết, lá đỏ |
-| Tán cam Thu | `#E58A3A` | Cây điểm xuyết, quả |
-| Tán tím | `#7A4C9E` | Cây điểm xuyết, hoa |
-| Gỗ sáng | `#B07A4A` | Gỗ đã chặt, cán công cụ |
-| Gỗ thân cây | `#6E4630` | Vỏ cây |
-| Gỗ tối | `#3F2A20` | Khe vỏ, gốc cây |
-| Đá sáng | `#A9A8A0` | Mặt trên đá |
-| Đá xám xanh | `#6F7A78` | Thân đá |
-| Đá tối | `#454B52` | Khe đá |
-| Linh Thạch | `#5FD3E0` | Tinh thể Linh Thạch (phát sáng trong game bằng emission ở Godot) |
-| Cỏ khô / rơm | `#D9B86A` | Giáp cỏ, mái rơm, dây thừng |
-| Da lông nâu | `#8A5A3C` | Sói, da lông |
-| Lông xám | `#7D7A78` | Sói |
-| Lông trắng kem | `#EDE3D0` | Thỏ linh |
-| Lông khỉ vàng nâu | `#B98A4E` | Khỉ linh |
-| Đỏ sơn cổ phong | `#A8322B` | Chi tiết công trình, Hồi Hồn Đài |
-| Vàng đồng | `#C9A24A` | Viền đồ quý, Lò Đan |
-| Linh khí | `#9FE8C8` | Đan dược, Thanh Mộc Tuyền, Hồn Phách |
-| Da người | `#E0B48E` | Nhân vật |
+| Lá ô liu sáng | `#808C47` | Mặt trên tán cây, cỏ |
+| Lá ô liu đậm | `#4E5B32` | Mặt dưới tán cây |
+| Lá rất đậm | `#2E3624` | Bóng trong tán, bụi rậm |
+| Cỏ úa | `#5F6340` | Mặt đất cỏ, búi cỏ |
+| Đất | `#6B5A3E` | Đất trống, hang thỏ, luống ruộng |
+| Trúc xanh xám | `#7E9C6E` | Thân linh trúc |
+| Tán gỉ sắt (Thu) | `#94472E` | Cây điểm xuyết, lá đỏ |
+| Tán vàng đất (Thu) | `#B37636` | Cây điểm xuyết |
+| Tán tím tro | `#5C4A63` | Cây điểm xuyết, hoa |
+| Gỗ sáng | `#A07A52` | Gỗ đã chặt, cán công cụ |
+| Gỗ thân cây | `#5C4332` | Vỏ cây |
+| Gỗ tối | `#33261E` | Khe vỏ, gốc cây |
+| Đá sáng | `#8F8C80` | Mặt trên đá |
+| Đá xám nâu | `#6B6A62` | Thân đá |
+| Đá tối | `#3E3D3A` | Khe đá |
+| Cỏ khô / rơm | `#B89E62` | Giáp cỏ, mái rơm, dây thừng |
+| Da lông nâu | `#6E4E38` | Sói, da lông |
+| Lông xám | `#6A6763` | Sói |
+| Lông trắng ngà | `#CFC6B4` | Thỏ linh |
+| Lông khỉ nâu vàng | `#9A774A` | Khỉ linh |
+| Đỏ sơn mài cũ | `#852D26` | Chi tiết công trình, Hồi Hồn Đài |
+| Đồng cũ | `#A88B4E` | Viền đồ quý, Lò Đan |
+| Da người | `#C9A386` | Nhân vật |
 
-Được thêm màu mới khi cần, nhưng phải ghi vào bảng này và báo chủ dự án.
+**Điểm nhấn (được rực, chỉ dùng cho thứ quan trọng với gameplay, mỗi asset tối đa một vùng nhỏ):**
+
+| Vai trò | Hex | Dùng cho |
+|---|---|---|
+| Linh Thạch | `#5FD3E0` | Tinh thể Linh Thạch (Godot thêm phát sáng) |
+| Linh khí | `#9FE8C8` | Đan dược, Thanh Mộc Tuyền, Hồn Phách, Linh Quả biến dị |
+| Quả chín | `#D9532E` | Quả linh, quả trên bụi |
+| Lửa | `#F29A3A` | Than hồng, đầu đuốc |
+| Mắt yêu thú | `#E8C24A` | Mắt sói, mắt khỉ |
+
+Được thêm màu mới khi cần, nhưng phải ghi vào bảng này và báo chủ dự án. Màu nền mới phải trầm, độ bão hòa thấp như các màu trên.
 
 ## Yêu cầu ảnh concept (đầu vào cho Omni)
 
@@ -75,14 +89,17 @@ Dựng đủ công cụ trên máy, chốt bảng màu và quy trình chuẩn, l
 **Mẫu prompt tạo ảnh concept** (thay phần trong ngoặc vuông):
 
 ```
-stylized low-poly 3D game asset, [MÔ TẢ VẬT THỂ], ancient chinese fantasy wilderness,
-hand-painted flat colors with soft gradients, warm saturated autumn palette,
-chunky simple shapes, soft rounded forms, single object centered, full object visible,
-three-quarter front view from slightly above, plain light grey background,
-flat even lighting, no shadow, no text, no outline
+stylized low-poly 3D game asset, [MÔ TẢ VẬT THỂ], gloomy ancient chinese fantasy wilderness,
+survival game mood, hand-painted flat colors with soft gradients,
+muted earthy desaturated palette, olive green, umber brown, rust, ash grey,
+weathered and worn, chunky simple shapes, soft rounded forms,
+single object centered, full object visible, three-quarter front view from slightly above,
+plain light grey background, flat even lighting, no shadow, no text, no outline
 ```
 
-Prompt phủ định (negative): `photorealistic, PBR, metal, scratches, high detail noise, text, logo, watermark, multiple objects, ground, scene, harsh shadow, black outline, cropped`.
+Prompt phủ định (negative): `bright saturated colors, cheerful, cute pastel, neon, photorealistic, PBR, shiny metal, high detail noise, text, logo, watermark, multiple objects, ground, scene, harsh shadow, black outline, cropped`.
+
+Ảnh concept ra vẫn tươi quá thì không sao: khi tô texture (bước 5) màu luôn kéo về bảng màu chuẩn ở trên.
 
 ## Quy trình chuẩn (áp dụng cho mọi asset)
 

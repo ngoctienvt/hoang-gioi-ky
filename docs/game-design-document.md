@@ -10,7 +10,7 @@
 | Chủ đề | Quyết định |
 |---|---|
 | Thể loại | Sinh tồn co-op 1–4 người, 3D stylized, camera nghiêng cố định (chưa xoay) |
-| Art direction | Xem mục 1.1: 3D low-poly tô màu kiểu tranh vẽ, màu bão hòa ấm, kiến trúc cổ phong, ánh sáng và sương có không khí. Không dùng outline nét mực cho thế giới |
+| Art direction | Xem mục 1.1: 3D low-poly tô màu kiểu tranh vẽ, **tông màu đất trầm, u ám kiểu sinh tồn DST** (đổi ngày 2026-11-23, trước đây là màu bão hòa ấm), kiến trúc cổ phong, sương dày. Không dùng outline nét mực cho thế giới |
 | Chủ đề | **Huyền huyễn**, không phải tu tiên cảnh giới. Nhân vật là người **xuyên không** |
 | Dựng Sơn Môn | Tự do chọn chỗ, không có vùng tân thủ cố định |
 | Linh Mạch | Đổi thành **Linh Tuyền**: chỉ mang lợi ích (tưới cây, tôi vũ khí, ngâm/uống, dung môi lò đan). **Không** ảnh hưởng cách đặt công trình, yêu thú hay người chơi khác |
@@ -48,12 +48,13 @@
 4. **Chế tác dựa trên tài nguyên, có công cụ giảm tải.** Lò và nồi kiểu crockpot. Việc lặp lại (chặt, đào, vận chuyển) được tự động hóa bằng Khôi Lỗi từ giữa game.
 
 ### 1.1. Art direction
-Tham chiếu: ảnh chụp một game 3D cổ phong do chủ dự án cung cấp (2026-11-23). Chỉ học phong cách, không sao chép giao diện hay asset.
+Tham chiếu hình khối: ảnh chụp một game 3D cổ phong do chủ dự án cung cấp (2026-11-23), chỉ học cách dựng khối low-poly. Tham chiếu không khí và màu sắc: cảm giác hoang dã, bất an của Don't Starve Together. Không sao chép giao diện hay asset của game nào.
 - **Hình khối:** 3D low-poly đến mid-poly, tỉ lệ hơi cách điệu. Cây có tán tròn khối, đá góc cạnh mềm.
 - **Chất liệu:** texture tô tay hoặc màu phẳng có chuyển sắc kiểu tranh vẽ, không dùng PBR chân thực.
-- **Màu sắc:** bão hòa và ấm. Trời chạng vạng cam đỏ, cây xanh đậm, điểm xuyết tán lá đỏ và tím. Mỗi biome có bảng màu chủ đạo riêng.
-- **Kiến trúc:** cổ phong (mái cong, cổng tam quan, tường thành, đèn lồng), dùng cho công trình Sơn Môn.
-- **Ánh sáng và không khí:** sương theo khoảng cách (depth fog), bloom nhẹ, hạt bay (đom đóm, tàn lửa, linh khí). Ánh sáng đổi rõ rệt theo ngày, chạng vạng, đêm.
+- **Màu sắc (quy tắc 80/20):** khoảng 80% màn hình là màu đất trầm, độ bão hòa thấp: xanh ô liu, nâu đất, vàng úa, gỉ sắt, tím tro, đá xám ngả nâu. Khoảng 20% còn lại là màu rực, **chỉ dành cho thứ có ý nghĩa gameplay**: lửa, Linh Thạch, linh khí, quả chín, mắt yêu thú, công trình quan trọng. Mỗi biome có bảng màu chủ đạo riêng nhưng đều theo quy tắc này. Bảng màu biome đầu nằm ở [plan asset 3D, phase-01](../plans/261123-1413-3d-asset-pipeline-hunyuan3d-omni/phase-01-style-lock-and-setup.md).
+- **Kiến trúc:** cổ phong (mái cong, cổng tam quan, tường thành, đèn lồng), dùng cho công trình Sơn Môn. Gỗ sơn đỏ và đồng đã cũ, bạc màu.
+- **Ánh sáng và không khí:** thế giới u ám, đè nén. Trời xám đục, chạng vạng cam đục pha xám, đêm gần như đen hẳn, chỉ có vùng lửa sáng ấm. Sương xám dày theo khoảng cách che bớt tầm nhìn. Mép màn hình tối dần (vignette). Bloom nhẹ, chỉ ở nguồn sáng. Hạt bay (đom đóm, tàn lửa, linh khí) là điểm sáng hiếm hoi. Ánh sáng đổi rõ rệt theo ngày, chạng vạng, đêm.
+- **Cảnh thử:** `world/style_test/style_test.tscn`, ảnh tại `plans/reports/style-test-261123-1429-canh-thu-u-am.png`.
 - **Camera:** góc nghiêng phối cảnh (perspective), thấp hơn kiểu DST một chút để thấy được bầu trời và chiều cao công trình.
 - **Thủy mặc chỉ còn làm điểm nhấn:** chữ thư pháp lớn khi vào vùng hoặc kích hoạt kỹ năng, viền mực khi Tâm Ma, khung giao diện.
 - **Giao diện:** khung viền vàng đồng, nền tối trong suốt, biểu tượng tròn.

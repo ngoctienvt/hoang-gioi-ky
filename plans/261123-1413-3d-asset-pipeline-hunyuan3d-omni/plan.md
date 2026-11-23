@@ -48,8 +48,9 @@ Tạo đủ model 3D cho bản demo (biome Rừng Linh Trúc & Đồng Cỏ, mù
 ## Phong cách (tóm tắt từ GDD 1.1)
 
 - **Hình khối:** low-poly đến mid-poly, tỉ lệ hơi cách điệu, khối lớn rõ ràng. Cây có tán tròn khối, đá góc cạnh mềm. Chi tiết nhỏ hơn 5 cm thì bỏ.
-- **Màu:** bão hòa và ấm, tô kiểu tranh vẽ, chuyển sắc mềm, không chân thực. Cây xanh đậm, điểm xuyết tán đỏ và tím. Gỗ nâu ấm, đá xám ngả xanh hoặc tím.
-- **Kiến trúc:** cổ phong (mái cong, gỗ sơn đỏ, đá xám, đèn lồng), nhưng ở demo công trình còn thô sơ, làm từ gỗ, đá, cỏ, dây thừng.
+- **Không khí:** thế giới hoang dã **u ám**, đè nén, kiểu sinh tồn DST. Mọi thứ trông cũ, bạc màu, dãi dầu mưa nắng.
+- **Màu (quy tắc 80/20):** 80% là màu đất trầm, độ bão hòa thấp (ô liu, nâu đất, gỉ sắt, tím tro, đá xám nâu). 20% màu rực chỉ dành cho điểm nhấn gameplay: Linh Thạch, linh khí, quả chín, lửa, mắt yêu thú. Tô kiểu tranh vẽ, chuyển sắc mềm, không chân thực.
+- **Kiến trúc:** cổ phong (mái cong, gỗ sơn đỏ đã bạc, đá xám, đèn lồng), nhưng ở demo công trình còn thô sơ, làm từ gỗ, đá, cỏ, dây thừng.
 - **Không có:** viền đen nét mực, chữ, logo, chi tiết sci-fi, vật liệu kim loại bóng.
 - Bảng màu chuẩn ghi ở [phase-01](phase-01-style-lock-and-setup.md). Mọi texture phải lấy màu từ bảng đó.
 - Trong Godot, model được tô bằng shader toon `shaders/painted_gradient.gdshader` (ánh sáng 2 bậc mềm). Vì vậy texture chỉ cần màu phẳng và chuyển sắc nhẹ, không cần tô bóng sáng.

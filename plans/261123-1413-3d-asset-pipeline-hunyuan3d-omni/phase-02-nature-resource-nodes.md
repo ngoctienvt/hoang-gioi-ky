@@ -11,7 +11,7 @@ Làm toàn bộ mục 1, 2, 3 của [asset-catalog.md](asset-catalog.md): cây, 
    - Giai đoạn sau làm **từ chính mesh giai đoạn trước trong Blender** (cắt bớt, đập vỡ bằng Boolean hoặc Cell Fracture, rồi giảm poly), **không** tạo lại bằng Omni. Như vậy chỗ đặt, màu và hướng vân sẽ khớp, khi đổi giai đoạn người chơi không thấy nhảy hình.
    - Gốc cây (`stump`) đặt đúng vị trí và cùng đường kính với chân thân cây ở `standing`.
 2. **Cây đổ** do Godot làm (xoay mesh `standing` đổ xuống rồi biến mất). Vì vậy pivot cây ở tâm đáy thân cây, không phải tâm tán.
-3. **Tán lá:** khối tròn to, 3–6 cụm, không làm từng lá. Mặt trên sáng (`#7FB24A`), mặt dưới tối (`#3E6B2F`). Với cách tô bảng màu, gán UV mặt trên vào ô sáng, mặt dưới vào ô tối, phần giữa chuyển sắc.
+3. **Tán lá:** khối tròn to, 3–6 cụm, không làm từng lá. Mặt trên sáng (`#808C47`), mặt dưới tối (`#4E5B32`). Với cách tô bảng màu, gán UV mặt trên vào ô sáng, mặt dưới vào ô tối, phần giữa chuyển sắc.
 4. **Biến thể cây** (`tree_common_a/b/c`): cùng chiều cao và bảng màu, khác dáng tán và độ nghiêng thân. Dùng khống chế `bbox` giống nhau cho cả ba, đổi ảnh concept.
 5. **Linh Thạch:** tinh thể là object con tên `crystal`, gán vào ô màu `#5FD3E0`. Godot sẽ thêm phát sáng cho object này.
 6. **Bụi linh quả:** quả là object con tên `berries`. Giai đoạn `picked` chỉ cần xóa object `berries`, không làm lại bụi.
