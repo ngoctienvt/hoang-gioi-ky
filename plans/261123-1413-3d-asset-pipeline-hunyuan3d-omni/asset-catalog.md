@@ -115,7 +115,7 @@ Vật phẩm nằm dưới đất trong game và cũng dùng để render icon. 
 
 | id | Tên | Trạng thái (mỗi cái một file, hoặc object con bật tắt) | Kích thước | Tam giác | Tex | Ưu tiên |
 |---|---|---|---|---|---|---|
-| `struct_campfire` | Lửa Trại | Vòng đá + củi. Object con: `logs_full`, `logs_low`, `ash` (Godot bật tắt theo nhiên liệu). Empty `flame_socket` | 1,2 × 1,2 × 0,5 | 800 | pal | P0 |
+| `struct_campfire` | Lửa Trại | Vòng đá + củi. Object con: `logs_full`, `logs_low`, `ash` (Godot bật tắt theo nhiên liệu). Empty `flame_socket` | 1,2 × 1,2 × 0,5 | 3000 (800 vỡ vòng đá, 23-11) | pal | P0 |
 | `struct_fire_pit` | Lò Lửa (lửa trại bền) | Bếp đá xếp cao hơn. Object con như trên | 1,5 × 1,5 × 0,8 | 1200 | pal | P0 |
 | `struct_crafting_table` | Bàn Chế Tác | Bàn gỗ thô, trên có rìu, dây, vài miếng gỗ | 1,4 × 0,9 × 1 | 1800 | pal | P0 |
 | `struct_chest` | Rương | Object con `lid` có pivot ở bản lề để Godot mở nắp | 0,9 × 0,6 × 0,6 | 800 | pal | P0 |

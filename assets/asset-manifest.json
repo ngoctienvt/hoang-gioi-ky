@@ -1,0 +1,2034 @@
+{
+ "schema_version": 1,
+ "note": "Nguồn gốc mọi asset. 'packs' = asset ngoài dùng tạm/dùng lại; 'assets' = asset làm riêng cho game (mẫu mục ở plans/261123-1413-3d-asset-pipeline-hunyuan3d-omni/phase-01).",
+ "packs": [
+  {
+   "id": "kenney_nature_kit",
+   "name": "Nature Kit 2.1",
+   "author": "Kenney",
+   "license": "CC0-1.0",
+   "source": "https://kenney.nl/assets/nature-kit",
+   "path": "assets/models/_placeholder/nature/kenney",
+   "note": "187 GLB: cây (cả biến thể _fall/_dark), gốc, đá, bụi, cỏ, hoa, nấm, gỗ, lửa trại đá, luống ruộng, trúc, cột/đá phế tích. Màu phẳng nhiều material, chưa tô theo bảng màu.",
+   "copied_from": "animation2d/tongmon/assets_src/kenney_nature_kit"
+  },
+  {
+   "id": "kaykit_adventurers",
+   "name": "KayKit Character Pack: Adventurers 1.0",
+   "author": "Kay Lousberg",
+   "license": "CC0-1.0",
+   "source": "https://github.com/KayKit-Game-Assets/KayKit-Character-Pack-Adventures-1.0",
+   "path": "assets/models/_placeholder/characters",
+   "note": "Barbarian, Rogue_Hooded: rig người, 76 clip (Idle, Walking_A, Running_A, Interact, PickUp, Use_Item, Hit_A, Death_A...). Nhân vật tạm cho phase 02.",
+   "copied_from": "animation2d/tongmon/assets_src/kaykit_adventurers"
+  },
+  {
+   "id": "quaternius_wolf",
+   "name": "Animal Pack Vol.2 — Wolf",
+   "author": "Quaternius",
+   "license": "CC0-1.0",
+   "source": "https://quaternius.com",
+   "path": "assets/models/_placeholder/creatures/creature_forest_wolf_quaternius.glb",
+   "note": "Đổi sang GLB, dài 1,4 m, pivot tâm đáy. Chỉ có 2 clip Idle, Walking. File gốc ở art-source/packs/.",
+   "copied_from": "animation2d/tongmon/assets_src/quaternius_animals2"
+  },
+  {
+   "id": "kenney_audio",
+   "name": "Impact Sounds, Interface Sounds, RPG Audio",
+   "author": "Kenney",
+   "license": "CC0-1.0",
+   "source": "https://kenney.nl/assets",
+   "path": "assets/audio/sfx/kenney",
+   "note": "284 file .ogg chia theo gói",
+   "copied_from": "animation2d/tongmon/assets_src/kenney_audio"
+  },
+  {
+   "id": "kenney_particles",
+   "name": "Particle Pack (18 tấm chọn lọc)",
+   "author": "Kenney",
+   "license": "CC0-1.0",
+   "source": "https://kenney.nl/assets/particle-pack",
+   "path": "assets/fx/kenney",
+   "note": "lửa, khói, tinh quang, vết cháy",
+   "copied_from": "animation2d/tongmon/assets/fx/kenney"
+  },
+  {
+   "id": "mixamo_mocap",
+   "name": "Mixamo animations",
+   "author": "Adobe Mixamo",
+   "license": "Mixamo terms: dùng trong game được, không phát lại file gốc",
+   "path": "art-source/mocap (không commit)",
+   "note": "Idle, Walking, Running, đòn đánh, trúng đòn, chết: để retarget cho nhân vật thật",
+   "copied_from": "animation2d/assets/mocap"
+  }
+ ],
+ "assets": [
+  {
+   "id": "tree_common_a_standing",
+   "file": "assets/models/nature/tree_common_a/tree_common_a_standing.glb",
+   "category": "nature",
+   "priority": "P0",
+   "style_anchor": true,
+   "dimensions_m": [
+    3.04,
+    3.13,
+    6.0
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "rock_spirit_ore_stage1",
+   "file": "assets/models/nature/rock_spirit_ore/rock_spirit_ore_stage1.glb",
+   "category": "nature",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.4,
+    1.19,
+    1.26
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "bush_berry_ripe",
+   "file": "assets/models/nature/bush_berry/bush_berry_ripe.glb",
+   "category": "nature",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.18,
+    1.2,
+    0.97
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "bush_twig_full",
+   "file": "assets/models/nature/bush_twig/bush_twig_full.glb",
+   "category": "nature",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.89,
+    0.8,
+    1.0
+   ],
+   "triangles": 39999,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "herb_spirit_wild",
+   "file": "assets/models/nature/herb_spirit_wild/herb_spirit_wild.glb",
+   "category": "nature",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.4,
+    0.38,
+    0.4
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "spring_thanh_moc",
+   "file": "assets/models/nature/spring_thanh_moc/spring_thanh_moc.glb",
+   "category": "nature",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    3.0,
+    2.98,
+    0.54
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "den_rabbit_burrow",
+   "file": "assets/models/nature/den_rabbit_burrow/den_rabbit_burrow.glb",
+   "category": "nature",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.18,
+    1.2,
+    0.37
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "den_wolf",
+   "file": "assets/models/nature/den_wolf/den_wolf.glb",
+   "category": "nature",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    4.0,
+    2.9,
+    1.92
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "den_monkey_nest",
+   "file": "assets/models/nature/den_monkey_nest/den_monkey_nest.glb",
+   "category": "nature",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.18,
+    2.32,
+    2.5
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_twigs",
+   "file": "assets/models/items/item_twigs/item_twigs.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.5,
+    0.19,
+    0.1
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_grass_fiber",
+   "file": "assets/models/items/item_grass_fiber/item_grass_fiber.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.4,
+    0.15,
+    0.06
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_flint",
+   "file": "assets/models/items/item_flint/item_flint.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.1,
+    0.08
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_log",
+   "file": "assets/models/items/item_log/item_log.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.7,
+    0.24,
+    0.24
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_bamboo",
+   "file": "assets/models/items/item_bamboo/item_bamboo.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.8,
+    0.11,
+    0.09
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_stone",
+   "file": "assets/models/items/item_stone/item_stone.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.2,
+    0.16,
+    0.15
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_spirit_stone",
+   "file": "assets/models/items/item_spirit_stone/item_spirit_stone.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.15
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_spirit_berry",
+   "file": "assets/models/items/item_spirit_berry/item_spirit_berry.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.12,
+    0.11
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_white_mushroom",
+   "file": "assets/models/items/item_white_mushroom/item_white_mushroom.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_wild_tuber",
+   "file": "assets/models/items/item_wild_tuber/item_wild_tuber.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.18,
+    0.12,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_pine_cone",
+   "file": "assets/models/items/item_pine_cone/item_pine_cone.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.09,
+    0.09,
+    0.1
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_rope",
+   "file": "assets/models/items/item_rope/item_rope.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.2,
+    0.2,
+    0.07
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_meat_small",
+   "file": "assets/models/items/item_meat_small/item_meat_small.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.15,
+    0.08,
+    0.06
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_meat",
+   "file": "assets/models/items/item_meat/item_meat.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.25,
+    0.15,
+    0.1
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_pelt",
+   "file": "assets/models/items/item_pelt/item_pelt.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.4,
+    0.29,
+    0.11
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_wolf_tooth",
+   "file": "assets/models/items/item_wolf_tooth/item_wolf_tooth.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.04,
+    0.03,
+    0.08
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 31,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_monkey_fur",
+   "file": "assets/models/items/item_monkey_fur/item_monkey_fur.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.15,
+    0.11,
+    0.07
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 31,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_spirit_herb",
+   "file": "assets/models/items/item_spirit_herb/item_spirit_herb.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.2,
+    0.13,
+    0.08
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_herb_seed",
+   "file": "assets/models/items/item_herb_seed/item_herb_seed.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.08,
+    0.08,
+    0.1
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_beast_core_small",
+   "file": "assets/models/items/item_beast_core_small/item_beast_core_small.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.06,
+    0.06,
+    0.06
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_mutated_fruit",
+   "file": "assets/models/items/item_mutated_fruit/item_mutated_fruit.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.15,
+    0.15,
+    0.18
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "tool_axe_stone",
+   "file": "assets/models/items/tool_axe_stone/tool_axe_stone.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.6,
+    0.23,
+    0.08
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "cán bị chẻ đôi"
+  },
+  {
+   "id": "tool_pickaxe_stone",
+   "file": "assets/models/items/tool_pickaxe_stone/tool_pickaxe_stone.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.65,
+    0.34,
+    0.07
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "cán bị chẻ đôi"
+  },
+  {
+   "id": "tool_shovel",
+   "file": "assets/models/items/tool_shovel/tool_shovel.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.9,
+    0.2,
+    0.06
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "tool_hammer",
+   "file": "assets/models/items/tool_hammer/tool_hammer.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.55,
+    0.24,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "cán bị chẻ đôi"
+  },
+  {
+   "id": "weapon_spear",
+   "file": "assets/models/items/weapon_spear/weapon_spear.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.6,
+    1.21,
+    0.17
+   ],
+   "triangles": 28356,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "Omni ra hình rìu hai lưỡi, cần làm lại"
+  },
+  {
+   "id": "tool_torch",
+   "file": "assets/models/items/tool_torch/tool_torch.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.55,
+    0.08,
+    0.06
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "tool_water_flask_empty",
+   "file": "assets/models/items/tool_water_flask/tool_water_flask_empty.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.14,
+    0.15,
+    0.25
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "armor_grass_item",
+   "file": "assets/models/items/armor_grass/armor_grass_item.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.4,
+    0.3,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "ra vòng cỏ thay vì áo"
+  },
+  {
+   "id": "food_berry_roasted",
+   "file": "assets/models/items/food_berry_roasted/food_berry_roasted.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": null,
+   "triangles": null,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "food_meat_roasted",
+   "file": "assets/models/items/food_meat_roasted/food_meat_roasted.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": null,
+   "triangles": null,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "food_mushroom_roasted",
+   "file": "assets/models/items/food_mushroom_roasted/food_mushroom_roasted.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": null,
+   "triangles": null,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "food_berry_soup",
+   "file": "assets/models/items/food_berry_soup/food_berry_soup.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": null,
+   "triangles": null,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "food_meat_mushroom_stew",
+   "file": "assets/models/items/food_meat_mushroom_stew/food_meat_mushroom_stew.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": null,
+   "triangles": null,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "food_steamed_tuber",
+   "file": "assets/models/items/food_steamed_tuber/food_steamed_tuber.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": null,
+   "triangles": null,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "food_spirit_feast",
+   "file": "assets/models/items/food_spirit_feast/food_spirit_feast.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": null,
+   "triangles": null,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "food_burnt",
+   "file": "assets/models/items/food_burnt/food_burnt.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": null,
+   "triangles": null,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "pill_heal",
+   "file": "assets/models/items/pill_heal/pill_heal.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.1,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 31,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "viên đan thành đĩa dẹt"
+  },
+  {
+   "id": "pill_calm_mind",
+   "file": "assets/models/items/pill_calm_mind/pill_calm_mind.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.1,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 31,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "viên đan thành đĩa dẹt"
+  },
+  {
+   "id": "pill_night_sight",
+   "file": "assets/models/items/pill_night_sight/pill_night_sight.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.1,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 31,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "viên đan thành đĩa dẹt"
+  },
+  {
+   "id": "pill_revive",
+   "file": "assets/models/items/pill_revive/pill_revive.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.1,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 31,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "viên đan thành đĩa dẹt"
+  },
+  {
+   "id": "pill_waste",
+   "file": "assets/models/items/pill_waste/pill_waste.glb",
+   "category": "items",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.1,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 31,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null,
+   "known_issue": "viên đan thành đĩa dẹt"
+  },
+  {
+   "id": "struct_campfire",
+   "file": "assets/models/structures/struct_campfire/struct_campfire.glb",
+   "category": "structures",
+   "priority": "P0",
+   "style_anchor": true,
+   "dimensions_m": [
+    1.2,
+    1.2,
+    0.48
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_fire_pit",
+   "file": "assets/models/structures/struct_fire_pit/struct_fire_pit.glb",
+   "category": "structures",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.5,
+    1.5,
+    0.79
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_crafting_table",
+   "file": "assets/models/structures/struct_crafting_table/struct_crafting_table.glb",
+   "category": "structures",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.4,
+    0.95,
+    0.98
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_chest",
+   "file": "assets/models/structures/struct_chest/struct_chest.glb",
+   "category": "structures",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.9,
+    0.68,
+    0.61
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_cook_pot",
+   "file": "assets/models/structures/struct_cook_pot/struct_cook_pot.glb",
+   "category": "structures",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.01,
+    1.02,
+    1.1
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_alchemy_furnace",
+   "file": "assets/models/structures/struct_alchemy_furnace/struct_alchemy_furnace.glb",
+   "category": "structures",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.25,
+    1.58,
+    1.8
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 47,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_herb_field",
+   "file": "assets/models/structures/struct_herb_field/struct_herb_field.glb",
+   "category": "structures",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.0,
+    2.0,
+    0.44
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_revive_altar",
+   "file": "assets/models/structures/struct_revive_altar/struct_revive_altar.glb",
+   "category": "structures",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.5,
+    2.46,
+    2.27
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_forest_wolf",
+   "file": "assets/models/creatures/creature_forest_wolf/creature_forest_wolf.glb",
+   "category": "creatures",
+   "priority": "P0",
+   "style_anchor": true,
+   "dimensions_m": [
+    0.47,
+    1.37,
+    0.8
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 31,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": "tools/studio/creature_rig.py (quadruped)",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_spirit_rabbit",
+   "file": "assets/models/creatures/creature_spirit_rabbit/creature_spirit_rabbit.glb",
+   "category": "creatures",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.17,
+    0.45,
+    0.35
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 47,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": "tools/studio/creature_rig.py (quadruped)",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_spirit_monkey",
+   "file": "assets/models/creatures/creature_spirit_monkey/creature_spirit_monkey.glb",
+   "category": "creatures",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.37,
+    0.91,
+    0.6
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 31,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": "tools/studio/creature_rig.py (quadruped)",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "char_ancient_beast_blood",
+   "file": "assets/models/characters/char_ancient_beast_blood/char_ancient_beast_blood.glb",
+   "category": "characters",
+   "priority": "P0",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.75,
+    0.36,
+    1.7
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  }
+ ]
+}

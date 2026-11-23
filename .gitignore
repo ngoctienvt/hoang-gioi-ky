@@ -29,3 +29,7 @@ art-source/
 .runtime/
 build/
 plans/reports/*.log
+
+# Ban sao tam va file sinh ra cua pipeline asset
+*.bak*
+tools/asset_pipeline/omni_jobs.json
