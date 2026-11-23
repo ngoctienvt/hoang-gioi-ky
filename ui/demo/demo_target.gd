@@ -16,6 +16,7 @@ func refresh(entity: Dictionary) -> void:
 	W.label(self, "DEMO_SELECTED_SLOT").text += " %d" % (selected_slot + 1)
 	var kind := String(entity.get("kind", ""))
 	if kind == "player":
+		name_label.text = String(entity.get("name", "")) + (" — " + tr("DEMO_GHOST") if entity.get("ghost", false) else "")
 		if entity.get("ghost", false):
 			W.button(self, "DEMO_REVIVE", func(): action.emit("revive", {"peer_id": int(entity.uid)}))
 		return
@@ -42,14 +43,16 @@ func refresh(entity: Dictionary) -> void:
 			var b := W.button(self, "DEMO_CHEST_TAKE", func(): action.emit("chest_take", {"uid": target.uid, "slot": i}))
 			b.text += " " + W.item_name(String(slots[i].get("id", ""))) + " ×" + str(slots[i].get("count", 0))
 	elif kind in ["spring", "spirit_spring", "qingmu_spring", "farm", "herb_farm"]:
-		for mode in ["fill", "drink", "bathe", "water", "fertilize"]:
+		var modes := ["fill", "drink", "bathe"] if "spring" in kind else ["water", "fertilize"]
+		for mode in modes:
 			_button("DEMO_WATER_" + mode.to_upper(), "water", {"mode": mode})
-		_button("DEMO_PLANT", "plant", {"slot": selected_slot})
-		_button("DEMO_TAKE", "water", {"mode": "harvest"})
+		if "farm" in kind:
+			_button("DEMO_PLANT", "plant", {"slot": selected_slot})
+			_button("DEMO_TAKE", "water", {"mode": "harvest"})
 	elif kind in ["campfire", "fire_pit", "firepit"]:
 		W.label(self, "DEMO_FUEL").text += " %.0f" % float(entity.get("fuel", 0))
 		_button("DEMO_ADD_FUEL", "fuel", {"slot": selected_slot})
-		_button("DEMO_ROAST", "cook", {"slot": selected_slot})
+		_button("DEMO_ROAST", "roast", {"slot": selected_slot})
 	else:
 		for verb in ["pickup", "work", "attack", "revive"]:
 			_button("DEMO_" + verb.to_upper(), verb)

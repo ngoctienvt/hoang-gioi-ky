@@ -66,7 +66,7 @@ func refresh(world: Dictionary, local_player: Dictionary) -> void:
 					var description: String = tr(entry.result.name_key)
 					for field in ["minimum", "maximum", "forbidden", "success"]:
 						var value = entry.get(field)
-						if value != null: description += "\n%s: %s" % [tr("DEMO_" + field.to_upper()), str(value)]
+						if value != null: description += "\n%s: %s" % [tr("DEMO_" + field.to_upper()), _condition_text(value)]
 					var line := Label.new()
 					line.text = description
 					line.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
@@ -80,4 +80,13 @@ func nearby_tier(world: Dictionary, local_player: Dictionary) -> int:
 			var at: Array = building.position
 			if Vector2(p[0], p[2]).distance_to(Vector2(at[0], at[2])) <= 5: return 1
 	return 0
+
+func _condition_text(value: Variant) -> String:
+	var parts: Array[String] = []
+	if value is Dictionary:
+		for key in value: parts.append(tr("TAG_" + String(key).to_upper()) + " " + str(value[key]))
+	elif value is Array:
+		for key in value: parts.append(tr("TAG_" + String(key).to_upper()))
+	else: return str(value)
+	return " / ".join(parts) if not parts.is_empty() else tr("DEMO_NONE")
 

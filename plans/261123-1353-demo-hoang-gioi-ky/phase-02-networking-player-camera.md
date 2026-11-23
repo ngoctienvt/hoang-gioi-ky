@@ -19,3 +19,15 @@ Host tạo phòng, người khác vào qua IP. Mỗi người có nhân vật, d
 
 ## Rủi ro
 - Lỗi đồng bộ để lâu sẽ lan ra mọi tính năng. Phải chốt mẫu thao tác ở bước 8 trước khi qua giai đoạn 03.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã triển khai, chờ chủ dự án kiểm tra gameplay.
+
+**Mã nguồn:** autoload/network_manager.gd; world/demo_session.gd; entities/demo/network_avatar.gd; world/demo_main.gd; world/demo_controls.gd. ENet host quyết định; tối đa 4 người, UDP 24565.
+
+**Chủ dự án kiểm tra:** Hai người vào/rời qua IP, di chuyển, va chạm, camera/zoom, mất host và vào lại cùng tên.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.
+- [ ] Chủ dự án xác nhận gameplay và tiêu chí hoàn thành.

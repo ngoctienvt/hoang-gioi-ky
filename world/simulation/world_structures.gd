@@ -59,6 +59,8 @@ static func perform(world, player: Dictionary, verb: String, args: Dictionary) -
 		slot.count -= 1
 		if slot.count == 0:
 			inv.slots[index] = {}
+		if verb == "insert" and args.get("solvent", false) == true:
+			world.Access.return_bottle(world, inv, player.position)
 	elif verb == "chest_take":
 		if target.kind not in ["chest", "resurrection_altar"] or not world.valid_slot(index) or target.slots[index].is_empty():
 			return false

@@ -22,3 +22,15 @@
 
 ## Rủi ro
 - Đồng bộ nhiều yêu thú tốn băng thông: chỉ đồng bộ vị trí với tần suất thấp và nội suy ở client.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã triển khai, chờ chủ dự án kiểm tra gameplay.
+
+**Mã nguồn:** data/creatures/; world/simulation/world_creatures.gd; world_combat.gd; world_life.gd. Thỏ/sói/khỉ, đồ rơi, trộm đồ, hồi quần thể, giáp/vũ khí, không PvP thường.
+
+**Chủ dự án kiểm tra:** Đánh sói bằng giáo, bị sói đánh, khỉ trộm và trả đồ khi chết; kiểm tra hồi quần thể và giáp giảm sát thương.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.
+- [ ] Chủ dự án xác nhận gameplay và tiêu chí hoàn thành.

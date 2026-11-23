@@ -21,3 +21,15 @@
 
 ## Rủi ro
 - Tính vùng sáng cho Hắc Ám không dựa vào render; dùng danh sách nguồn sáng và bán kính để host tính được.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã triển khai, chờ chủ dự án kiểm tra gameplay.
+
+**Mã nguồn:** autoload/game_clock.gd; components/survival_stats.gd; world/simulation/world_life.gd; entities/demo/demo_view.gd; ui/demo/demo_radial.gd. Ngày 480 giây, ngày/chạng vạng/đêm 8/6/2 phần.
+
+**Chủ dự án kiểm tra:** Đi qua đủ ba pha; đêm ngoài sáng bị đánh, gần lửa an toàn; ba chỉ số và HUD đồng bộ.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.
+- [ ] Chủ dự án xác nhận gameplay và tiêu chí hoàn thành.

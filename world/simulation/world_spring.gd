@@ -9,6 +9,7 @@ static func perform(world, player: Dictionary, verb: String, args: Dictionary) -
 			return false
 		if not inv.remove_item("spirit_water", 1):
 			return false
+		world.Access.return_bottle(world, inv, player.position)
 		inv.slots[index].vitality_hits = 20
 	elif verb == "plant":
 		var index = args.get("slot", -1)
@@ -58,6 +59,8 @@ static func perform(world, player: Dictionary, verb: String, args: Dictionary) -
 					return false
 				if not inv.remove_item("waste_pill" if mode == "fertilize" else "spirit_water", 1):
 					return false
+				if mode == "water":
+					world.Access.return_bottle(world, inv, player.position)
 				target["fertilized" if mode == "fertilize" else "watered"] = true
 				target.growth += world.day_length() * 0.3
 			else:

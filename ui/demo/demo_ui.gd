@@ -27,6 +27,7 @@ var target_frame: Control
 var craft_frame: Control
 
 func _ready() -> void:
+	layer = 20
 	root = Control.new()
 	root.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE

@@ -2,6 +2,7 @@ extends Node
 ## Authenticated intent boundary; clients never supply their identity or world state.
 signal state_received(state: Dictionary)
 signal ended(message: String)
+signal action_feedback(success: bool)
 const World = preload("res://world/simulation/demo_world.gd")
 const Avatar = preload("res://entities/demo/network_avatar.gd")
 var world
@@ -32,6 +33,10 @@ func start(options: Dictionary) -> Error:
 		return error
 	world = World.new()
 	var saved := SaveManager.load_world(str(options.get("load_slot", ""))) if not str(options.get("load_slot", "")).is_empty() else {}
+	if not str(options.get("load_slot", "")).is_empty() and saved.is_empty():
+		NetworkManager.leave()
+		world = null
+		return ERR_FILE_CORRUPT
 	if saved.is_empty():
 		world.initialize(int(options.get("seed", 12345)), options)
 	else:
@@ -41,7 +46,6 @@ func start(options: Dictionary) -> Error:
 	sent_sections.clear()
 	_publish()
 	return OK
-
 func stop() -> void:
 	world = null
 	state.clear()
@@ -49,12 +53,10 @@ func stop() -> void:
 	for avatar in avatars.get_children():
 		avatar.queue_free()
 	limits.clear()
-
 func save() -> void:
 	if world != null and multiplayer.is_server():
 		var error := SaveManager.save_world(world.snapshot(), "world_" + str(world.state.seed))
 		print("[save] result=", error)
-
 func _spawn_avatar(data: Dictionary) -> Node:
 	var avatar := Avatar.new()
 	avatar.name = str(data.peer_id)
@@ -62,7 +64,6 @@ func _spawn_avatar(data: Dictionary) -> Node:
 	avatar.position = Vector3(data.position[0], 0, data.position[2])
 	avatar.authoritative_position = avatar.position
 	return avatar
-
 @rpc("any_peer", "reliable")
 func request_register(display_name: String) -> void:
 	if world == null or not multiplayer.is_server():
@@ -105,8 +106,17 @@ func _apply(sender: int, verb: String, args: Dictionary) -> void:
 	if now - int(limits.get(sender, 0)) < 80 or args.size() > 12 or var_to_bytes(args).size() > 2048:
 		return
 	limits[sender] = now
-	if world.action(sender, verb, args):
+	var success: bool = world.action(sender, verb, args)
+	if sender == 1:
+		action_feedback.emit(success)
+	else:
+		action_result.rpc_id(sender, success)
+	if success:
 		print("[action] peer=", sender, " verb=", verb)
+
+@rpc("authority", "reliable")
+func action_result(success: bool) -> void:
+	action_feedback.emit(success)
 
 func move_input(direction: Vector2) -> void:
 	if not NetworkManager.active:
@@ -140,6 +150,7 @@ func _physics_process(delta: float) -> void:
 			avatar.position = Vector3(pos[0], 0, pos[2])
 		player.position = [avatar.position.x, 0.0, avatar.position.z]
 		avatar.speed = 3.0 if float(player.stats.get("stamina", 100)) < 20 else 5.0
+		avatar.collision_mask = 0 if player.get("ghost", false) else 1
 		if float(player.get("beast_time", 0)) > 0:
 			avatar.speed *= 1.5
 	world.step(delta)

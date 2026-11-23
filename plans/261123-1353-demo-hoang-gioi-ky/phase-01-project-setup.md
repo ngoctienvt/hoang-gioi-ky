@@ -40,3 +40,14 @@ Có project Godot chạy được, cấu trúc thư mục rõ ràng, khung autol
 
 ## Rủi ro
 - Plugin GUT phải đúng phiên bản cho Godot 4.6. Đã dùng GUT 9.7.1, chạy được trên Godot 4.7.2.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã hoàn thành khung dự án (giữ kết quả ghi nhận trước phiên này).
+
+**Mã nguồn:** project.godot; data/defs/; autoload/event_bus.gd; addons/gut/; localization/strings.csv.
+
+**Chủ dự án kiểm tra:** Mở project bằng Godot .NET; cảnh chơi chính hiện chuyển sang world/demo.tscn.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.

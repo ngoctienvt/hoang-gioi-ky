@@ -50,6 +50,7 @@ func handle(event: InputEvent) -> void:
 			if not target.is_empty():
 				var category := str(target.get("collection", ""))
 				if category == "structures":
+					if target.kind == "workbench": main.ui.open_crafting()
 					var player: Dictionary = main.state.players.get(str(main.multiplayer.get_unique_id()), {})
 					if player.get("inventory", {}).get("equipment", {}).get("hand", {}).get("id", "") == "hammer":
 						action("attack", {"uid": target.uid})

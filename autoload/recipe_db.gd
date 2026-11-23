@@ -11,13 +11,14 @@ func reload_data() -> void:
 	recipes.clear()
 	cooking.clear()
 	alchemy.clear()
-	for file in DirAccess.get_files_at(RECIPES_DIR):
+	# Keep resource discovery compatible with exported .tres remaps.
+	for file in ResourceLoader.list_directory(RECIPES_DIR):
 		if file.ends_with(".tres"):
 			var recipe = load(RECIPES_DIR + file) as RecipeDef
 			if recipe != null:
 				recipes[String(recipe.id)] = recipe
 	for kind in ["cooking", "alchemy"]:
-		for file in DirAccess.get_files_at("res://data/" + kind):
+		for file in ResourceLoader.list_directory("res://data/" + kind):
 			if file.ends_with(".tres"):
 				var recipe = load("res://data/" + kind + "/" + file) as TagRecipeDef
 				if recipe != null:

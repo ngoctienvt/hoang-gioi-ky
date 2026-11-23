@@ -31,3 +31,17 @@ Chết và hồi sinh, lưu và tải thế giới, hoàn thiện để chơi th
 
 ## Rủi ro
 - Chơi qua mạng Internet (không phải LAN) cần host mở port. Ghi hướng dẫn mở port trong README cho người thử. Steam P2P để sau demo.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã triển khai phần chết/lưu/âm thanh/tùy chọn; còn build Windows và chơi thử LAN 10 ngày.
+
+**Mã nguồn:** world/simulation/world_life.gd; autoload/save_manager.gd; world/demo_session.gd; entities/demo/demo_audio.gd; ui/demo/demo_menu.gd. Lưu host bằng tên người chơi, tự lưu đầu ngày/thoát; Hồn Phách/hồi sinh và phạt máu.
+
+**Chủ dự án kiểm tra:** Kiểm tra lưu/tải/đổi peer giữ cùng tên; Hoàn Hồn Đan/đài tiêu hao vật liệu; cả nhóm chết theo tùy chọn. Xuất Windows, chạy máy khác và chơi LAN/IP 2–4 người qua 10 ngày Thu.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.
+- [ ] Chủ dự án xác nhận gameplay và tiêu chí hoàn thành.
+- [ ] Xuất Windows, chạy trên máy khác.
+- [ ] LAN/IP 2–4 người qua 10 ngày Thu.

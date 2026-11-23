@@ -26,3 +26,15 @@ Sinh một bản đồ Rừng Linh Trúc & Đồng Cỏ với đủ lớp tài n
 
 ## Rủi ro
 - Đồng bộ trạng thái cho người vào sau: host gửi ảnh chụp trạng thái thế giới khi có người kết nối.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã triển khai vòng khai thác, chờ chủ dự án kiểm tra gameplay.
+
+**Mã nguồn:** world/simulation/world_seed.gd; world_resources.gd; world_rules.gd; data/nodes/. Cây 15 nhát; đá 3 giai đoạn × 3 nhát; gieo lại, bứng bụi, mọc lại.
+
+**Chủ dự án kiểm tra:** Hai người cùng chặt/đào; tài nguyên chỉ rơi một lần; người vào sau thấy đúng trạng thái; đào gốc không còn vật cản.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.
+- [ ] Chủ dự án xác nhận gameplay và tiêu chí hoàn thành.

@@ -43,7 +43,8 @@ func _ready() -> void:
 	ui.leave_requested.connect(_leave)
 	ui.save_requested.connect(session.save)
 	session.state_received.connect(_receive)
-	session.ended.connect(func(message): state.clear(); ui.show_menu(tr(message)))
+	session.action_feedback.connect(func(success): ui.set_status("" if success else "DEMO_ACTION_FAILED"))
+	session.ended.connect(func(message): _clear_world(); ui.show_menu(tr(message)))
 	ui.show_menu()
 	var args := OS.get_cmdline_user_args()
 	if "--host" in args:
@@ -112,10 +113,11 @@ func _process(delta: float) -> void:
 	if not preview_recipe.is_empty() or controls.plant_slot >= 0:
 		preview.visible = true
 		preview.position = _mouse_world() + Vector3(0, 0.25, 0)
-		var valid := preview.position.distance_to(authoritative) <= 4.0
-		for structure in state.get("structures", []):
-			var p: Array = structure.position
-			valid = valid and Vector2(p[0], p[2]).distance_to(Vector2(preview.position.x, preview.position.z)) > 1.5
+		var valid := preview.position.distance_to(authoritative) <= 5.0 and absf(preview.position.x) <= 40 and absf(preview.position.z) <= 40
+		for entity in state.get("structures", []) + state.get("nodes", []):
+			var p: Array = entity.position
+			var radius := 3.0 if entity.kind == "spring" else 1.5
+			valid = valid and Vector2(p[0], p[2]).distance_to(Vector2(preview.position.x, preview.position.z)) >= radius
 		var material := StandardMaterial3D.new()
 		material.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 		material.albedo_color = Color(0.2, 1, 0.3, 0.45) if valid else Color(1, 0.1, 0.1, 0.45)
@@ -142,8 +144,10 @@ func _ground_collision() -> void:
 	add_child(body)
 
 func _obstacles() -> void:
+	var present := {}
 	for entity in state.get("nodes", []):
 		var key := int(entity.uid)
+		present[key] = true
 		var solid: bool = str(entity.kind) in ["tree", "bamboo", "rock", "spirit_rock"] and not entity.get("depleted", false)
 		if solid and not colliders.has(key):
 			var body := StaticBody3D.new()
@@ -159,12 +163,24 @@ func _obstacles() -> void:
 		elif not solid and colliders.has(key):
 			colliders[key].queue_free()
 			colliders.erase(key)
+	for key in colliders.keys():
+		if not present.has(key):
+			colliders[key].queue_free()
+			colliders.erase(key)
+
+func _clear_world() -> void:
+	state.clear()
+	controls.cancel()
+	for body in colliders.values():
+		body.queue_free()
+	colliders.clear()
+	view.render({}, multiplayer.get_unique_id())
 
 func _leave() -> void:
 	session.save()
 	session.stop()
 	NetworkManager.leave()
-	state.clear()
+	_clear_world()
 	ui.show_menu()
 
 func _notification(what: int) -> void:

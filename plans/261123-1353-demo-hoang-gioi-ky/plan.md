@@ -1,6 +1,16 @@
+---
+title: Demo Hoang Giới Ký
+status: in-progress
+priority: P1
+effort: large
+branch: main
+tags: [godot, survival, coop]
+created: 2026-11-23
+---
+
 # Kế hoạch Demo — Hoang Giới Ký
 
-- **Trạng thái:** Đang làm (xong giai đoạn 01)
+- **Trạng thái:** Đang làm — giai đoạn 02–09 đã triển khai, chờ chủ dự án chơi thử; giai đoạn 10 còn build Windows và LAN 10 ngày
 - **Ngày lập:** 2026-11-23
 - **Nguồn thiết kế:** [docs/game-design-document.md](../../docs/game-design-document.md)
 - **Đội làm:** Chủ dự án + AI
@@ -34,15 +44,15 @@ Biome thứ 2 trở đi, mùa Đông/Xuân/Hạ và nhiệt độ, Tâm Ma, Th�
 | # | Giai đoạn | Phụ thuộc | Trạng thái |
 |---|---|---|---|
 | 01 | [Cài đặt & khung dự án](phase-01-project-setup.md) | — | Xong (2026-11-23) |
-| 02 | [Mạng, nhân vật điều khiển & camera](phase-02-networking-player-camera.md) | 01 | Chưa làm |
-| 03 | [Vật phẩm, kho đồ & đồ dưới đất](phase-03-items-inventory.md) | 02 | Chưa làm |
-| 04 | [Thế giới & điểm tài nguyên](phase-04-world-resource-nodes.md) | 03 | Chưa làm |
-| 05 | [Chế tác & công trình](phase-05-crafting-structures.md) | 04 | Chưa làm |
-| 06 | [Thời gian, ánh sáng & chỉ số sinh tồn](phase-06-time-light-survival-stats.md) | 05 | Chưa làm |
-| 07 | [Thức ăn & nấu nướng](phase-07-food-cooking.md) | 06 | Chưa làm |
-| 08 | [Yêu thú & chiến đấu](phase-08-creatures-combat.md) | 06 | Chưa làm |
-| 09 | [Nhân vật, Lò Đan & Linh Tuyền](phase-09-character-alchemy-spring.md) | 07, 08 | Chưa làm |
-| 10 | [Chết, lưu game & hoàn thiện demo](phase-10-death-save-polish.md) | 09 | Chưa làm |
+| 02 | [Mạng, nhân vật điều khiển & camera](phase-02-networking-player-camera.md) | 01 | Đã triển khai; chờ chủ dự án kiểm tra |
+| 03 | [Vật phẩm, kho đồ & đồ dưới đất](phase-03-items-inventory.md) | 02 | Đã triển khai; chờ chủ dự án kiểm tra |
+| 04 | [Thế giới & điểm tài nguyên](phase-04-world-resource-nodes.md) | 03 | Đã triển khai; chờ chủ dự án kiểm tra |
+| 05 | [Chế tác & công trình](phase-05-crafting-structures.md) | 04 | Đã triển khai; chờ chủ dự án kiểm tra |
+| 06 | [Thời gian, ánh sáng & chỉ số sinh tồn](phase-06-time-light-survival-stats.md) | 05 | Đã triển khai; chờ chủ dự án kiểm tra |
+| 07 | [Thức ăn & nấu nướng](phase-07-food-cooking.md) | 06 | Đã triển khai; chờ chủ dự án kiểm tra |
+| 08 | [Yêu thú & chiến đấu](phase-08-creatures-combat.md) | 06 | Đã triển khai; chờ chủ dự án kiểm tra |
+| 09 | [Nhân vật, Lò Đan & Linh Tuyền](phase-09-character-alchemy-spring.md) | 07, 08 | Đã triển khai; chờ chủ dự án kiểm tra |
+| 10 | [Chết, lưu game & hoàn thiện demo](phase-10-death-save-polish.md) | 09 | Đã có chết/lưu/âm thanh/tùy chọn; còn build & LAN 10 ngày |
 
 ## Quyết định kiến trúc chung
 
@@ -58,3 +68,11 @@ Biome thứ 2 trở đi, mùa Đông/Xuân/Hạ và nhiệt độ, Tâm Ma, Th�
 
 - **Đồng bộ mạng** là phần dễ vỡ nhất. Phải có từ giai đoạn 02, mọi tính năng sau đều thử với 2 cửa sổ.
 - **Phạm vi phình to.** Bám sát danh sách Non-goals, ý tưởng mới ghi vào GDD chứ không làm thêm trong demo.
+
+## Tiến độ triển khai — 2026-11-23
+
+Đã đồng bộ cả 10 giai đoạn theo mã nguồn. Không đánh dấu hoàn tất acceptance chỉ từ việc có code. Các phase giữ nguyên danh sách yêu cầu gốc; mục tiến độ cuối mỗi file chỉ rõ mã thực tế và việc chủ dự án kiểm tra.
+
+Kiến trúc hiện dùng `InventoryComponent`, `SurvivalStats` và các module `world/simulation/`; các trách nhiệm máu/khai thác/tương tác/độ bền chưa được tách thành đủ các lớp component đã dự kiến. Giao diện demo lấy cảm hứng DST và dùng lại `world/style_test/style_test.tscn` qua `entities/demo/demo_style.gd`.
+
+Còn: chơi thử gameplay từng giai đoạn, cân chỉnh số liệu, xuất Windows và LAN/IP 2–4 người trong 10 ngày Thu. Theo yêu cầu mới, AI dừng chạy kiểm thử; chủ dự án thực hiện các kiểm tra trong [báo cáo triển khai](../reports/implementation-261123-1425-demo.md).

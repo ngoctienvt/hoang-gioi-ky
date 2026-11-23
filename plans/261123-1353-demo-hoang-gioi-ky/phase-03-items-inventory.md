@@ -18,3 +18,15 @@ Có hệ vật phẩm dữ liệu hóa, kho đồ kiểu DST, ô cầm tay, đ�
 
 ## Rủi ro
 - Hai người nhặt cùng một món cùng lúc: host xử lý yêu cầu đầu tiên, yêu cầu sau bị từ chối.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã triển khai, chờ chủ dự án kiểm tra gameplay.
+
+**Mã nguồn:** components/inventory_component.gd; autoload/item_db.gd; data/items/; world/simulation/world_inventory.gd; ui/demo/demo_slot.gd. Kho 15 ô và tay/thân/đầu, gộp/tách/chuyển/thả, độ bền.
+
+**Chủ dự án kiểm tra:** Hai người tranh nhặt cùng món; kho đầy; kéo thả/CTRL tách; trang bị/tháo và công cụ hỏng.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.
+- [ ] Chủ dự án xác nhận gameplay và tiêu chí hoàn thành.

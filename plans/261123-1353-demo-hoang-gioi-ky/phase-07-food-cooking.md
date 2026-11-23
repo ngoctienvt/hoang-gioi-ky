@@ -18,3 +18,15 @@
 
 ## Rủi ro
 - Bộ khớp công thức phải viết tổng quát ngay từ đầu để giai đoạn 09 (Lò Đan) dùng lại.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã triển khai, chờ chủ dự án kiểm tra gameplay.
+
+**Mã nguồn:** data/cooking/; data/defs/tag_recipe_def.gd; autoload/recipe_db.gd; world/simulation/world_structures.gd; world_inventory.gd. Nướng, ăn, nồi 4 nguyên liệu dùng chung; 5 món và Món Cháy.
+
+**Chủ dự án kiểm tra:** Nướng khi lửa cháy, nấu/chờ/lấy món; hai người dùng nồi; kiểm tra món theo thẻ và hồi chỉ số.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.
+- [ ] Chủ dự án xác nhận gameplay và tiêu chí hoàn thành.

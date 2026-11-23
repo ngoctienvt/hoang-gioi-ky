@@ -58,7 +58,7 @@ static func perform(world, player: Dictionary, verb: String, args: Dictionary) -
 			inv.slots[index] = inv.equipment.get(part, {})
 			inv.equipment[part] = slot
 		elif verb == "use":
-			if int(item.get("category", 0)) not in [3, 4]:
+			if int(item.get("category", 0)) not in [3, 4] and slot.id not in ["spirit_water", "plain_water"]:
 				return false
 			if slot.id == "revival_pill":
 				return false
@@ -72,6 +72,8 @@ static func perform(world, player: Dictionary, verb: String, args: Dictionary) -
 			slot.count -= 1
 			if slot.count <= 0:
 				inv.slots[index] = {}
+			if slot.id in ["spirit_water", "plain_water"]:
+				world.Access.return_bottle(world, inv, player.position)
 		else:
 			return false
 	player.inventory = inv.to_dict()

@@ -8,6 +8,10 @@ static func extra(slot: Dictionary) -> Dictionary:
 		result.erase("durability")
 	return result
 
+static func return_bottle(world, inv, position: Array) -> void:
+	if inv.add_item("water_bottle", 1) > 0:
+		world.drop_item("water_bottle", 1, position)
+
 static func item(id: String) -> Dictionary:
 	var value = ItemDB.get_item(id)
 	if value == null:

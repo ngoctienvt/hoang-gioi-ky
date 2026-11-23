@@ -9,7 +9,7 @@ var stack: Dictionary = {}
 func configure(slot: int, value: Dictionary) -> void:
 	index = slot
 	stack = value
-	custom_minimum_size = Vector2(70, 65)
+	custom_minimum_size = Vector2(66, 65)
 	var id := String(stack.get("id", ""))
 	text = "%d\n%s" % [slot + 1, W.item_name(id) if not id.is_empty() else tr("DEMO_EMPTY")]
 	if not id.is_empty():
@@ -45,3 +45,11 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	action.emit("split" if data.split else "move_slot", {"from": data.slot, "to": index, "count": data.count})
+
+func _draw() -> void:
+	if stack.is_empty(): return
+	var item = ItemDB.get_item(String(stack.get("id", "")))
+	if item and item.max_durability > 0:
+		var fraction := clampf(float(stack.get("durability", 0)) / item.max_durability, 0, 1)
+		draw_rect(Rect2(5, size.y - 5, size.x - 10, 3), Color("514638"))
+		draw_rect(Rect2(5, size.y - 5, (size.x - 10) * fraction, 3), Color("b79c52") if fraction > 0.25 else Color("b64e42"))

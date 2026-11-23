@@ -79,8 +79,8 @@ func test_team_damage_requires_uncontrolled_beast() -> void:
 	player.beast_time = 0.0
 	world.step(0.1)
 	assert_true(player.mad)
-	assert_true(world.action(1, "attack", {"peer_id": 2}))
 	assert_lt(float(guest.stats.health), 150.0)
+	assert_gt(float(player.attack_cd), 0.0)
 
 func test_spirit_water_expires_and_remains_valid_item() -> void:
 	give("spirit_water")

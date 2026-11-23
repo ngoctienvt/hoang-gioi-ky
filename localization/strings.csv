@@ -13,7 +13,7 @@ DEMO_CHEST_PUT,"Cất đồ từ ô đã chọn"
 DEMO_CHEST_TAKE,"Lấy đồ:"
 DEMO_COMBAT,"Chiến đấu"
 DEMO_CONTINUE,"Cả nhóm chết: Chơi tiếp"
-DEMO_CONTROLS,"WASD: di chuyển • Bấm thế giới: thao tác • Q: Hóa Thú • F: Thú Giác • Cuộn: thu/phóng"
+DEMO_CONTROLS,"WASD: đi • Chuột trái/phải: thao tác • Space: gần nhất • Tab: chế tác • B: Thiên Thư • Q/F: kỹ năng • Cuộn: thu/phóng"
 DEMO_COOK,"Bắt đầu nấu / luyện"
 DEMO_COOKING,"Nồi Linh Thực — điều kiện thẻ"
 DEMO_DAY_LENGTH,"Độ dài một ngày (giây)"
@@ -154,3 +154,34 @@ DEMO_BOOK,Thiên Thư
 DEMO_CLOSE,Đóng [Tab]
 DEMO_SEARCH,Tìm công thức...
 DEMO_DAY,Ngày %d — Thu / %s
+CONNECTION_FAILED,Không thể kết nối
+DEMO_HP,Khí Huyết
+DEMO_SP,Thể Lực
+DEMO_DAO,Đạo Tâm
+DEMO_NONE,Không có
+TAG_FRUIT,Quả
+TAG_MEAT,Thú
+TAG_WOOD,Mộc
+TAG_VEGETABLE,Rau củ
+TAG_HERB,Linh thảo
+TAG_SPIRIT,Linh khí
+TAG_WATER,Thủy
+TAG_MONSTER,Yêu
+TAG_MUSHROOM,Nấm
+TAG_ROOT,Củ
+TAG_HEAL,Trị liệu
+TAG_MIND,Định thần
+TAG_TOXIC,Độc
+TAG_FOOD,Thực phẩm
+
+DEMO_ACTION_FAILED,Không thể thao tác: kiểm tra khoảng cách và vật phẩm cùng điều kiện.
+ITEM_PLAIN_WATER,Nước Thường
+DESC_PLAIN_WATER,Linh Thủy đã mất linh tính.
+ITEM_BERRY_BUSH,Bụi Linh Quả
+DESC_BERRY_BUSH,Bụi cây đã bứng có thể trồng lại.
+ITEM_TWIG_BUSH,Bụi Cành
+DESC_TWIG_BUSH,Bụi cành đã bứng có thể trồng lại.
+ITEM_MONKEY_FUR,Lông Khỉ Linh
+DESC_MONKEY_FUR,Lông thu được từ Khỉ Linh.
+TAG_BEAST,Thú
+TAG_HEALING,Trị liệu

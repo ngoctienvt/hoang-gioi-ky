@@ -15,8 +15,9 @@ func _draw() -> void:
 		draw_circle(center, 27, Color("a18348"))
 		draw_circle(center, 24, Color("192725"))
 		var value := float(values.get(keys[i], 0))
-		draw_arc(center, 21, -PI / 2, -PI / 2 + TAU * clampf(value / (150 if i == 0 else 100), 0, 1), 36, colors[i], 5, true)
+		draw_arc(center, 21, -PI / 2, -PI / 2 + TAU * clampf(value / float(values.get("max_health", 150) if i == 0 else 100), 0, 1), 36, colors[i], 5, true)
 		draw_string(font, center + Vector2(-12, 6), str(int(value)), HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("eee0ba"))
+		draw_string(font, center + Vector2(-25, 42), tr(["DEMO_HP", "DEMO_SP", "DEMO_DAO"][i]), HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color("eee0ba"))
 	var clock := Vector2(244, 30)
 	draw_circle(clock, 28, Color("20292a"))
 	for i in 16:

@@ -24,3 +24,15 @@ Menu chế tác kiểu DST, có bậc mở khóa qua Bàn Chế Tác. Chế đư
 
 ## Rủi ro
 - Trừ nguyên liệu phải làm ở host, trong một bước, để không bị chế hai lần khi mạng trễ.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã triển khai, chờ chủ dự án kiểm tra gameplay.
+
+**Mã nguồn:** autoload/recipe_db.gd; data/recipes/; world/simulation/world_structures.gd; world_combat.gd; ui/demo/demo_recipes.gd. Bậc chế tác, đặt công trình, nhiên liệu, rương, phá bằng búa và Thiên Thư.
+
+**Chủ dự án kiểm tra:** Bàn chế tác mở/khóa bậc theo khoảng cách; đặt hai công trình không chồng; thử rương dùng chung và tiếp nhiên liệu.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.
+- [ ] Chủ dự án xác nhận gameplay và tiêu chí hoàn thành.

@@ -33,3 +33,15 @@ Thêm ba nét riêng của Hoang Giới Ký: nhân vật Huyết Mạch Cổ Th�
 - Hóa Thú và Thú Giác chạy đúng, có cooldown, trừ Thể Lực đúng, đồng bộ cho mọi người thấy.
 - Luyện ra đủ 4 loại đan, có lần thất bại ra Phế Đan, Đan Độc vượt ngưỡng thì bị debuff.
 - Tưới Thanh Mộc Thủy thấy cây lớn nhanh hơn. Vũ khí tôi Sinh Cơ hồi máu khi đánh.
+
+## Tiến độ triển khai — 2026-11-23
+
+**Trạng thái:** Đã triển khai, chờ chủ dự án kiểm tra gameplay.
+
+**Mã nguồn:** world/simulation/world_life.gd; world_spring.gd; data/alchemy/; autoload/recipe_db.gd. Hóa Thú/Thú Giác/cuồng tính, luyện 4 đan và dung môi, Đan Độc, tuyền/ruộng, nước hết linh tính, tôi Sinh Cơ.
+
+**Chủ dự án kiểm tra:** Q/F tốn Thể Lực và hồi chiêu; thử luyện thất bại/đan độc; tưới/bón/thu hoạch; Sinh Cơ hồi máu; cuồng tính có thể đánh đồng đội.
+
+
+- [x] Đã triển khai phần mã nêu trong mục tiến độ.
+- [ ] Chủ dự án xác nhận gameplay và tiêu chí hoàn thành.

@@ -42,7 +42,9 @@ static func step(world, delta: float) -> void:
 				creature.state = "flee"
 				speed = 4.0
 		elif creature.kind == "monkey":
-			if creature.state == "flee":
+			if definition.active_period == 1 and phase != "day":
+				creature.state = "return"
+			elif creature.state == "flee":
 				speed = 4.0
 				if world.distance(creature.position, creature.home) < 1:
 					creature.state = "idle"

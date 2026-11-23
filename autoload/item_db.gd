@@ -8,7 +8,8 @@ func _ready() -> void:
 
 func reload_data() -> void:
 	items.clear()
-	for file in DirAccess.get_files_at(ITEMS_DIR):
+	# ResourceLoader returns logical paths even when exports remap .tres files.
+	for file in ResourceLoader.list_directory(ITEMS_DIR):
 		if file.ends_with(".tres"):
 			var item = load(ITEMS_DIR + file) as ItemDef
 			if item != null and not item.id.is_empty():
