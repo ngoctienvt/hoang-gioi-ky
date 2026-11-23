@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="TagRecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/tag_recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/full_awakening_pill.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = "full_awakening_pill"
+result = ExtResource("2")
+minimum = Dictionary[StringName, float]({&"herb": 1.0, &"beast": 4.0, &"spirit": 4.0})
+maximum = Dictionary[StringName, float]({})
+forbidden = Array[StringName]([])
+priority = 18
+time = 35.0
+success = 0.55
+solvent_tag = &"universal"

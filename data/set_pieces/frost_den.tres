@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SetPieceDef" load_steps=2 format=3]
+[ext_resource type="Script" path="res://data/defs/set_piece_def.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"frost_den"
+layer_tag = &"den"
+radius = 3.5
+entries = Array[Dictionary]([{"kind": "ice_wolf_den", "offset": Vector2(0, 0), "jitter": 0.3}, {"kind": "snow_bear_den", "offset": Vector2(3, 1.5), "jitter": 0.3}, {"kind": "thick_fur_den", "offset": Vector2(-2.5, 2.0), "jitter": 0.3}])

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/light_pillar.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = &"light_pillar"
+result = ExtResource("2")
+tier = 1
+group = 1
+is_structure = true
+ingredients = Dictionary[StringName, int]({&"stone": 6, &"thunder_crystal": 1, &"spirit_stone": 2})

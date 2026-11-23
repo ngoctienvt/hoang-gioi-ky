@@ -1,14 +1,11 @@
 extends GutTest
 
-var world: DemoWorld
+var world: GameWorld
 
 func before_each() -> void:
-	world = DemoWorld.new()
+	world = GameWorld.new()
 	world.initialize(1234, {"all_dead": "continue"})
-	world.state.nodes.clear()
-	world.state.creatures.clear()
-	world.state.structures.clear()
-	world.state.drops.clear()
+	world.clear_entities()
 	world.add_player(1, "Host")
 	world.add_player(2, "Guest")
 
@@ -28,7 +25,7 @@ func structure(kind: String) -> Dictionary:
 	result.merge({"health": 200.0, "fuel": 0.0, "ingredients": [], "solvent": "", "remaining": 0.0, "output": "", "pending": "", "slots": [], "crop": "", "growth": 0.0})
 	for i in 15:
 		result.slots.append({})
-	world.state.structures.append(result)
+	world.add_entity("structures", result)
 	return result
 
 func test_pickup_is_once_only_and_checks_proximity() -> void:
@@ -47,7 +44,7 @@ func test_pickup_is_once_only_and_checks_proximity() -> void:
 func test_untrusted_requests_cannot_modify_inventory() -> void:
 	give("twig", 5)
 	var before = player().inventory.duplicate(true)
-	for args in [{"slot": -1}, {"slot": 15}, {"slot": "0"}, {"slot": 0, "count": -1}, {"slot": 0, "count": 9999}]:
+	for args in [{"slot": -1}, {"slot": InventoryComponent.SLOT_COUNT}, {"slot": "0"}, {"slot": 0, "count": -1}, {"slot": 0, "count": 9999}]:
 		assert_false(world.action(1, "drop", args))
 	assert_false(world.action(999, "drop", {"slot": 0}))
 	assert_false(world.action(1, "craft", {"recipe": {"result": "spear"}}))
@@ -134,7 +131,7 @@ func test_restore_and_same_name_reconnect_keep_progress() -> void:
 	player().position = [3.0, 0.0, 4.0]
 	world.remove_player(1)
 	var saved = world.snapshot()
-	var restored = DemoWorld.new()
+	var restored = GameWorld.new()
 	restored.restore(saved)
 	restored.add_player(8, "Host")
 	var returning = restored.state.players["8"]

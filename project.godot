@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Hoang Giới Ký"
-run/main_scene="res://world/demo.tscn"
+run/main_scene="res://world/game.tscn"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -23,10 +23,12 @@ GameClock="*res://autoload/game_clock.gd"
 ItemDB="*res://autoload/item_db.gd"
 RecipeDB="*res://autoload/recipe_db.gd"
 SaveManager="*res://autoload/save_manager.gd"
+SettingsManager="*res://autoload/settings_manager.gd"
 
-[dotnet]
+[debug]
 
-project/assembly_name="HoangGioiKy"
+file_logging/enable_file_logging=true
+file_logging/log_path="user://logs/game.log"
 
 [display]
 
@@ -36,11 +38,9 @@ window/size/window_width_override=1280
 window/size/window_height_override=800
 window/stretch/mode="canvas_items"
 
-[debug]
+[dotnet]
 
-file_logging/enable_file_logging=true
-file_logging/log_path="user://logs/game.log"
-file_logging/max_log_files=5
+project/assembly_name="HoangGioiKy"
 
 [editor_plugins]
 

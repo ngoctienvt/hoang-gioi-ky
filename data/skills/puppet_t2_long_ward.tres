@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillNodeDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/skill_node_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"puppet_t2_long_ward"
+tree_id = &"tree_puppeteer"
+tier = 2
+branch = &"B"
+excludes = Array[StringName]([&"puppet_t2_overclock"])
+name_key = "SKILL_PUPPET_T2_LONG_WARD"
+desc_key = "DESC_SKILL_PUPPET_T2_LONG_WARD"
+effect_id = &"guard_puppet_long_life"
+params = {}

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SetPieceDef" load_steps=2 format=3]
+[ext_resource type="Script" path="res://data/defs/set_piece_def.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"volcano_stone"
+layer_tag = &"stone"
+radius = 4.5
+entries = Array[Dictionary]([{"kind": "basalt_rock", "offset": Vector2(0, 0), "jitter": 0.5}, {"kind": "dark_iron_vein", "offset": Vector2(2.5, 1.2), "jitter": 0.5}, {"kind": "magma_ore", "offset": Vector2(-2.5, 0.8), "jitter": 0.5}])

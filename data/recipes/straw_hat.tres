@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RecipeDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/defs/recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/straw_hat.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+id = &"straw_hat"
+result = ExtResource("2")
+tier = 0
+group = 2
+ingredients = Dictionary[StringName, int]({&"bamboo": 2, &"grass": 4})

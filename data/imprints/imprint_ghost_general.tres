@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ImprintDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/imprint_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"imprint_ghost_general"
+name_key = "ITEM_IMPRINT_GHOST_GENERAL"
+desc_key = "DESC_IMPRINT_GHOST_GENERAL"
+item_id = &"imprint_ghost_general"
+boss_material = &"ghost_general_core"
+effect_id = &"no_dark_dao_drain"
+params = {}

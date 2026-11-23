@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CreatureDef" load_steps=5 format=3]
+[ext_resource type="Script" path="res://data/defs/creature_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/soul_herb.tres" id="i1"]
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 1
+max_count = 2
+[resource]
+script = ExtResource("1")
+id = &"wraith"
+name_key = "WORLD_WRAITH"
+max_health = 70.0
+damage = 12.0
+move_speed = 3.5
+detect_range = 16.0
+active_period = 4
+drops = Array[ExtResource("drop")]([SubResource("d1")])

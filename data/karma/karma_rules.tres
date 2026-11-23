@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="KarmaRulesDef" load_steps=2 format=3]
+[ext_resource type="Script" path="res://data/defs/karma_rules_def.gd" id="1"]
+[resource]
+script = ExtResource("1")
+kill_peaceful = 8.0
+mine_sect_ore = 10.0
+break_seal_stone = 12.0
+forbidden_skill = 15.0
+altar_offering = 10.0
+help_wanderer = 12.0
+release_beast = 8.0
+plant_spirit_tree = 6.0
+daily_decay = 2.0

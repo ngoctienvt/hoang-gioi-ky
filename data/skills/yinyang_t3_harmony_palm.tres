@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillNodeDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/skill_node_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"yinyang_t3_harmony_palm"
+tree_id = &"tree_yin_yang"
+tier = 3
+branch = &"B"
+excludes = Array[StringName]([&"yinyang_t3_eclipse"])
+name_key = "SKILL_YINYANG_T3_HARMONY_PALM"
+desc_key = "DESC_SKILL_YINYANG_T3_HARMONY_PALM"
+effect_id = &"palm_lifesteal"
+params = {}

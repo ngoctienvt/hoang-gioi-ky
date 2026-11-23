@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BiomeDef" load_steps=8 format=3]
+[ext_resource type="Script" path="res://data/defs/biome_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/set_piece_def.gd" id="sp_script"]
+[ext_resource type="Resource" path="res://data/set_pieces/thunder_food.tres" id="sp1"]
+[ext_resource type="Resource" path="res://data/set_pieces/thunder_wood.tres" id="sp2"]
+[ext_resource type="Resource" path="res://data/set_pieces/thunder_stone.tres" id="sp3"]
+[ext_resource type="Resource" path="res://data/set_pieces/thunder_misc.tres" id="sp4"]
+[ext_resource type="Resource" path="res://data/set_pieces/thunder_den.tres" id="sp5"]
+[resource]
+script = ExtResource("1")
+id = &"thunder_gorge"
+name_key = "BIOME_THUNDER_GORGE"
+ground_color = Color(0.2314, 0.2392, 0.3412, 1)
+accent_color = Color(0.4039, 0.7216, 0.8392, 1)
+water_type = &"loi_tri"
+required_pieces = Array[ExtResource("sp_script")]([ExtResource("sp1"), ExtResource("sp2"), ExtResource("sp3"), ExtResource("sp4"), ExtResource("sp5")])
+optional_pieces = Array[ExtResource("sp_script")]([ExtResource("sp1"), ExtResource("sp2"), ExtResource("sp3"), ExtResource("sp4")])
+optional_weights = PackedFloat32Array(1.2, 1.2, 1.0, 1.0)
+density = 55
+den_kinds = Array[StringName]([&"thunder_beast_den", &"stone_golem_den"])

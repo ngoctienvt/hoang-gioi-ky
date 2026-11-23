@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CharacterDef" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://data/defs/character_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/ability_def.gd" id="ab"]
+[ext_resource type="Resource" path="res://data/abilities/shadow_step.tres" id="2"]
+[ext_resource type="Resource" path="res://data/abilities/yin_yang_palm.tres" id="3"]
+
+[resource]
+script = ExtResource("1")
+id = &"yin_yang"
+name_key = "CHAR_YIN_YANG"
+desc_key = "DESC_CHAR_YIN_YANG"
+power_key = "POWER_YIN_YANG"
+cost_key = "COST_YIN_YANG"
+max_health = 140.0
+move_speed = 5.0
+heal_rate = 1.0
+unarmed_damage_mult = 1.0
+poison_threshold = 100.0
+abilities = Array[ExtResource("ab")]([ExtResource("2"), ExtResource("3")])
+trait_id = &"boundary_dao"
+skill_tree_id = &"tree_yin_yang"
+tribulation_id = &"trib_yin_yang"
+body_color = Color(0.419608, 0.329412, 0.490196, 1)
+selectable = true

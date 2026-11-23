@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/refining_forge.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = &"refining_forge"
+result = ExtResource("2")
+tier = 1
+group = 4
+is_structure = true
+ingredients = Dictionary[StringName, int]({&"stone": 8, &"dark_iron_ore": 4, &"spirit_stone": 2})

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BiomeDef" load_steps=8 format=3]
+[ext_resource type="Script" path="res://data/defs/biome_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/set_piece_def.gd" id="sp_script"]
+[ext_resource type="Resource" path="res://data/set_pieces/volcano_food.tres" id="sp1"]
+[ext_resource type="Resource" path="res://data/set_pieces/volcano_wood.tres" id="sp2"]
+[ext_resource type="Resource" path="res://data/set_pieces/volcano_stone.tres" id="sp3"]
+[ext_resource type="Resource" path="res://data/set_pieces/volcano_misc.tres" id="sp4"]
+[ext_resource type="Resource" path="res://data/set_pieces/volcano_den.tres" id="sp5"]
+[resource]
+script = ExtResource("1")
+id = &"crimson_volcano"
+name_key = "BIOME_CRIMSON_VOLCANO"
+ground_color = Color(0.3608, 0.1882, 0.1608, 1)
+accent_color = Color(0.8392, 0.3765, 0.2196, 1)
+water_type = &"xich_viem"
+required_pieces = Array[ExtResource("sp_script")]([ExtResource("sp1"), ExtResource("sp2"), ExtResource("sp3"), ExtResource("sp4"), ExtResource("sp5")])
+optional_pieces = Array[ExtResource("sp_script")]([ExtResource("sp1"), ExtResource("sp2"), ExtResource("sp3"), ExtResource("sp4")])
+optional_weights = PackedFloat32Array(1.2, 1.2, 1.0, 1.0)
+density = 55
+den_kinds = Array[StringName]([&"lava_lizard_den", &"fire_bird_den"])

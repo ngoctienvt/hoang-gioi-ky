@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/ice-fish.svg" id="ui_icon"]
+
+[resource]
+script = ExtResource("1")
+icon = ExtResource("ui_icon")
+id = &"ice_fish"
+name_key = "ITEM_ICE_FISH"
+desc_key = "DESC_ICE_FISH"
+category = 3
+max_stack = 99
+restore_health = 5
+restore_stamina = 20
+tags = Dictionary[StringName, float]({&"meat": 1.0, &"ice": 0.5, &"water": 0.5, &"food": 1.0})
+spoil_time = 960
+cool_effect = 15

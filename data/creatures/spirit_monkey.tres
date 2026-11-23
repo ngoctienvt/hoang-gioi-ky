@@ -27,4 +27,6 @@ max_health = 60.0
 damage = 8.0
 move_speed = 4.2
 active_period = 1
+behavior = &"thief"
+params = {"steal_radius": 7.0, "flee_speed": 4.5}
 drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2"), SubResource("d3")])

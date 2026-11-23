@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+
+[ext_resource type="Texture2D" path="res://assets/ui/icons/ancient-golem-core.svg" id="ui_icon"]
+
+[resource]
+script = ExtResource("1")
+icon = ExtResource("ui_icon")
+id = &"ancient_golem_core"
+name_key = "ITEM_ANCIENT_GOLEM_CORE"
+desc_key = "DESC_ANCIENT_GOLEM_CORE"
+category = 0
+max_stack = 99
+tags = Dictionary[StringName, float]({&"stone": 2.0, &"spirit": 2.0})

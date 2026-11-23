@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/beast_cage.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = &"beast_cage"
+result = ExtResource("2")
+tier = 1
+group = 2
+ingredients = Dictionary[StringName, int]({&"wood": 4, &"rope": 2})

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CharacterDef" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://data/defs/character_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/ability_def.gd" id="ab"]
+[ext_resource type="Resource" path="res://data/abilities/devour.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+id = &"devourer"
+name_key = "CHAR_DEVOURER"
+desc_key = "DESC_CHAR_DEVOURER"
+power_key = "POWER_DEVOURER"
+cost_key = "COST_DEVOURER"
+max_health = 150.0
+move_speed = 5.0
+heal_rate = 1.0
+unarmed_damage_mult = 1.0
+poison_threshold = 150.0
+abilities = Array[ExtResource("ab")]([ExtResource("2")])
+trait_id = &"devourer_conflict"
+skill_tree_id = &"tree_devourer"
+tribulation_id = &"trib_devourer"
+body_color = Color(0.309804, 0.490196, 0.345098, 1)
+selectable = true

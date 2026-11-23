@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "state": {
+    "seed": 12345,
+    "players": {},
+    "offline_players": {
+      "Tester": {
+        "uid": -1,
+        "kind": "player",
+        "name": "Tester",
+        "position": [2.0, 0.0, 3.0],
+        "stats": {"health": 140.0, "max_health": 150.0, "stamina": 90.0, "dao": 85.0},
+        "inventory": {"slots": [], "equipment": {}},
+        "ghost": false,
+        "deaths": 0
+      }
+    },
+    "nodes": [
+      {"uid": 1, "kind": "spring", "position": [18.0, 0.0, 18.0]},
+      {"uid": 2, "kind": "tree", "position": [-10.0, 0.0, -10.0], "stage": 0, "hits": 0, "regrow": 0.0, "age": 0.0, "depleted": false}
+    ],
+    "drops": [],
+    "structures": [],
+    "creatures": [],
+    "discovered": ["flint_axe"],
+    "events": [],
+    "clock": {"elapsed": 120.0, "day": 1, "phase": "day"},
+    "options": {"day_length": 480.0, "death_mode": "continue"},
+    "reset_requested": false,
+    "next_uid": 10,
+    "rng_state": "12345"
+  }
+}

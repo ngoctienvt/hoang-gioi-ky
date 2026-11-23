@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillNodeDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/skill_node_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"devour_t1_gluttony"
+tree_id = &"tree_devourer"
+tier = 1
+branch = &"A"
+excludes = Array[StringName]([&"devour_t1_purify"])
+name_key = "SKILL_DEVOUR_T1_GLUTTONY"
+desc_key = "DESC_SKILL_DEVOUR_T1_GLUTTONY"
+effect_id = &"devour_double_heal"
+params = {}

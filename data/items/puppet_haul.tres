@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/puppet-haul.svg" id="ui_icon"]
+
+[resource]
+script = ExtResource("1")
+icon = ExtResource("ui_icon")
+id = &"puppet_haul"
+name_key = "ITEM_PUPPET_HAUL"
+desc_key = "DESC_PUPPET_HAUL"
+category = 5
+max_stack = 1

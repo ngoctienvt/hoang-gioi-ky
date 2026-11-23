@@ -1,14 +1,19 @@
-[gd_resource type="Resource" script_class="ItemDef" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
 
+[ext_resource type="Texture2D" path="res://assets/ui/icons/mushroom-stew.svg" id="ui_icon"]
+
 [resource]
 script = ExtResource("1")
+icon = ExtResource("ui_icon")
 id = &"mushroom_stew"
 name_key = "ITEM_MUSHROOM_STEW"
 desc_key = "DESC_MUSHROOM_STEW"
 category = 3
-max_stack = 40
+max_stack = 99
 restore_stamina = 65
 restore_health = 20
 restore_dao_heart = 5
+spoil_time = 2400
+warm_effect = 20

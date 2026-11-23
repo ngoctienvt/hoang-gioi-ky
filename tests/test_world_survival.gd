@@ -1,15 +1,12 @@
 extends GutTest
 
-var world: DemoWorld
+var world: GameWorld
 var player: Dictionary
 
 func before_each() -> void:
-	world = DemoWorld.new()
+	world = GameWorld.new()
 	world.initialize(42, {})
-	world.state.nodes.clear()
-	world.state.creatures.clear()
-	world.state.structures.clear()
-	world.state.drops.clear()
+	world.clear_entities()
 	world.add_player(1, "Host")
 	world.add_player(2, "Guest")
 	player = world.state.players["1"]
@@ -24,7 +21,7 @@ func structure(kind: String) -> Dictionary:
 	target.merge({"health": 200.0, "fuel": 90.0, "ingredients": [], "solvent": "", "remaining": 0.0, "output": "", "pending": "", "slots": [], "crop": "", "growth": 0.0})
 	for i in 15:
 		target.slots.append({})
-	world.state.structures.append(target)
+	world.add_entity("structures", target)
 	return target
 
 func test_altar_consumes_stones_and_penalty_persists_tick() -> void:
@@ -45,7 +42,7 @@ func test_rock_exhaustion_prevents_repeated_loot() -> void:
 	assert_true(world.action(1, "equip", {"slot": 0}))
 	var rock = world.entity("rock", [1.0, 0.0, 0.0])
 	rock.merge({"stage": 0, "hits": 0, "depleted": false, "regrow": 0.0})
-	world.state.nodes.append(rock)
+	world.add_entity("nodes", rock)
 	for i in 9:
 		player.work_cd = 0.0
 		assert_true(world.action(1, "work", {"uid": rock.uid}))

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SeasonDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/season_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"winter"
+name_key = "SEASON_WINTER"
+default_length = 15
+day_segments = 5
+dusk_segments = 5
+night_segments = 6
+base_temperature = 10.0
+rain_chance = 0.0
+snow_chance = 0.6
+storm_chance = 0.05
+sky_tint = Color(0.72, 0.8, 0.9, 1)

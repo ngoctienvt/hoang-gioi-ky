@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ImprintDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/imprint_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"imprint_ancient_warden"
+name_key = "ITEM_IMPRINT_ANCIENT_WARDEN"
+desc_key = "DESC_IMPRINT_ANCIENT_WARDEN"
+item_id = &"imprint_ancient_warden"
+boss_material = &"ancient_warden_core"
+effect_id = &"trap_immunity"
+params = {}

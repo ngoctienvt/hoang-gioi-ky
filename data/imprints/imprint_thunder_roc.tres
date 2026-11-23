@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ImprintDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/imprint_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"imprint_thunder_roc"
+name_key = "ITEM_IMPRINT_THUNDER_ROC"
+desc_key = "DESC_IMPRINT_THUNDER_ROC"
+item_id = &"imprint_thunder_roc"
+boss_material = &"thunder_roc_feather"
+effect_id = &"lightning_surge"
+params = {}

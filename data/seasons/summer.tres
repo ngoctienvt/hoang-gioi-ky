@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SeasonDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/season_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"summer"
+name_key = "SEASON_SUMMER"
+default_length = 15
+day_segments = 11
+dusk_segments = 1
+night_segments = 4
+base_temperature = 82.0
+rain_chance = 0.15
+snow_chance = 0.0
+storm_chance = 0.15
+sky_tint = Color(0.95, 0.82, 0.58, 1)

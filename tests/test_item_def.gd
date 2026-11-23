@@ -4,8 +4,8 @@ extends GutTest
 
 func test_item_def_defaults() -> void:
 	var item := ItemDef.new()
-	assert_eq(item.max_stack, 40, "Mặc định chồng được 40")
-	assert_true(item.is_stackable(), "Chồng 40 thì stackable")
+	assert_eq(item.max_stack, 99, "Mặc định chồng được 99")
+	assert_true(item.is_stackable(), "Chồng 99 thì stackable")
 	assert_eq(item.tool_type, ItemDef.ToolType.NONE)
 
 

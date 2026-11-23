@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillNodeDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/skill_node_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"beast_t1_ferocity"
+tree_id = &"tree_beast_bloodline"
+tier = 1
+branch = &"A"
+excludes = Array[StringName]([&"sense_t1_keensense"])
+name_key = "SKILL_BEAST_T1_FEROCITY"
+desc_key = "DESC_SKILL_BEAST_T1_FEROCITY"
+effect_id = &"beast_damage_mult"
+params = {}

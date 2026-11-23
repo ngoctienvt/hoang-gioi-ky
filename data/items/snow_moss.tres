@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/snow-moss.svg" id="ui_icon"]
+
+[resource]
+script = ExtResource("1")
+icon = ExtResource("ui_icon")
+id = &"snow_moss"
+name_key = "ITEM_SNOW_MOSS"
+desc_key = "DESC_SNOW_MOSS"
+category = 3
+max_stack = 99
+restore_health = 2
+restore_stamina = 10
+tags = Dictionary[StringName, float]({&"herb": 0.5, &"ice": 1.0, &"food": 1.0})

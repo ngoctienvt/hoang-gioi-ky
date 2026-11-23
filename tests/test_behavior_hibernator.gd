@@ -1,0 +1,35 @@
+extends GutTest
+
+
+func test_snow_bear_and_golem_sleep_until_hit_or_loud_noise() -> void:
+	var world := GameWorld.new()
+	world.initialize(22, {})
+	world.clear_entities()
+	world.add_player(1, "QuietWalker")
+	var player: Dictionary = world.state.players["1"]
+	player.position = [3.0, 0.0, 0.0]
+
+	var bear := world.entity("snow_bear", [0.0, 0.0, 0.0])
+	bear.merge({"health": 220.0, "home": [0.0, 0.0, 0.0], "state": "idle", "behavior_state": "idle", "effects": {}, "cooldown": 0.0, "respawn": 0.0, "stolen": []})
+	world.add_entity("creatures", bear)
+
+	var golem := world.entity("stone_golem", [12.0, 0.0, 0.0])
+	golem.merge({"health": 240.0, "home": [12.0, 0.0, 0.0], "state": "idle", "behavior_state": "idle", "effects": {}, "cooldown": 0.0, "respawn": 0.0, "stolen": []})
+	world.add_entity("creatures", golem)
+
+	for _i in 5:
+		world.step(0.5)
+	assert_eq(str(bear.state), "sleep", "Snow bear should stay asleep when player walks nearby")
+	assert_eq(str(golem.state), "sleep", "Stone golem should stay asleep when player is quiet")
+
+	# Loud noise within 8m wakes snow bear, not golem at 12m
+	world.Creatures.notify_noise(world, [2.0, 0.0, 0.0], 8.0)
+	world.step(0.5)
+	assert_eq(str(bear.state), "chase", "Loud noise should wake snow bear")
+	assert_eq(str(golem.state), "sleep")
+
+	# Lightning strike near golem wakes golem
+	player.position = [10.0, 0.0, 0.0]
+	world.Weather.strike_at(world, [11.0, 0.0, 0.0])
+	world.step(0.5)
+	assert_eq(str(golem.state), "chase", "Lightning near golem should wake it")

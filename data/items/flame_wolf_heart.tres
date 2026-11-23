@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"flame_wolf_heart"
+name_key = "ITEM_FLAME_WOLF_HEART"
+desc_key = "DESC_FLAME_WOLF_HEART"
+category = 0
+max_stack = 99
+tags = Dictionary[StringName, float]({&"boss_fire": 1.0, &"spirit": 1.5})

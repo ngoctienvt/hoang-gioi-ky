@@ -1,0 +1,41 @@
+{
+  "source_kind": "AI-generated",
+  "tool": "built-in image_gen",
+  "date": "2026-11-23",
+  "note": "Original generated game UI artwork, no third-party source assets. Preserve AI disclosure when shipping. Source PNG files kept outside Godot import using .gdignore.",
+  "assets": [
+    {
+      "width": 1586,
+      "id": "menu-forest",
+      "technical_checks_passed": true,
+      "height": 992,
+      "source": "assets/ui/art-source/menu-forest.png",
+      "visual_approval": "source inspected; in-game pending",
+      "fully_transparent_pixels": 0,
+      "file": "assets/ui/illustrations/menu-forest.png",
+      "source_sha256": "CEBACCB62D0689FFF1A6FE3509DA9FC0D0E1E61B661659C0877A9F88DF7ACEAF"
+    },
+    {
+      "width": 192,
+      "id": "ability-beast",
+      "technical_checks_passed": true,
+      "height": 192,
+      "source": "assets/ui/art-source/ability-beast.png",
+      "visual_approval": "source inspected; in-game pending",
+      "fully_transparent_pixels": 17839,
+      "file": "assets/ui/illustrations/ability-beast.png",
+      "source_sha256": "636B395206295D7022B71D9C3E9674F7CFDBD4568D0C66676128DF0DB49E7E1B"
+    },
+    {
+      "width": 192,
+      "id": "ability-sense",
+      "technical_checks_passed": true,
+      "height": 192,
+      "source": "assets/ui/art-source/ability-sense.png",
+      "visual_approval": "source inspected; in-game pending",
+      "fully_transparent_pixels": 27946,
+      "file": "assets/ui/illustrations/ability-sense.png",
+      "source_sha256": "E661874CAAC6A22DD972FBA26EF5CD69B8A998BB7F173F478AB593393CC283C4"
+    }
+  ]
+}

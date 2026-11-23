@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CreatureDef" load_steps=5 format=3]
+[ext_resource type="Script" path="res://data/defs/creature_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/heart_demon_essence.tres" id="i1"]
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 1
+max_count = 1
+[resource]
+script = ExtResource("1")
+id = &"heart_demon"
+name_key = "WORLD_HEART_DEMON"
+max_health = 80.0
+damage = 14.0
+move_speed = 4.2
+detect_range = 32.0
+active_period = 4
+drops = Array[ExtResource("drop")]([SubResource("d1")])

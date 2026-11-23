@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KarmaEventDef" load_steps=2 format=3]
+[ext_resource type="Script" path="res://data/defs/karma_event_def.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"sin_60_enforcers"
+bar = "sin"
+threshold = 60
+weight = 1.0
+cost = 15.0
+kind = "spawn_hostiles"
+params = {"kind": "enforcer", "count": 3, "health": 110.0, "damage": 16.0}

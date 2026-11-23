@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KarmaEventDef" load_steps=2 format=3]
+[ext_resource type="Script" path="res://data/defs/karma_event_def.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"sin_30_merchant"
+bar = "sin"
+threshold = 30
+weight = 1.0
+cost = 15.0
+kind = "spawn_npc"
+params = {"faction": "merchant", "offers": [{"id": "conceal_pill", "count": 1, "currency": "spirit_stone", "price": 2}, {"id": "ghost_mask_talisman", "count": 2, "currency": "spirit_stone", "price": 2}]}

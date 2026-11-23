@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/cool-jade-pill.svg" id="ui_icon"]
+
+[resource]
+script = ExtResource("1")
+icon = ExtResource("ui_icon")
+id = &"cool_jade_pill"
+name_key = "ITEM_COOL_JADE_PILL"
+desc_key = "DESC_COOL_JADE_PILL"
+category = 4
+max_stack = 99
+effects = {"temp_lock": [50.0, 480.0]}

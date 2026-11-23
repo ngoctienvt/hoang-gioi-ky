@@ -70,9 +70,13 @@ func alchemy_chance(recipe_id: String, furnace_tier: int = 0, solvent: String = 
 		if recipe.id == recipe_id:
 			var bonus = 0.0
 			var item = ItemDB.get_item(solvent)
-			if item != null and item.get_tag(recipe.solvent_tag) > 0.0:
-				bonus = 0.15
-			return clampf(recipe.success + clampi(furnace_tier, 0, 3) * 0.05 + bonus, 0.0, 1.0)
+			if item != null:
+				if item.get_tag(recipe.solvent_tag) > 0.0:
+					bonus = 0.15
+				elif item.get_tag(&"universal") > 0.0 or String(solvent) == "spirit_water_co_van":
+					bonus = 0.07
+			var tier_bonus := 0.0 if furnace_tier <= 0 else (0.05 if furnace_tier == 1 else 0.20)
+			return clampf(recipe.success + tier_bonus + bonus, 0.0, 1.0)
 	return 0.0
 
 func resolve_alchemy(ids: Array, roll: float, furnace_tier: int = 0, solvent: String = "") -> Dictionary:

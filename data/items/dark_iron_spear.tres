@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/dark-iron-spear.svg" id="ui_icon"]
+
+[resource]
+script = ExtResource("1")
+icon = ExtResource("ui_icon")
+id = &"dark_iron_spear"
+name_key = "ITEM_DARK_IRON_SPEAR"
+desc_key = "DESC_DARK_IRON_SPEAR"
+category = 2
+max_stack = 1
+max_durability = 120
+damage = 32.0
+equipment_slot = &"hand"

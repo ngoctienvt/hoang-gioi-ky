@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RecipeDef" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://data/defs/recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/imprint_ghost_general.tres" id="2"]
+
+[resource]
+script = ExtResource("1")
+id = &"imprint_ghost_general"
+result = ExtResource("2")
+tier = 0
+group = 3
+station = &"refining_forge"
+ingredients = Dictionary[StringName, int]({&"ghost_general_core": 1, &"spirit_stone": 3})

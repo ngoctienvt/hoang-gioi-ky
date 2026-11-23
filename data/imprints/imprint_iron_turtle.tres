@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ImprintDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/imprint_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"imprint_iron_turtle"
+name_key = "ITEM_IMPRINT_IRON_TURTLE"
+desc_key = "DESC_IMPRINT_IRON_TURTLE"
+item_id = &"imprint_iron_turtle"
+boss_material = &"iron_turtle_shell"
+effect_id = &"thorns_reflect"
+params = {}

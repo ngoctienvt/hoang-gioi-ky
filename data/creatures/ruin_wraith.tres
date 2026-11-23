@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CreatureDef" load_steps=7 format=3]
+[ext_resource type="Script" path="res://data/defs/creature_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/wraith_essence.tres" id="i1"]
+[ext_resource type="Resource" path="res://data/items/monster_core_high.tres" id="i2"]
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 1
+max_count = 1
+[sub_resource type="Resource" id="d2"]
+script = ExtResource("drop")
+item = ExtResource("i2")
+chance = 0.6
+min_count = 1
+max_count = 1
+[resource]
+script = ExtResource("1")
+id = &"ruin_wraith"
+name_key = "WORLD_RUIN_WRAITH"
+max_health = 140
+damage = 26
+move_speed = 3.8
+detect_range = 11
+active_period = 3
+behavior = &"night_guardian"
+params = {"fear_radius": 6.0}
+drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2")])

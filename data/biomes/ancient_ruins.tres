@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BiomeDef" load_steps=8 format=3]
+[ext_resource type="Script" path="res://data/defs/biome_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/set_piece_def.gd" id="sp_script"]
+[ext_resource type="Resource" path="res://data/set_pieces/ruins_food.tres" id="sp1"]
+[ext_resource type="Resource" path="res://data/set_pieces/ruins_wood.tres" id="sp2"]
+[ext_resource type="Resource" path="res://data/set_pieces/ruins_stone.tres" id="sp3"]
+[ext_resource type="Resource" path="res://data/set_pieces/ruins_misc.tres" id="sp4"]
+[ext_resource type="Resource" path="res://data/set_pieces/ruins_den.tres" id="sp5"]
+[resource]
+script = ExtResource("1")
+id = &"ancient_ruins"
+name_key = "BIOME_ANCIENT_RUINS"
+ground_color = Color(0.4196, 0.3608, 0.2588, 1)
+accent_color = Color(0.7686, 0.6431, 0.3529, 1)
+water_type = &"co_van"
+required_pieces = Array[ExtResource("sp_script")]([ExtResource("sp1"), ExtResource("sp2"), ExtResource("sp3"), ExtResource("sp4"), ExtResource("sp5")])
+optional_pieces = Array[ExtResource("sp_script")]([ExtResource("sp1"), ExtResource("sp2"), ExtResource("sp3"), ExtResource("sp4")])
+optional_weights = PackedFloat32Array(1.2, 1.2, 1.0, 1.0)
+density = 55
+den_kinds = Array[StringName]([&"construct_den", &"spirit_den"])

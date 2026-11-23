@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CreatureDef" load_steps=5 format=3]
+[ext_resource type="Script" path="res://data/defs/creature_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/minor_blood_essence.tres" id="i1"]
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 1
+max_count = 1
+[resource]
+script = ExtResource("1")
+id = &"spirit_leech"
+name_key = "WORLD_SPIRIT_LEECH"
+max_health = 45
+damage = 5
+move_speed = 3.6
+detect_range = 8
+active_period = 0
+behavior = &"leech"
+params = {}
+drops = Array[ExtResource("drop")]([SubResource("d1")])

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/spirit-water-huyen-bang.svg" id="ui_icon"]
+
+[resource]
+script = ExtResource("1")
+icon = ExtResource("ui_icon")
+id = &"spirit_water_huyen_bang"
+name_key = "ITEM_SPIRIT_WATER_HUYEN_BANG"
+desc_key = "DESC_SPIRIT_WATER_HUYEN_BANG"
+category = 4
+max_stack = 99
+restore_health = 5
+restore_stamina = 5
+restore_dao_heart = 5
+tags = Dictionary[StringName, float]({&"water": 1.0, &"spirit": 1.0, &"ice": 1.0, &"heat_resist": 1.0})

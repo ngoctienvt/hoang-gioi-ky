@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/spirit-pickaxe.svg" id="ui_icon"]
+
+[resource]
+script = ExtResource("1")
+icon = ExtResource("ui_icon")
+id = &"spirit_pickaxe"
+name_key = "ITEM_SPIRIT_PICKAXE"
+desc_key = "DESC_SPIRIT_PICKAXE"
+category = 1
+max_stack = 1
+tool_type = 2
+tool_tier = 2
+max_durability = 160
+damage = 18.0

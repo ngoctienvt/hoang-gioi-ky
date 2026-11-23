@@ -1,0 +1,1275 @@
+{
+  "version": 1,
+  "dimensions": [
+    96,
+    96
+  ],
+  "background": "transparent",
+  "source": "Original code-authored SVG by Codex for Hoang Giới Ký, 2026-11-23; no third-party artwork.",
+  "license": "Project-owned original artwork; no external attribution required.",
+  "concept_is_ai_generated": true,
+  "runtime_is_ai_raster": false,
+  "assets": [
+    {
+      "id": "alchemy_furnace",
+      "family": "furnace",
+      "file": "assets/ui/icons/alchemy-furnace.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "alchemy_furnace_t2",
+      "family": "furnace",
+      "file": "assets/ui/icons/alchemy-furnace-t2.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ancient_fruit",
+      "family": "fruit",
+      "file": "assets/ui/icons/ancient-fruit.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ancient_gear",
+      "family": "gear",
+      "file": "assets/ui/icons/ancient-gear.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ancient_golem_core",
+      "family": "gear",
+      "file": "assets/ui/icons/ancient-golem-core.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ancient_vine",
+      "family": "grass",
+      "file": "assets/ui/icons/ancient-vine.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "antidote_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/antidote-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ash",
+      "family": "stone",
+      "file": "assets/ui/icons/ash.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "awakening_altar",
+      "family": "altar",
+      "file": "assets/ui/icons/awakening-altar.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "bamboo",
+      "family": "wood",
+      "file": "assets/ui/icons/bamboo.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "basalt",
+      "family": "stone",
+      "file": "assets/ui/icons/basalt.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "beast_cage",
+      "family": "cage",
+      "file": "assets/ui/icons/beast-cage.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "berry_bush",
+      "family": "fruit",
+      "file": "assets/ui/icons/berry-bush.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "bind_talisman",
+      "family": "talisman",
+      "file": "assets/ui/icons/bind-talisman.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "blood_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/blood-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "broken_sword",
+      "family": "sword",
+      "file": "assets/ui/icons/broken-sword.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "calm_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/calm-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "campfire",
+      "family": "fire",
+      "file": "assets/ui/icons/campfire.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "carved_stone",
+      "family": "stone",
+      "file": "assets/ui/icons/carved-stone.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "charcoal",
+      "family": "stone",
+      "file": "assets/ui/icons/charcoal.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "charged_thunder_crystal",
+      "family": "crystal",
+      "file": "assets/ui/icons/charged-thunder-crystal.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "charred_food",
+      "family": "meat",
+      "file": "assets/ui/icons/charred-food.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "chest",
+      "family": "chest",
+      "file": "assets/ui/icons/chest.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "cinnabar",
+      "family": "stone",
+      "file": "assets/ui/icons/cinnabar.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "conceal_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/conceal-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "cooking_pot",
+      "family": "pot",
+      "file": "assets/ui/icons/cooking-pot.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "cool_jade_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/cool-jade-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "cool_vest",
+      "family": "armor",
+      "file": "assets/ui/icons/cool-vest.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "crow_feather",
+      "family": "feather",
+      "file": "assets/ui/icons/crow-feather.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "damp_wood",
+      "family": "wood",
+      "file": "assets/ui/icons/damp-wood.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "dark_iron_armor",
+      "family": "armor",
+      "file": "assets/ui/icons/dark-iron-armor.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "dark_iron_ore",
+      "family": "stone",
+      "file": "assets/ui/icons/dark-iron-ore.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "dark_iron_spear",
+      "family": "spear",
+      "file": "assets/ui/icons/dark-iron-spear.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "detox_soup",
+      "family": "bowl",
+      "file": "assets/ui/icons/detox-soup.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "eternal_ice",
+      "family": "crystal",
+      "file": "assets/ui/icons/eternal-ice.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fang",
+      "family": "fang",
+      "file": "assets/ui/icons/fang.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "farm",
+      "family": "bench",
+      "file": "assets/ui/icons/farm.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "feather",
+      "family": "feather",
+      "file": "assets/ui/icons/feather.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "filled_beast_cage",
+      "family": "cage",
+      "file": "assets/ui/icons/filled-beast-cage.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "firepit",
+      "family": "fire",
+      "file": "assets/ui/icons/firepit.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fire_berry",
+      "family": "fruit",
+      "file": "assets/ui/icons/fire-berry.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fire_egg",
+      "family": "egg",
+      "file": "assets/ui/icons/fire-egg.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fire_feather",
+      "family": "feather",
+      "file": "assets/ui/icons/fire-feather.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fire_lotus",
+      "family": "lotus",
+      "file": "assets/ui/icons/fire-lotus.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "flint",
+      "family": "stone",
+      "file": "assets/ui/icons/flint.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "flint_axe",
+      "family": "axe",
+      "file": "assets/ui/icons/flint-axe.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "flint_pickaxe",
+      "family": "pickaxe",
+      "file": "assets/ui/icons/flint-pickaxe.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "frost_rice",
+      "family": "seed",
+      "file": "assets/ui/icons/frost-rice.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "frost_talisman",
+      "family": "talisman",
+      "file": "assets/ui/icons/frost-talisman.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "frost_wood",
+      "family": "wood",
+      "file": "assets/ui/icons/frost-wood.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fruit_salad",
+      "family": "bowl",
+      "file": "assets/ui/icons/fruit-salad.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fruit_soup",
+      "family": "bowl",
+      "file": "assets/ui/icons/fruit-soup.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "full_awakening_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/full-awakening-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fur",
+      "family": "fur",
+      "file": "assets/ui/icons/fur.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fur_coat",
+      "family": "armor",
+      "file": "assets/ui/icons/fur-coat.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "fur_hat",
+      "family": "hat",
+      "file": "assets/ui/icons/fur-hat.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ghost_general_core",
+      "family": "essence",
+      "file": "assets/ui/icons/ghost-general-core.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ghost_mask_talisman",
+      "family": "talisman",
+      "file": "assets/ui/icons/ghost-mask-talisman.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "glow_mushroom",
+      "family": "mushroom",
+      "file": "assets/ui/icons/glow-mushroom.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "grass",
+      "family": "grass",
+      "file": "assets/ui/icons/grass.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "grass_armor",
+      "family": "armor",
+      "file": "assets/ui/icons/grass-armor.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "gravel",
+      "family": "stone",
+      "file": "assets/ui/icons/gravel.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "guest_altar",
+      "family": "altar",
+      "file": "assets/ui/icons/guest-altar.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "hammer",
+      "family": "hammer",
+      "file": "assets/ui/icons/hammer.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "hand_warmer",
+      "family": "pot",
+      "file": "assets/ui/icons/hand-warmer.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "hard_wood",
+      "family": "wood",
+      "file": "assets/ui/icons/hard-wood.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "heart_demon_essence",
+      "family": "essence",
+      "file": "assets/ui/icons/heart-demon-essence.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "herb",
+      "family": "grass",
+      "file": "assets/ui/icons/herb.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ice_block",
+      "family": "crystal",
+      "file": "assets/ui/icons/ice-block.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ice_cellar",
+      "family": "chest",
+      "file": "assets/ui/icons/ice-cellar.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ice_fish",
+      "family": "fish",
+      "file": "assets/ui/icons/ice-fish.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ice_structure",
+      "family": "altar",
+      "file": "assets/ui/icons/ice-structure.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ice_wolf_pelt",
+      "family": "fur",
+      "file": "assets/ui/icons/ice-wolf-pelt.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "incense",
+      "family": "twig",
+      "file": "assets/ui/icons/incense.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "lava_scale",
+      "family": "fang",
+      "file": "assets/ui/icons/lava-scale.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "lightning_rod",
+      "family": "spear",
+      "file": "assets/ui/icons/lightning-rod.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "lightning_ward_talisman",
+      "family": "talisman",
+      "file": "assets/ui/icons/lightning-ward-talisman.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "light_pillar",
+      "family": "altar",
+      "file": "assets/ui/icons/light-pillar.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "magma_crystal",
+      "family": "crystal",
+      "file": "assets/ui/icons/magma-crystal.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "meat",
+      "family": "meat",
+      "file": "assets/ui/icons/meat.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "mid_awakening_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/mid-awakening-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "minor_awakening_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/minor-awakening-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "minor_blood_essence",
+      "family": "essence",
+      "file": "assets/ui/icons/minor-blood-essence.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "monkey_fur",
+      "family": "fur",
+      "file": "assets/ui/icons/monkey-fur.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "monster_core",
+      "family": "essence",
+      "file": "assets/ui/icons/monster-core.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "monster_core_high",
+      "family": "essence",
+      "file": "assets/ui/icons/monster-core-high.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "monster_core_low",
+      "family": "essence",
+      "file": "assets/ui/icons/monster-core-low.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "monster_core_mid",
+      "family": "essence",
+      "file": "assets/ui/icons/monster-core-mid.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "mud_clump",
+      "family": "stone",
+      "file": "assets/ui/icons/mud-clump.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "mushroom",
+      "family": "mushroom",
+      "file": "assets/ui/icons/mushroom.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "mushroom_stew",
+      "family": "bowl",
+      "file": "assets/ui/icons/mushroom-stew.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "mutant_fruit",
+      "family": "fruit",
+      "file": "assets/ui/icons/mutant-fruit.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "night_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/night-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "pierce_mist_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/pierce-mist-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "pinecone",
+      "family": "fruit",
+      "file": "assets/ui/icons/pinecone.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "plain_water",
+      "family": "water",
+      "file": "assets/ui/icons/plain-water.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "puppet_chop",
+      "family": "puppet",
+      "file": "assets/ui/icons/puppet-chop.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "puppet_haul",
+      "family": "puppet",
+      "file": "assets/ui/icons/puppet-haul.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "puppet_mine",
+      "family": "puppet",
+      "file": "assets/ui/icons/puppet-mine.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "quartz",
+      "family": "crystal",
+      "file": "assets/ui/icons/quartz.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "reed",
+      "family": "grass",
+      "file": "assets/ui/icons/reed.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "refining_forge",
+      "family": "furnace",
+      "file": "assets/ui/icons/refining-forge.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "resin",
+      "family": "stone",
+      "file": "assets/ui/icons/resin.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "resurrection_altar",
+      "family": "altar",
+      "file": "assets/ui/icons/resurrection-altar.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "revival_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/revival-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "roasted_fruit",
+      "family": "fruit",
+      "file": "assets/ui/icons/roasted-fruit.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "roasted_meat",
+      "family": "meat",
+      "file": "assets/ui/icons/roasted-meat.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "roasted_mushroom",
+      "family": "mushroom",
+      "file": "assets/ui/icons/roasted-mushroom.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "roasted_root",
+      "family": "root",
+      "file": "assets/ui/icons/roasted-root.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "rope",
+      "family": "rope",
+      "file": "assets/ui/icons/rope.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ruin_mushroom",
+      "family": "mushroom",
+      "file": "assets/ui/icons/ruin-mushroom.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ruin_shard",
+      "family": "stone",
+      "file": "assets/ui/icons/ruin-shard.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "rune_crystal",
+      "family": "crystal",
+      "file": "assets/ui/icons/rune-crystal.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "seed",
+      "family": "seed",
+      "file": "assets/ui/icons/seed.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "shovel",
+      "family": "shovel",
+      "file": "assets/ui/icons/shovel.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "small_meat",
+      "family": "meat",
+      "file": "assets/ui/icons/small-meat.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "snowball",
+      "family": "crystal",
+      "file": "assets/ui/icons/snowball.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "snow_lotus",
+      "family": "lotus",
+      "file": "assets/ui/icons/snow-lotus.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "snow_moss",
+      "family": "grass",
+      "file": "assets/ui/icons/snow-moss.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "soul_herb",
+      "family": "grass",
+      "file": "assets/ui/icons/soul-herb.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "soul_lantern",
+      "family": "torch",
+      "file": "assets/ui/icons/soul-lantern.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spear",
+      "family": "spear",
+      "file": "assets/ui/icons/spear.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_feast",
+      "family": "bowl",
+      "file": "assets/ui/icons/spirit-feast.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_fruit",
+      "family": "fruit",
+      "file": "assets/ui/icons/spirit-fruit.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_pickaxe",
+      "family": "pickaxe",
+      "file": "assets/ui/icons/spirit-pickaxe.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_rice",
+      "family": "seed",
+      "file": "assets/ui/icons/spirit-rice.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_rice_seed",
+      "family": "seed",
+      "file": "assets/ui/icons/spirit-rice-seed.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_stone",
+      "family": "crystal",
+      "file": "assets/ui/icons/spirit-stone.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_water",
+      "family": "water",
+      "file": "assets/ui/icons/spirit-water.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_water_co_van",
+      "family": "water",
+      "file": "assets/ui/icons/spirit-water-co-van.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_water_huyen_bang",
+      "family": "water",
+      "file": "assets/ui/icons/spirit-water-huyen-bang.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_water_loi_tri",
+      "family": "water",
+      "file": "assets/ui/icons/spirit-water-loi-tri.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_water_thanh_moc",
+      "family": "water",
+      "file": "assets/ui/icons/spirit-water-thanh-moc.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_water_u_minh",
+      "family": "water",
+      "file": "assets/ui/icons/spirit-water-u-minh.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spirit_water_xich_viem",
+      "family": "water",
+      "file": "assets/ui/icons/spirit-water-xich-viem.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "spoiled_food",
+      "family": "meat",
+      "file": "assets/ui/icons/spoiled-food.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "stake",
+      "family": "twig",
+      "file": "assets/ui/icons/stake.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "steamed_roots",
+      "family": "root",
+      "file": "assets/ui/icons/steamed-roots.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "stone",
+      "family": "stone",
+      "file": "assets/ui/icons/stone.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "straw_hat",
+      "family": "hat",
+      "file": "assets/ui/icons/straw-hat.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "swift_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/swift-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "talisman_chest",
+      "family": "chest",
+      "file": "assets/ui/icons/talisman-chest.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "talisman_desk",
+      "family": "bench",
+      "file": "assets/ui/icons/talisman-desk.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "talisman_paper",
+      "family": "paper",
+      "file": "assets/ui/icons/talisman-paper.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "thick_fur",
+      "family": "fur",
+      "file": "assets/ui/icons/thick-fur.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "thunder_crystal",
+      "family": "crystal",
+      "file": "assets/ui/icons/thunder-crystal.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "thunder_fur",
+      "family": "fur",
+      "file": "assets/ui/icons/thunder-fur.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "thunder_herb",
+      "family": "grass",
+      "file": "assets/ui/icons/thunder-herb.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "torch",
+      "family": "torch",
+      "file": "assets/ui/icons/torch.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "true_sight_talisman",
+      "family": "talisman",
+      "file": "assets/ui/icons/true-sight-talisman.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "twig",
+      "family": "twig",
+      "file": "assets/ui/icons/twig.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "twig_bush",
+      "family": "twig",
+      "file": "assets/ui/icons/twig-bush.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "volt_moss",
+      "family": "grass",
+      "file": "assets/ui/icons/volt-moss.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "warm_yang_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/warm-yang-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "waste_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/waste-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "water_array",
+      "family": "altar",
+      "file": "assets/ui/icons/water-array.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "water_bottle",
+      "family": "water",
+      "file": "assets/ui/icons/water-bottle.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "water_root",
+      "family": "root",
+      "file": "assets/ui/icons/water-root.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "water_ward_pill",
+      "family": "pill",
+      "file": "assets/ui/icons/water-ward-pill.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "wild_root",
+      "family": "root",
+      "file": "assets/ui/icons/wild-root.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "wood",
+      "family": "wood",
+      "file": "assets/ui/icons/wood.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "workbench",
+      "family": "bench",
+      "file": "assets/ui/icons/workbench.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "wraith_essence",
+      "family": "essence",
+      "file": "assets/ui/icons/wraith-essence.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "yin_soul_crystal",
+      "family": "crystal",
+      "file": "assets/ui/icons/yin-soul-crystal.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-health",
+      "family": "heart",
+      "file": "assets/ui/icons/ui-health.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-stamina",
+      "family": "grass",
+      "file": "assets/ui/icons/ui-stamina.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-dao",
+      "family": "essence",
+      "file": "assets/ui/icons/ui-dao.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-tools",
+      "family": "axe",
+      "file": "assets/ui/icons/ui-tools.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-light",
+      "family": "torch",
+      "file": "assets/ui/icons/ui-light.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-survival",
+      "family": "grass",
+      "file": "assets/ui/icons/ui-survival.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-combat",
+      "family": "spear",
+      "file": "assets/ui/icons/ui-combat.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-buildings",
+      "family": "bench",
+      "file": "assets/ui/icons/ui-buildings.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-talismans",
+      "family": "talisman",
+      "file": "assets/ui/icons/ui-talismans.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-puppets",
+      "family": "puppet",
+      "file": "assets/ui/icons/ui-puppets.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-book",
+      "family": "book",
+      "file": "assets/ui/icons/ui-book.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-beast",
+      "family": "beast",
+      "file": "assets/ui/icons/ui-beast.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-sense",
+      "family": "eye",
+      "file": "assets/ui/icons/ui-sense.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-hand",
+      "family": "spear",
+      "file": "assets/ui/icons/ui-hand.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-body",
+      "family": "armor",
+      "file": "assets/ui/icons/ui-body.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    },
+    {
+      "id": "ui-head",
+      "family": "hat",
+      "file": "assets/ui/icons/ui-head.svg",
+      "technical_checks_passed": true,
+      "visual_approval": "pending-in-game"
+    }
+  ],
+  "technical_check_scope": "SVG XML, 96x96 canvas, no background rectangles or embedded/external content; all ItemDef icon links exist. Raster alpha and in-engine visual acceptance pending."
+}

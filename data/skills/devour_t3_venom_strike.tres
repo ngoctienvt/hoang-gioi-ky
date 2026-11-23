@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillNodeDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/skill_node_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"devour_t3_venom_strike"
+tree_id = &"tree_devourer"
+tier = 3
+branch = &"B"
+excludes = Array[StringName]([&"devour_t3_soul_feast"])
+name_key = "SKILL_DEVOUR_T3_VENOM_STRIKE"
+desc_key = "DESC_SKILL_DEVOUR_T3_VENOM_STRIKE"
+effect_id = &"poison_damage_bonus"
+params = {}

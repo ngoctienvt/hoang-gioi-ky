@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SeasonDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/season_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"autumn"
+name_key = "SEASON_AUTUMN"
+default_length = 20
+day_segments = 8
+dusk_segments = 6
+night_segments = 2
+base_temperature = 50.0
+rain_chance = 0.2
+snow_chance = 0.0
+storm_chance = 0.05
+sky_tint = Color(0.88, 0.76, 0.6, 1)

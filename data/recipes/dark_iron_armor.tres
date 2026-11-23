@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/dark_iron_armor.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = &"dark_iron_armor"
+result = ExtResource("2")
+tier = 0
+group = 3
+station = &"refining_forge"
+ingredients = Dictionary[StringName, int]({&"dark_iron_ore": 4, &"fur": 2, &"rope": 2})

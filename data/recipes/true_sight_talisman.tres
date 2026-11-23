@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/true_sight_talisman.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = &"true_sight_talisman"
+result = ExtResource("2")
+result_count = 2
+tier = 0
+group = 5
+station = &"talisman_desk"
+ingredients = Dictionary[StringName, int]({&"talisman_paper": 1, &"cinnabar": 1, &"glow_mushroom": 1})

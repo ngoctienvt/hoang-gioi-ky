@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SetPieceDef" load_steps=2 format=3]
+[ext_resource type="Script" path="res://data/defs/set_piece_def.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"ruins_wood"
+layer_tag = &"wood"
+radius = 4.0
+entries = Array[Dictionary]([{"kind": "ancient_vine_node", "offset": Vector2(0, 0), "jitter": 0.6}, {"kind": "ancient_vine_node", "offset": Vector2(2, 1), "jitter": 0.6}])

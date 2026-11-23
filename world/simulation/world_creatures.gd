@@ -1,71 +1,175 @@
 extends RefCounted
+
 const Rules = preload("res://world/simulation/world_rules.gd")
+const EntityIndex = preload("res://world/simulation/world_entity_index.gd")
+
+const BEHAVIORS := {
+	&"herd_flee": preload("res://world/simulation/behaviors/herd_flee.gd"),
+	&"pack_hunter": preload("res://world/simulation/behaviors/pack_hunter.gd"),
+	&"thief": preload("res://world/simulation/behaviors/thief.gd"),
+	&"leech": preload("res://world/simulation/behaviors/leech.gd"),
+	&"scavenger": preload("res://world/simulation/behaviors/scavenger.gd"),
+	&"grave_rise": preload("res://world/simulation/behaviors/grave_rise.gd"),
+	&"fire_defender": preload("res://world/simulation/behaviors/fire_defender.gd"),
+	&"nest_guard": preload("res://world/simulation/behaviors/nest_guard.gd"),
+	&"pair_striker": preload("res://world/simulation/behaviors/pair_striker.gd"),
+	&"dormant_golem": preload("res://world/simulation/behaviors/dormant_golem.gd"),
+	&"hibernator": preload("res://world/simulation/behaviors/hibernator.gd"),
+	&"patrol": preload("res://world/simulation/behaviors/patrol.gd"),
+	&"night_guardian": preload("res://world/simulation/behaviors/night_guardian.gd"),
+	&"boss_mechanic": preload("res://world/simulation/behaviors/boss_mechanic.gd"),
+}
+
+
+static func apply_effect(world, creature: Dictionary, effect: String, duration: float) -> void:
+	if creature.is_empty() or duration <= 0.0:
+		return
+	if not creature.has("effects") or not creature.effects is Dictionary:
+		creature["effects"] = {}
+	creature.effects[effect] = maxf(float(creature.effects.get(effect, 0.0)), duration)
+	world.touch(int(creature.uid))
+
+
+static func notify_noise(world, pos: Array, radius: float) -> void:
+	for c in world.index.entities_near(pos, radius, "creatures"):
+		if float(c.get("health", 0.0)) > 0.0:
+			c["noise_alert"] = 10.0
+
+
+static func on_creature_hurt(world, creature: Dictionary, attacker: Dictionary) -> void:
+	var definition = Rules.creature(str(creature.get("kind", "")))
+	if definition == null:
+		return
+	var script = BEHAVIORS.get(definition.behavior)
+	if script != null and script.has_method("on_hurt"):
+		script.on_hurt(world, creature, attacker, definition)
+	else:
+		creature.state = "chase"
+	creature["behavior_state"] = creature.state
+
+
+static func _active_chunks(world) -> Dictionary:
+	var active: Dictionary = {}
+	for player in world.state.players.values():
+		if player.get("ghost", false):
+			continue
+		var c := EntityIndex.chunk_coords(player.get("position", [0.0, 0.0, 0.0]))
+		for dx in range(-3, 4):
+			for dz in range(-3, 4):
+				active[EntityIndex.chunk_key(c.x + dx, c.y + dz)] = true
+	return active
+
 
 static func step(world, delta: float) -> void:
-	var phase = str(world.state.clock.get("phase", "day"))
+	var phase := str(world.state.clock.get("phase", "day"))
+	var limit: float = world.map_half() - 1.0
+	var active_chunks := _active_chunks(world)
+	var has_players: bool = not active_chunks.is_empty()
+
 	for creature in world.state.creatures:
-		var definition = Rules.creature(creature.kind)
-		creature.cooldown = maxf(0, creature.cooldown - delta)
-		creature.hit_flash = maxf(0, creature.get("hit_flash", 0) - delta)
-		if creature.health <= 0:
-			creature.respawn -= delta
-			if creature.respawn <= 0:
-				creature.health = definition.max_health
-				creature.position = creature.home.duplicate()
-				creature.state = "idle"
+		var definition = Rules.creature(str(creature.get("kind", "")))
+		if definition == null:
 			continue
+		creature.cooldown = maxf(0.0, float(creature.get("cooldown", 0.0)) - delta)
+		var old_flash := float(creature.get("hit_flash", 0.0))
+		creature.hit_flash = maxf(0.0, old_flash - delta)
+		if old_flash > 0.0 and creature.hit_flash == 0.0:
+			world.touch(int(creature.uid))
+
+		if float(creature.get("health", 0.0)) <= 0.0:
+			creature.respawn = float(creature.get("respawn", 0.0)) - delta
+			if creature.respawn <= 0.0:
+				creature.health = definition.max_health
+				creature.state = "idle"
+				creature["behavior_state"] = "idle"
+				creature["effects"] = {}
+				creature["attached_peer"] = -1
+				creature["provoked"] = 0.0
+				creature["noise_alert"] = 0.0
+				world.move_entity(creature, creature.home.duplicate(), true)
+			continue
+
+		if has_players:
+			var ckey: String = world.index.entity_chunk.get(int(creature.uid), "")
+			if not ckey.is_empty() and not active_chunks.has(ckey):
+				continue
+
+		var speed_mult: float = world.Effects.step_creature(world, creature, delta)
+		if float(creature.health) <= 0.0:
+			continue
+
+		if float(creature.get("noise_alert", 0.0)) > 0.0:
+			creature["noise_alert"] = maxf(0.0, float(creature["noise_alert"]) - delta)
+		if float(creature.get("provoked", 0.0)) > 0.0:
+			creature["provoked"] = maxf(0.0, float(creature["provoked"]) - delta)
+
+		if speed_mult <= 0.0:
+			creature.state = "idle"
+			creature["behavior_state"] = "idle"
+			continue
+
 		var nearest: Dictionary = {}
-		var distance = definition.detect_range
+		var distance: float = definition.detect_range
 		for player in world.state.players.values():
-			var value = world.distance(player.position, creature.position)
-			if not player.ghost and value < distance:
+			if player.get("ghost", false) or world.Effects.has(player, "stealth"):
+				continue
+			var value: float = world.distance(player.position, creature.position)
+			if value < distance:
 				distance = value
 				nearest = player
-		var destination: Array = creature.home
-		var speed = definition.move_speed
-		if creature.kind == "wolf":
-			if phase == "day":
-				creature.state = "sleep"
-			elif not nearest.is_empty() and world.distance(creature.home, creature.position) < 18:
-				creature.state = "chase"
-				destination = nearest.position
-				speed = definition.move_speed
-				nearest.stats.dao = maxf(0, float(nearest.stats.get("dao", 100)) - delta * 0.4)
-				if distance < 1.7 and creature.cooldown <= 0:
-					world.hurt(nearest, definition.damage)
-					creature.cooldown = 1.5
-			else:
-				creature.state = "return"
-		elif creature.kind == "rabbit":
-			creature.state = "burrow" if phase == "night" else "idle"
-			if not nearest.is_empty():
-				creature.state = "flee"
-				speed = 4.0
-		elif creature.kind == "monkey":
-			if definition.active_period == 1 and phase != "day":
-				creature.state = "return"
-			elif creature.state == "flee":
-				speed = 4.0
-				if world.distance(creature.position, creature.home) < 1:
-					creature.state = "idle"
-			elif creature.stolen.is_empty():
-				for drop in world.state.drops:
-					if world.distance(creature.position, drop.position) < 7:
-						destination = drop.position
-						creature.state = "steal"
-						if world.distance(creature.position, drop.position) < 1:
-							creature.stolen.append(drop.duplicate(true))
-							world.state.drops.erase(drop)
-						break
-			else:
-				creature.state = "return"
-		if creature.state == "idle":
-			var t = world.elapsed() * 0.12 + creature.uid
-			destination = [creature.home[0] + sin(t) * 3, 0.0, creature.home[2] + cos(t) * 3]
-		move(creature, destination, speed * delta)
 
-static func move(creature: Dictionary, target: Array, amount: float) -> void:
-	var source = Vector3(creature.position[0], 0, creature.position[2])
-	var destination = Vector3(target[0], 0, target[2])
-	var result = source.move_toward(destination, amount)
-	creature.position = [clampf(result.x, -39, 39), 0.0, clampf(result.z, -39, 39)]
+		var ctx := {
+			"phase": phase,
+			"nearest_player": nearest,
+			"nearest_dist": distance,
+			"speed_mult": speed_mult,
+			"destination": creature.home,
+			"speed": definition.move_speed * speed_mult,
+		}
+		var prev_state := str(creature.get("state", "idle"))
+		var script = BEHAVIORS.get(definition.behavior, BEHAVIORS[&"herd_flee"])
+		script.tick(world, creature, definition, ctx, delta)
+		creature["behavior_state"] = creature.state
+		if creature.state != prev_state:
+			world.touch(int(creature.uid))
+
+		var destination: Array = ctx.destination
+		if creature.state == "idle":
+			var t: float = world.elapsed() * 0.12 + float(creature.uid)
+			destination = [float(creature.home[0]) + sin(t) * 3.0, 0.0, float(creature.home[2]) + cos(t) * 3.0]
+
+		var moved := false
+		if creature.get("in_secret_realm", false):
+			moved = _move_in_bounds(creature, destination, float(ctx.speed) * delta, 1200.0 - 15.0, 1200.0 + 15.0, 1200.0 - 15.0, 1200.0 + 15.0)
+		else:
+			moved = move(creature, destination, float(ctx.speed) * delta, limit)
+		if moved:
+			world.move_entity(creature, creature.position, false)
+
+
+static func _move_in_bounds(creature: Dictionary, target: Array, amount: float, min_x: float, max_x: float, min_z: float, max_z: float) -> bool:
+	if amount <= 0.0:
+		return false
+	var source := Vector3(float(creature.position[0]), 0.0, float(creature.position[2]))
+	var destination := Vector3(float(target[0]), 0.0, float(target[2]))
+	var result := source.move_toward(destination, amount)
+	var nx := clampf(result.x, min_x, max_x)
+	var nz := clampf(result.z, min_z, max_z)
+	if absf(nx - float(creature.position[0])) < 0.0001 and absf(nz - float(creature.position[2])) < 0.0001:
+		return false
+	creature.position = [nx, 0.0, nz]
+	return true
+
+
+static func move(creature: Dictionary, target: Array, amount: float, limit: float = 39.0) -> bool:
+	if amount <= 0.0:
+		return false
+	var source := Vector3(float(creature.position[0]), 0.0, float(creature.position[2]))
+	var destination := Vector3(float(target[0]), 0.0, float(target[2]))
+	var result := source.move_toward(destination, amount)
+	var nx := clampf(result.x, -limit, limit)
+	var nz := clampf(result.z, -limit, limit)
+	if absf(nx - float(creature.position[0])) < 0.0001 and absf(nz - float(creature.position[2])) < 0.0001:
+		return false
+	creature.position = [nx, 0.0, nz]
+	return true

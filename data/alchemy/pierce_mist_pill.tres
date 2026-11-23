@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="TagRecipeDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/tag_recipe_def.gd" id="1"]
+[ext_resource type="Resource" path="res://data/items/pierce_mist_pill.tres" id="2"]
+[resource]
+script = ExtResource("1")
+id = "pierce_mist_pill"
+result = ExtResource("2")
+minimum = Dictionary[StringName, float]({&"boss_ghost": 1.0, &"herb": 1.0})
+maximum = Dictionary[StringName, float]({})
+forbidden = Array[StringName]([])
+priority = 15
+time = 25.0
+success = 0.7
+solvent_tag = &"mind"

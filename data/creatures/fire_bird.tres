@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CreatureDef" load_steps=7 format=3]
+[ext_resource type="Script" path="res://data/defs/creature_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/fire_feather.tres" id="i1"]
+[ext_resource type="Resource" path="res://data/items/fire_egg.tres" id="i2"]
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 1
+max_count = 1
+[sub_resource type="Resource" id="d2"]
+script = ExtResource("drop")
+item = ExtResource("i2")
+chance = 0.6
+min_count = 1
+max_count = 1
+[resource]
+script = ExtResource("1")
+id = &"fire_bird"
+name_key = "WORLD_FIRE_BIRD"
+max_health = 95
+damage = 16
+move_speed = 4.5
+detect_range = 9
+active_period = 0
+behavior = &"nest_guard"
+params = {"nest_radius": 6.0, "leash": 14.0}
+drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2")])

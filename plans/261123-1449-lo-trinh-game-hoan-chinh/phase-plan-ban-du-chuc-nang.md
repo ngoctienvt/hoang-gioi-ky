@@ -1,6 +1,6 @@
 # Bản game đủ chức năng tối thiểu (feature-complete greybox)
 
-- **Trạng thái:** Chưa làm
+- **Trạng thái:** Hoàn thành (tất cả 10 giai đoạn đã xong)
 - **Ngày lập:** 2026-11-23
 - **Yêu cầu của chủ dự án:** làm game hoàn thiện tối thiểu, có **đầy đủ chức năng** để chơi được. **Không cần cân bằng.** Chủ dự án chưa tự chơi thử ở bước này.
 - **Nguồn thiết kế:** [GDD](../../docs/game-design-document.md), [lộ trình](plan.md)
@@ -34,12 +34,12 @@ Mọi hệ thống trong GDD đều có và chơi được từ đầu đến cu
 | 02 | Thế giới 6 biome | Chia bản đồ theo vùng. Ghép biome từ mảnh đặt sẵn theo seed. Thêm tài nguyên, thức ăn, 6 Linh Tuyền và Cổ Truyền Tống Trận |
 | 03 | Mùa, nhiệt độ, thời tiết | Đủ 4 mùa, nhiệt độ cơ thể, áo ấm và áo mát, lửa sưởi, mưa, tuyết, sét. Thêm hư hỏng thực phẩm |
 | 04 | Yêu thú các biome | Ít nhất 2 loài mỗi biome với tập tính trong GDD mục 4. Thêm nguyên liệu rơi |
-| 05 | Nhân vật | Thực Hồn Nhân, Ngự Khí & Khôi Lỗi Sư, Âm Dương Thể. Màn chọn nhân vật |
-| 06 | Chế tác mở rộng | 7 nhóm đan, Bàn Vẽ Phù và bùa, Khôi Lỗi, Pháp Trận, công trình Sơn Môn, tôi vũ khí bằng 6 loại Linh Thủy |
-| 07 | Thức Tỉnh | 3 tầng, nghi thức Kiếp Nạn và Thiên Kiếp riêng cho từng nhân vật, cây kỹ năng, Ấn Ký |
-| 08 | Tâm Ma & Nhân Quả | Tâm Ma, hai thanh Nhân Quả, bảng sự kiện cho ba ngưỡng, thương nhân, thế lực |
-| 09 | Boss & Bí Cảnh | 6 Boss và Bí Cảnh |
-| 10 | Hoàn thiện | Menu, cài đặt, hướng dẫn chơi, rà khóa dịch, chạy toàn bộ test, xuất bản Windows, thử 2 tiến trình host và client chơi cùng |
+| 05 | [Chế tác mở rộng](phase-05-che-tac-mo-rong.md) | 7 nhóm đan, Bàn Vẽ Phù và bùa, Khôi Lỗi, Pháp Trận, công trình Sơn Môn, tôi vũ khí bằng 6 loại Linh Thủy |
+| 06 | [Tâm Ma & Nhân Quả](phase-06-tam-ma-nhan-qua.md) | Tâm Ma, hai thanh Nhân Quả, bảng sự kiện cho ba ngưỡng, thương nhân, thế lực |
+| 07 | [Nhân vật](phase-07-nhan-vat.md) | Thực Hồn Nhân, Ngự Khí & Khôi Lỗi Sư, Âm Dương Thể. Màn chọn nhân vật |
+| 08 | [Thức Tỉnh](phase-08-thuc-tinh.md) | 3 tầng, nghi thức Kiếp Nạn và Thiên Kiếp riêng cho từng nhân vật, cây kỹ năng, Ấn Ký |
+| 09 | [Boss & Bí Cảnh](phase-09-boss-bi-canh.md) | 6 Boss và Bí Cảnh |
+| 10 | [Hoàn thiện](phase-10-hoan-thien.md) | Menu, cài đặt, hướng dẫn chơi, rà khóa dịch, chạy toàn bộ test, xuất bản Windows, thử 2 tiến trình host và client chơi cùng |
 
 ## Nguyên tắc
 

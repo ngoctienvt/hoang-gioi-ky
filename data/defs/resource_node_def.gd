@@ -7,6 +7,7 @@ extends Resource
 @export var name_key: String = ""
 ## Công cụ cần để khai thác. NONE = nhặt bằng tay.
 @export var required_tool: ItemDef.ToolType = ItemDef.ToolType.NONE
+@export_range(1, 5) var required_tool_tier: int = 1
 ## Các giai đoạn theo thứ tự, ví dụ cây: đứng -> đổ -> gốc.
 @export var stages: Array[ResourceNodeStage] = []
 ## Giây để mọc lại sau khi khai thác hết. 0 = không mọc lại.

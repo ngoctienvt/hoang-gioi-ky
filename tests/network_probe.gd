@@ -1,5 +1,5 @@
 extends Node
-## Real two-process ENet probe, enabled only through --probe user argument.
+## Real multi-process ENet probe, enabled only through --probe user argument.
 var main
 var elapsed := 0.0
 var checks := 0
@@ -8,13 +8,23 @@ var moved := false
 var inventory_checked := false
 var target_uid := -1
 var before_count := 0
+var expected_clients := 1
+
+
+func _ready() -> void:
+	var args := OS.get_cmdline_user_args()
+	var idx := args.find("--clients")
+	if idx >= 0 and idx + 1 < args.size():
+		expected_clients = maxi(1, int(args[idx + 1]))
+
 
 func _process(delta: float) -> void:
 	elapsed += delta
 	var session = main.session
 	var state: Dictionary = session.state
 	if not state.is_empty():
-		saw_two = saw_two or state.get("players", {}).size() >= 2
+		var min_players := 1 + expected_clients if multiplayer.is_server() else 2
+		saw_two = saw_two or state.get("players", {}).size() >= min_players
 		var local_id := str(multiplayer.get_unique_id())
 		var player: Dictionary = state.get("players", {}).get(local_id, {})
 		if not player.is_empty() and not multiplayer.is_server():
@@ -34,17 +44,35 @@ func _process(delta: float) -> void:
 			if target_uid != -1 and _count(player) > before_count:
 				inventory_checked = true
 		elif multiplayer.is_server():
+			var moved_count := 0
 			for id in state.get("players", {}):
-				if str(id) != "1" and float(state.players[id].position[0]) > 2:
-					moved = true
+				if str(id) != "1" and float(state.players[id].position[0]) > 2.0:
+					moved_count += 1
+			if moved_count >= expected_clients:
+				moved = true
 	if elapsed > (12 if multiplayer.is_server() else 8):
 		checks = int(saw_two) + int(moved)
+		_print_enet_stats()
 		print("[probe] saw_two=", saw_two, " moved=", moved, " pickup=", inventory_checked)
 		if multiplayer.is_server():
 			session.save()
 		main.session.stop()
 		NetworkManager.leave()
 		get_tree().quit(0 if checks == 2 else 1)
+
+
+func _print_enet_stats() -> void:
+	var mp_peer := multiplayer.multiplayer_peer
+	if mp_peer is ENetMultiplayerPeer:
+		var peers: PackedInt32Array = multiplayer.get_peers() if multiplayer.is_server() else PackedInt32Array([1])
+		for pid in peers:
+			var pkt_peer: ENetPacketPeer = mp_peer.get_peer(pid)
+			if pkt_peer != null:
+				var sent := pkt_peer.get_statistic(ENetPacketPeer.PEER_PACKET_THROTTLE_LIMIT)
+				var rtt := pkt_peer.get_statistic(ENetPacketPeer.PEER_ROUND_TRIP_TIME)
+				var lost := pkt_peer.get_statistic(ENetPacketPeer.PEER_PACKET_LOSS)
+				print("[probe] enet peer=", pid, " rtt_ms=", rtt, " loss=", lost, " throttle=", sent)
+
 
 func _count(player: Dictionary) -> int:
 	var count := 0

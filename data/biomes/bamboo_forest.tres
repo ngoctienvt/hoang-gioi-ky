@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="BiomeDef" load_steps=8 format=3]
+[ext_resource type="Script" path="res://data/defs/biome_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/set_piece_def.gd" id="sp_script"]
+[ext_resource type="Resource" path="res://data/set_pieces/bamboo_food.tres" id="sp1"]
+[ext_resource type="Resource" path="res://data/set_pieces/bamboo_wood.tres" id="sp2"]
+[ext_resource type="Resource" path="res://data/set_pieces/bamboo_stone.tres" id="sp3"]
+[ext_resource type="Resource" path="res://data/set_pieces/bamboo_misc.tres" id="sp4"]
+[ext_resource type="Resource" path="res://data/set_pieces/bamboo_den.tres" id="sp5"]
+[resource]
+script = ExtResource("1")
+id = &"bamboo_forest"
+name_key = "BIOME_BAMBOO_FOREST"
+ground_color = Color(0.2706, 0.3804, 0.2314, 1)
+accent_color = Color(0.4353, 0.6275, 0.3529, 1)
+water_type = &"thanh_moc"
+required_pieces = Array[ExtResource("sp_script")]([ExtResource("sp1"), ExtResource("sp2"), ExtResource("sp3"), ExtResource("sp4"), ExtResource("sp5")])
+optional_pieces = Array[ExtResource("sp_script")]([ExtResource("sp1"), ExtResource("sp2"), ExtResource("sp3"), ExtResource("sp4")])
+optional_weights = PackedFloat32Array(1.2, 1.2, 1.0, 1.0)
+density = 60
+den_kinds = Array[StringName]([&"rabbit_den", &"wolf_den", &"monkey_den"])

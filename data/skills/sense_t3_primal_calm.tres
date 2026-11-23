@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillNodeDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/skill_node_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"sense_t3_primal_calm"
+tree_id = &"tree_beast_bloodline"
+tier = 3
+branch = &"B"
+excludes = Array[StringName]([&"beast_t3_apex"])
+name_key = "SKILL_SENSE_T3_PRIMAL_CALM"
+desc_key = "DESC_SKILL_SENSE_T3_PRIMAL_CALM"
+effect_id = &"primal_calm_regen"
+params = {}

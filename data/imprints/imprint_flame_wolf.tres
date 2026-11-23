@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ImprintDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/imprint_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"imprint_flame_wolf"
+name_key = "ITEM_IMPRINT_FLAME_WOLF"
+desc_key = "DESC_IMPRINT_FLAME_WOLF"
+item_id = &"imprint_flame_wolf"
+boss_material = &"flame_wolf_heart"
+effect_id = &"fire_immunity"
+params = {}

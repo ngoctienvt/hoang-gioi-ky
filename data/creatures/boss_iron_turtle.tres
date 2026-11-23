@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="CreatureDef" load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://data/defs/creature_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/iron_turtle_shell.tres" id="i1"]
+[ext_resource type="Resource" path="res://data/items/dark_iron_ore.tres" id="i2"]
+[ext_resource type="Resource" path="res://data/items/monster_core_mid.tres" id="i3"]
+
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 1
+max_count = 2
+
+[sub_resource type="Resource" id="d2"]
+script = ExtResource("drop")
+item = ExtResource("i2")
+min_count = 2
+max_count = 3
+
+[sub_resource type="Resource" id="d3"]
+script = ExtResource("drop")
+item = ExtResource("i3")
+min_count = 1
+max_count = 2
+
+[resource]
+script = ExtResource("1")
+id = &"boss_iron_turtle"
+name_key = "WORLD_BOSS_IRON_TURTLE"
+max_health = 500.0
+damage = 22.0
+move_speed = 2.6
+detect_range = 18.0
+active_period = 0
+behavior = &"boss_mechanic"
+params = {"biome": "bamboo_forest", "leash": 26.0, "dao_drain": 0.6}
+drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2"), SubResource("d3")])

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/ability_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"shadow_step"
+name_key = "ABILITY_SHADOW_STEP"
+desc_key = "DESC_ABILITY_SHADOW_STEP"
+cooldown = 12.0
+cost_type = "dao"
+cost_amount = 8.0
+forbidden = true
+sin_amount = 4.0

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CreatureDef" load_steps=7 format=3]
+[ext_resource type="Script" path="res://data/defs/creature_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/ice_wolf_pelt.tres" id="i1"]
+[ext_resource type="Resource" path="res://data/items/monster_core_mid.tres" id="i2"]
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 1
+max_count = 1
+[sub_resource type="Resource" id="d2"]
+script = ExtResource("drop")
+item = ExtResource("i2")
+chance = 0.6
+min_count = 1
+max_count = 1
+[resource]
+script = ExtResource("1")
+id = &"ice_wolf"
+name_key = "WORLD_ICE_WOLF"
+max_health = 120
+damage = 20
+move_speed = 4.5
+detect_range = 10
+active_period = 0
+behavior = &"pack_hunter"
+params = {"sleep_at_day": false, "leash": 18.0, "prey_kinds": ["thick_fur_beast"], "pack_radius": 9.0, "dao_drain": 0.3}
+drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2")])

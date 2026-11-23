@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillNodeDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/skill_node_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"puppet_t3_swift_cast"
+tree_id = &"tree_puppeteer"
+tier = 3
+branch = &"B"
+excludes = Array[StringName]([&"puppet_t3_steel_frame"])
+name_key = "SKILL_PUPPET_T3_SWIFT_CAST"
+desc_key = "DESC_SKILL_PUPPET_T3_SWIFT_CAST"
+effect_id = &"puppeteer_cd_half"
+params = {}

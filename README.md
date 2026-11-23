@@ -14,7 +14,7 @@ Game sinh tồn co-op 1–4 người, bối cảnh huyền huyễn, làm bằng 
 
 ## Chạy game
 
-Main scene: `res://world/demo.tscn`. Demo dùng lại cảnh phong cách `world/style_test/style_test.tscn` qua `entities/demo/demo_style.gd`.
+Main scene: `res://world/game.tscn`. Dùng lại cảnh phong cách `world/style_test/style_test.tscn` qua `entities/view/world_style.gd`.
 
 ```powershell
 & "D:/Downloads/Godot_v4.7.2-stable_mono_win64/Godot_v4.7.2-stable_mono_win64/Godot_v4.7.2-stable_mono_win64_console.exe" --path .

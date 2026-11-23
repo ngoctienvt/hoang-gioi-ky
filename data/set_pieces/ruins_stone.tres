@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SetPieceDef" load_steps=2 format=3]
+[ext_resource type="Script" path="res://data/defs/set_piece_def.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"ruins_stone"
+layer_tag = &"stone"
+radius = 4.5
+entries = Array[Dictionary]([{"kind": "carved_pillar", "offset": Vector2(0, 0), "jitter": 0.5}, {"kind": "rune_crystal_node", "offset": Vector2(2.6, 1), "jitter": 0.5}])

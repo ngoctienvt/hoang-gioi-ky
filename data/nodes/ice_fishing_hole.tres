@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ResourceNodeDef" load_steps=7 format=3]
+[ext_resource type="Script" path="res://data/defs/resource_node_def.gd" id="1"]
+[ext_resource type="Script" path="res://data/defs/resource_node_stage.gd" id="stage"]
+[ext_resource type="Script" path="res://data/defs/drop_entry.gd" id="drop"]
+[ext_resource type="Resource" path="res://data/items/ice_fish.tres" id="i1"]
+[sub_resource type="Resource" id="d1"]
+script = ExtResource("drop")
+item = ExtResource("i1")
+min_count = 1
+max_count = 2
+chance = 1.0
+[sub_resource type="Resource" id="s1"]
+script = ExtResource("stage")
+stage_name = &"whole"
+work_hits = 1
+drops = Array[ExtResource("drop")]([SubResource("d1")])
+[resource]
+script = ExtResource("1")
+id = &"ice_fishing_hole"
+name_key = "WORLD_ICE_FISHING_HOLE"
+required_tool = 0
+required_tool_tier = 1
+stages = Array[ExtResource("stage")]([SubResource("s1")])
+regrow_time = 240.0

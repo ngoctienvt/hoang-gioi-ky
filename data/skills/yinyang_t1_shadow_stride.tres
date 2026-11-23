@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillNodeDef" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://data/defs/skill_node_def.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"yinyang_t1_shadow_stride"
+tree_id = &"tree_yin_yang"
+tier = 1
+branch = &"A"
+excludes = Array[StringName]([&"yinyang_t1_wide_gate"])
+name_key = "SKILL_YINYANG_T1_SHADOW_STRIDE"
+desc_key = "DESC_SKILL_YINYANG_T1_SHADOW_STRIDE"
+effect_id = &"shadow_step_far"
+params = {}

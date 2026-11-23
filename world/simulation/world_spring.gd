@@ -1,93 +1,94 @@
 extends RefCounted
 
+
+static func is_spirit_water(id: String) -> bool:
+	return id == "spirit_water" or id.begins_with("spirit_water_")
+
+
+static func water_type_from_item(id: String) -> String:
+	if id == "spirit_water":
+		return "thanh_moc"
+	if id.begins_with("spirit_water_"):
+		return id.trim_prefix("spirit_water_")
+	return ""
+
+
+static func apply_water_effect(player: Dictionary, water_type: String) -> void:
+	match water_type:
+		"thanh_moc":
+			player.spring_heal = 30.0
+		"u_minh":
+			player.sense_time = maxf(float(player.get("sense_time", 0.0)), 15.0)
+			player.stats.dao = maxf(0.0, float(player.stats.get("dao", 100.0)) - 10.0)
+		"xich_viem":
+			player.warm_time = 60.0
+		"loi_tri":
+			player.speed_boost_time = 20.0
+		"huyen_bang":
+			player.cool_time = 60.0
+		"co_van":
+			pass
+
+
 static func perform(world, player: Dictionary, verb: String, args: Dictionary) -> bool:
-	var inv = world.inventory(player)
-	var target = world.find_any(args.get("uid", -1))
 	if verb == "temper":
-		var index = args.get("slot", -1)
-		if not world.valid_slot(index) or inv.slots[index].is_empty() or float(world.item(inv.slots[index].id).get("damage", 0)) <= 0:
-			return false
-		if not inv.remove_item("spirit_water", 1):
-			return false
-		world.Access.return_bottle(world, inv, player.position)
-		inv.slots[index].vitality_hits = 20
-	elif verb == "plant":
-		var index = args.get("slot", -1)
-		if not world.valid_slot(index) or inv.slots[index].is_empty():
-			return false
-		var id: String = inv.slots[index].id
-		if id in ["pinecone", "berry_bush", "grass", "twig_bush"]:
-			var pos = args.get("position", [])
-			if not world.valid_position(pos) or not world.near(player, {"position": pos}, 4):
-				return false
-			for node in world.state.nodes + world.state.structures:
-				if world.distance(node.position, pos) < 1.5:
-					return false
-			var node = world.entity("tree" if id == "pinecone" else id, pos)
-			node.merge({"stage": 0, "hits": 0, "regrow": 0.0, "age": 0.0, "sapling": id == "pinecone"})
-			world.state.nodes.append(node)
-		elif id in ["seed", "herb"] and not target.is_empty() and target.kind == "farm" and world.near(player, target, 3) and target.crop == "":
-			target.crop = "herb"
-			target.growth = 0.0
-			target.watered = false
-		else:
-			return false
-		inv.remove_item(id, 1)
-	elif verb == "water":
-		if target.is_empty() or not world.near(player, target, 3):
-			return false
-		var mode = args.get("mode", "fill" if target.kind == "spring" else "water")
-		if target.kind == "spring":
-			if mode == "fill":
-				if not inv.remove_item("water_bottle", 1) or inv.add_item("spirit_water", 1, {"expires": world.elapsed() + world.day_length() * 3}) != 0:
-					return false
-			elif mode in ["drink", "bathe"]:
-				player.spring_heal = 30.0
-			else:
-				return false
-		elif target.kind == "farm":
-			if mode == "harvest" and target.growth >= world.day_length():
-				var result = "mutant_fruit" if target.get("watered", false) and world.rng.randf() < 0.3 else "herb"
-				if inv.add_item(result, 2) != 0:
-					return false
-				target.crop = ""
-				target.growth = 0.0
-				target.fertilized = false
-				target.watered = false
-			elif target.crop != "" and mode in ["water", "fertilize"]:
-				if target.get("fertilized" if mode == "fertilize" else "watered", false):
-					return false
-				if not inv.remove_item("waste_pill" if mode == "fertilize" else "spirit_water", 1):
-					return false
-				if mode == "water":
-					world.Access.return_bottle(world, inv, player.position)
-				target["fertilized" if mode == "fertilize" else "watered"] = true
-				target.growth += world.day_length() * 0.3
-			else:
-				return false
-		else:
-			return false
-	else:
+		return world.Tempering.temper(world, player, args)
+	var target: Dictionary = world.find_any(args.get("uid", -1))
+	if verb == "plant":
+		return world.Farming.plant(world, player, args, target)
+	if verb != "water" or target.is_empty() or not world.near(player, target, 3):
 		return false
-	player.inventory = inv.to_dict()
-	return true
+	var mode := str(args.get("mode", "fill" if target.kind == "spring" else "water"))
+	if target.kind == "spring":
+		var inv = world.inventory(player)
+		var wtype := str(target.get("water_type", "thanh_moc"))
+		if mode == "fill":
+			if target.get("frozen", false):
+				return false
+			var item_id := "spirit_water_" + wtype
+			if ItemDB.get_item(item_id) == null:
+				item_id = "spirit_water"
+			if not inv.remove_item("water_bottle", 1) or inv.add_item(item_id, 1, {"expires": world.elapsed() + world.day_length() * 3}) != 0:
+				return false
+			player.inventory = inv.to_dict()
+			return true
+		if mode in ["drink", "bathe"]:
+			apply_water_effect(player, wtype)
+			return true
+		return false
+	if target.kind == "farm":
+		return world.Farming.water_farm(world, player, target, mode)
+	return false
+
 
 static func step(world, delta: float) -> void:
 	for target in world.state.structures:
-		expire_slots(target.slots, world.elapsed())
-		if target.solvent == "spirit_water" and float(target.get("solvent_expires", INF)) <= world.elapsed():
+		var changed := false
+		if expire_slots(target.slots, world.elapsed()):
+			changed = true
+		if is_spirit_water(str(target.solvent)) and float(target.get("solvent_expires", INF)) <= world.elapsed():
 			target.solvent = "plain_water"
+			changed = true
 		if target.kind == "farm" and target.crop != "":
-			target.growth += delta * (1.5 if target.get("watered", false) else 1.0)
+			var rate := 1.8 if (target.get("watered", false) and str(target.get("water_type", "")) == "thanh_moc") else (1.5 if target.get("watered", false) else 1.0)
+			target.growth += delta * rate
+			changed = true
+		if changed:
+			world.touch(int(target.uid))
 	for player in world.state.players.values() + world.state.offline_players.values():
 		expire_slots(player.inventory.slots, world.elapsed())
 	for drop in world.state.drops:
-		if drop.id == "spirit_water" and float(drop.extra.get("expires", INF)) <= world.elapsed():
+		if is_spirit_water(str(drop.id)) and float(drop.extra.get("expires", INF)) <= world.elapsed():
 			drop.id = "plain_water"
 			drop.extra.erase("expires")
+			world.touch(int(drop.uid))
 
-static func expire_slots(slots: Array, time: float) -> void:
+
+static func expire_slots(slots: Array, time: float) -> bool:
+	var changed := false
 	for slot in slots:
-		if slot.get("id", "") == "spirit_water" and float(slot.get("expires", INF)) <= time:
+		if is_spirit_water(str(slot.get("id", ""))) and float(slot.get("expires", INF)) <= time:
 			slot.id = "plain_water"
 			slot.erase("expires")
+			changed = true
+	return changed

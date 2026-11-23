@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDef" load_steps=3 format=3]
+[ext_resource type="Script" path="res://data/defs/item_def.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/ui/icons/quartz.svg" id="ui_icon"]
+
+[resource]
+script = ExtResource("1")
+icon = ExtResource("ui_icon")
+id = &"quartz"
+name_key = "ITEM_QUARTZ"
+desc_key = "DESC_QUARTZ"
+category = 0
+max_stack = 99
+tags = Dictionary[StringName, float]({&"spirit": 0.5})
