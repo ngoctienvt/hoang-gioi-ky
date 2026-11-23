@@ -2,7 +2,6 @@ extends RefCounted
 
 const SeasonDef = preload("res://data/defs/season_def.gd")
 const ORDER := ["autumn", "winter", "spring", "summer"]
-const DEFAULT_LENGTHS := {"autumn": 20, "winter": 15, "spring": 20, "summer": 15}
 static var _cache: Dictionary = {}
 
 
@@ -19,7 +18,7 @@ static func get_def(season_id: String) -> SeasonDef:
 static func season_length(world, season_id: String) -> int:
 	var lengths: Dictionary = world.state.get("options", {}).get("season_lengths", {})
 	var def := get_def(season_id)
-	var fallback := def.default_length if def != null else int(DEFAULT_LENGTHS.get(season_id, 20))
+	var fallback := def.default_length if def != null else 20
 	return maxi(1, int(lengths.get(season_id, fallback)))
 
 

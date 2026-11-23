@@ -1,4 +1,5 @@
 extends RefCounted
+const Resources = preload("res://world/simulation/world_resources.gd")
 
 
 static func tick(world, puppet: Dictionary, delta: float) -> void:
@@ -93,17 +94,9 @@ static func _work_node(world, node: Dictionary, _tool_type: int) -> void:
 	var stage = definition.stages[mini(int(node.get("stage", 0)), definition.stages.size() - 1)]
 	node.hits = int(node.get("hits", 0)) + 1
 	if node.hits >= int(stage.work_hits):
-		node.hits = 0
-		node.stage = int(node.get("stage", 0)) + 1
-		world.Rules.drops(world, stage.drops, node.position)
-		if str(node.kind) == "spirit_rock":
-			world.drop_item("spirit_stone", 1, node.position)
-		if node.stage >= definition.stages.size():
-			node.depleted = true
-			node.regrow = definition.regrow_time * world.day_length() / 480.0 if str(node.kind) != "tree" else 0.0
-			if float(node.regrow) > 0.0:
-				world.regrowing_uids[int(node.uid)] = true
-	world.touch(int(node.uid))
+		Resources.complete_stage(world, node, definition, stage)
+	if not world.index.find(int(node.uid)).is_empty():
+		world.touch(int(node.uid))
 
 
 static func _nearest_drop(world, from_pos: Array, center: Array, radius: float) -> Dictionary:

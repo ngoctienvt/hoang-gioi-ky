@@ -18,6 +18,7 @@ const BEHAVIORS := {
 	&"patrol": preload("res://world/simulation/behaviors/patrol.gd"),
 	&"night_guardian": preload("res://world/simulation/behaviors/night_guardian.gd"),
 	&"boss_mechanic": preload("res://world/simulation/behaviors/boss_mechanic.gd"),
+	&"heart_demon": preload("res://world/simulation/behaviors/heart_demon.gd"),
 }
 
 
@@ -48,6 +49,31 @@ static func on_creature_hurt(world, creature: Dictionary, attacker: Dictionary) 
 	creature["behavior_state"] = creature.state
 
 
+## Whether a species is awake in this phase of the day (CreatureDef.active_period).
+static func is_active(definition, phase: String) -> bool:
+	match int(definition.active_period):
+		CreatureDef.ActivePeriod.DAY:
+			return phase == "day"
+		CreatureDef.ActivePeriod.DUSK:
+			return phase == "dusk"
+		CreatureDef.ActivePeriod.NIGHT:
+			return phase == "night"
+		CreatureDef.ActivePeriod.DUSK_AND_NIGHT:
+			return phase != "day"
+	return true
+
+
+## Outside its active period a creature walks home and rests there (params.rest_state, e.g. a
+## rabbit's burrow); being hurt (provoked) wakes it.
+static func _rest(world, creature: Dictionary, definition, ctx: Dictionary) -> void:
+	if world.distance(creature.position, creature.home) > 1.0:
+		creature.state = "return"
+		ctx.destination = creature.home
+	else:
+		creature.state = str(definition.params.get("rest_state", "sleep"))
+		ctx.speed = 0.0
+
+
 static func _active_chunks(world) -> Dictionary:
 	var active: Dictionary = {}
 	for player in world.state.players.values():
@@ -63,10 +89,10 @@ static func _active_chunks(world) -> Dictionary:
 static func step(world, delta: float) -> void:
 	var phase := str(world.state.clock.get("phase", "day"))
 	var limit: float = world.map_half() - 1.0
+	# Creatures only think near living players; with nobody around (all dead or gone) nothing moves.
 	var active_chunks := _active_chunks(world)
-	var has_players: bool = not active_chunks.is_empty()
 
-	for creature in world.state.creatures:
+	for creature in world.state.creatures.duplicate():
 		var definition = Rules.creature(str(creature.get("kind", "")))
 		if definition == null:
 			continue
@@ -89,10 +115,8 @@ static func step(world, delta: float) -> void:
 				world.move_entity(creature, creature.home.duplicate(), true)
 			continue
 
-		if has_players:
-			var ckey: String = world.index.entity_chunk.get(int(creature.uid), "")
-			if not ckey.is_empty() and not active_chunks.has(ckey):
-				continue
+		if not active_chunks.has(world.index.entity_chunk.get(int(creature.uid), "")):
+			continue
 
 		var speed_mult: float = world.Effects.step_creature(world, creature, delta)
 		if float(creature.health) <= 0.0:
@@ -120,6 +144,7 @@ static func step(world, delta: float) -> void:
 
 		var ctx := {
 			"phase": phase,
+			"season": str(world.state.clock.get("season", "autumn")),
 			"nearest_player": nearest,
 			"nearest_dist": distance,
 			"speed_mult": speed_mult,
@@ -127,8 +152,13 @@ static func step(world, delta: float) -> void:
 			"speed": definition.move_speed * speed_mult,
 		}
 		var prev_state := str(creature.get("state", "idle"))
-		var script = BEHAVIORS.get(definition.behavior, BEHAVIORS[&"herd_flee"])
-		script.tick(world, creature, definition, ctx, delta)
+		if not is_active(definition, phase) and float(creature.get("provoked", 0.0)) <= 0.0:
+			_rest(world, creature, definition, ctx)
+		else:
+			var script = BEHAVIORS.get(definition.behavior, BEHAVIORS[&"herd_flee"])
+			script.tick(world, creature, definition, ctx, delta)
+		if not world.index.by_uid.has(int(creature.uid)):
+			continue  # the behaviour removed it (a heart demon whose owner is gone)
 		creature["behavior_state"] = creature.state
 		if creature.state != prev_state:
 			world.touch(int(creature.uid))

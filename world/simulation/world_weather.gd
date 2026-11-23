@@ -1,8 +1,14 @@
 extends RefCounted
 
+const Structures = preload("res://world/simulation/world_structures.gd")
 const Season = preload("res://world/simulation/world_season.gd")
 const Temperature = preload("res://world/simulation/world_temperature.gd")
 const WOODEN_STRUCTURES := ["chest", "workbench", "farm"]
+## Seconds a structure cannot catch fire again after its fire went out, so neighbours cannot keep
+## re-igniting each other.
+const REIGNITE_GUARD := 60.0
+## A charged water array within this range keeps structures from igniting.
+const WATER_ARRAY_GUARD_RADIUS := 8.0
 
 
 static func player_weather(world, player: Dictionary) -> String:
@@ -49,7 +55,7 @@ static func strike_at(world, pos: Array) -> Dictionary:
 			else:
 				world.hurt(player, 30.0)
 	for s in world.index.entities_near(pos, 3.0, "structures"):
-		if str(s.get("kind", "")) in WOODEN_STRUCTURES:
+		if _can_ignite(world, s):
 			s["burning"] = 12.0
 			world.touch(int(s.uid))
 	world.Creatures.notify_noise(world, pos, 12.0)
@@ -120,36 +126,41 @@ static func step(world, delta: float) -> void:
 			if p.get("ghost", false):
 				continue
 			for s in world.index.entities_near(p.position, 12.0, "structures"):
-				if str(s.get("kind", "")) in WOODEN_STRUCTURES and float(s.get("burning", 0.0)) <= 0.0:
-					if Temperature.ambient_at(world, s.position, world.biome_at(s.position)) > 80.0 and not _has_ice_near(world, s.position):
-						if world.rng.randf() < 0.05:
-							s["burning"] = 12.0
-							world.touch(int(s.uid))
+				if _can_ignite(world, s) and Temperature.ambient_at(world, s.position, world.biome_at(s.position)) > 80.0:
+					if world.rng.randf() < 0.05:
+						s["burning"] = 12.0
+						world.touch(int(s.uid))
 
 	var is_wet := str(weather.get("kind", "")) in ["rain", "storm"]
 	for s in world.state.structures.duplicate():
+		if float(s.get("_fire_guard", 0.0)) > 0.0:
+			s["_fire_guard"] = maxf(0.0, float(s._fire_guard) - delta)
 		var burn := float(s.get("burning", 0.0))
 		if burn <= 0.0:
 			continue
 		if is_wet:
-			s["burning"] = 0.0
-			world.touch(int(s.uid))
+			_extinguish(world, s)
 			continue
+		var shown_before := ceili(burn) + ceili(float(s.get("health", 200.0))) * 1000
 		s["burning"] = maxf(0.0, burn - delta)
 		s["health"] = float(s.get("health", 200.0)) - 5.0 * delta
 		if float(s["health"]) <= 0.0:
-			world.remove_entity(s)
-		else:
+			# Burnt down: whatever was stored falls to the ground instead of vanishing.
+			Structures.destroy(world, s, false)
+			continue
+		if float(s["burning"]) <= 0.0:
+			_extinguish(world, s)
+			continue
+		if ceili(float(s.burning)) + ceili(float(s.health)) * 1000 != shown_before:
 			world.touch(int(s.uid))
-			for adj in world.index.entities_near(s.position, 3.0, "structures"):
-				if adj != s and str(adj.get("kind", "")) in WOODEN_STRUCTURES and float(adj.get("burning", 0.0)) <= 0.0:
-					adj["burning"] = 10.0
-					world.touch(int(adj.uid))
+		for adj in world.index.entities_near(s.position, 3.0, "structures"):
+			if adj != s and _can_ignite(world, adj):
+				adj["burning"] = 10.0
+				world.touch(int(adj.uid))
 
 	# 5. Winter frozen springs
-	for node in world.state.nodes:
-		if str(node.get("kind", "")) != "spring":
-			continue
+	for uid in world.index.uids_of_kind("spring"):
+		var node: Dictionary = world.index.find(uid)
 		if season_id == "winter" and str(node.get("water_type", "thanh_moc")) != "xich_viem":
 			var thaw := float(node.get("ice_thaw_timer", 0.0))
 			if thaw > 0.0:
@@ -166,6 +177,20 @@ static func step(world, delta: float) -> void:
 			node["frozen"] = false
 			node["ice_hits"] = 0
 			world.touch(int(node.uid))
+
+
+static func _can_ignite(world, s: Dictionary) -> bool:
+	if str(s.get("kind", "")) not in WOODEN_STRUCTURES or s.get("fireproof", false):
+		return false
+	if float(s.get("burning", 0.0)) > 0.0 or float(s.get("_fire_guard", 0.0)) > 0.0:
+		return false
+	return not _has_ice_near(world, s.position) and not Structures.has_water_array_near(world, s.position, WATER_ARRAY_GUARD_RADIUS)
+
+
+static func _extinguish(world, s: Dictionary) -> void:
+	s["burning"] = 0.0
+	s["_fire_guard"] = REIGNITE_GUARD
+	world.touch(int(s.uid))
 
 
 static func _has_ice_near(world, pos: Array) -> bool:

@@ -1,8 +1,11 @@
 extends RefCounted
 
+const Rules = preload("res://world/simulation/world_rules.gd")
 const Stations = preload("res://world/simulation/world_stations.gd")
 const PuppeteerCraft = preload("res://world/simulation/traits/puppeteer_craft.gd")
 
+## An ice cellar outside Tuyết Lĩnh must be built within this range of an ice block.
+const ICE_CELLAR_ICE_RADIUS := 6.0
 const CHEST_KINDS := ["chest", "ice_cellar", "talisman_chest", "resurrection_altar"]
 const FUEL_ITEMS := {"wood": 90.0, "twig": 30.0, "grass": 15.0, "bamboo": 60.0, "damp_wood": 60.0, "charcoal": 120.0, "hard_wood": 110.0, "frost_wood": 90.0}
 
@@ -94,6 +97,8 @@ static func place(world, player: Dictionary, args: Dictionary) -> bool:
 		return false
 	if kind.begins_with("puppet_"):
 		return world.Puppets.deploy_from_recipe(world, player, recipe, pos)
+	if not _site_allows(world, kind, pos):
+		return false
 	for target in world.index.entities_near(pos, 3.5):
 		var col: String = world.index.collection_of.get(int(target.uid), "")
 		if col not in ["structures", "nodes"]:
@@ -114,6 +119,8 @@ static func place(world, player: Dictionary, args: Dictionary) -> bool:
 		structure["fireproof"] = true
 		structure["anti_theft"] = true
 		structure["moisture_proof"] = true
+	elif kind == "ice_structure":
+		structure["melt"] = world.day_length() * Rules.ICE_BLOCK_MELT_DAYS
 	elif kind == "stake":
 		structure["radius"] = 8.0
 	elif kind == "water_array":
@@ -128,6 +135,40 @@ static func place(world, player: Dictionary, args: Dictionary) -> bool:
 	return true
 
 
+## Site conditions beyond free space: an ice cellar needs the cold of Tuyết Lĩnh or an ice block
+## that has not melted nearby.
+static func _site_allows(world, kind: String, pos: Array) -> bool:
+	if kind != "ice_cellar" or world.biome_at(pos) == "frost_peaks":
+		return true
+	for s in world.index.entities_near(pos, ICE_CELLAR_ICE_RADIUS, "structures"):
+		if str(s.get("kind", "")) == "ice_structure" and float(s.get("melt", 0.0)) > 0.0:
+			return true
+	return false
+
+
+## Removes a structure and drops everything it held. salvage also returns half the build cost
+## (dismantling with a hammer); a structure lost to fire gives no salvage.
+static func destroy(world, target: Dictionary, salvage: bool) -> void:
+	for slot in target.get("slots", []):
+		if slot is Dictionary and not slot.is_empty():
+			world.drop_item(slot.id, slot.count, target.position, slot)
+	for id in target.get("ingredients", []):
+		world.drop_item(id, 1, target.position)
+	if str(target.get("output", "")) != "":
+		world.drop_item(target.output, 1, target.position)
+	if str(target.get("solvent", "")) != "":
+		world.drop_item(target.solvent, 1, target.position)
+	if salvage:
+		for value in RecipeDB.recipes.values():
+			if value.is_structure and str(value.result.id) == target.kind:
+				for id in value.ingredients:
+					var count := int(value.ingredients[id]) / 2
+					if count > 0:
+						world.drop_item(str(id), count, target.position)
+				break
+	world.remove_entity(target)
+
+
 static func has_water_array_near(world, pos: Array, radius: float = 8.0) -> bool:
 	for s in world.index.entities_near(pos, radius, "structures"):
 		if s.kind == "water_array" and int(s.get("charges", 0)) > 0:
@@ -137,12 +178,12 @@ static func has_water_array_near(world, pos: Array, radius: float = 8.0) -> bool
 
 static func step(world, delta: float) -> void:
 	var day := int(world.state.clock.get("day", 1))
-	for target in world.state.structures:
+	for target in world.state.structures.duplicate():
 		var changed := false
 		# Countdowns replicate on whole-second steps only (see StateReplicator.COARSE_TIMERS).
 		if float(target.fuel) > 0.0:
 			var fuel_before := ceili(float(target.fuel))
-			target.fuel = maxf(0.0, float(target.fuel) - delta)
+			target.fuel = maxf(0.0, float(target.fuel) - delta * _fuel_rate(world, target))
 			changed = ceili(float(target.fuel)) != fuel_before
 		if float(target.remaining) > 0.0:
 			var remaining_before := ceili(float(target.remaining))
@@ -151,11 +192,15 @@ static func step(world, delta: float) -> void:
 			if target.remaining == 0.0:
 				target.output = target.pending
 				world.discover(target.output)
-		if target.kind == "talisman_chest":
-			for slot in target.slots:
-				if slot is Dictionary and float(slot.get("soak", 0.0)) > 0.0:
-					slot.soak = 0.0
-					changed = true
+		if target.kind == "ice_structure":
+			# Melts over time, faster in summer; gone when fully melted.
+			var rate := 2.0 if str(world.state.clock.get("season", "")) == "summer" else 1.0
+			var melt_before := ceili(float(target.get("melt", 0.0)))
+			target.melt = maxf(0.0, float(target.get("melt", 0.0)) - delta * rate)
+			if target.melt <= 0.0:
+				world.remove_entity(target)
+				continue
+			changed = changed or ceili(float(target.melt)) != melt_before
 		if target.kind == "water_array" and int(target.get("charges", 0)) > 0 and str(target.get("water_type", "")) != "" and int(target.get("last_water_day", 0)) < day:
 			if _water_nearby_farms(world, target):
 				target.charges = maxi(0, int(target.charges) - 1)
@@ -163,6 +208,18 @@ static func step(world, delta: float) -> void:
 				changed = true
 		if changed:
 			world.touch(int(target.uid))
+
+
+## Open fires burn their fuel faster in rain and twice as fast in a storm.
+static func _fuel_rate(world, target: Dictionary) -> float:
+	if str(target.kind) not in ["campfire", "firepit"]:
+		return 1.0
+	match str(world.state.get("weather", {}).get("kind", "")):
+		"rain":
+			return Rules.RAIN_FIRE_FUEL_RATE
+		"storm":
+			return Rules.STORM_FIRE_FUEL_RATE
+	return 1.0
 
 
 static func _water_nearby_farms(world, array_struct: Dictionary) -> bool:

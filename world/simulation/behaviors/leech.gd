@@ -12,8 +12,11 @@ static func tick(world, creature: Dictionary, definition: CreatureDef, ctx: Dict
 		creature.state = "special"
 		ctx.destination = victim.position
 		ctx.speed = 12.0
-		var drain := maxf(2.0, definition.damage) * delta
-		world.hurt(victim, drain)
+		# Drains once per second (one health change and one replicated update per second, not per frame).
+		creature["_drain_timer"] = float(creature.get("_drain_timer", 0.0)) + delta
+		if float(creature._drain_timer) >= 1.0:
+			creature._drain_timer = float(creature._drain_timer) - 1.0
+			world.hurt(victim, maxf(2.0, definition.damage), false)
 		return
 
 	if creature.state == "flee":

@@ -120,12 +120,15 @@ static func wear_hand(player: Dictionary, amount: int) -> void:
 		player.inventory.equipment.hand = {}
 
 
-static func hurt(world, player: Dictionary, amount: float) -> void:
+## Damages a player. Body armour absorbs 40%; a blow (wear_armor) also costs it one durability,
+## while damage over time (a leech draining, burning) does not wear it down.
+static func hurt(world, player: Dictionary, amount: float, wear_armor: bool = true) -> void:
 	if player.ghost:
 		return
 	var armor: Dictionary = player.inventory.equipment.get("body", {})
 	if not armor.is_empty():
 		amount *= 0.6
+	if not armor.is_empty() and wear_armor:
 		armor.durability = int(armor.get("durability", 0)) - 1
 		if armor.durability <= 0:
 			player.inventory.equipment.body = {}

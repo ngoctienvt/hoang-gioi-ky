@@ -73,7 +73,8 @@ func initialize(seed_value: int, options: Dictionary) -> void:
 	if not state.options.has("seasons"):
 		state.options["seasons"] = true
 	if not state.options.has("season_lengths") or not state.options.season_lengths is Dictionary:
-		state.options["season_lengths"] = {"autumn": 20, "winter": 15, "spring": 20, "summer": 15}
+		# Empty means each season uses its SeasonDef.default_length; the host may override per season.
+		state.options["season_lengths"] = {}
 	GameClock.day_length = state.options.day_length
 	GameClock.elapsed = 0.0
 	GameClock.day = 1
@@ -444,7 +445,7 @@ func distance(a: Array, b: Array) -> float: return Access.distance(a, b)
 func near(a: Dictionary, b: Dictionary, radius: float) -> bool: return distance(a.position, b.position) <= radius
 func has_tool(player: Dictionary, tool: String, min_tier: int = 1) -> bool: return Access.has_tool(self, player, tool, min_tier)
 func wear_hand(player: Dictionary, amount: int) -> void: Access.wear_hand(player, amount)
-func hurt(player: Dictionary, amount: float) -> void: Access.hurt(self, player, amount)
+func hurt(player: Dictionary, amount: float, wear_armor: bool = true) -> void: Access.hurt(self, player, amount, wear_armor)
 func day_length() -> float: return float(state.options.day_length)
 func elapsed() -> float: return float(state.clock.elapsed)
 func structure_kind(value: Dictionary) -> String: return str(value.get("result", "")) if value.get("is_structure", false) else ""

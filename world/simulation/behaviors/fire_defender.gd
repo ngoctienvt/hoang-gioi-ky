@@ -21,6 +21,8 @@ static func tick(world, creature: Dictionary, definition: CreatureDef, ctx: Dict
 		for p in world.state.players.values():
 			if not p.get("ghost", false) and world.distance(creature.position, p.position) <= 4.0:
 				world.hurt(p, definition.damage)
+				# Fire breath leaves the victim burning for a few seconds.
+				world.Effects.apply(world, p, "burn", float(definition.params.get("burn_dps", 3.0)), float(definition.params.get("burn_time", 4.0)))
 		creature.cooldown = 2.5
 
 

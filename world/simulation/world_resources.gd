@@ -33,6 +33,26 @@ static func step(world, delta: float) -> void:
 			world.regrowing_uids.erase(uid)
 
 
+## Finishes the current stage of a node: drops its loot and advances. After the last stage the node
+## regrows (regrow_time), stays as a stump (leaves_stump) or is gone. Returns true when the last
+## stage was finished. Shared by players and gathering puppets.
+static func complete_stage(world, node: Dictionary, definition, stage) -> bool:
+	node.hits = 0
+	node.stage = int(node.get("stage", 0)) + 1
+	Rules.drops(world, stage.drops, node.position)
+	if str(node.kind) == "spirit_rock":
+		world.drop_item("spirit_stone", 1, node.position)
+	if node.stage < definition.stages.size():
+		return false
+	node.depleted = true
+	node.regrow = definition.regrow_time * world.day_length() / 480.0
+	if node.regrow > 0.0:
+		world.regrowing_uids[int(node.uid)] = true
+	elif not definition.leaves_stump:
+		world.remove_entity(node)
+	return true
+
+
 static func work(world, player: Dictionary, node: Dictionary, auto_equip: bool = false) -> bool:
 	if node.is_empty() or node.get("sapling", false):
 		return false
@@ -80,20 +100,12 @@ static func work(world, player: Dictionary, node: Dictionary, auto_equip: bool =
 		world.remove_entity(node)
 	else:
 		if node.hits >= int(stage.work_hits):
-			node.hits = 0
-			node.stage = int(node.get("stage", 0)) + 1
-			Rules.drops(world, stage.drops, node.position)
-			if kind == "spirit_rock":
-				world.drop_item("spirit_stone", 1, node.position)
-			if node.stage >= definition.stages.size():
-				node.depleted = true
+			if complete_stage(world, node, definition, stage):
 				if kind == "sect_ore":
 					world.Karma.add_sin(world, "mine_sect_ore")
 				elif kind == "seal_stone":
 					world.Karma.add_sin(world, "break_seal_stone")
-				node.regrow = definition.regrow_time * world.day_length() / 480.0 if kind != "tree" else 0.0
-				if node.regrow > 0.0:
-					world.regrowing_uids[int(node.uid)] = true
-		world.touch(int(node.uid))
+		if not world.index.find(int(node.uid)).is_empty():
+			world.touch(int(node.uid))
 	world.log_event("work", {"uid": node.uid, "hits": node.hits})
 	return true

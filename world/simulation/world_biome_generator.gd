@@ -3,21 +3,6 @@ extends RefCounted
 const Rules = preload("res://world/simulation/world_rules.gd")
 const Layout = preload("res://world/simulation/world_layout.gd")
 const TRANSITION_BAND := 4.0
-const DEN_CREATURE_MAP := {
-	"pheasant_den": {"kind": "forest_pheasant", "count": 3},
-	"leech_den": {"kind": "spirit_leech", "count": 3},
-	"crow_den": {"kind": "carrion_crow", "count": 2},
-	"ancient_grave": {"kind": "jiangshi", "count": 2},
-	"lava_lizard_den": {"kind": "lava_lizard", "count": 2},
-	"fire_bird_nest": {"kind": "fire_bird", "count": 2},
-	"thunder_beast_den": {"kind": "thunder_beast", "count": 2},
-	"golem_pillar": {"kind": "stone_golem", "count": 1},
-	"ice_wolf_den": {"kind": "ice_wolf", "count": 3},
-	"snow_bear_den": {"kind": "snow_bear", "count": 1},
-	"thick_fur_den": {"kind": "thick_fur_beast", "count": 3},
-	"construct_den": {"kind": "construct_beast", "count": 2},
-	"wraith_shrine": {"kind": "ruin_wraith", "count": 2},
-}
 
 
 static func generate(world) -> void:
@@ -143,36 +128,14 @@ static func generate(world) -> void:
 		var id: String = ["flint", "twig", "grass", "mushroom", "wild_root"][index % 5]
 		world.drop_item(id, 1, [rng.randf_range(-12, 12), 0.0, rng.randf_range(-12, 12)])
 
-	# 8. Starter creatures near spawn / bamboo_forest
+	# 8. Starter dens (rabbits, wolves, monkeys) around the bamboo forest centre
 	var bamboo_region := {}
 	for r in regions:
 		if r.biome == "bamboo_forest":
 			bamboo_region = r
 			break
-	var bc: Array = bamboo_region.get("center", [0.0, 0.0, -30.0])
-	for group in [
-		{"kind": "rabbit", "home": [float(bc[0]) - 8.0, 0.0, float(bc[2]) + 8.0], "count": 4},
-		{"kind": "wolf", "home": [float(bc[0]) - 18.0, 0.0, float(bc[2]) - 14.0], "count": 3},
-		{"kind": "monkey", "home": [float(bc[0]) + 10.0, 0.0, float(bc[2]) - 10.0], "count": 3},
-	]:
-		var den: Dictionary = world.entity(group.kind + "_den", group.home)
-		den.merge({"biome": "bamboo_forest", "layer": "den"})
-		world.add_entity("nodes", den)
-		for _i in range(group.count):
-			var cpos := [float(group.home[0]) + rng.randf_range(-2, 2), 0.0, float(group.home[2]) + rng.randf_range(-2, 2)]
-			var creature: Dictionary = world.entity(group.kind, cpos)
-			creature.merge({
-				"health": Rules.creature(group.kind).max_health,
-				"home": group.home.duplicate(),
-				"state": "idle",
-				"behavior_state": "idle",
-				"effects": {},
-				"cooldown": 0.0,
-				"respawn": 0.0,
-				"stolen": [],
-				"biome": "bamboo_forest",
-			})
-			world.add_entity("creatures", creature)
+	var starter: SetPieceDef = load("res://data/set_pieces/forest_starter.tres")
+	_spawn_set_piece(world, rng, starter, bamboo_region.get("center", [0.0, 0.0, -30.0]), "bamboo_forest")
 
 
 static func _random_in_region(rng: RandomNumberGenerator, region: Dictionary, margin: float) -> Array:
@@ -226,22 +189,29 @@ static func _spawn_set_piece(world, rng: RandomNumberGenerator, piece: SetPieceD
 		elif kind == "mud":
 			node["non_blocking"] = true
 		world.add_entity("nodes", node)
-		if DEN_CREATURE_MAP.has(kind):
-			var info: Dictionary = DEN_CREATURE_MAP[kind]
-			var cdef = Rules.creature(str(info.kind))
-			if cdef != null:
-				for _c in int(info.count):
-					var cpos := [pos[0] + rng.randf_range(-1.5, 1.5), 0.0, pos[2] + rng.randf_range(-1.5, 1.5)]
-					var creature: Dictionary = world.entity(str(info.kind), cpos)
-					creature.merge({
-						"health": cdef.max_health,
-						"home": pos.duplicate(),
-						"state": "idle",
-						"behavior_state": "idle",
-						"effects": {},
-						"cooldown": 0.0,
-						"respawn": 0.0,
-						"stolen": [],
-						"biome": biome_id,
-					})
-					world.add_entity("creatures", creature)
+		_spawn_den_creatures(world, rng, str(entry.get("spawn", "")), int(entry.get("count", 0)), pos, biome_id)
+
+
+## Creatures living at a den use it as home, so they return there and respawn around it.
+static func _spawn_den_creatures(world, rng: RandomNumberGenerator, creature_id: String, count: int, home: Array, biome_id: String) -> void:
+	if creature_id.is_empty() or count <= 0:
+		return
+	var cdef = Rules.creature(creature_id)
+	if cdef == null:
+		push_warning("Set piece spawns unknown creature '%s'" % creature_id)
+		return
+	for _c in count:
+		var cpos := [float(home[0]) + rng.randf_range(-1.5, 1.5), 0.0, float(home[2]) + rng.randf_range(-1.5, 1.5)]
+		var creature: Dictionary = world.entity(creature_id, cpos)
+		creature.merge({
+			"health": cdef.max_health,
+			"home": home.duplicate(),
+			"state": "idle",
+			"behavior_state": "idle",
+			"effects": {},
+			"cooldown": 0.0,
+			"respawn": 0.0,
+			"stolen": [],
+			"biome": biome_id,
+		})
+		world.add_entity("creatures", creature)

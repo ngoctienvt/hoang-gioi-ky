@@ -3,10 +3,6 @@ extends RefCounted
 
 static func tick(world, creature: Dictionary, definition: CreatureDef, ctx: Dictionary, _delta: float) -> void:
 	var params: Dictionary = definition.params
-	if definition.active_period == CreatureDef.ActivePeriod.DAY and ctx.phase != "day":
-		creature.state = "return"
-		ctx.destination = creature.home
-		return
 	if creature.state == "flee":
 		ctx.speed = float(params.get("flee_speed", 4.0)) * float(ctx.speed_mult)
 		ctx.destination = creature.home

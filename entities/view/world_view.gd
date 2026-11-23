@@ -3,6 +3,7 @@ extends Node3D
 const Shapes = preload("res://entities/view/entity_meshes.gd")
 const WorldSeason = preload("res://world/simulation/world_season.gd")
 const BoundaryDao = preload("res://world/simulation/traits/boundary_dao.gd")
+const Rules = preload("res://world/simulation/world_rules.gd")
 ## Entities farther than this from the local player are not drawn. On clients the mirror is already
 ## limited to the interest window; on the host this keeps the scene from holding the whole map.
 const VIEW_RADIUS := float(InterestGrid.EXIT_RADIUS + 1) * WorldEntityIndex.CHUNK_SIZE
@@ -185,7 +186,7 @@ func render(state: Dictionary, local_id: int) -> void:
 			desired[key] = epos
 			tracked[key] = state.players[str(entity.uid)] if category == "players" else entity
 			visual.visible = not (category == "nodes" and float(entity.get("regrow", 0)) > 0)
-			if str(entity.get("kind", "")) in ["floor_trap", "wraith", "phantom"]:
+			if str(entity.get("kind", "")) == "floor_trap" or str(entity.get("kind", "")) in Rules.SPIRIT_KINDS:
 				visual.visible = visual.visible and can_see_hidden
 			if category == "creatures":
 				var cstate := str(entity.get("state", ""))

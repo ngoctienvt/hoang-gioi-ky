@@ -24,5 +24,5 @@ move_speed = 4.5
 detect_range = 10
 active_period = 0
 behavior = &"pack_hunter"
-params = {"sleep_at_day": false, "leash": 18.0, "prey_kinds": ["thick_fur_beast"], "pack_radius": 9.0, "dao_drain": 0.3}
+params = {"leash": 18.0, "prey_kinds": ["thick_fur_beast"], "pack_radius": 9.0, "dao_drain": 0.3}
 drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2")])

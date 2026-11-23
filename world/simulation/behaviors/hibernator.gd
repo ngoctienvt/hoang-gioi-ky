@@ -2,7 +2,8 @@ extends RefCounted
 
 
 static func tick(world, creature: Dictionary, definition: CreatureDef, ctx: Dictionary, _delta: float) -> void:
-	var awake := float(creature.get("provoked", 0.0)) > 0.0 or float(creature.get("noise_alert", 0.0)) > 0.0
+	# Hibernates through winter unless woken by a blow or a loud noise; awake the rest of the year.
+	var awake: bool = ctx.season != "winter" or float(creature.get("provoked", 0.0)) > 0.0 or float(creature.get("noise_alert", 0.0)) > 0.0
 	if not awake:
 		creature.state = "sleep"
 		ctx.speed = 0.0
@@ -22,8 +23,9 @@ static func tick(world, creature: Dictionary, definition: CreatureDef, ctx: Dict
 			creature.state = "return"
 			ctx.destination = creature.home
 		else:
-			creature.state = "sleep"
-			ctx.speed = 0.0
+			creature.state = "idle" if ctx.season != "winter" else "sleep"
+			if creature.state == "sleep":
+				ctx.speed = 0.0
 
 
 static func on_hurt(_world, creature: Dictionary, _attacker: Dictionary, _definition: CreatureDef) -> void:

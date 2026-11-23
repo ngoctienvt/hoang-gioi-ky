@@ -1,10 +1,21 @@
 extends GutTest
 
+const Season = preload("res://world/simulation/world_season.gd")
 
-func test_snow_bear_and_golem_sleep_until_hit_or_loud_noise() -> void:
+
+func _winter_world() -> GameWorld:
 	var world := GameWorld.new()
 	world.initialize(22, {})
 	world.clear_entities()
+	# Winter starts after the 20 autumn days; the bear hibernates only then.
+	world.state.clock.elapsed = 21.0 * world.day_length() + 1.0
+	Season.update_clock(world)
+	return world
+
+
+func test_snow_bear_and_golem_sleep_until_hit_or_loud_noise() -> void:
+	var world := _winter_world()
+	assert_eq(str(world.state.clock.season), "winter")
 	world.add_player(1, "QuietWalker")
 	var player: Dictionary = world.state.players["1"]
 	player.position = [3.0, 0.0, 0.0]
@@ -33,3 +44,22 @@ func test_snow_bear_and_golem_sleep_until_hit_or_loud_noise() -> void:
 	world.Weather.strike_at(world, [11.0, 0.0, 0.0])
 	world.step(0.5)
 	assert_eq(str(golem.state), "chase", "Lightning near golem should wake it")
+
+
+func test_snow_bear_is_awake_outside_winter() -> void:
+	# Arrange: autumn, a player walks up to the bear.
+	var world := GameWorld.new()
+	world.initialize(22, {})
+	world.clear_entities()
+	world.add_player(1, "Hiker")
+	world.state.players["1"].position = [3.0, 0.0, 0.0]
+	var bear := world.entity("snow_bear", [0.0, 0.0, 0.0])
+	bear.merge({"health": 220.0, "home": [0.0, 0.0, 0.0], "state": "idle", "effects": {}, "cooldown": 0.0, "respawn": 0.0, "stolen": []})
+	world.add_entity("creatures", bear)
+
+	# Act
+	world.step(0.5)
+
+	# Assert
+	assert_eq(str(world.state.clock.season), "autumn")
+	assert_eq(str(bear.state), "chase", "outside winter the bear defends its ground")

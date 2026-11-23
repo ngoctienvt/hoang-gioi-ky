@@ -4,5 +4,5 @@
 script = ExtResource("1")
 id = &"swamp_den"
 layer_tag = &"den"
-radius = 3.5
-entries = Array[Dictionary]([{"kind": "leech_den", "offset": Vector2(0, 0), "jitter": 0.3}, {"kind": "crow_den", "offset": Vector2(2.5, 1.5), "jitter": 0.3}, {"kind": "ancient_grave", "offset": Vector2(-2.5, 2.0), "jitter": 0.3}])
+radius = 4.0
+entries = Array[Dictionary]([{"kind": "leech_den", "offset": Vector2(0, 0), "jitter": 0.3, "spawn": "spirit_leech", "count": 3}, {"kind": "crow_den", "offset": Vector2(2.5, 1.5), "jitter": 0.3, "spawn": "carrion_crow", "count": 2}, {"kind": "ancient_grave", "offset": Vector2(-2.5, 2.0), "jitter": 0.3, "spawn": "jiangshi", "count": 2}, {"kind": "ancient_grave", "offset": Vector2(-1.0, -3.0), "jitter": 0.3, "spawn": "wraith", "count": 2}])

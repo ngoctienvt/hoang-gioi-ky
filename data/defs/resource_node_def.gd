@@ -12,3 +12,5 @@ extends Resource
 @export var stages: Array[ResourceNodeStage] = []
 ## Giây để mọc lại sau khi khai thác hết. 0 = không mọc lại.
 @export_range(0.0, 99999.0) var regrow_time: float = 0.0
+## Khi không mọc lại (regrow_time = 0): true = để lại gốc, đào bằng xẻng; false = khai thác xong là mất hẳn.
+@export var leaves_stump: bool = false

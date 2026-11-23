@@ -71,8 +71,10 @@ static func step(world, delta: float) -> void:
 			changed = true
 		if target.kind == "farm" and target.crop != "":
 			var rate := 1.8 if (target.get("watered", false) and str(target.get("water_type", "")) == "thanh_moc") else (1.5 if target.get("watered", false) else 1.0)
+			var growth_before := floori(float(target.growth))
 			target.growth += delta * rate
-			changed = true
+			# Replicates on whole-second steps only (see StateReplicator.COARSE_TIMERS).
+			changed = changed or floori(float(target.growth)) != growth_before
 		if changed:
 			world.touch(int(target.uid))
 	for player in world.state.players.values() + world.state.offline_players.values():

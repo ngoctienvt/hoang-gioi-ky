@@ -1,6 +1,14 @@
 extends RefCounted
 
 const BASE_MAX_HEALTH := 150.0
+## Spirit beings (linh thể): hidden and immune to blows unless the player can see spirits
+## (U Minh tempered weapon, Phá Hồn / spirit sight, a shaken Dao Heart, Boundary Dao).
+const SPIRIT_KINDS := ["wraith", "ruin_wraith", "phantom"]
+## Days an ice block (băng khối) lasts before it has melted away (summer melts it twice as fast).
+const ICE_BLOCK_MELT_DAYS := 3.0
+## Fuel burn multipliers for open fires (campfire, firepit) in bad weather.
+const RAIN_FIRE_FUEL_RATE := 1.5
+const STORM_FIRE_FUEL_RATE := 2.0
 const PLAYER_TIMERS := [
 	"attack_cd",
 	"work_cd",
@@ -30,14 +38,24 @@ const CREATURE_ALIASES := {
 const NODE_KINDS := ["tree", "bamboo", "rock", "spirit_rock", "berry_bush", "grass", "twig_bush", "herb"]
 
 
+## Definitions are looked up every simulation step for every entity, so they are cached by kind
+## (null included, for kinds without a definition).
+static var _node_defs: Dictionary = {}
+static var _creature_defs: Dictionary = {}
+
+
 static func node(kind: String):
-	var path := "res://data/nodes/" + str(NODE_ALIASES.get(kind, kind)) + ".tres"
-	return load(path) if ResourceLoader.exists(path) else null
+	if not _node_defs.has(kind):
+		var path := "res://data/nodes/" + str(NODE_ALIASES.get(kind, kind)) + ".tres"
+		_node_defs[kind] = load(path) if ResourceLoader.exists(path) else null
+	return _node_defs[kind]
 
 
 static func creature(kind: String):
-	var path := "res://data/creatures/" + str(CREATURE_ALIASES.get(kind, kind)) + ".tres"
-	return load(path) if ResourceLoader.exists(path) else null
+	if not _creature_defs.has(kind):
+		var path := "res://data/creatures/" + str(CREATURE_ALIASES.get(kind, kind)) + ".tres"
+		_creature_defs[kind] = load(path) if ResourceLoader.exists(path) else null
+	return _creature_defs[kind]
 
 
 static func drops(world, entries: Array, position: Array) -> void:

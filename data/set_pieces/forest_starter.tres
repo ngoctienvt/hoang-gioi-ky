@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="SetPieceDef" load_steps=2 format=3]
+[ext_resource type="Script" path="res://data/defs/set_piece_def.gd" id="1"]
+[resource]
+script = ExtResource("1")
+id = &"forest_starter"
+layer_tag = &"den"
+radius = 20.0
+entries = Array[Dictionary]([{"kind": "rabbit_den", "offset": Vector2(-8, 8), "jitter": 0.0, "spawn": "rabbit", "count": 4}, {"kind": "wolf_den", "offset": Vector2(-18, -14), "jitter": 0.0, "spawn": "wolf", "count": 3}, {"kind": "monkey_den", "offset": Vector2(10, -10), "jitter": 0.0, "spawn": "monkey", "count": 3}])

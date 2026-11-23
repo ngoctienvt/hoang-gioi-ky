@@ -3,12 +3,6 @@ extends RefCounted
 
 static func tick(world, creature: Dictionary, definition: CreatureDef, ctx: Dictionary, delta: float) -> void:
 	var params: Dictionary = definition.params
-	var phase: String = ctx.phase
-	if bool(params.get("sleep_at_day", false)) and phase == "day":
-		creature.state = "sleep"
-		ctx.speed = 0.0
-		return
-
 	var leash := float(params.get("leash", 18.0))
 	var nearest: Dictionary = ctx.nearest_player
 	var dist: float = ctx.nearest_dist
@@ -36,10 +30,19 @@ static func tick(world, creature: Dictionary, definition: CreatureDef, ctx: Dict
 					c.hit_flash = 0.2
 					creature.cooldown = 1.5
 					if float(c.health) <= 0.0:
-						world.Combat.kill(world, c)
+						world.Combat.kill(world, c, false)
 					else:
 						world.touch(int(c.uid))
 				return
+
+	# A packmate was attacked: run to where the attacker stood, then give up.
+	var aggro: Array = creature.get("aggro_pos", [])
+	if aggro.size() == 3 and world.distance(creature.home, creature.position) < leash:
+		if world.distance(creature.position, aggro) > 1.5:
+			creature.state = "chase"
+			ctx.destination = aggro
+			return
+	creature.erase("aggro_pos")
 
 	if world.distance(creature.position, creature.home) > 1.5:
 		creature.state = "return"

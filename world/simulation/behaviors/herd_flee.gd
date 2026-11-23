@@ -3,12 +3,6 @@ extends RefCounted
 
 static func tick(world, creature: Dictionary, definition: CreatureDef, ctx: Dictionary, _delta: float) -> void:
 	var params: Dictionary = definition.params
-	var phase: String = ctx.phase
-	if bool(params.get("burrow_at_night", false)) and phase == "night":
-		creature.state = "burrow"
-		ctx.speed = 0.0
-		return
-
 	var threat_pos: Array = []
 	var nearest: Dictionary = ctx.nearest_player
 	if not nearest.is_empty():

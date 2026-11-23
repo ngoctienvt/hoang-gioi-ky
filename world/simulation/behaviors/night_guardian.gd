@@ -2,14 +2,10 @@ extends RefCounted
 
 
 static func tick(world, creature: Dictionary, definition: CreatureDef, ctx: Dictionary, delta: float) -> void:
-	if ctx.phase != "night":
-		creature.state = "sleep"
-		ctx.speed = 0.0
-		return
-
+	# Only the Soul Lantern (Đèn Dẫn Hồn) drives a guardian back; ordinary fires do not.
 	var fear_r := float(definition.params.get("fear_radius", 6.0))
 	for s in world.index.entities_near(creature.position, fear_r, "structures"):
-		if float(s.get("fuel", 0.0)) > 0.0:
+		if str(s.get("kind", "")) == "soul_lantern":
 			creature.state = "flee"
 			var away := Vector3(float(creature.position[0]) - float(s.position[0]), 0.0, float(creature.position[2]) - float(s.position[2]))
 			if away.length_squared() < 0.001:

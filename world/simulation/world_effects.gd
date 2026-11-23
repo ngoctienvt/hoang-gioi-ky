@@ -81,6 +81,12 @@ static func step_player(world, player: Dictionary, delta: float) -> void:
 		player.stats.temperature = magnitude(player, "temp_lock", 50.0)
 	if has(player, "nausea") and player.has("stats") and player.stats is Dictionary:
 		player.stats.dao = maxf(0.0, float(player.stats.get("dao", 100.0)) - 0.8 * delta)
+	if has(player, "burn"):
+		# Burn damage lands once per second (mag = damage per second) and does not wear armour.
+		fx.burn["tick"] = float(fx.burn.get("tick", 0.0)) + delta
+		if float(fx.burn.tick) >= 1.0:
+			fx.burn.tick = float(fx.burn.tick) - 1.0
+			world.hurt(player, magnitude(player, "burn"), false)
 
 
 static func step_creature(world, creature: Dictionary, delta: float) -> float:

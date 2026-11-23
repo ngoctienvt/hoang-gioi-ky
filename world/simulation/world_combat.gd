@@ -1,4 +1,5 @@
 extends RefCounted
+const Structures = preload("res://world/simulation/world_structures.gd")
 const Rules = preload("res://world/simulation/world_rules.gd")
 const BoundaryDao = preload("res://world/simulation/traits/boundary_dao.gd")
 
@@ -39,7 +40,7 @@ static func attack(world, player: Dictionary, args: Dictionary) -> bool:
 			return false
 		if target.get("private_to_owner", false) and int(target.get("owner_peer", 0)) != -int(player.uid):
 			return false
-		if target.kind in ["wraith", "phantom"]:
+		if target.kind in Rules.SPIRIT_KINDS:
 			var ttype: String = str(world.Tempering.get_temper_type(hand))
 			var can_see_spirit: bool = ttype == "u_minh" or world.Effects.has(player, "pierce_mist") or world.Effects.has(player, "spirit_sight") or float(player.stats.get("dao", 100.0)) < 30.0 or BoundaryDao.in_boundary(player)
 			if not can_see_spirit:
@@ -74,23 +75,7 @@ static func attack(world, player: Dictionary, args: Dictionary) -> bool:
 		world.Creatures.notify_noise(world, player.position, 8.0)
 		target.health -= damage
 		if target.health <= 0:
-			for slot in target.slots:
-				if not slot.is_empty():
-					world.drop_item(slot.id, slot.count, target.position, slot)
-			for id in target.ingredients:
-				world.drop_item(id, 1, target.position)
-			if target.output != "":
-				world.drop_item(target.output, 1, target.position)
-			if target.solvent != "":
-				world.drop_item(target.solvent, 1, target.position)
-			for value in RecipeDB.recipes.values():
-				if value.is_structure and str(value.result.id) == target.kind:
-					for id in value.ingredients:
-						var count := int(value.ingredients[id]) / 2
-						if count > 0:
-							world.drop_item(str(id), count, target.position)
-					break
-			world.remove_entity(target)
+			Structures.destroy(world, target, true)
 		else:
 			world.touch(int(target.uid))
 	else:
@@ -104,14 +89,16 @@ static func attack(world, player: Dictionary, args: Dictionary) -> bool:
 	return true
 
 
-static func kill(world, target: Dictionary) -> void:
+## by_player: the kill was made by a player (or their puppet, skill, effect); only those weigh on
+## karma. Predators killing prey is nature.
+static func kill(world, target: Dictionary, by_player: bool = true) -> void:
 	var cdef = Rules.creature(target.kind)
 	if cdef != null:
 		Rules.drops(world, cdef.drops, target.position)
 	for slot in target.get("stolen", []):
 		world.drop_item(slot.id, slot.count, target.position, slot.get("extra", slot))
 	target.stolen = []
-	if target.kind == "rabbit" and not target.get("ally", false):
+	if by_player and target.kind == "rabbit" and not target.get("ally", false):
 		world.Karma.add_sin(world, "kill_peaceful")
 	if target.get("no_respawn", false) or target.get("ally", false):
 		world.remove_entity(target)

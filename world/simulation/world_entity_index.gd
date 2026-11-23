@@ -7,6 +7,7 @@ var by_uid: Dictionary = {}
 var collection_of: Dictionary = {}
 var chunks: Dictionary = {}
 var entity_chunk: Dictionary = {}
+var by_kind: Dictionary = {}  # kind -> {uid: true}, for systems that only care about one kind (springs)
 var dirty: Dictionary = {}
 var removed: Dictionary = {}
 var moved_creatures: Dictionary = {}
@@ -31,6 +32,7 @@ func clear() -> void:
 	collection_of.clear()
 	chunks.clear()
 	entity_chunk.clear()
+	by_kind.clear()
 	dirty.clear()
 	removed.clear()
 	moved_creatures.clear()
@@ -54,6 +56,10 @@ func _index_existing(collection: String, entity: Dictionary) -> void:
 	var c := chunk_coords(entity.get("position", [0.0, 0.0, 0.0]))
 	var key := chunk_key(c.x, c.y)
 	entity_chunk[uid] = key
+	var kind := str(entity.get("kind", ""))
+	if not by_kind.has(kind):
+		by_kind[kind] = {}
+	by_kind[kind][uid] = true
 	if not chunks.has(key):
 		chunks[key] = {}
 	chunks[key][uid] = true
@@ -76,6 +82,7 @@ func remove(uid: int) -> void:
 		if chunks[key].is_empty():
 			chunks.erase(key)
 	entity_chunk.erase(uid)
+	by_kind.get(str(by_uid[uid].get("kind", "")), {}).erase(uid)
 	by_uid.erase(uid)
 	collection_of.erase(uid)
 	dirty.erase(uid)
@@ -83,6 +90,10 @@ func remove(uid: int) -> void:
 	chunk_changed.erase(uid)
 	last_sent_pos.erase(uid)
 	removed[uid] = true
+
+
+func uids_of_kind(kind: String) -> Array:
+	return by_kind.get(kind, {}).keys()
 
 
 func update_position(entity: Dictionary) -> void:

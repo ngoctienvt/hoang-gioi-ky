@@ -26,6 +26,9 @@ static func step(world, delta: float) -> void:
 		if player.biome_timer >= 1.0:
 			player.biome_timer = 0.0
 			player.biome = world.biome_at(player.position)
+		# Timed effects (regen, stealth, burn, nausea...) count down and apply before the stats tick,
+		# so burn damage dealt here is not overwritten by the stats written back below.
+		world.Effects.step_player(world, player, delta)
 		var stats = world.stats(player)
 		var near_fire := false
 		var lit: bool = player.night_vision > 0

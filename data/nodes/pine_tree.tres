@@ -26,3 +26,4 @@ name_key = "WORLD_PINE_TREE"
 required_tool = 1
 stages = Array[ExtResource("stage")]([SubResource("s1")])
 regrow_time = 0.0
+leaves_stump = true

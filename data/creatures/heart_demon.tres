@@ -15,5 +15,6 @@ max_health = 80.0
 damage = 14.0
 move_speed = 4.2
 detect_range = 32.0
-active_period = 4
+active_period = 0
+behavior = &"heart_demon"
 drops = Array[ExtResource("drop")]([SubResource("d1")])

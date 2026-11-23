@@ -5,4 +5,4 @@ script = ExtResource("1")
 id = &"thunder_den"
 layer_tag = &"den"
 radius = 3.5
-entries = Array[Dictionary]([{"kind": "thunder_beast_den", "offset": Vector2(0, 0), "jitter": 0.3}, {"kind": "golem_pillar", "offset": Vector2(3.0, -1.5), "jitter": 0.3}])
+entries = Array[Dictionary]([{"kind": "thunder_beast_den", "offset": Vector2(0, 0), "jitter": 0.3, "spawn": "thunder_beast", "count": 2}, {"kind": "golem_pillar", "offset": Vector2(3.0, -1.5), "jitter": 0.3, "spawn": "stone_golem", "count": 1}])

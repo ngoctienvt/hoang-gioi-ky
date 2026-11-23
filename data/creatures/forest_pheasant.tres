@@ -24,5 +24,5 @@ move_speed = 4.2
 detect_range = 8
 active_period = 1
 behavior = &"herd_flee"
-params = {"flee_speed": 4.8, "dash_flee": true}
+params = {"flee_speed": 4.8}
 drops = Array[ExtResource("drop")]([SubResource("d1"), SubResource("d2")])

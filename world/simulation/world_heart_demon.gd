@@ -37,7 +37,6 @@ static func step(world, delta: float) -> void:
 				]
 				var demon: Dictionary = world.entity("heart_demon", pos)
 				demon.merge({
-					"behavior": "heart_demon",
 					"owner_peer": peer_id,
 					"private_to_owner": true,
 					"no_respawn": true,
@@ -68,18 +67,17 @@ static func _owned_demons(world, peer_id: int) -> Array:
 	return out
 
 
-static func tick_creature(world, creature: Dictionary, delta: float, speed_mult: float = 1.0) -> void:
+## Creature behaviour of a heart demon: it only hunts its owner and vanishes once the owner is gone
+## or dead. Movement is done by the creature step towards ctx.destination.
+static func tick_creature(world, creature: Dictionary, definition, ctx: Dictionary) -> void:
 	var peer_id := int(creature.get("owner_peer", 0))
 	var owner: Dictionary = world.state.players.get(str(peer_id), {})
 	if owner.is_empty() or owner.get("ghost", false):
 		world.remove_entity(creature)
+		ctx.speed = 0.0
 		return
-	var definition = world.Rules.creature("heart_demon")
-	var speed: float = (definition.move_speed if definition != null else 4.2) * speed_mult
-	var dmg: float = definition.damage if definition != null else 14.0
-	var dist: float = world.distance(creature.position, owner.position)
-	if dist < 1.8 and float(creature.cooldown) <= 0.0:
-		world.hurt(owner, dmg)
+	creature.state = "chase"
+	ctx.destination = owner.position
+	if world.distance(creature.position, owner.position) < 1.8 and float(creature.cooldown) <= 0.0:
+		world.hurt(owner, definition.damage)
 		creature.cooldown = 1.5
-	if world.Creatures.move(creature, owner.position, speed * delta, world.map_half() - 1.0):
-		world.move_entity(creature, creature.position, false)

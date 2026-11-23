@@ -14,7 +14,7 @@ const SHARED_GROUPS := ["discovered", "regions", "teleports", "karma", "forbidde
 const HOST_ONLY_FIELDS := ["cooldown", "noise_alert", "provoked", "home", "stolen", "target_uid", "aggro_pos",
 	"cracked_timer", "grounded_timer", "channel_timer", "respawn"]
 ## Countdowns the host only re-sends when they cross a whole second, so a mirror may lag by under 1 s.
-const COARSE_TIMERS := ["fuel", "remaining", "regrow", "age"]
+const COARSE_TIMERS := ["fuel", "remaining", "regrow", "age", "melt", "burning", "health", "growth"]
 ## Key inside a per-field delta listing the fields the receiver must erase.
 const REMOVED_KEY := "~removed"
 ## Weather countdowns tick every frame; clients only need the kind and the warning areas.

@@ -20,7 +20,7 @@ var show_labels := false
 func _ready() -> void:
 	custom_minimum_size = Vector2(168, 110)
 	mouse_filter = Control.MOUSE_FILTER_STOP
-	tooltip_text = "Nhấn [M] để mở bản đồ lớn"
+	tooltip_text = tr("HUD_MINIMAP_HINT")
 	for bid in ["bamboo_forest", "nether_swamp", "crimson_volcano", "thunder_gorge", "frost_peaks", "ancient_ruins"]:
 		var path := "res://data/biomes/%s.tres" % bid
 		if ResourceLoader.exists(path):
