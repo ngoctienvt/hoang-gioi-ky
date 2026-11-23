@@ -1,0 +1,38 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Hoang Giới Ký"
+run/main_scene="res://world/style_test/style_test.tscn"
+config/features=PackedStringArray("4.7", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+EventBus="*res://autoload/event_bus.gd"
+NetworkManager="*res://autoload/network_manager.gd"
+GameClock="*res://autoload/game_clock.gd"
+ItemDB="*res://autoload/item_db.gd"
+RecipeDB="*res://autoload/recipe_db.gd"
+SaveManager="*res://autoload/save_manager.gd"
+
+[dotnet]
+
+project/assembly_name="HoangGioiKy"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_mcp/plugin.cfg", "res://addons/gut/plugin.cfg")
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://localization/strings.vi.translation")
+locale/fallback="vi"

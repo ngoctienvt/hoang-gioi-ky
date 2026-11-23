@@ -1,0 +1,23 @@
+# Godot
+.godot/
+.import/
+export.cfg
+export_credentials.cfg
+*.translation
+
+# .NET
+.mono/
+bin/
+obj/
+*.user
+
+# MCP (contains local auth token)
+.mcp.json
+.godot-mcp/secrets*
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Godot-MCP managed server binary
+.ai-game-dev/

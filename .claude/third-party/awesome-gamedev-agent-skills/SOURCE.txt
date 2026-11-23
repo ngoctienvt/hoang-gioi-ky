@@ -1,0 +1,1 @@
+Source: https://github.com/gamedev-skills/awesome-gamedev-agent-skills @ c6ca6c4 (installed 2026-11-23, 25 skills)
