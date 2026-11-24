@@ -13,6 +13,26 @@ const CREATURE_MODELS := {
 	"spirit_rabbit": "res://assets/models/creatures/creature_spirit_rabbit/creature_spirit_rabbit.glb",
 	"monkey": "res://assets/models/creatures/creature_spirit_monkey/creature_spirit_monkey.glb",
 	"spirit_monkey": "res://assets/models/creatures/creature_spirit_monkey/creature_spirit_monkey.glb",
+	"boss_ancient_warden": "res://assets/models/creatures/creature_boss_ancient_warden/creature_boss_ancient_warden.glb",
+	"boss_flame_wolf": "res://assets/models/creatures/creature_boss_flame_wolf/creature_boss_flame_wolf.glb",
+	"boss_frost_wyrm": "res://assets/models/creatures/creature_boss_frost_wyrm/creature_boss_frost_wyrm.glb",
+	"boss_ghost_general": "res://assets/models/creatures/creature_boss_ghost_general/creature_boss_ghost_general.glb",
+	"boss_iron_turtle": "res://assets/models/creatures/creature_boss_iron_turtle/creature_boss_iron_turtle.glb",
+	"boss_thunder_roc": "res://assets/models/creatures/creature_boss_thunder_roc/creature_boss_thunder_roc.glb",
+	"carrion_crow": "res://assets/models/creatures/creature_carrion_crow/creature_carrion_crow.glb",
+	"construct_beast": "res://assets/models/creatures/creature_construct_beast/creature_construct_beast.glb",
+	"fire_bird": "res://assets/models/creatures/creature_fire_bird/creature_fire_bird.glb",
+	"forest_pheasant": "res://assets/models/creatures/creature_forest_pheasant/creature_forest_pheasant.glb",
+	"heart_demon": "res://assets/models/creatures/creature_heart_demon/creature_heart_demon.glb",
+	"jiangshi": "res://assets/models/creatures/creature_jiangshi/creature_jiangshi.glb",
+	"lava_lizard": "res://assets/models/creatures/creature_lava_lizard/creature_lava_lizard.glb",
+	"ruin_wraith": "res://assets/models/creatures/creature_ruin_wraith/creature_ruin_wraith.glb",
+	"snow_bear": "res://assets/models/creatures/creature_snow_bear/creature_snow_bear.glb",
+	"spirit_leech": "res://assets/models/creatures/creature_spirit_leech/creature_spirit_leech.glb",
+	"stone_golem": "res://assets/models/creatures/creature_stone_golem/creature_stone_golem.glb",
+	"thick_fur_beast": "res://assets/models/creatures/creature_thick_fur_beast/creature_thick_fur_beast.glb",
+	"thunder_beast": "res://assets/models/creatures/creature_thunder_beast/creature_thunder_beast.glb",
+	"wraith": "res://assets/models/creatures/creature_wraith/creature_wraith.glb",
 }
 
 const NODE_MODELS := {
@@ -56,6 +76,45 @@ const NODE_MODELS := {
 	"water_root_node": "res://assets/models/items/item_wild_tuber/item_wild_tuber.glb",
 	"grass": "res://assets/models/items/item_grass_fiber/item_grass_fiber.glb",
 	"altar": "res://assets/models/structures/struct_revive_altar/struct_revive_altar.glb",
+	"ancient_grave": "res://assets/models/nature/ancient_grave/ancient_grave.glb",
+	"ancient_vine_node": "res://assets/models/nature/ancient_vine_node/ancient_vine_node.glb",
+	"ash_pile": "res://assets/models/nature/ash_pile/ash_pile.glb",
+	"bamboo": "res://assets/models/nature/bamboo_cluster/bamboo_cluster_full.glb",
+	"bamboo_tree": "res://assets/models/nature/bamboo_cluster/bamboo_cluster_full.glb",
+	"bird_nest": "res://assets/models/nature/bird_nest/bird_nest.glb",
+	"broken_sword_pile": "res://assets/models/nature/broken_sword_pile/broken_sword_pile.glb",
+	"carved_pillar": "res://assets/models/nature/carved_pillar/carved_pillar.glb",
+	"construct_den": "res://assets/models/nature/construct_den/construct_den.glb",
+	"crow_den": "res://assets/models/nature/crow_den/crow_den.glb",
+	"fire_bird_nest": "res://assets/models/nature/fire_bird_nest/fire_bird_nest.glb",
+	"fire_lotus_node": "res://assets/models/nature/fire_lotus_node/fire_lotus_node.glb",
+	"floor_trap": "res://assets/models/nature/floor_trap/floor_trap.glb",
+	"golem_pillar": "res://assets/models/nature/golem_pillar/golem_pillar.glb",
+	"gravel_pile": "res://assets/models/nature/gravel_pile/gravel_pile.glb",
+	"ice_fishing_hole": "res://assets/models/nature/ice_fishing_hole/ice_fishing_hole.glb",
+	"lava_lizard_den": "res://assets/models/nature/lava_lizard_den/lava_lizard_den.glb",
+	"leech_den": "res://assets/models/nature/leech_den/leech_den.glb",
+	"mud": "res://assets/models/nature/mud/mud.glb",
+	"pheasant_den": "res://assets/models/nature/pheasant_den/pheasant_den.glb",
+	"reed_clump": "res://assets/models/nature/reed_clump/reed_clump.glb",
+	"ruin_debris": "res://assets/models/nature/ruin_debris/ruin_debris.glb",
+	"rune_crystal_node": "res://assets/models/nature/rune_crystal_node/rune_crystal_node.glb",
+	"seal_stone": "res://assets/models/nature/seal_stone/seal_stone.glb",
+	"snow_bear_den": "res://assets/models/nature/snow_bear_den/snow_bear_den.glb",
+	"snow_lotus_node": "res://assets/models/nature/snow_lotus_node/snow_lotus_node.glb",
+	"snow_moss_node": "res://assets/models/nature/snow_moss_node/snow_moss_node.glb",
+	"snow_pile": "res://assets/models/nature/snow_pile/snow_pile.glb",
+	"thick_fur_den": "res://assets/models/nature/thick_fur_den/thick_fur_den.glb",
+	"thunder_beast_den": "res://assets/models/nature/thunder_beast_den/thunder_beast_den.glb",
+	"volt_moss_node": "res://assets/models/nature/volt_moss_node/volt_moss_node.glb",
+	"wraith_shrine": "res://assets/models/nature/wraith_shrine/wraith_shrine.glb",
+}
+
+const PUPPET_MODELS := {
+	"puppet_chop": "res://assets/models/structures/struct_puppet_chop/struct_puppet_chop.glb",
+	"puppet_mine": "res://assets/models/structures/struct_puppet_mine/struct_puppet_mine.glb",
+	"puppet_haul": "res://assets/models/structures/struct_puppet_haul/struct_puppet_haul.glb",
+	"puppet_guard": "res://assets/models/structures/struct_puppet_chop/struct_puppet_chop.glb",
 }
 
 const STRUCTURE_MODELS := {
@@ -75,6 +134,15 @@ const STRUCTURE_MODELS := {
 	"awakening_altar": "res://assets/models/structures/struct_revive_altar/struct_revive_altar.glb",
 	"guest_altar": "res://assets/models/structures/struct_revive_altar/struct_revive_altar.glb",
 	"altar": "res://assets/models/structures/struct_revive_altar/struct_revive_altar.glb",
+	"ice_cellar": "res://assets/models/structures/struct_ice_cellar/struct_ice_cellar.glb",
+	"ice_structure": "res://assets/models/structures/struct_ice_structure/struct_ice_structure.glb",
+	"light_pillar": "res://assets/models/structures/struct_light_pillar/struct_light_pillar.glb",
+	"lightning_rod": "res://assets/models/structures/struct_lightning_rod/struct_lightning_rod.glb",
+	"refining_forge": "res://assets/models/structures/struct_refining_forge/struct_refining_forge.glb",
+	"soul_lantern": "res://assets/models/structures/struct_soul_lantern/struct_soul_lantern.glb",
+	"stake": "res://assets/models/structures/struct_stake/struct_stake.glb",
+	"talisman_desk": "res://assets/models/structures/struct_talisman_desk/struct_talisman_desk.glb",
+	"water_array": "res://assets/models/structures/struct_water_array/struct_water_array.glb",
 }
 
 const ITEM_MODELS := {
@@ -167,6 +235,68 @@ const ITEM_MODELS := {
 	"spirit_water_co_van": "res://assets/models/items/tool_water_flask/tool_water_flask_empty.glb",
 	"spear": "res://assets/models/items/weapon_spear/weapon_spear.glb",
 	"dark_iron_spear": "res://assets/models/items/weapon_spear/weapon_spear.glb",
+	"ancient_gear": "res://assets/models/items/item_ancient_gear/item_ancient_gear.glb",
+	"ancient_golem_core": "res://assets/models/items/item_ancient_golem_core/item_ancient_golem_core.glb",
+	"ancient_vine": "res://assets/models/items/item_ancient_vine/item_ancient_vine.glb",
+	"ancient_warden_core": "res://assets/models/items/item_ancient_warden_core/item_ancient_warden_core.glb",
+	"ash": "res://assets/models/items/item_ash/item_ash.glb",
+	"beast_cage": "res://assets/models/items/item_beast_cage/item_beast_cage.glb",
+	"filled_beast_cage": "res://assets/models/items/item_filled_beast_cage/item_filled_beast_cage.glb",
+	"broken_sword": "res://assets/models/items/item_broken_sword/item_broken_sword.glb",
+	"charcoal": "res://assets/models/items/item_charcoal/item_charcoal.glb",
+	"thunder_crystal": "res://assets/models/items/item_thunder_crystal/item_thunder_crystal.glb",
+	"charged_thunder_crystal": "res://assets/models/items/item_charged_thunder_crystal/item_charged_thunder_crystal.glb",
+	"cinnabar": "res://assets/models/items/item_cinnabar/item_cinnabar.glb",
+	"cool_vest": "res://assets/models/items/item_cool_vest/item_cool_vest.glb",
+	"crow_feather": "res://assets/models/items/item_crow_feather/item_crow_feather.glb",
+	"feather": "res://assets/models/items/item_feather/item_feather.glb",
+	"fire_feather": "res://assets/models/items/item_fire_feather/item_fire_feather.glb",
+	"thunder_roc_feather": "res://assets/models/items/item_thunder_roc_feather/item_thunder_roc_feather.glb",
+	"dark_iron_armor": "res://assets/models/items/item_dark_iron_armor/item_dark_iron_armor.glb",
+	"dark_iron_ore": "res://assets/models/items/item_dark_iron_ore/item_dark_iron_ore.glb",
+	"eternal_ice": "res://assets/models/items/item_eternal_ice/item_eternal_ice.glb",
+	"ice_block": "res://assets/models/items/item_ice_block/item_ice_block.glb",
+	"fire_egg": "res://assets/models/items/item_fire_egg/item_fire_egg.glb",
+	"flame_wolf_heart": "res://assets/models/items/item_flame_wolf_heart/item_flame_wolf_heart.glb",
+	"frost_rice": "res://assets/models/items/item_frost_rice/item_frost_rice.glb",
+	"spirit_rice": "res://assets/models/items/item_spirit_rice/item_spirit_rice.glb",
+	"frost_wyrm_scale": "res://assets/models/items/item_frost_wyrm_scale/item_frost_wyrm_scale.glb",
+	"fur_coat": "res://assets/models/items/item_fur_coat/item_fur_coat.glb",
+	"fur_hat": "res://assets/models/items/item_fur_hat/item_fur_hat.glb",
+	"straw_hat": "res://assets/models/items/item_straw_hat/item_straw_hat.glb",
+	"ghost_general_core": "res://assets/models/items/item_ghost_general_core/item_ghost_general_core.glb",
+	"heart_demon_essence": "res://assets/models/items/item_heart_demon_essence/item_heart_demon_essence.glb",
+	"hand_warmer": "res://assets/models/items/item_hand_warmer/item_hand_warmer.glb",
+	"ice_fish": "res://assets/models/items/item_ice_fish/item_ice_fish.glb",
+	"incense": "res://assets/models/items/item_incense/item_incense.glb",
+	"iron_turtle_shell": "res://assets/models/items/item_iron_turtle_shell/item_iron_turtle_shell.glb",
+	"lava_scale": "res://assets/models/items/item_lava_scale/item_lava_scale.glb",
+	"magma_crystal": "res://assets/models/items/item_magma_crystal/item_magma_crystal.glb",
+	"minor_blood_essence": "res://assets/models/items/item_minor_blood_essence/item_minor_blood_essence.glb",
+	"mud_clump": "res://assets/models/items/item_mud_clump/item_mud_clump.glb",
+	"reed": "res://assets/models/items/item_reed/item_reed.glb",
+	"resin": "res://assets/models/items/item_resin/item_resin.glb",
+	"ruin_shard": "res://assets/models/items/item_ruin_shard/item_ruin_shard.glb",
+	"rune_crystal": "res://assets/models/items/item_rune_crystal/item_rune_crystal.glb",
+	"snow_moss": "res://assets/models/items/item_snow_moss/item_snow_moss.glb",
+	"volt_moss": "res://assets/models/items/item_volt_moss/item_volt_moss.glb",
+	"snowball": "res://assets/models/items/item_snowball/item_snowball.glb",
+	"wraith_essence": "res://assets/models/items/item_wraith_essence/item_wraith_essence.glb",
+	"yin_soul_crystal": "res://assets/models/items/item_yin_soul_crystal/item_yin_soul_crystal.glb",
+	"talisman_paper": "res://assets/models/items/item_talisman_paper/item_talisman_paper.glb",
+	"ghost_mask_talisman": "res://assets/models/items/item_ghost_mask_talisman/item_ghost_mask_talisman.glb",
+	"bind_talisman": "res://assets/models/items/item_bind_talisman/item_bind_talisman.glb",
+	"frost_talisman": "res://assets/models/items/item_frost_talisman/item_frost_talisman.glb",
+	"lightning_ward_talisman": "res://assets/models/items/item_lightning_ward_talisman/item_lightning_ward_talisman.glb",
+	"true_sight_talisman": "res://assets/models/items/item_true_sight_talisman/item_true_sight_talisman.glb",
+	"imprint_flame_wolf": "res://assets/models/items/item_imprint_flame_wolf/item_imprint_flame_wolf.glb",
+	"imprint_frost_wyrm": "res://assets/models/items/item_imprint_frost_wyrm/item_imprint_frost_wyrm.glb",
+	"imprint_ghost_general": "res://assets/models/items/item_imprint_ghost_general/item_imprint_ghost_general.glb",
+	"imprint_iron_turtle": "res://assets/models/items/item_imprint_iron_turtle/item_imprint_iron_turtle.glb",
+	"imprint_thunder_roc": "res://assets/models/items/item_imprint_thunder_roc/item_imprint_thunder_roc.glb",
+	"imprint_ancient_warden": "res://assets/models/items/item_imprint_ancient_warden/item_imprint_ancient_warden.glb",
+	"berry_bush": "res://assets/models/nature/bush_berry/bush_berry_ripe.glb",
+	"twig_bush": "res://assets/models/nature/bush_twig/bush_twig_full.glb",
 }
 
 static var _cache: Dictionary = {}
@@ -175,7 +305,7 @@ static var _shadow_mat: StandardMaterial3D
 
 static func all_paths() -> Array[String]:
 	var seen := {}
-	for dict in [PLAYER_MODELS, CREATURE_MODELS, NODE_MODELS, STRUCTURE_MODELS, ITEM_MODELS]:
+	for dict in [PLAYER_MODELS, CREATURE_MODELS, NODE_MODELS, PUPPET_MODELS, STRUCTURE_MODELS, ITEM_MODELS]:
 		for path in dict.values():
 			seen[str(path)] = true
 	var out: Array[String] = []
@@ -198,6 +328,8 @@ static func resolve_path(kind: String, category: String, entity: Dictionary = {}
 			return str(NODE_MODELS.get(kind, ""))
 		"structures":
 			return str(STRUCTURE_MODELS.get(kind, ""))
+		"puppets":
+			return str(PUPPET_MODELS.get(kind, ""))
 		"drops":
 			var item_id := str(entity.get("id", ""))
 			return str(ITEM_MODELS.get(item_id, ""))
@@ -263,7 +395,8 @@ static func _fix_materials(root: Node) -> void:
 			mat.metallic_specular = 0.0
 			mat.roughness = 0.90
 			mat.diffuse_mode = BaseMaterial3D.DIFFUSE_LAMBERT_WRAP
-			mat.albedo_color = Color(1.22, 1.22, 1.20, 1.0)
+			# Texture da nang sang ~17% trong hgk_fit.py (Dot 2); truoc la 1.22 de bu texture toi.
+			mat.albedo_color = Color(1.05, 1.05, 1.03, 1.0)
 			mat.set_meta("hgk_fixed", true)
 
 
@@ -300,6 +433,8 @@ static func _add_contact_shadow(wrapper: Node3D, kind: String, category: String)
 			size = 1.15
 		"creatures":
 			size = 0.75 if kind in ["rabbit", "spirit_rabbit"] else 1.2
+			if kind.begins_with("boss_"):
+				size = 3.2
 		"structures":
 			size = 1.6 if kind in ["chest", "talisman_chest", "realm_chest", "cooking_pot"] else 2.2
 		"nodes":

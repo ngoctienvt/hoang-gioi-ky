@@ -87,7 +87,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -118,7 +118,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -149,7 +149,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -180,7 +180,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -211,7 +211,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -242,7 +242,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -273,7 +273,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -304,7 +304,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -335,7 +335,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -366,7 +366,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -397,7 +397,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -428,7 +428,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -459,7 +459,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -490,7 +490,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -521,7 +521,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -552,7 +552,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -583,7 +583,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -614,7 +614,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -645,7 +645,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -676,7 +676,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -707,7 +707,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -738,7 +738,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -769,7 +769,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -800,7 +800,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -831,7 +831,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -862,7 +862,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -893,7 +893,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -924,7 +924,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -955,7 +955,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -986,7 +986,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1017,7 +1017,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1049,7 +1049,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1081,7 +1081,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1112,7 +1112,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1144,7 +1144,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1176,7 +1176,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1207,7 +1207,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1238,7 +1238,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1266,7 +1266,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1293,7 +1293,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1320,7 +1320,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1347,7 +1347,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1374,7 +1374,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1401,7 +1401,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1428,7 +1428,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1455,7 +1455,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1486,7 +1486,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1518,7 +1518,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1550,7 +1550,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1582,7 +1582,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1614,7 +1614,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; biến thể đổi màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1646,7 +1646,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1677,7 +1677,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1708,7 +1708,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1739,7 +1739,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1770,7 +1770,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1801,7 +1801,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1832,7 +1832,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1863,7 +1863,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1906,7 +1906,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1949,7 +1949,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -1992,7 +1992,7 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
@@ -2023,10 +2023,4370 @@
     "controls": [
      "bbox"
     ],
-    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu"
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; Đợt 2: fit lại — metallicFactor=0, bỏ KHR_materials_specular, nâng sáng texture x1.17"
    },
    "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
    "technical_checks_passed": null,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_boss_ancient_warden",
+   "file": "assets/models/creatures/creature_boss_ancient_warden/creature_boss_ancient_warden.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "boss_ancient_warden",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.4,
+    1.46,
+    3.62
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "Ancient Warden boss: a towering ancient stone guardian construct of weathered carved monolith blocks overgrown with moss and roots, faint pale mint runes in the cracks of its chest, heavy stone fists",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style hop",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_boss_flame_wolf",
+   "file": "assets/models/creatures/creature_boss_flame_wolf/creature_boss_flame_wolf.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "boss_flame_wolf",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.3,
+    3.41,
+    1.99
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "Crimson Flame Wolf boss: a huge gaunt wolf with charcoal black fur cracked with ember orange lines, a smouldering ragged mane and burning eyes",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "creature_rig.py (Tong Mon) — xuong 4 chan + clip thu tuc",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_boss_frost_wyrm",
+   "file": "assets/models/creatures/creature_boss_frost_wyrm/creature_boss_frost_wyrm.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "boss_frost_wyrm",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.32,
+    2.32,
+    2.21
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "idle",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "Frost Wyrm boss: a long wingless serpentine ice dragon with pale grey-blue scales, jagged ice spines along its back and small horns",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "creature_rig.py --kind serpent",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_boss_ghost_general",
+   "file": "assets/models/creatures/creature_boss_ghost_general/creature_boss_ghost_general.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "boss_ghost_general",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.44,
+    0.81,
+    3.0
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "Ghost General boss: a towering undead general in rusted ancient lamellar armor and a tattered dark cape, pale grey-blue ghostly skin, hollow dark eyes",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style float",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_boss_iron_turtle",
+   "file": "assets/models/creatures/creature_boss_iron_turtle/creature_boss_iron_turtle.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "boss_iron_turtle",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.75,
+    3.2,
+    1.79
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "Dark Iron Rock Turtle boss: a massive tortoise with a craggy dark iron-grey rocky shell with ore veins and thick stone-like legs",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "creature_rig.py (Tong Mon) — xuong 4 chan + clip thu tuc",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_boss_thunder_roc",
+   "file": "assets/models/creatures/creature_boss_thunder_roc/creature_boss_thunder_roc.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "boss_thunder_roc",
+   "style_anchor": false,
+   "dimensions_m": [
+    4.8,
+    2.98,
+    2.02
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "idle",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "Thunder Roc boss: a giant storm eagle with slate grey and deep blue feathers and pale yellow lightning streak markings on its wings",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "bird_rig.py (Tong Mon) — xuong chim + clip bay",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_carrion_crow",
+   "file": "assets/models/creatures/creature_carrion_crow/creature_carrion_crow.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "carrion_crow",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.0,
+    0.66,
+    0.43
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "idle",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a scruffy black carrion crow with ragged feathers and a pale grey beak",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "bird_rig.py (Tong Mon) — xuong chim + clip bay",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_construct_beast",
+   "file": "assets/models/creatures/creature_construct_beast/creature_construct_beast.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "construct_beast",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.8,
+    1.56,
+    1.1
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "an ancient mechanical construct beast: a four-legged hound-like automaton of weathered bronze plates and carved stone, faint pale mint rune lines, gears at the joints",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "creature_rig.py (Tong Mon) — xuong 4 chan + clip thu tuc",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_fire_bird",
+   "file": "assets/models/creatures/creature_fire_bird/creature_fire_bird.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "fire_bird",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.14,
+    0.76,
+    0.72
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "idle",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a fire bird with dusky red-orange plumage, ember orange wing tips and a long trailing tail",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "bird_rig.py (Tong Mon) — xuong chim + clip bay",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_forest_pheasant",
+   "file": "assets/models/creatures/creature_forest_pheasant/creature_forest_pheasant.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "forest_pheasant",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.05,
+    0.87,
+    0.45
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "idle",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a wild forest pheasant with mottled brown and rust feathers and a long barred tail",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "bird_rig.py (Tong Mon) — xuong chim + clip bay",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_heart_demon",
+   "file": "assets/models/creatures/creature_heart_demon/creature_heart_demon.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "heart_demon",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.72,
+    0.38,
+    1.9
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "Heart Demon: a shadowy humanoid phantom made of ink-black brush strokes and dark mist, long ragged limbs, a blank pale mask-like face with dark hollow eyes, ink wash painting style",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style float",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_jiangshi",
+   "file": "assets/models/creatures/creature_jiangshi/creature_jiangshi.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "jiangshi",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.79,
+    0.7,
+    1.75
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a jiangshi hopping corpse in a faded dark blue old official robe and round hat, grey-green skin, stiff arms stretched forward, a yellow paper talisman on the forehead",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style hop",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_lava_lizard",
+   "file": "assets/models/creatures/creature_lava_lizard/creature_lava_lizard.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "lava_lizard",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.59,
+    1.61,
+    0.5
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a lava lizard: a stocky lizard with cracked dark basalt scales and ember orange seams",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "creature_rig.py (Tong Mon) — xuong 4 chan + clip thu tuc",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_ruin_wraith",
+   "file": "assets/models/creatures/creature_ruin_wraith/creature_ruin_wraith.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ruin_wraith",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.73,
+    0.6,
+    1.8
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a ruin wraith: a floating spectral guardian of ancient ruins in a tattered pale grey-teal hooded robe with a carved stone mask and faint mint runes",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style float",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_snow_bear",
+   "file": "assets/models/creatures/creature_snow_bear/creature_snow_bear.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "snow_bear",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.3,
+    2.27,
+    1.5
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a big snow bear with thick shaggy white-grey fur, dark nose and claws",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "creature_rig.py (Tong Mon) — xuong 4 chan + clip thu tuc",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_spirit_leech",
+   "file": "assets/models/creatures/creature_spirit_leech/creature_spirit_leech.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "spirit_leech",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.47,
+    0.51,
+    0.4
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "idle",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a giant swamp spirit leech: a fat segmented slimy dark olive-purple leech with a round sucker mouth",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "creature_rig.py --kind serpent",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_stone_golem",
+   "file": "assets/models/creatures/creature_stone_golem/creature_stone_golem.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "stone_golem",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.48,
+    1.07,
+    2.21
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a stone golem: a hulking humanoid of stacked mossy grey boulders with long heavy arms and small amber eyes",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style hop",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_thick_fur_beast",
+   "file": "assets/models/creatures/creature_thick_fur_beast/creature_thick_fur_beast.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "thick_fur_beast",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.22,
+    2.34,
+    1.6
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a thick-furred beast: a stocky yak-like beast with long shaggy brown-grey fur and curved horns",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "creature_rig.py (Tong Mon) — xuong 4 chan + clip thu tuc",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_thunder_beast",
+   "file": "assets/models/creatures/creature_thunder_beast/creature_thunder_beast.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "thunder_beast",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.66,
+    1.56,
+    1.0
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "cast",
+    "claw",
+    "death",
+    "hit",
+    "howl",
+    "idle",
+    "pounce",
+    "roar",
+    "run",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a thunder beast: a lean wolf-sized beast with slate blue-grey fur, pale yellow lightning streak markings and sharp ears",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "creature_rig.py (Tong Mon) — xuong 4 chan + clip thu tuc",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "creature_wraith",
+   "file": "assets/models/creatures/creature_wraith/creature_wraith.glb",
+   "category": "creatures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "wraith",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.69,
+    0.66,
+    1.8
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a vengeful swamp wraith: a floating ghost in a tattered grey burial shroud, long dark hair covering the face, thin pale hands",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style float",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "ancient_grave",
+   "file": "assets/models/nature/ancient_grave/ancient_grave.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ancient_grave",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.0,
+    1.86,
+    1.49
+   ],
+   "triangles": 39999,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "an ancient overgrown grave mound with a tilted cracked stone stele, moss and dead grass",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "ancient_vine_node",
+   "file": "assets/models/nature/ancient_vine_node/ancient_vine_node.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ancient_vine_node",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.36,
+    1.5,
+    1.2
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a thick tangle of ancient gnarled vines with large dark leaves creeping over a broken stone block",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "ash_pile",
+   "file": "assets/models/nature/ash_pile/ash_pile.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ash_pile",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.2,
+    1.2,
+    0.37
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a low pile of grey volcanic ash with a few charred lumps",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "bamboo_cluster_full",
+   "file": "assets/models/nature/bamboo_cluster/bamboo_cluster_full.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "bamboo_cluster",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.78,
+    2.17,
+    7.0
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a dense cluster of tall grey-green spirit bamboo stalks with sparse leaves at the top",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "bird_nest",
+   "file": "assets/models/nature/bird_nest/bird_nest.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "bird_nest",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.2,
+    1.2,
+    0.83
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a big nest of twigs on a rock ledge holding a few large speckled eggs",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "broken_sword_pile",
+   "file": "assets/models/nature/broken_sword_pile/broken_sword_pile.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "broken_sword_pile",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.38,
+    1.4,
+    1.23
+   ],
+   "triangles": 39999,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a pile of ancient rusted broken swords stuck into a mound of earth and stones",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "carved_pillar",
+   "file": "assets/models/nature/carved_pillar/carved_pillar.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "carved_pillar",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.88,
+    0.91,
+    3.0
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a weathered ancient monolithic stone pillar carved with worn runes, cracked top and moss",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "construct_den",
+   "file": "assets/models/nature/construct_den/construct_den.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "construct_den",
+   "style_anchor": false,
+   "dimensions_m": [
+    3.0,
+    2.54,
+    2.21
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a collapsed ancient ruin workshop alcove: a broken stone arch with rusted bronze gears and scattered machine parts",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "crow_den",
+   "file": "assets/models/nature/crow_den/crow_den.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "crow_den",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.93,
+    1.81,
+    3.5
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a dead leaning swamp tree with several messy crow nests in its bare branches",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "fire_bird_nest",
+   "file": "assets/models/nature/fire_bird_nest/fire_bird_nest.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "fire_bird_nest",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.57,
+    1.6,
+    1.31
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a large nest of charred twigs on a jagged black basalt rock with ember coals inside",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "fire_lotus_node",
+   "file": "assets/models/nature/fire_lotus_node/fire_lotus_node.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "fire_lotus_node",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.6,
+    0.6,
+    0.53
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a fire lotus plant: a cluster of dark leaves with one ember orange-red lotus flower",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "floor_trap",
+   "file": "assets/models/nature/floor_trap/floor_trap.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "floor_trap",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.2,
+    1.19,
+    0.13
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a square ancient stone pressure plate trap tile, cracked, with carved rune grooves",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "golem_pillar",
+   "file": "assets/models/nature/golem_pillar/golem_pillar.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "golem_pillar",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.5,
+    2.47,
+    2.01
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a ring of three heavy stacked mossy boulders around a cracked rune stone",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "gravel_pile",
+   "file": "assets/models/nature/gravel_pile/gravel_pile.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "gravel_pile",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.99,
+    1.0,
+    0.37
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a low pile of loose grey-brown gravel and small stones",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "ice_fishing_hole",
+   "file": "assets/models/nature/ice_fishing_hole/ice_fishing_hole.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ice_fishing_hole",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.6,
+    1.6,
+    0.27
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a round hole cut in a slab of frozen ice with cracked edges and a few snow lumps, dark water inside",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "lava_lizard_den",
+   "file": "assets/models/nature/lava_lizard_den/lava_lizard_den.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "lava_lizard_den",
+   "style_anchor": false,
+   "dimensions_m": [
+    3.0,
+    2.48,
+    1.58
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a low cave burrow in cracked black basalt rocks with a faint ember glow inside",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "leech_den",
+   "file": "assets/models/nature/leech_den/leech_den.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "leech_den",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.5,
+    2.4,
+    0.66
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a stagnant swamp hollow: a ring of rotten logs and reeds around murky dark mud",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "mud",
+   "file": "assets/models/nature/mud/mud.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "mud",
+   "style_anchor": false,
+   "dimensions_m": [
+    2.78,
+    2.8,
+    0.21
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a flat puddle of thick dark brown mud with a raised muddy rim",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "pheasant_den",
+   "file": "assets/models/nature/pheasant_den/pheasant_den.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "pheasant_den",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.2,
+    1.18,
+    0.61
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a ground nest of dry grass and leaves under a small bush with a few speckled eggs",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "reed_clump",
+   "file": "assets/models/nature/reed_clump/reed_clump.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "reed_clump",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.02,
+    1.22,
+    1.8
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a clump of tall dry reeds and cattails",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "ruin_debris",
+   "file": "assets/models/nature/ruin_debris/ruin_debris.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ruin_debris",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.6,
+    1.3,
+    0.91
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a pile of broken carved ancient stone blocks and rubble with moss",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "rune_crystal_node",
+   "file": "assets/models/nature/rune_crystal_node/rune_crystal_node.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "rune_crystal_node",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.02,
+    1.05,
+    1.2
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a cluster of pale mint rune-carved crystals growing from a broken stone base",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "seal_stone",
+   "file": "assets/models/nature/seal_stone/seal_stone.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "seal_stone",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.1,
+    0.8,
+    1.6
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "an ancient seal stone: a squat weathered stone stele wrapped with rusted chains and faded talisman strips",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "snow_bear_den",
+   "file": "assets/models/nature/snow_bear_den/snow_bear_den.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "snow_bear_den",
+   "style_anchor": false,
+   "dimensions_m": [
+    4.0,
+    3.12,
+    2.49
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a dark cave entrance in a snowy rock outcrop with icicles",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "snow_lotus_node",
+   "file": "assets/models/nature/snow_lotus_node/snow_lotus_node.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "snow_lotus_node",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.49,
+    0.5,
+    0.41
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a snow lotus: a pale white-blue lotus flower among frosty leaves on a small snow mound",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "snow_moss_node",
+   "file": "assets/models/nature/snow_moss_node/snow_moss_node.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "snow_moss_node",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.8,
+    0.79,
+    0.32
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a patch of pale frosty grey-green moss on a snowy rock",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "snow_pile",
+   "file": "assets/models/nature/snow_pile/snow_pile.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "snow_pile",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.2,
+    1.14,
+    0.61
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a lumpy pile of snow",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "thick_fur_den",
+   "file": "assets/models/nature/thick_fur_den/thick_fur_den.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "thick_fur_den",
+   "style_anchor": false,
+   "dimensions_m": [
+    3.5,
+    3.11,
+    1.98
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a sheltered den under a big leaning rock with piled dry grass and shed fur, dusted with snow",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "thunder_beast_den",
+   "file": "assets/models/nature/thunder_beast_den/thunder_beast_den.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "thunder_beast_den",
+   "style_anchor": false,
+   "dimensions_m": [
+    3.5,
+    3.0,
+    1.97
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a den in jagged slate rocks split by lightning with scorch marks and pale yellow crystal shards",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "volt_moss_node",
+   "file": "assets/models/nature/volt_moss_node/volt_moss_node.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "volt_moss_node",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.79,
+    0.8,
+    0.32
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a patch of dark moss with pale yellow glowing speckles on a slate rock",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "wraith_shrine",
+   "file": "assets/models/nature/wraith_shrine/wraith_shrine.glb",
+   "category": "nature",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "wraith_shrine",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.96,
+    1.61,
+    2.2
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small ruined ancient shrine of cracked stone blocks with a flat stone slab roof, faded talisman strips and a cold mint glow",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_ice_cellar",
+   "file": "assets/models/structures/struct_ice_cellar/struct_ice_cellar.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ice_cellar",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.6,
+    1.6,
+    0.98
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a primitive ice cellar: a low dug-in storage pit covered with a wooden hatch and stacked stones, frost and ice blocks around",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_ice_structure",
+   "file": "assets/models/structures/struct_ice_structure/struct_ice_structure.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ice_structure",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.99,
+    0.99,
+    1.0
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a large rough block of clear pale blue ice",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_light_pillar",
+   "file": "assets/models/structures/struct_light_pillar/struct_light_pillar.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "light_pillar",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.56,
+    0.68,
+    2.6
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a tall survival light pillar: a carved stone post wrapped with rope holding a big cyan spirit crystal at the top",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_lightning_rod",
+   "file": "assets/models/structures/struct_lightning_rod/struct_lightning_rod.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "lightning_rod",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.68,
+    0.7,
+    3.2
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a tall primitive lightning rod: a wooden pole braced with stones and rope with a jagged metal spike and pale yellow crystals at the top",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_puppet_chop",
+   "file": "assets/models/structures/struct_puppet_chop/struct_puppet_chop.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "puppet_chop",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.7,
+    0.51,
+    1.5
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a wooden puppet automaton laborer holding a stone axe: crude jointed wooden body, carved stone head with mint rune eyes",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style hop",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_puppet_haul",
+   "file": "assets/models/structures/struct_puppet_haul/struct_puppet_haul.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "puppet_haul",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.74,
+    0.59,
+    1.5
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a wooden puppet automaton laborer carrying a large woven basket on its back: crude jointed wooden body, carved stone head with mint rune eyes",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style hop",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_puppet_mine",
+   "file": "assets/models/structures/struct_puppet_mine/struct_puppet_mine.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "puppet_mine",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.73,
+    0.58,
+    1.5
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [
+    "attack",
+    "death",
+    "hit",
+    "idle",
+    "roar",
+    "walk"
+   ],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a wooden puppet automaton miner holding a pickaxe with a long pointed stone pick head: crude jointed wooden body, carved stone head with mint rune eyes",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": "rigid_rig.py --style hop",
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_refining_forge",
+   "file": "assets/models/structures/struct_refining_forge/struct_refining_forge.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "refining_forge",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.8,
+    1.2,
+    1.62
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a primitive forge: a stone furnace with hide and wood bellows, a rough anvil on a log stump and tongs",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_soul_lantern",
+   "file": "assets/models/structures/struct_soul_lantern/struct_soul_lantern.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "soul_lantern",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.54,
+    0.6,
+    1.8
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a soul-guiding lamp: a carved stone post with a cage of bones holding a pale mint glowing spirit stone",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_stake",
+   "file": "assets/models/structures/struct_stake/struct_stake.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "stake",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.17,
+    0.15,
+    1.2
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a single long sharpened wooden stake pole standing straight upright, vertical, tied with a strip of faded red cloth near the top",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_talisman_desk",
+   "file": "assets/models/structures/struct_talisman_desk/struct_talisman_desk.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "talisman_desk",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.4,
+    0.84,
+    0.87
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a crude low wooden writing desk with talisman paper strips, a brush, an ink stone and a small cinnabar dish on top",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "struct_water_array",
+   "file": "assets/models/structures/struct_water_array/struct_water_array.glb",
+   "category": "structures",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "water_array",
+   "style_anchor": false,
+   "dimensions_m": [
+    1.99,
+    2.0,
+    0.42
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small ancient water array: a round flat stone disc carved with flowing water runes with a small stone basin in the center",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ancient_gear",
+   "file": "assets/models/items/item_ancient_gear/item_ancient_gear.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ancient_gear",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.2,
+    0.2,
+    0.05
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "an ancient weathered bronze gear wheel with chipped teeth lying flat",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ancient_golem_core",
+   "file": "assets/models/items/item_ancient_golem_core/item_ancient_golem_core.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ancient_golem_core",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.18,
+    0.18,
+    0.18
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a round ancient stone core sphere with carved runes and a faint amber glow",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ancient_vine",
+   "file": "assets/models/items/item_ancient_vine/item_ancient_vine.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ancient_vine",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.4,
+    0.31,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a coiled length of thick gnarled ancient vine with a few leaves",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ancient_warden_core",
+   "file": "assets/models/items/item_ancient_warden_core/item_ancient_warden_core.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ancient_warden_core",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.16,
+    0.13,
+    0.25
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a heavy carved monolith shard with an embedded pale mint rune crystal",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ash",
+   "file": "assets/models/items/item_ash/item_ash.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ash",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.2,
+    0.2,
+    0.07
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a small soft heap of fine grey powder ash with a few tiny black cinders, no rocks",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_beast_cage",
+   "file": "assets/models/items/item_beast_cage/item_beast_cage.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "beast_cage",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.6,
+    0.46,
+    0.47
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small primitive animal cage trap of lashed wooden sticks with a little door, empty",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_filled_beast_cage",
+   "file": "assets/models/items/item_filled_beast_cage/item_filled_beast_cage.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "filled_beast_cage",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.6,
+    0.41,
+    0.46
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small primitive animal cage trap of lashed wooden sticks with a little door, a cream white rabbit inside",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_broken_sword",
+   "file": "assets/models/items/item_broken_sword/item_broken_sword.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "broken_sword",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.6,
+    0.18,
+    0.11
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single ancient sword with a rusted blade snapped in half and a worn hilt, lying flat",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_charcoal",
+   "file": "assets/models/items/item_charcoal/item_charcoal.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "charcoal",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.18,
+    0.15,
+    0.07
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "three lumps of black charcoal with cracked burnt wood grain, nothing else",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_thunder_crystal",
+   "file": "assets/models/items/item_thunder_crystal/item_thunder_crystal.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "thunder_crystal",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.11,
+    0.1,
+    0.16
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single jagged pale yellow thunder crystal shard",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_charged_thunder_crystal",
+   "file": "assets/models/items/item_charged_thunder_crystal/item_charged_thunder_crystal.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "charged_thunder_crystal",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.09,
+    0.16
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single jagged bright yellow thunder crystal shard wrapped with thin copper wire",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_cinnabar",
+   "file": "assets/models/items/item_cinnabar/item_cinnabar.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "cinnabar",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.15,
+    0.12,
+    0.1
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a chunk of red cinnabar ore crystal on grey rock",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_cool_vest",
+   "file": "assets/models/items/item_cool_vest/item_cool_vest.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "cool_vest",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.49,
+    0.3,
+    0.55
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a primitive sleeveless vest woven from big green leaves and thin vines, standing upright on its own as if worn by an invisible body, front view, hollow neck opening",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_crow_feather",
+   "file": "assets/models/items/item_crow_feather/item_crow_feather.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "crow_feather",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.06,
+    0.25,
+    0.01
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single black crow feather lying flat",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_feather",
+   "file": "assets/models/items/item_feather/item_feather.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "feather",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.06,
+    0.25,
+    0.01
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single mottled brown pheasant feather lying flat",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_fire_feather",
+   "file": "assets/models/items/item_fire_feather/item_fire_feather.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "fire_feather",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.08,
+    0.3,
+    0.01
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single long ember orange-red feather lying flat",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_thunder_roc_feather",
+   "file": "assets/models/items/item_thunder_roc_feather/item_thunder_roc_feather.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "thunder_roc_feather",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.45,
+    0.01
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single huge slate blue feather with a pale yellow zigzag stripe lying flat",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_dark_iron_armor",
+   "file": "assets/models/items/item_dark_iron_armor/item_dark_iron_armor.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "dark_iron_armor",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.5,
+    0.32,
+    0.6
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a primitive sleeveless armor vest of dark iron plates laced with leather straps, standing upright on its own as if worn by an invisible body, front view, hollow neck opening",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_dark_iron_ore",
+   "file": "assets/models/items/item_dark_iron_ore/item_dark_iron_ore.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "dark_iron_ore",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.18,
+    0.15,
+    0.13
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a chunk of dark iron ore: black-grey rock with dark metallic veins",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_eternal_ice",
+   "file": "assets/models/items/item_eternal_ice/item_eternal_ice.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "eternal_ice",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.15,
+    0.12,
+    0.15
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single chunk of ancient deep blue ice crystal",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ice_block",
+   "file": "assets/models/items/item_ice_block/item_ice_block.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ice_block",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.25,
+    0.25,
+    0.23
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a single rough cube of translucent pale blue ice, only ice, no dirt, no snow on top",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_fire_egg",
+   "file": "assets/models/items/item_fire_egg/item_fire_egg.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "fire_egg",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.13,
+    0.13,
+    0.16
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single large speckled egg with ember orange cracks",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_flame_wolf_heart",
+   "file": "assets/models/items/item_flame_wolf_heart/item_flame_wolf_heart.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "flame_wolf_heart",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.14,
+    0.11,
+    0.14
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a charred heart-shaped ember stone with glowing orange cracks",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_frost_rice",
+   "file": "assets/models/items/item_frost_rice/item_frost_rice.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "frost_rice",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.15,
+    0.15,
+    0.15
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small open cloth sack of pale blue-white rice grains",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_spirit_rice",
+   "file": "assets/models/items/item_spirit_rice/item_spirit_rice.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "spirit_rice",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.15,
+    0.15,
+    0.15
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small open cloth sack of pale cream rice grains",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_frost_wyrm_scale",
+   "file": "assets/models/items/item_frost_wyrm_scale/item_frost_wyrm_scale.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "frost_wyrm_scale",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.2,
+    0.19,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single large pale blue-grey dragon scale lying flat",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_fur_coat",
+   "file": "assets/models/items/item_fur_coat/item_fur_coat.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "fur_coat",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.74,
+    0.33,
+    0.8
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a primitive long coat of patched brown fur pelts tied with leather cords, standing upright on its own as if worn by an invisible body with the sleeves hanging down, front view",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_fur_hat",
+   "file": "assets/models/items/item_fur_hat/item_fur_hat.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "fur_hat",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.25,
+    0.25,
+    0.14
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a primitive round fur hat with ear flaps",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_straw_hat",
+   "file": "assets/models/items/item_straw_hat/item_straw_hat.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "straw_hat",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.4,
+    0.4,
+    0.15
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a wide conical woven straw hat",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ghost_general_core",
+   "file": "assets/models/items/item_ghost_general_core/item_ghost_general_core.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ghost_general_core",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.16
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a dark purple-grey teardrop soul crystal with a faint cold mint swirl inside",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_heart_demon_essence",
+   "file": "assets/models/items/item_heart_demon_essence/item_heart_demon_essence.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "heart_demon_essence",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.1
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a small round orb of swirling black ink mist with faint white wisps, floating, nothing else",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_hand_warmer",
+   "file": "assets/models/items/item_hand_warmer/item_hand_warmer.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "hand_warmer",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.16,
+    0.16,
+    0.18
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small handheld clay fire pot with a lid and a rope handle, ember glow at the vents",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ice_fish",
+   "file": "assets/models/items/item_ice_fish/item_ice_fish.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ice_fish",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.35,
+    0.12,
+    0.07
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single pale blue-grey fish frosted with ice lying on its side",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_incense",
+   "file": "assets/models/items/item_incense/item_incense.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "incense",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.25
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small bundle of incense sticks standing in a little clay holder",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_iron_turtle_shell",
+   "file": "assets/models/items/item_iron_turtle_shell/item_iron_turtle_shell.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "iron_turtle_shell",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.4,
+    0.38,
+    0.15
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a large dark iron-grey turtle shell plate with rocky ore veins",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_lava_scale",
+   "file": "assets/models/items/item_lava_scale/item_lava_scale.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "lava_scale",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.1,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single hard dark basalt scale with ember orange edges lying flat",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_magma_crystal",
+   "file": "assets/models/items/item_magma_crystal/item_magma_crystal.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "magma_crystal",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.12,
+    0.15
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single dark red-orange magma crystal shard on black rock",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_minor_blood_essence",
+   "file": "assets/models/items/item_minor_blood_essence/item_minor_blood_essence.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "minor_blood_essence",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.08,
+    0.08,
+    0.14
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small corked clay vial of dark red blood essence",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_mud_clump",
+   "file": "assets/models/items/item_mud_clump/item_mud_clump.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "mud_clump",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.2,
+    0.18,
+    0.1
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a lump of wet dark brown mud",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_reed",
+   "file": "assets/models/items/item_reed/item_reed.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "reed",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.6,
+    0.14,
+    0.06
+   ],
+   "triangles": 39999,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a bundle of cut dry reeds tied together lying on its side",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_resin",
+   "file": "assets/models/items/item_resin/item_resin.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "resin",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.11,
+    0.08
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a single small blob of translucent amber tree resin, nothing else",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ruin_shard",
+   "file": "assets/models/items/item_ruin_shard/item_ruin_shard.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ruin_shard",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.2,
+    0.16,
+    0.06
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a broken shard of carved ancient stone with part of a rune",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_rune_crystal",
+   "file": "assets/models/items/item_rune_crystal/item_rune_crystal.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "rune_crystal",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.11,
+    0.1,
+    0.16
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single pale mint rune-carved crystal shard",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_snow_moss",
+   "file": "assets/models/items/item_snow_moss/item_snow_moss.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "snow_moss",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.15,
+    0.15,
+    0.06
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small clump of pale frosty grey-green moss",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_volt_moss",
+   "file": "assets/models/items/item_volt_moss/item_volt_moss.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "volt_moss",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.15,
+    0.15,
+    0.06
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small clump of dark moss with pale yellow glowing speckles",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_snowball",
+   "file": "assets/models/items/item_snowball/item_snowball.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "snowball",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.12,
+    0.12
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a single round packed white snowball, only snow, no rock",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_wraith_essence",
+   "file": "assets/models/items/item_wraith_essence/item_wraith_essence.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "wraith_essence",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.12,
+    0.11,
+    0.14
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a pale grey-teal ghostly wisp trapped in a small carved stone vessel",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_yin_soul_crystal",
+   "file": "assets/models/items/item_yin_soul_crystal/item_yin_soul_crystal.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "yin_soul_crystal",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.11,
+    0.1,
+    0.15
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a single jagged dark grey-green crystal shard with a faint cold glow inside, no symbol",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_talisman_paper",
+   "file": "assets/models/items/item_talisman_paper/item_talisman_paper.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "talisman_paper",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.11,
+    0.22,
+    0.04
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a small stack of blank yellowed talisman paper strips",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_ghost_mask_talisman",
+   "file": "assets/models/items/item_ghost_mask_talisman/item_ghost_mask_talisman.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "ghost_mask_talisman",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.2,
+    0.08,
+    0.24
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a crude carved wooden demon face mask with two small horns, painted with faded red talisman marks, standing upright facing the viewer",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_bind_talisman",
+   "file": "assets/models/items/item_bind_talisman/item_bind_talisman.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "bind_talisman",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.08,
+    0.22,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 11,
+    "concept_prompt": "a single yellowed paper talisman strip with red cinnabar brush marks, slightly curled",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_imprint_flame_wolf",
+   "file": "assets/models/items/item_imprint_flame_wolf/item_imprint_flame_wolf.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "imprint_flame_wolf",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.02
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a snarling wolf head sigil on its face, inlaid with a small ember orange stone",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_imprint_frost_wyrm",
+   "file": "assets/models/items/item_imprint_frost_wyrm/item_imprint_frost_wyrm.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "imprint_frost_wyrm",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a coiled serpent dragon sigil on its face, inlaid with a small pale blue ice stone",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_imprint_ghost_general",
+   "file": "assets/models/items/item_imprint_ghost_general/item_imprint_ghost_general.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "imprint_ghost_general",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a horned helmet skull sigil on its face, inlaid with a small dark purple stone",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_imprint_iron_turtle",
+   "file": "assets/models/items/item_imprint_iron_turtle/item_imprint_iron_turtle.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "imprint_iron_turtle",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a turtle shell sigil on its face, inlaid with a small dark iron stud",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_imprint_thunder_roc",
+   "file": "assets/models/items/item_imprint_thunder_roc/item_imprint_thunder_roc.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "imprint_thunder_roc",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a spread-winged bird sigil on its face, inlaid with a small pale yellow crystal",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_imprint_ancient_warden",
+   "file": "assets/models/items/item_imprint_ancient_warden/item_imprint_ancient_warden.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "imprint_ancient_warden",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.1,
+    0.1,
+    0.02
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a stone guardian face sigil on its face, inlaid with a small pale mint crystal",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_frost_talisman",
+   "file": "assets/models/items/item_frost_talisman/item_frost_talisman.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "frost_talisman",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.09,
+    0.22,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a single pale yellowed paper talisman strip, slightly curled, painted with a pale blue ink snowflake rune",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_lightning_ward_talisman",
+   "file": "assets/models/items/item_lightning_ward_talisman/item_lightning_ward_talisman.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "lightning_ward_talisman",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.09,
+    0.22,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a single pale yellowed paper talisman strip, slightly curled, painted with a black ink zigzag lightning rune",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
+   "approved_by": null,
+   "approved_date": null
+  },
+  {
+   "id": "item_true_sight_talisman",
+   "file": "assets/models/items/item_true_sight_talisman/item_true_sight_talisman.glb",
+   "category": "items",
+   "priority": "P1",
+   "batch": 2,
+   "game_id": "true_sight_talisman",
+   "style_anchor": false,
+   "dimensions_m": [
+    0.09,
+    0.22,
+    0.03
+   ],
+   "triangles": 40000,
+   "texture": "embedded",
+   "animations": [],
+   "source": {
+    "kind": "ai_generated",
+    "concept_tool": "Qwen-Image 2512 + BiRefNet (ComfyUI, local)",
+    "concept_seed": 23,
+    "concept_prompt": "a single pale yellowed paper talisman strip, slightly curled, painted with a green ink open eye rune",
+    "mesh_tool": "Hunyuan3D-Omni (bbox control)",
+    "texture_tool": "Hunyuan3D-2.1 Paint, kéo màu về bảng màu phase-01, nâng sáng x1.17",
+    "rig_tool": null,
+    "controls": [
+     "bbox"
+    ],
+    "human_edits": "giữ nguyên mesh Omni (không giảm tam giác); chỉ scale, pivot, hướng mặt, màu; metallicFactor=0"
+   },
+   "license": "Tencent Hunyuan 3D Community License — chưa chốt (giới hạn EU/UK/KR, >1M MAU)",
+   "technical_checks_passed": true,
    "approved_by": null,
    "approved_date": null
   }

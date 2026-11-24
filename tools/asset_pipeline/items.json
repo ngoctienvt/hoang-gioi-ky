@@ -951,5 +951,2221 @@
   "tex": 1024,
   "rig": null,
   "file": "char_ancient_beast_blood"
+ },
+ {
+  "key": "creature_boss_ancient_warden",
+  "name": "Hoang Cổ Thủ Vệ",
+  "folder": "creatures",
+  "kind": "monster",
+  "prompt": "Ancient Warden boss: a towering ancient stone guardian construct of weathered carved monolith blocks overgrown with moss and roots, faint pale mint runes in the cracks of its chest, heavy stone fists",
+  "dims": [
+   2.2,
+   3.6,
+   1.4
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "hop",
+  "file": "creature_boss_ancient_warden",
+  "game_id": "boss_ancient_warden",
+  "batch": 2
+ },
+ {
+  "key": "creature_boss_flame_wolf",
+  "name": "Xích Viêm Hỏa Lang",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "Crimson Flame Wolf boss: a huge gaunt wolf with charcoal black fur cracked with ember orange lines, a smouldering ragged mane and burning eyes",
+  "dims": [
+   1.2,
+   2.0,
+   3.2
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "quadruped",
+  "file": "creature_boss_flame_wolf",
+  "game_id": "boss_flame_wolf",
+  "batch": 2
+ },
+ {
+  "key": "creature_boss_frost_wyrm",
+  "name": "Hàn Băng Tuyết Giao",
+  "folder": "creatures",
+  "kind": "serpent",
+  "prompt": "Frost Wyrm boss: a long wingless serpentine ice dragon with pale grey-blue scales, jagged ice spines along its back and small horns",
+  "dims": [
+   2.4,
+   2.2,
+   2.4
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "serpent",
+  "file": "creature_boss_frost_wyrm",
+  "game_id": "boss_frost_wyrm",
+  "batch": 2
+ },
+ {
+  "key": "creature_boss_ghost_general",
+  "name": "U Minh Quỷ Tướng",
+  "folder": "creatures",
+  "kind": "monster",
+  "prompt": "Ghost General boss: a towering undead general in rusted ancient lamellar armor and a tattered dark cape, pale grey-blue ghostly skin, hollow dark eyes",
+  "dims": [
+   1.5,
+   3.0,
+   0.9
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "float",
+  "file": "creature_boss_ghost_general",
+  "game_id": "boss_ghost_general",
+  "batch": 2
+ },
+ {
+  "key": "creature_boss_iron_turtle",
+  "name": "Huyền Thiết Nham Quy",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "Dark Iron Rock Turtle boss: a massive tortoise with a craggy dark iron-grey rocky shell with ore veins and thick stone-like legs",
+  "dims": [
+   2.6,
+   1.8,
+   3.4
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "quadruped",
+  "file": "creature_boss_iron_turtle",
+  "game_id": "boss_iron_turtle",
+  "batch": 2
+ },
+ {
+  "key": "creature_boss_thunder_roc",
+  "name": "Lôi Đình Cự Bằng",
+  "folder": "creatures",
+  "kind": "bird",
+  "prompt": "Thunder Roc boss: a giant storm eagle with slate grey and deep blue feathers and pale yellow lightning streak markings on its wings",
+  "dims": [
+   5.0,
+   2.4,
+   2.5
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "bird",
+  "file": "creature_boss_thunder_roc",
+  "game_id": "boss_thunder_roc",
+  "batch": 2
+ },
+ {
+  "key": "creature_carrion_crow",
+  "name": "Quạ Ăn Xác",
+  "folder": "creatures",
+  "kind": "bird",
+  "prompt": "a scruffy black carrion crow with ragged feathers and a pale grey beak",
+  "dims": [
+   1.0,
+   0.5,
+   0.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "bird",
+  "file": "creature_carrion_crow",
+  "game_id": "carrion_crow",
+  "batch": 2
+ },
+ {
+  "key": "creature_construct_beast",
+  "name": "Cơ Quan Thú",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "an ancient mechanical construct beast: a four-legged hound-like automaton of weathered bronze plates and carved stone, faint pale mint rune lines, gears at the joints",
+  "dims": [
+   0.8,
+   1.1,
+   1.6
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "quadruped",
+  "file": "creature_construct_beast",
+  "game_id": "construct_beast",
+  "batch": 2
+ },
+ {
+  "key": "creature_fire_bird",
+  "name": "Chim Lửa",
+  "folder": "creatures",
+  "kind": "bird",
+  "prompt": "a fire bird with dusky red-orange plumage, ember orange wing tips and a long trailing tail",
+  "dims": [
+   1.3,
+   0.6,
+   0.9
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "bird",
+  "file": "creature_fire_bird",
+  "game_id": "fire_bird",
+  "batch": 2
+ },
+ {
+  "key": "creature_forest_pheasant",
+  "name": "Trĩ Rừng",
+  "folder": "creatures",
+  "kind": "bird",
+  "prompt": "a wild forest pheasant with mottled brown and rust feathers and a long barred tail",
+  "dims": [
+   0.9,
+   0.45,
+   0.7
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "bird",
+  "file": "creature_forest_pheasant",
+  "game_id": "forest_pheasant",
+  "batch": 2
+ },
+ {
+  "key": "creature_heart_demon",
+  "name": "Tâm Ma",
+  "folder": "creatures",
+  "kind": "monster",
+  "prompt": "Heart Demon: a shadowy humanoid phantom made of ink-black brush strokes and dark mist, long ragged limbs, a blank pale mask-like face with dark hollow eyes, ink wash painting style",
+  "dims": [
+   0.9,
+   1.9,
+   0.6
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "float",
+  "file": "creature_heart_demon",
+  "game_id": "heart_demon",
+  "batch": 2
+ },
+ {
+  "key": "creature_jiangshi",
+  "name": "Cương Thi",
+  "folder": "creatures",
+  "kind": "monster",
+  "prompt": "a jiangshi hopping corpse in a faded dark blue old official robe and round hat, grey-green skin, stiff arms stretched forward, a yellow paper talisman on the forehead",
+  "dims": [
+   0.8,
+   1.75,
+   0.7
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "hop",
+  "file": "creature_jiangshi",
+  "game_id": "jiangshi",
+  "batch": 2
+ },
+ {
+  "key": "creature_lava_lizard",
+  "name": "Thằn Lằn Nham",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "a lava lizard: a stocky lizard with cracked dark basalt scales and ember orange seams",
+  "dims": [
+   0.6,
+   0.5,
+   1.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "quadruped",
+  "file": "creature_lava_lizard",
+  "game_id": "lava_lizard",
+  "batch": 2
+ },
+ {
+  "key": "creature_ruin_wraith",
+  "name": "Linh Thể Di Tích",
+  "folder": "creatures",
+  "kind": "monster",
+  "prompt": "a ruin wraith: a floating spectral guardian of ancient ruins in a tattered pale grey-teal hooded robe with a carved stone mask and faint mint runes",
+  "dims": [
+   0.8,
+   1.8,
+   0.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "float",
+  "file": "creature_ruin_wraith",
+  "game_id": "ruin_wraith",
+  "batch": 2
+ },
+ {
+  "key": "creature_snow_bear",
+  "name": "Gấu Tuyết",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "a big snow bear with thick shaggy white-grey fur, dark nose and claws",
+  "dims": [
+   1.2,
+   1.5,
+   2.2
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "quadruped",
+  "file": "creature_snow_bear",
+  "game_id": "snow_bear",
+  "batch": 2
+ },
+ {
+  "key": "creature_spirit_leech",
+  "name": "Đỉa Linh",
+  "folder": "creatures",
+  "kind": "serpent",
+  "prompt": "a giant swamp spirit leech: a fat segmented slimy dark olive-purple leech with a round sucker mouth",
+  "dims": [
+   0.5,
+   0.4,
+   0.5
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "serpent",
+  "file": "creature_spirit_leech",
+  "game_id": "spirit_leech",
+  "batch": 2
+ },
+ {
+  "key": "creature_stone_golem",
+  "name": "Thạch Khôi Lỗi",
+  "folder": "creatures",
+  "kind": "monster",
+  "prompt": "a stone golem: a hulking humanoid of stacked mossy grey boulders with long heavy arms and small amber eyes",
+  "dims": [
+   1.4,
+   2.2,
+   1.0
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "hop",
+  "file": "creature_stone_golem",
+  "game_id": "stone_golem",
+  "batch": 2
+ },
+ {
+  "key": "creature_thick_fur_beast",
+  "name": "Thú Lông Dày",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "a thick-furred beast: a stocky yak-like beast with long shaggy brown-grey fur and curved horns",
+  "dims": [
+   1.2,
+   1.6,
+   2.2
+  ],
+  "tris": 0,
+  "tex": 1024,
+  "rig": "quadruped",
+  "file": "creature_thick_fur_beast",
+  "game_id": "thick_fur_beast",
+  "batch": 2
+ },
+ {
+  "key": "creature_thunder_beast",
+  "name": "Linh Thú Lôi",
+  "folder": "creatures",
+  "kind": "quad",
+  "prompt": "a thunder beast: a lean wolf-sized beast with slate blue-grey fur, pale yellow lightning streak markings and sharp ears",
+  "dims": [
+   0.6,
+   1.0,
+   1.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "quadruped",
+  "file": "creature_thunder_beast",
+  "game_id": "thunder_beast",
+  "batch": 2
+ },
+ {
+  "key": "creature_wraith",
+  "name": "Oán Linh",
+  "folder": "creatures",
+  "kind": "monster",
+  "prompt": "a vengeful swamp wraith: a floating ghost in a tattered grey burial shroud, long dark hair covering the face, thin pale hands",
+  "dims": [
+   0.7,
+   1.8,
+   0.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "float",
+  "file": "creature_wraith",
+  "game_id": "wraith",
+  "batch": 2
+ },
+ {
+  "key": "ancient_grave",
+  "name": "Mộ cổ",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "an ancient overgrown grave mound with a tilted cracked stone stele, moss and dead grass",
+  "dims": [
+   2,
+   1.4,
+   2
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "ancient_grave",
+  "game_id": "ancient_grave",
+  "batch": 2
+ },
+ {
+  "key": "ancient_vine_node",
+  "name": "Dây Leo Cổ",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a thick tangle of ancient gnarled vines with large dark leaves creeping over a broken stone block",
+  "dims": [
+   1.5,
+   1.2,
+   1.5
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "ancient_vine_node",
+  "game_id": "ancient_vine_node",
+  "batch": 2
+ },
+ {
+  "key": "ash_pile",
+  "name": "Đống Tro",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a low pile of grey volcanic ash with a few charred lumps",
+  "dims": [
+   1.2,
+   0.4,
+   1.2
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "ash_pile",
+  "game_id": "ash_pile",
+  "batch": 2
+ },
+ {
+  "key": "bamboo_cluster",
+  "name": "Bụi linh trúc",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a dense cluster of tall grey-green spirit bamboo stalks with sparse leaves at the top",
+  "dims": [
+   2,
+   7,
+   2
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "bamboo_cluster_full",
+  "game_id": "bamboo_cluster",
+  "batch": 2
+ },
+ {
+  "key": "bird_nest",
+  "name": "Ổ Trứng Dị Điểu",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a big nest of twigs on a rock ledge holding a few large speckled eggs",
+  "dims": [
+   1.2,
+   0.8,
+   1.2
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "bird_nest",
+  "game_id": "bird_nest",
+  "batch": 2
+ },
+ {
+  "key": "broken_sword_pile",
+  "name": "Cổ Kiếm Gãy",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a pile of ancient rusted broken swords stuck into a mound of earth and stones",
+  "dims": [
+   1.4,
+   1.2,
+   1.4
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "broken_sword_pile",
+  "game_id": "broken_sword_pile",
+  "batch": 2
+ },
+ {
+  "key": "carved_pillar",
+  "name": "Cột Đá Chạm Khắc",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a weathered ancient monolithic stone pillar carved with worn runes, cracked top and moss",
+  "dims": [
+   0.9,
+   3,
+   0.9
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "carved_pillar",
+  "game_id": "carved_pillar",
+  "batch": 2
+ },
+ {
+  "key": "construct_den",
+  "name": "Ổ Cơ Quan Thú",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a collapsed ancient ruin workshop alcove: a broken stone arch with rusted bronze gears and scattered machine parts",
+  "dims": [
+   3,
+   2.2,
+   2.5
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "construct_den",
+  "game_id": "construct_den",
+  "batch": 2
+ },
+ {
+  "key": "crow_den",
+  "name": "Ổ Quạ",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a dead leaning swamp tree with several messy crow nests in its bare branches",
+  "dims": [
+   2,
+   3.5,
+   2
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "crow_den",
+  "game_id": "crow_den",
+  "batch": 2
+ },
+ {
+  "key": "fire_bird_nest",
+  "name": "Ổ Chim Lửa",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a large nest of charred twigs on a jagged black basalt rock with ember coals inside",
+  "dims": [
+   1.6,
+   1.2,
+   1.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "fire_bird_nest",
+  "game_id": "fire_bird_nest",
+  "batch": 2
+ },
+ {
+  "key": "fire_lotus_node",
+  "name": "Hỏa Liên",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a fire lotus plant: a cluster of dark leaves with one ember orange-red lotus flower",
+  "dims": [
+   0.6,
+   0.6,
+   0.6
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "fire_lotus_node",
+  "game_id": "fire_lotus_node",
+  "batch": 2
+ },
+ {
+  "key": "floor_trap",
+  "name": "Bẫy sàn cổ",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a square ancient stone pressure plate trap tile, cracked, with carved rune grooves",
+  "dims": [
+   1.2,
+   0.1,
+   1.2
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "floor_trap",
+  "game_id": "floor_trap",
+  "batch": 2
+ },
+ {
+  "key": "golem_pillar",
+  "name": "Trụ Thạch Khôi",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a ring of three heavy stacked mossy boulders around a cracked rune stone",
+  "dims": [
+   2.5,
+   2,
+   2.5
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "golem_pillar",
+  "game_id": "golem_pillar",
+  "batch": 2
+ },
+ {
+  "key": "gravel_pile",
+  "name": "Đống Sỏi",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a low pile of loose grey-brown gravel and small stones",
+  "dims": [
+   1,
+   0.35,
+   1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "gravel_pile",
+  "game_id": "gravel_pile",
+  "batch": 2
+ },
+ {
+  "key": "ice_fishing_hole",
+  "name": "Hố Băng Câu Cá",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a round hole cut in a slab of frozen ice with cracked edges and a few snow lumps, dark water inside",
+  "dims": [
+   1.6,
+   0.3,
+   1.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "ice_fishing_hole",
+  "game_id": "ice_fishing_hole",
+  "batch": 2
+ },
+ {
+  "key": "lava_lizard_den",
+  "name": "Hang Thằn Lằn Nham",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a low cave burrow in cracked black basalt rocks with a faint ember glow inside",
+  "dims": [
+   3,
+   1.6,
+   2.5
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "lava_lizard_den",
+  "game_id": "lava_lizard_den",
+  "batch": 2
+ },
+ {
+  "key": "leech_den",
+  "name": "Ổ Đỉa",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a stagnant swamp hollow: a ring of rotten logs and reeds around murky dark mud",
+  "dims": [
+   2.5,
+   0.8,
+   2.5
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "leech_den",
+  "game_id": "leech_den",
+  "batch": 2
+ },
+ {
+  "key": "mud",
+  "name": "Vũng bùn",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a flat puddle of thick dark brown mud with a raised muddy rim",
+  "dims": [
+   2.8,
+   0.08,
+   2.8
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "mud",
+  "game_id": "mud",
+  "batch": 2
+ },
+ {
+  "key": "pheasant_den",
+  "name": "Ổ Trĩ",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a ground nest of dry grass and leaves under a small bush with a few speckled eggs",
+  "dims": [
+   1.2,
+   0.6,
+   1.2
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "pheasant_den",
+  "game_id": "pheasant_den",
+  "batch": 2
+ },
+ {
+  "key": "reed_clump",
+  "name": "Bụi Lau Sậy",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a clump of tall dry reeds and cattails",
+  "dims": [
+   1,
+   1.8,
+   1
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "reed_clump",
+  "game_id": "reed_clump",
+  "batch": 2
+ },
+ {
+  "key": "ruin_debris",
+  "name": "Mảnh Phế Tích",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a pile of broken carved ancient stone blocks and rubble with moss",
+  "dims": [
+   1.6,
+   0.9,
+   1.4
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "ruin_debris",
+  "game_id": "ruin_debris",
+  "batch": 2
+ },
+ {
+  "key": "rune_crystal_node",
+  "name": "Tinh Thể Cổ Văn",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a cluster of pale mint rune-carved crystals growing from a broken stone base",
+  "dims": [
+   1,
+   1.2,
+   1
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "rune_crystal_node",
+  "game_id": "rune_crystal_node",
+  "batch": 2
+ },
+ {
+  "key": "seal_stone",
+  "name": "Đá Cấm Chế",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "an ancient seal stone: a squat weathered stone stele wrapped with rusted chains and faded talisman strips",
+  "dims": [
+   1,
+   1.6,
+   0.8
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "seal_stone",
+  "game_id": "seal_stone",
+  "batch": 2
+ },
+ {
+  "key": "snow_bear_den",
+  "name": "Hang Gấu Tuyết",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a dark cave entrance in a snowy rock outcrop with icicles",
+  "dims": [
+   4,
+   2.4,
+   3
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "snow_bear_den",
+  "game_id": "snow_bear_den",
+  "batch": 2
+ },
+ {
+  "key": "snow_lotus_node",
+  "name": "Tuyết Liên",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a snow lotus: a pale white-blue lotus flower among frosty leaves on a small snow mound",
+  "dims": [
+   0.5,
+   0.4,
+   0.5
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "snow_lotus_node",
+  "game_id": "snow_lotus_node",
+  "batch": 2
+ },
+ {
+  "key": "snow_moss_node",
+  "name": "Rêu Tuyết",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a patch of pale frosty grey-green moss on a snowy rock",
+  "dims": [
+   0.8,
+   0.3,
+   0.8
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "snow_moss_node",
+  "game_id": "snow_moss_node",
+  "batch": 2
+ },
+ {
+  "key": "snow_pile",
+  "name": "Đống Tuyết",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a lumpy pile of snow",
+  "dims": [
+   1.2,
+   0.6,
+   1.2
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "snow_pile",
+  "game_id": "snow_pile",
+  "batch": 2
+ },
+ {
+  "key": "thick_fur_den",
+  "name": "Ổ Thú Lông Dày",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a sheltered den under a big leaning rock with piled dry grass and shed fur, dusted with snow",
+  "dims": [
+   3.5,
+   2,
+   3
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "thick_fur_den",
+  "game_id": "thick_fur_den",
+  "batch": 2
+ },
+ {
+  "key": "thunder_beast_den",
+  "name": "Ổ Linh Thú Lôi",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a den in jagged slate rocks split by lightning with scorch marks and pale yellow crystal shards",
+  "dims": [
+   3.5,
+   2,
+   3
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "thunder_beast_den",
+  "game_id": "thunder_beast_den",
+  "batch": 2
+ },
+ {
+  "key": "volt_moss_node",
+  "name": "Rêu Điện Quang",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a patch of dark moss with pale yellow glowing speckles on a slate rock",
+  "dims": [
+   0.8,
+   0.3,
+   0.8
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "volt_moss_node",
+  "game_id": "volt_moss_node",
+  "batch": 2
+ },
+ {
+  "key": "wraith_shrine",
+  "name": "Miếu Oán Linh",
+  "folder": "nature",
+  "kind": "prop",
+  "prompt": "a small ruined ancient shrine of cracked stone blocks with a flat stone slab roof, faded talisman strips and a cold mint glow",
+  "dims": [
+   2,
+   2.2,
+   1.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "wraith_shrine",
+  "game_id": "wraith_shrine",
+  "batch": 2
+ },
+ {
+  "key": "struct_ice_cellar",
+  "name": "Hầm Băng",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a primitive ice cellar: a low dug-in storage pit covered with a wooden hatch and stacked stones, frost and ice blocks around",
+  "dims": [
+   1.6,
+   1.0,
+   1.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_ice_cellar",
+  "game_id": "ice_cellar",
+  "batch": 2
+ },
+ {
+  "key": "struct_ice_structure",
+  "name": "Băng Khối",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a large rough block of clear pale blue ice",
+  "dims": [
+   1,
+   1,
+   1
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_ice_structure",
+  "game_id": "ice_structure",
+  "batch": 2
+ },
+ {
+  "key": "struct_light_pillar",
+  "name": "Trụ Chiếu Sáng",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a tall survival light pillar: a carved stone post wrapped with rope holding a big cyan spirit crystal at the top",
+  "dims": [
+   0.6,
+   2.6,
+   0.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_light_pillar",
+  "game_id": "light_pillar",
+  "batch": 2
+ },
+ {
+  "key": "struct_lightning_rod",
+  "name": "Trụ Dẫn Lôi",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a tall primitive lightning rod: a wooden pole braced with stones and rope with a jagged metal spike and pale yellow crystals at the top",
+  "dims": [
+   0.7,
+   3.2,
+   0.7
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_lightning_rod",
+  "game_id": "lightning_rod",
+  "batch": 2
+ },
+ {
+  "key": "struct_puppet_chop",
+  "name": "Khôi Lỗi Đốn Cây",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a wooden puppet automaton laborer holding a stone axe: crude jointed wooden body, carved stone head with mint rune eyes",
+  "dims": [
+   0.7,
+   1.5,
+   0.5
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "hop",
+  "file": "struct_puppet_chop",
+  "game_id": "puppet_chop",
+  "batch": 2
+ },
+ {
+  "key": "struct_puppet_haul",
+  "name": "Khôi Lỗi Vận Chuyển",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a wooden puppet automaton laborer carrying a large woven basket on its back: crude jointed wooden body, carved stone head with mint rune eyes",
+  "dims": [
+   0.7,
+   1.5,
+   0.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "hop",
+  "file": "struct_puppet_haul",
+  "game_id": "puppet_haul",
+  "batch": 2
+ },
+ {
+  "key": "struct_puppet_mine",
+  "name": "Khôi Lỗi Khai Khoáng",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a wooden puppet automaton miner holding a pickaxe with a long pointed stone pick head: crude jointed wooden body, carved stone head with mint rune eyes",
+  "dims": [
+   0.7,
+   1.5,
+   0.5
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": "hop",
+  "file": "struct_puppet_mine",
+  "game_id": "puppet_mine",
+  "batch": 2
+ },
+ {
+  "key": "struct_refining_forge",
+  "name": "Đài Luyện Khí",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a primitive forge: a stone furnace with hide and wood bellows, a rough anvil on a log stump and tongs",
+  "dims": [
+   1.8,
+   1.6,
+   1.2
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_refining_forge",
+  "game_id": "refining_forge",
+  "batch": 2
+ },
+ {
+  "key": "struct_soul_lantern",
+  "name": "Đèn Dẫn Hồn",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a soul-guiding lamp: a carved stone post with a cage of bones holding a pale mint glowing spirit stone",
+  "dims": [
+   0.6,
+   1.8,
+   0.6
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_soul_lantern",
+  "game_id": "soul_lantern",
+  "batch": 2
+ },
+ {
+  "key": "struct_stake",
+  "name": "Cọc Khoanh Vùng",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a single long sharpened wooden stake pole standing straight upright, vertical, tied with a strip of faded red cloth near the top",
+  "dims": [
+   0.15,
+   1.2,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "struct_stake",
+  "game_id": "stake",
+  "batch": 2
+ },
+ {
+  "key": "struct_talisman_desk",
+  "name": "Bàn Vẽ Phù",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a crude low wooden writing desk with talisman paper strips, a brush, an ink stone and a small cinnabar dish on top",
+  "dims": [
+   1.4,
+   0.9,
+   0.8
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_talisman_desk",
+  "game_id": "talisman_desk",
+  "batch": 2
+ },
+ {
+  "key": "struct_water_array",
+  "name": "Thủy Dẫn Trận",
+  "folder": "structures",
+  "kind": "prop",
+  "prompt": "a small ancient water array: a round flat stone disc carved with flowing water runes with a small stone basin in the center",
+  "dims": [
+   2,
+   0.4,
+   2
+  ],
+  "tris": 0,
+  "tex": 512,
+  "rig": null,
+  "file": "struct_water_array",
+  "game_id": "water_array",
+  "batch": 2
+ },
+ {
+  "key": "item_ancient_gear",
+  "name": "Bánh Răng Cổ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "an ancient weathered bronze gear wheel with chipped teeth lying flat",
+  "dims": [
+   0.2,
+   0.05,
+   0.2
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ancient_gear",
+  "game_id": "ancient_gear",
+  "batch": 2
+ },
+ {
+  "key": "item_ancient_golem_core",
+  "name": "Lõi Cổ Khôi",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a round ancient stone core sphere with carved runes and a faint amber glow",
+  "dims": [
+   0.18,
+   0.18,
+   0.18
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ancient_golem_core",
+  "game_id": "ancient_golem_core",
+  "batch": 2
+ },
+ {
+  "key": "item_ancient_vine",
+  "name": "Dây Leo Cổ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a coiled length of thick gnarled ancient vine with a few leaves",
+  "dims": [
+   0.4,
+   0.1,
+   0.3
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ancient_vine",
+  "game_id": "ancient_vine",
+  "batch": 2
+ },
+ {
+  "key": "item_ancient_warden_core",
+  "name": "Lõi Thủ Vệ Cổ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a heavy carved monolith shard with an embedded pale mint rune crystal",
+  "dims": [
+   0.15,
+   0.25,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ancient_warden_core",
+  "game_id": "ancient_warden_core",
+  "batch": 2
+ },
+ {
+  "key": "item_ash",
+  "name": "Tro Núi Lửa",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small soft heap of fine grey powder ash with a few tiny black cinders, no rocks",
+  "dims": [
+   0.2,
+   0.07,
+   0.2
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ash",
+  "game_id": "ash",
+  "batch": 2
+ },
+ {
+  "key": "item_beast_cage",
+  "name": "Lồng Bắt Thú",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small primitive animal cage trap of lashed wooden sticks with a little door, empty",
+  "dims": [
+   0.6,
+   0.5,
+   0.45
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_beast_cage",
+  "game_id": "beast_cage",
+  "batch": 2
+ },
+ {
+  "key": "item_filled_beast_cage",
+  "name": "Lồng Có Thú",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small primitive animal cage trap of lashed wooden sticks with a little door, a cream white rabbit inside",
+  "dims": [
+   0.6,
+   0.5,
+   0.45
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_filled_beast_cage",
+  "game_id": "filled_beast_cage",
+  "batch": 2
+ },
+ {
+  "key": "item_broken_sword",
+  "name": "Cổ Kiếm Gãy",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single ancient sword with a rusted blade snapped in half and a worn hilt, lying flat",
+  "dims": [
+   0.6,
+   0.05,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_broken_sword",
+  "game_id": "broken_sword",
+  "batch": 2
+ },
+ {
+  "key": "item_charcoal",
+  "name": "Than Cháy",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "three lumps of black charcoal with cracked burnt wood grain, nothing else",
+  "dims": [
+   0.18,
+   0.08,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_charcoal",
+  "game_id": "charcoal",
+  "batch": 2
+ },
+ {
+  "key": "item_thunder_crystal",
+  "name": "Lôi Tinh Thạch",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single jagged pale yellow thunder crystal shard",
+  "dims": [
+   0.1,
+   0.16,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_thunder_crystal",
+  "game_id": "thunder_crystal",
+  "batch": 2
+ },
+ {
+  "key": "item_charged_thunder_crystal",
+  "name": "Lôi Tinh Thạch Nạp Điện",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single jagged bright yellow thunder crystal shard wrapped with thin copper wire",
+  "dims": [
+   0.1,
+   0.16,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_charged_thunder_crystal",
+  "game_id": "charged_thunder_crystal",
+  "batch": 2
+ },
+ {
+  "key": "item_cinnabar",
+  "name": "Chu Sa",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a chunk of red cinnabar ore crystal on grey rock",
+  "dims": [
+   0.15,
+   0.1,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_cinnabar",
+  "game_id": "cinnabar",
+  "batch": 2
+ },
+ {
+  "key": "item_cool_vest",
+  "name": "Áo Mát Lá",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive sleeveless vest woven from big green leaves and thin vines, standing upright on its own as if worn by an invisible body, front view, hollow neck opening",
+  "dims": [
+   0.45,
+   0.55,
+   0.25
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_cool_vest",
+  "game_id": "cool_vest",
+  "batch": 2
+ },
+ {
+  "key": "item_crow_feather",
+  "name": "Lông Quạ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single black crow feather lying flat",
+  "dims": [
+   0.06,
+   0.02,
+   0.25
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_crow_feather",
+  "game_id": "crow_feather",
+  "batch": 2
+ },
+ {
+  "key": "item_feather",
+  "name": "Lông Vũ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single mottled brown pheasant feather lying flat",
+  "dims": [
+   0.06,
+   0.02,
+   0.25
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_feather",
+  "game_id": "feather",
+  "batch": 2
+ },
+ {
+  "key": "item_fire_feather",
+  "name": "Lông Lửa",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single long ember orange-red feather lying flat",
+  "dims": [
+   0.07,
+   0.02,
+   0.3
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_fire_feather",
+  "game_id": "fire_feather",
+  "batch": 2
+ },
+ {
+  "key": "item_thunder_roc_feather",
+  "name": "Lông Lôi Bằng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single huge slate blue feather with a pale yellow zigzag stripe lying flat",
+  "dims": [
+   0.1,
+   0.03,
+   0.45
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_thunder_roc_feather",
+  "game_id": "thunder_roc_feather",
+  "batch": 2
+ },
+ {
+  "key": "item_dark_iron_armor",
+  "name": "Giáp Huyền Thiết",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive sleeveless armor vest of dark iron plates laced with leather straps, standing upright on its own as if worn by an invisible body, front view, hollow neck opening",
+  "dims": [
+   0.5,
+   0.6,
+   0.3
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_dark_iron_armor",
+  "game_id": "dark_iron_armor",
+  "batch": 2
+ },
+ {
+  "key": "item_dark_iron_ore",
+  "name": "Huyền Thiết Tinh",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a chunk of dark iron ore: black-grey rock with dark metallic veins",
+  "dims": [
+   0.18,
+   0.12,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_dark_iron_ore",
+  "game_id": "dark_iron_ore",
+  "batch": 2
+ },
+ {
+  "key": "item_eternal_ice",
+  "name": "Vạn Năm Huyền Băng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single chunk of ancient deep blue ice crystal",
+  "dims": [
+   0.15,
+   0.15,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_eternal_ice",
+  "game_id": "eternal_ice",
+  "batch": 2
+ },
+ {
+  "key": "item_ice_block",
+  "name": "Băng Khối",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single rough cube of translucent pale blue ice, only ice, no dirt, no snow on top",
+  "dims": [
+   0.25,
+   0.22,
+   0.25
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ice_block",
+  "game_id": "ice_block",
+  "batch": 2,
+  "look": "cold winter palette, white snow and pale icy blue, hand-painted flat colors with soft gradients, chunky simple shapes, soft rounded forms"
+ },
+ {
+  "key": "item_fire_egg",
+  "name": "Trứng Dị Điểu",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single large speckled egg with ember orange cracks",
+  "dims": [
+   0.12,
+   0.16,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_fire_egg",
+  "game_id": "fire_egg",
+  "batch": 2
+ },
+ {
+  "key": "item_flame_wolf_heart",
+  "name": "Tim Hỏa Lang",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a charred heart-shaped ember stone with glowing orange cracks",
+  "dims": [
+   0.14,
+   0.14,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_flame_wolf_heart",
+  "game_id": "flame_wolf_heart",
+  "batch": 2
+ },
+ {
+  "key": "item_frost_rice",
+  "name": "Hàn Mễ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small open cloth sack of pale blue-white rice grains",
+  "dims": [
+   0.15,
+   0.15,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_frost_rice",
+  "game_id": "frost_rice",
+  "batch": 2
+ },
+ {
+  "key": "item_spirit_rice",
+  "name": "Linh Mễ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small open cloth sack of pale cream rice grains",
+  "dims": [
+   0.15,
+   0.15,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_spirit_rice",
+  "game_id": "spirit_rice",
+  "batch": 2
+ },
+ {
+  "key": "item_frost_wyrm_scale",
+  "name": "Vảy Tuyết Giao",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single large pale blue-grey dragon scale lying flat",
+  "dims": [
+   0.18,
+   0.03,
+   0.2
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_frost_wyrm_scale",
+  "game_id": "frost_wyrm_scale",
+  "batch": 2
+ },
+ {
+  "key": "item_fur_coat",
+  "name": "Áo Lông Thú",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive long coat of patched brown fur pelts tied with leather cords, standing upright on its own as if worn by an invisible body with the sleeves hanging down, front view",
+  "dims": [
+   0.7,
+   0.8,
+   0.3
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_fur_coat",
+  "game_id": "fur_coat",
+  "batch": 2
+ },
+ {
+  "key": "item_fur_hat",
+  "name": "Mũ Lông",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a primitive round fur hat with ear flaps",
+  "dims": [
+   0.25,
+   0.15,
+   0.25
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_fur_hat",
+  "game_id": "fur_hat",
+  "batch": 2
+ },
+ {
+  "key": "item_straw_hat",
+  "name": "Nón Lá",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a wide conical woven straw hat",
+  "dims": [
+   0.4,
+   0.15,
+   0.4
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_straw_hat",
+  "game_id": "straw_hat",
+  "batch": 2
+ },
+ {
+  "key": "item_ghost_general_core",
+  "name": "Quỷ Tướng Hồn Tinh",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a dark purple-grey teardrop soul crystal with a faint cold mint swirl inside",
+  "dims": [
+   0.1,
+   0.16,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ghost_general_core",
+  "game_id": "ghost_general_core",
+  "batch": 2
+ },
+ {
+  "key": "item_heart_demon_essence",
+  "name": "Tâm Ma Tinh",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small round orb of swirling black ink mist with faint white wisps, floating, nothing else",
+  "dims": [
+   0.1,
+   0.1,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_heart_demon_essence",
+  "game_id": "heart_demon_essence",
+  "batch": 2
+ },
+ {
+  "key": "item_hand_warmer",
+  "name": "Hỏa Lô Cầm Tay",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small handheld clay fire pot with a lid and a rope handle, ember glow at the vents",
+  "dims": [
+   0.15,
+   0.18,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_hand_warmer",
+  "game_id": "hand_warmer",
+  "batch": 2
+ },
+ {
+  "key": "item_ice_fish",
+  "name": "Cá Băng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single pale blue-grey fish frosted with ice lying on its side",
+  "dims": [
+   0.35,
+   0.08,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ice_fish",
+  "game_id": "ice_fish",
+  "batch": 2
+ },
+ {
+  "key": "item_incense",
+  "name": "Hương Dẫn Khách",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small bundle of incense sticks standing in a little clay holder",
+  "dims": [
+   0.1,
+   0.25,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_incense",
+  "game_id": "incense",
+  "batch": 2
+ },
+ {
+  "key": "item_iron_turtle_shell",
+  "name": "Mai Huyền Thiết",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a large dark iron-grey turtle shell plate with rocky ore veins",
+  "dims": [
+   0.4,
+   0.15,
+   0.35
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_iron_turtle_shell",
+  "game_id": "iron_turtle_shell",
+  "batch": 2
+ },
+ {
+  "key": "item_lava_scale",
+  "name": "Vảy Nham",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single hard dark basalt scale with ember orange edges lying flat",
+  "dims": [
+   0.12,
+   0.03,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_lava_scale",
+  "game_id": "lava_scale",
+  "batch": 2
+ },
+ {
+  "key": "item_magma_crystal",
+  "name": "Nham Tinh",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single dark red-orange magma crystal shard on black rock",
+  "dims": [
+   0.12,
+   0.15,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_magma_crystal",
+  "game_id": "magma_crystal",
+  "batch": 2
+ },
+ {
+  "key": "item_minor_blood_essence",
+  "name": "Tinh Huyết Sơ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small corked clay vial of dark red blood essence",
+  "dims": [
+   0.08,
+   0.14,
+   0.08
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_minor_blood_essence",
+  "game_id": "minor_blood_essence",
+  "batch": 2
+ },
+ {
+  "key": "item_mud_clump",
+  "name": "Bùn Đầm",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a lump of wet dark brown mud",
+  "dims": [
+   0.2,
+   0.1,
+   0.18
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_mud_clump",
+  "game_id": "mud_clump",
+  "batch": 2
+ },
+ {
+  "key": "item_reed",
+  "name": "Lau Sậy",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a bundle of cut dry reeds tied together lying on its side",
+  "dims": [
+   0.6,
+   0.08,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_reed",
+  "game_id": "reed",
+  "batch": 2
+ },
+ {
+  "key": "item_resin",
+  "name": "Nhựa Cây",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single small blob of translucent amber tree resin, nothing else",
+  "dims": [
+   0.12,
+   0.08,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_resin",
+  "game_id": "resin",
+  "batch": 2
+ },
+ {
+  "key": "item_ruin_shard",
+  "name": "Mảnh Phế Tích",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a broken shard of carved ancient stone with part of a rune",
+  "dims": [
+   0.2,
+   0.06,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ruin_shard",
+  "game_id": "ruin_shard",
+  "batch": 2
+ },
+ {
+  "key": "item_rune_crystal",
+  "name": "Tinh Thể Cổ Văn",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single pale mint rune-carved crystal shard",
+  "dims": [
+   0.1,
+   0.16,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_rune_crystal",
+  "game_id": "rune_crystal",
+  "batch": 2
+ },
+ {
+  "key": "item_snow_moss",
+  "name": "Rêu Tuyết",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small clump of pale frosty grey-green moss",
+  "dims": [
+   0.15,
+   0.06,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_snow_moss",
+  "game_id": "snow_moss",
+  "batch": 2
+ },
+ {
+  "key": "item_volt_moss",
+  "name": "Rêu Điện Quang",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small clump of dark moss with pale yellow glowing speckles",
+  "dims": [
+   0.15,
+   0.06,
+   0.15
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_volt_moss",
+  "game_id": "volt_moss",
+  "batch": 2
+ },
+ {
+  "key": "item_snowball",
+  "name": "Nắm Tuyết",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single round packed white snowball, only snow, no rock",
+  "dims": [
+   0.12,
+   0.12,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_snowball",
+  "game_id": "snowball",
+  "batch": 2,
+  "look": "cold winter palette, white snow and pale icy blue, hand-painted flat colors with soft gradients, chunky simple shapes, soft rounded forms"
+ },
+ {
+  "key": "item_wraith_essence",
+  "name": "Linh Thể Tinh",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a pale grey-teal ghostly wisp trapped in a small carved stone vessel",
+  "dims": [
+   0.12,
+   0.14,
+   0.12
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_wraith_essence",
+  "game_id": "wraith_essence",
+  "batch": 2
+ },
+ {
+  "key": "item_yin_soul_crystal",
+  "name": "Âm Hồn Tinh",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single jagged dark grey-green crystal shard with a faint cold glow inside, no symbol",
+  "dims": [
+   0.1,
+   0.15,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_yin_soul_crystal",
+  "game_id": "yin_soul_crystal",
+  "batch": 2
+ },
+ {
+  "key": "item_talisman_paper",
+  "name": "Giấy Bùa",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a small stack of blank yellowed talisman paper strips",
+  "dims": [
+   0.1,
+   0.04,
+   0.22
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_talisman_paper",
+  "game_id": "talisman_paper",
+  "batch": 2
+ },
+ {
+  "key": "item_ghost_mask_talisman",
+  "name": "Quỷ Diện",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a crude carved wooden demon face mask with two small horns, painted with faded red talisman marks, standing upright facing the viewer",
+  "dims": [
+   0.2,
+   0.24,
+   0.08
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_ghost_mask_talisman",
+  "game_id": "ghost_mask_talisman",
+  "batch": 2
+ },
+ {
+  "key": "item_bind_talisman",
+  "name": "Định Thân Phù",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single yellowed paper talisman strip with red cinnabar brush marks, slightly curled",
+  "dims": [
+   0.08,
+   0.03,
+   0.22
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_bind_talisman",
+  "game_id": "bind_talisman",
+  "batch": 2
+ },
+ {
+  "key": "item_imprint_flame_wolf",
+  "name": "Ấn Hỏa Lang",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a snarling wolf head sigil on its face, inlaid with a small ember orange stone",
+  "dims": [
+   0.1,
+   0.025,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_imprint_flame_wolf",
+  "game_id": "imprint_flame_wolf",
+  "batch": 2
+ },
+ {
+  "key": "item_imprint_frost_wyrm",
+  "name": "Ấn Tuyết Giao",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a coiled serpent dragon sigil on its face, inlaid with a small pale blue ice stone",
+  "dims": [
+   0.1,
+   0.025,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_imprint_frost_wyrm",
+  "game_id": "imprint_frost_wyrm",
+  "batch": 2
+ },
+ {
+  "key": "item_imprint_ghost_general",
+  "name": "Ấn Quỷ Tướng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a horned helmet skull sigil on its face, inlaid with a small dark purple stone",
+  "dims": [
+   0.1,
+   0.025,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_imprint_ghost_general",
+  "game_id": "imprint_ghost_general",
+  "batch": 2
+ },
+ {
+  "key": "item_imprint_iron_turtle",
+  "name": "Ấn Nham Quy",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a turtle shell sigil on its face, inlaid with a small dark iron stud",
+  "dims": [
+   0.1,
+   0.025,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_imprint_iron_turtle",
+  "game_id": "imprint_iron_turtle",
+  "batch": 2
+ },
+ {
+  "key": "item_imprint_thunder_roc",
+  "name": "Ấn Lôi Bằng",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a spread-winged bird sigil on its face, inlaid with a small pale yellow crystal",
+  "dims": [
+   0.1,
+   0.025,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_imprint_thunder_roc",
+  "game_id": "imprint_thunder_roc",
+  "batch": 2
+ },
+ {
+  "key": "item_imprint_ancient_warden",
+  "name": "Ấn Thủ Vệ",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a flat round carved grey stone seal medallion lying flat, seen from slightly above, engraved with a stone guardian face sigil on its face, inlaid with a small pale mint crystal",
+  "dims": [
+   0.1,
+   0.025,
+   0.1
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_imprint_ancient_warden",
+  "game_id": "imprint_ancient_warden",
+  "batch": 2
+ },
+ {
+  "key": "item_frost_talisman",
+  "name": "Hàn Băng Phù",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single pale yellowed paper talisman strip, slightly curled, painted with a pale blue ink snowflake rune",
+  "dims": [
+   0.08,
+   0.03,
+   0.22
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_frost_talisman",
+  "game_id": "frost_talisman",
+  "batch": 2
+ },
+ {
+  "key": "item_lightning_ward_talisman",
+  "name": "Phù Tránh Lôi",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single pale yellowed paper talisman strip, slightly curled, painted with a black ink zigzag lightning rune",
+  "dims": [
+   0.08,
+   0.03,
+   0.22
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_lightning_ward_talisman",
+  "game_id": "lightning_ward_talisman",
+  "batch": 2
+ },
+ {
+  "key": "item_true_sight_talisman",
+  "name": "Khai Nhãn Phù",
+  "folder": "items",
+  "kind": "prop",
+  "prompt": "a single pale yellowed paper talisman strip, slightly curled, painted with a green ink open eye rune",
+  "dims": [
+   0.08,
+   0.03,
+   0.22
+  ],
+  "tris": 0,
+  "tex": 256,
+  "rig": null,
+  "file": "item_true_sight_talisman",
+  "game_id": "true_sight_talisman",
+  "batch": 2
  }
 ]

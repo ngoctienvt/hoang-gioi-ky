@@ -242,6 +242,24 @@ Vật phẩm nằm dưới đất trong game và cũng dùng để render icon. 
   - Hang ổ & di tích: `ancient_grave`, `wraith_shrine`, `golem_pillar`, `ice_fishing_hole`, `broken_sword_pile`, `bird_nest`, `fire_bird_nest`, `crow_den`, `leech_den`, `lava_lizard_den`, `snow_bear_den`, `thick_fur_den`, `thunder_beast_den`, `construct_den` ⬜
   - Thảo dược & nấm đặc trưng: `snow_lotus_node`, `fire_lotus_node`, `glow_mushroom_node`, `ruin_mushroom_node`, `volt_moss_node`, `ancient_vine_node` ⬜
 
+## 10. Đợt 2 — đã tạo (Omni + Paint + fit, giữ mesh Omni)
+
+Tạo theo danh sách thực thể có trong code (`data/`, `model_library.gd`) mà chưa có model riêng. Ảnh xem trước: `art-source/previews/models_*.jpg` (không commit).
+
+Pipeline sửa trong đợt này: `hgk_fit.py` ghi `metallicFactor = 0`, bỏ `KHR_materials_specular`, nâng sáng texture ×1,17 (Đợt 1 đã fit lại theo cùng cách; `_fix_materials` hạ albedo 1,22 → 1,05). Rig: `creature_rig.py` (4 chân, rắn), `bird_rig.py` (chim), `rigid_rig.py` (quái hình người, Khôi Lỗi).
+
+**Yêu thú & Boss (có rig + clip)** (20): `boss_ancient_warden`, `boss_flame_wolf`, `boss_frost_wyrm`, `boss_ghost_general`, `boss_iron_turtle`, `boss_thunder_roc`, `carrion_crow`, `construct_beast`, `fire_bird`, `forest_pheasant`, `heart_demon`, `jiangshi`, `lava_lizard`, `ruin_wraith`, `snow_bear`, `spirit_leech`, `stone_golem`, `thick_fur_beast`, `thunder_beast`, `wraith`
+
+**Tài nguyên, hang ổ, phế tích** (31): `ancient_grave`, `ancient_vine_node`, `ash_pile`, `bamboo_cluster`, `bird_nest`, `broken_sword_pile`, `carved_pillar`, `construct_den`, `crow_den`, `fire_bird_nest`, `fire_lotus_node`, `floor_trap`, `golem_pillar`, `gravel_pile`, `ice_fishing_hole`, `lava_lizard_den`, `leech_den`, `mud`, `pheasant_den`, `reed_clump`, `ruin_debris`, `rune_crystal_node`, `seal_stone`, `snow_bear_den`, `snow_lotus_node`, `snow_moss_node`, `snow_pile`, `thick_fur_den`, `thunder_beast_den`, `volt_moss_node`, `wraith_shrine`
+
+**Công trình & Khôi Lỗi** (12): `ice_cellar`, `ice_structure`, `light_pillar`, `lightning_rod`, `puppet_chop`, `puppet_haul`, `puppet_mine`, `refining_forge`, `soul_lantern`, `stake`, `talisman_desk`, `water_array`
+
+**Vật phẩm** (60): `ancient_gear`, `ancient_golem_core`, `ancient_vine`, `ancient_warden_core`, `ash`, `beast_cage`, `filled_beast_cage`, `broken_sword`, `charcoal`, `thunder_crystal`, `charged_thunder_crystal`, `cinnabar`, `cool_vest`, `crow_feather`, `feather`, `fire_feather`, `thunder_roc_feather`, `dark_iron_armor`, `dark_iron_ore`, `eternal_ice`, `ice_block`, `fire_egg`, `flame_wolf_heart`, `frost_rice`, `spirit_rice`, `frost_wyrm_scale`, `fur_coat`, `fur_hat`, `straw_hat`, `ghost_general_core`, `heart_demon_essence`, `hand_warmer`, `ice_fish`, `incense`, `iron_turtle_shell`, `lava_scale`, `magma_crystal`, `minor_blood_essence`, `mud_clump`, `reed`, `resin`, `ruin_shard`, `rune_crystal`, `snow_moss`, `volt_moss`, `snowball`, `wraith_essence`, `yin_soul_crystal`, `talisman_paper`, `ghost_mask_talisman`, `bind_talisman`, `imprint_flame_wolf`, `imprint_frost_wyrm`, `imprint_ghost_general`, `imprint_iron_turtle`, `imprint_thunder_roc`, `imprint_ancient_warden`, `frost_talisman`, `lightning_ward_talisman`, `true_sight_talisman`
+
+Dùng lại model sẵn có (chỉ nối code): `bamboo`/`bamboo_tree` → `bamboo_cluster_full`, `berry_bush` → `bush_berry_ripe`, `twig_bush` → `bush_twig_full`, `puppet_guard` → `struct_puppet_chop`.
+
+**Còn lại / cần xem thêm:** chim `carrion_crow`, `fire_bird` hơi mảnh sau rig; `forest_pheasant` dùng rig bay (chưa có clip đi bộ/flee); boss chưa có clip riêng ngoài bộ thủ tục; biến thể giai đoạn (gốc cây, bụi đã hái, đá vỡ), decor MultiMesh ≤150 tam giác, texture nền (Đợt 2B), nhân vật/NPC Đợt 3 vẫn chưa làm. Toàn bộ model giữ mesh Omni ~40k tam giác — cần LOD/giảm mặt trước khi tối ưu hiệu năng.
+
 ## Tổng hợp tiến độ hiện tại
 
 | Nhóm | Đã có (Đợt 1) | Cần sửa (Đợt 2A) | Thiếu (Đợt 2B–4) |
